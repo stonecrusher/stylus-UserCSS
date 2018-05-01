@@ -3,7 +3,7 @@
 @description  Login-, Logout-, Vorschalt- und Errorseite sowie Posteingang für gmx.net / .de / .at / .ch radikal geputzt und sämtliche (Eigen)werbung entfernt. Optionaler "dark style" und Einblenden bestimmter Features (siehe Advanced style settings). *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      0.1.0
+@version      1.0
 @homepageURL  https://github.com/stonecrusher/UserCSS-GMX
 @supportURL   https://github.com/stonecrusher/UserCSS-GMX/Issues
 @license      CC-BY-NC-SA-4.0
@@ -31,379 +31,426 @@ https://userstyles.org/styles/134069/
   /*** Postfach (eingeloggt) ***/
 
   /* Sofort-Antwort verstecken? */
-	if sofortantwort-hide {
-    #mail-instant-reply { display:none !important; }
-	}
+  if sofortantwort-hide {
+    #mail-instant-reply {
+      display:none !important;
+    }
+  }
 
   /* Posteingang bis zum rechten Rand dehnen? */
-	if posteingang-dehnen {
+  if posteingang-dehnen {
     /* Dehnen - Startseite */
-		/* Navi groß */
-		#container > #home .navigation.component 
-			{ width:120px !important;
-			  padding:0px 5px 0 5px !important; }
-		.navcollapse { left:111px !important; }
+    /* Navi groß */
+    #container > #home .navigation.component {
+      width:120px !important;
+      padding:0px 5px 0 5px !important;
+    }
+    .navcollapse {
+      left:111px !important;
+    }
 
-		/* Nach Hierarchie */
-		#home { min-width:initial !important;
-				width:100% !important; }
-		#contentwrapper { width:calc(100% - 135px) !important; }  /* linke Navi abziehen */
-		#innercontent { width:100% !important; }
-		.mailbox { width:initial !important; }
-		.tab-mail { padding-bottom:11px !important; }
-		.footer { margin-top:11px !important; }
-		.inbox-container { overflow-y:scroll !important; }
-		.inbox-container > li { min-width:99% !important; }
-		div.sender { width:200px !important; }
-		div.subject { width:calc(100% - 340px) !important; }  /* sender (210) und date (110) abziehen */
+    /* Nach Hierarchie */
+    #home {
+      min-width:initial !important;
+      width:100% !important;
+    }
+    #contentwrapper { width:calc(100% - 135px) !important; }  /* linke Navi abziehen */
+    #innercontent { width:100% !important; }
+    .mailbox { width:initial !important; }
+    .tab-mail { padding-bottom:11px !important; }
+    .footer { margin-top:11px !important; }
+    .inbox-container { overflow-y:scroll !important; }
+    .inbox-container > li { min-width:99% !important; }
+    div.sender { width:200px !important; }
+    div.subject { width:calc(100% - 340px) !important; }  /* sender (210) und date (110) abziehen */
 
-		/* Dehnen - Postfach */
-		.section-1 { margin-right:0 !important; }  /* Email */
-		#regions { width:calc(100% - 20px) !important; }  /* Adressbuch */
-	}
-	
+    /* Dehnen - Postfach */
+    .section-1 { margin-right:0 !important; }  /* Email */
+    #regions { width:calc(100% - 20px) !important; }  /* Adressbuch */
+  }
+
   /* Farbe des Logout-Buttons */
   pos-icon-item[icon="core_logout"],
-  .is-mobile .toolbar__icon[data-position="right"]
-    { background-color:logoutbutton-color !important; }
+  .is-mobile .toolbar__icon[data-position="right"] { background-color:logoutbutton-color !important; }
 
   /* Fotoalbum, Pinnwand, Kalender? */
-	if calendar-hide {
-		pos-icon-item:nth-of-type(4),
-		#js-orga, .item.orga
-			{ display:none !important; }
-	}
+  if calendar-hide {
+    pos-icon-item:nth-of-type(4),
+    #js-orga, .item.orga {
+      display:none !important;
+    }
+  }
 
   /* MediaCenter? */
-	if mediacenter-hide {
-		atl-menu-item:nth-of-type(5), /* Top Toolbar */
-		#innercontent > .component.mailbox > .nav > li.storage
-			{ display:none !important; }
-	}
+  if mediacenter-hide {
+    atl-menu-item:nth-of-type(5), /* Top Toolbar */
+    #innercontent > .component.mailbox > .nav > li.storage {
+      display:none !important;
+    }
+  }
 
   /* DE-Mail? */
-	if demail-hide {
-		.demail-selection,
-		pos-icon-item:nth-of-type(8),
-		#home > .navigation > ul > li:nth-of-type(5),
-		#navigation li.item.komm:nth-of-type(5)
-			{ display:none !important; }
-	}
+  if demail-hide {
+    .demail-selection,
+    pos-icon-item:nth-of-type(8),
+    #home > .navigation > ul > li:nth-of-type(5),
+    #navigation li.item.komm:nth-of-type(5) {
+      display:none !important;
+    }
+  }
 
   /* Verschlüsselte, Fax, SMS? */
-	if sms-hide {
-		a[title="E-Mail schreiben"] + div.button-group-firstblockbutton_subgroup,
-		#home > .navigation > ul > li:nth-of-type(3),
-		#home > .navigation > ul > li:nth-of-type(10),
-		#home > .navigation > ul > li:nth-of-type(11),
-		#navigation li.item.komm:nth-of-type(3),
-		#navigation li.item.komm:nth-of-type(10),
-		#navigation li.item.komm:nth-of-type(11)
-			{ display:none !important; }
-	}
+  if sms-hide {
+    a[title="E-Mail schreiben"] + div.button-group-firstblockbutton_subgroup,
+    #home > .navigation > ul > li:nth-of-type(3),
+    #home > .navigation > ul > li:nth-of-type(10),
+    #home > .navigation > ul > li:nth-of-type(11),
+    #navigation li.item.komm:nth-of-type(3),
+    #navigation li.item.komm:nth-of-type(10),
+    #navigation li.item.komm:nth-of-type(11) {
+      display:none !important;
+    }
+  }
 
   /* MailCheck? */
-	if mailcheck-hide {
-		#home > .navigation > ul > li:nth-of-type(6),
-		#navigation li.item.komm:nth-of-type(6),
-		.mailcheck /* Achtung, Änderungen? */
-			{ display:none !important; }
-	}
+  if mailcheck-hide {
+    #home > .navigation > ul > li:nth-of-type(6),
+    #navigation li.item.komm:nth-of-type(6),
+    .mailcheck { /* Achtung, Änderungen? */
+      display:none !important;
+    }
+  }
 
   /* Grußkarten? */
-	if grusskarten-hide {
-		#home > .navigation > ul > li:nth-of-type(4),
-    	#navigation li.item.komm:nth-of-type(4)
-			{ display:none !important; }
-	}
+  if grusskarten-hide {
+    #home > .navigation > ul > li:nth-of-type(4),
+      #navigation li.item.komm:nth-of-type(4) {
+        display:none !important;
+      }
+  }
 
   /* Online-Office? */
-	if onlineoffice-hide {
-		#js-office,
-        .item.office
-			{ display:none !important; }
-	}
+  if onlineoffice-hide {
+    #js-office,
+    .item.office {
+      display:none !important;
+    }
+  }
 
-    /* weiterer Kram zum Verstecken */
-    .ad, .adframe, .specialad, #tracking, #js-kiosk, #kiosk, #js-produkte, .produkte,
-    iframe[src~="adimg.uimserv.net"],
-    .upsell, .button-upsell, .upsell-link, #billboard,
-    .pgp-empty-preview-teaser, .pgp-invite-teaser,
-    ul.link-menu li[title="GMX-Premium-Vorteile 1 Monat kostenlos testen"],
-	  ul.link-menu li[title~="Jobs"],
-    div#innercontent > div:nth-of-type(2),  /* footer-Werbung */
-    #page-footer li:nth-of-type(n+4), /* kleiner Footer Eigenwerbung */
-    /* Premium-Werbung in den Startseite-Einstellungen */
-    div.setting-dialog.settings-startpage > div > div:first-of-type,
-    p#id12ed, /* Werbelink in Einstellungen Newsletter Vorteilswelt */
-    p#id7c2, /* Werbelink in Einstellungen Newsletter Vorteilswelt */
-    /* Top-Toolbar */
-    atl-menu-item:nth-of-type(n+6), /* Musikflat, MailDomain, Premium, AllNet */
-    pos-feedback.pos-feedback, atl-feedback, /* Feedback-Reiter unten rechts */
-    .cke_toolbar.cke-custom-button-phxxxlstorage,
-    div.helpservice-container, a.upsell,
-    /* #footer, #footer-gap, */
-    div#footer > a:nth-of-type(n+4),
-    .splash-agb > .hero,  /* Vorschaltseiten */
-    /* .splash-agb > .content-part:not(:last-child), */
-    .splash-agb > .content-part > .content-part:not(:last-child),
-    .splash-agb > .content-part > [class|="content-part"]:not(:last-child),
-    /* .splash-agb   .btn-right-top > .btn-wrapper, */
-    .agb-note, /* Vorschaltseite 2017-06-30 Text */
-    [onclick*="partnershop_hermes"], /* Vorschaltseite 2017-06-30 Button */
-    .pos-third-party-dialog__blocker, /* MailCheck Overlay */
-    #btn-buy,
-    [data-buy], /* nochmal alle Kaufen-Buttons - doppelt hält besser */
-    #thirdPartyFrame_layer,
-    /*#desk #contentwrapper > div:first-of-type,  /* Werbefenster oben rechts [macht startseite kaputt] */
-    #content-sky,  /* Werbung rechte Seitenleiste */
-    tr.new.iba,  /* Werbung getarnt als Emails in der Übersicht */
-    .iba-acceptable,  /* Fake-Emails im Posteingang */
-    [class^="iba-"],  /* Generisch für Werbe-Klassen */
-    tr.new.iba-uncertain,
-    .inbox-container > .iba,
-    .inbox-ad-panel,  /* Seitliche Werbung bei reduziertem Funktionsumfang */
-    #navigation li.item:nth-last-of-type(2), /* Linker Menüpunkt "Sicherheitsnummer" */
-    #pkf.widget, /* Kasten mit JS-Inhalt Startseite unten links */
-    #skyscraper, /* großer Werbekasten rechts Startseite */
-    .login-security,  /* Aufforderung für Handynummer */
-    .misc-list__item:nth-of-type(even)  /* Mobile Seite - Links im Footer*/
-    .misc-list__item:nth-of-type(even),  /* Mobile Seite - Links im Footer*/
-    #adRectangle, /* Mobilfunk Werbung */
-    [translate="LOGGED_OUT_AUTOMATICALLY_TEXT"] > p, /* Mailcheck-Tipp bei Auto-Logoff */
-    #flyoutFeatureTeaser, /* "Jetzt verschlüsselt kommunizieren */
-    #transferoption .form-item[id], /* "Einschreiben" bei Email schreiben optionen */
-    #innercontent > div[id]:not([class]), /* Startseite textlink unter mailbox */
-    .webcent, /* WEB.cent auf Startseite */
-    .atl-third-party-dialog__blocker /* Neues Overlay 2018-03 */
-       {   display:none !important;   }
-
-    /* Info auf leeren Vorschaltseiten hinzufügen */
-    /*.splash-agb.agb-table.splash-treue .goto-next::before */
-    .splash-agb .btn-right-top::before
-        { content:"Werbung entfernt.\00a0" !important; }
-
-    /* Höhe der Startseite vergrößern */
-    .nav-tabs,
-    .tab-mail.active,
-    ul.inbox-container { height:350px !important; }
-    div.no-mails { margin-top:110px !important; }
-
-    /* Fehlerbenachrichtigung beim Login */
-    .hint-wrapper,
-    .hint-wrapper * { visibility:visible !important; }
-    .hint-wrapper {
-        position:fixed !important;
-        z-index:5 !important;
-        top:2% !important;
-        left:calc(42% + 50px) !important;
-        overflow:hidden !important;
-        width:300px !important;
-        margin-left:-150px !important; }
-    #loginsearch .hint-wrapper .r4 { border:none !important; } /* weißer Rand rechts */
-    #loginsearch .hint-wrapper::after,
-    #loginsearch .hint-error::after { display:none !important; } /* Pfeil rechts */
-    #loginsearch .hint { height:auto !important; }
-    #loginsearch .hint a { text-decoration:underline !important; }
-
-    .hint-btn { display:none !important; } /* Zurück zum Login Button */
-
-    .hint-error { background:#f66 !important; }
-    .hint-error h2 { line-height:48px !important;  }
-    .hint-error p { margin:0 auto !important;
-                    padding:10px !important;
-                    width:250px !important; }
-    .hint-error p strong { display:block !important; 
-                           margin-top:8px !important; }
+  /* weiterer Kram zum Verstecken */
+  .ad, .adframe, .specialad, #tracking, #js-kiosk, #kiosk, #js-produkte, .produkte,
+  iframe[src~="adimg.uimserv.net"],
+  .upsell, .button-upsell, .upsell-link, #billboard,
+  .pgp-empty-preview-teaser, .pgp-invite-teaser,
+  ul.link-menu li[title="GMX-Premium-Vorteile 1 Monat kostenlos testen"],
+  ul.link-menu li[title~="Jobs"],
+  div#innercontent > div:nth-of-type(2),  /* footer-Werbung */
+  #page-footer li:nth-of-type(n+4), /* kleiner Footer Eigenwerbung */
+  /* Premium-Werbung in den Startseite-Einstellungen */
+  div.setting-dialog.settings-startpage > div > div:first-of-type,
+  p#id12ed, /* Werbelink in Einstellungen Newsletter Vorteilswelt */
+  p#id7c2, /* Werbelink in Einstellungen Newsletter Vorteilswelt */
+  /* Top-Toolbar */
+  atl-menu-item:nth-of-type(n+6), /* Musikflat, MailDomain, Premium, AllNet */
+  pos-feedback.pos-feedback, atl-feedback, /* Feedback-Reiter unten rechts */
+  .cke_toolbar.cke-custom-button-phxxxlstorage,
+  div.helpservice-container, a.upsell,
+  /* #footer, #footer-gap, */
+  div#footer > a:nth-of-type(n+4),
+  .splash-agb > .hero,  /* Vorschaltseiten */
+  /* .splash-agb > .content-part:not(:last-child), */
+  .splash-agb > .content-part > .content-part:not(:last-child),
+  .splash-agb > .content-part > [class|="content-part"]:not(:last-child),
+  /* .splash-agb   .btn-right-top > .btn-wrapper, */
+  .agb-note, /* Vorschaltseite 2017-06-30 Text */
+  [onclick*="partnershop_hermes"], /* Vorschaltseite 2017-06-30 Button */
+  .pos-third-party-dialog__blocker, /* MailCheck Overlay */
+  #btn-buy,
+  [data-buy], /* nochmal alle Kaufen-Buttons - doppelt hält besser */
+  #thirdPartyFrame_layer,
+  /*#desk #contentwrapper > div:first-of-type,  /* Werbefenster oben rechts [macht startseite kaputt] */
+  #content-sky,  /* Werbung rechte Seitenleiste */
+  tr.new.iba,  /* Werbung getarnt als Emails in der Übersicht */
+  .iba-acceptable,  /* Fake-Emails im Posteingang */
+  [class^="iba-"],  /* Generisch für Werbe-Klassen */
+  tr.new.iba-uncertain,
+  .inbox-container > .iba,
+  .inbox-ad-panel,  /* Seitliche Werbung bei reduziertem Funktionsumfang */
+  #navigation li.item:nth-last-of-type(2), /* Linker Menüpunkt "Sicherheitsnummer" */
+  #pkf.widget, /* Kasten mit JS-Inhalt Startseite unten links */
+  #skyscraper, /* großer Werbekasten rechts Startseite */
+  .login-security,  /* Aufforderung für Handynummer */
+  .misc-list__item:nth-of-type(even)  /* Mobile Seite - Links im Footer*/
+  .misc-list__item:nth-of-type(even),  /* Mobile Seite - Links im Footer*/
+  #adRectangle, /* Mobilfunk Werbung */
+  [translate="LOGGED_OUT_AUTOMATICALLY_TEXT"] > p, /* Mailcheck-Tipp bei Auto-Logoff */
+  #flyoutFeatureTeaser, /* "Jetzt verschlüsselt kommunizieren */
+  #transferoption .form-item[id], /* "Einschreiben" bei Email schreiben optionen */
+  #innercontent > div[id]:not([class]), /* Startseite textlink unter mailbox */
+  .webcent, /* WEB.cent auf Startseite */
+  .atl-third-party-dialog__blocker { /* Neues Overlay 2018-03 */
+    display:none !important;
+  }
+  
+  /* Info auf leeren Vorschaltseiten hinzufügen */
+  /*.splash-agb.agb-table.splash-treue .goto-next::before */
+  .splash-agb .btn-right-top::before { content:"Werbung entfernt.\00a0" !important; }
+  
+  /* Höhe der Startseite vergrößern */
+  .nav-tabs,
+  .tab-mail.active,
+  ul.inbox-container {
+    height:350px !important;
+  }
+  div.no-mails { margin-top:110px !important; }
+  
+  /* Fehlerbenachrichtigung beim Login */
+  .hint-wrapper,
+  .hint-wrapper * {
+    visibility:visible !important;
+  }
+  .hint-wrapper {
+      position:fixed !important;
+      z-index:5 !important;
+      top:2% !important;
+      left:calc(42% + 50px) !important;
+      overflow:hidden !important;
+      width:300px !important;
+      margin-left:-150px !important; }
+  #loginsearch .hint-wrapper .r4 { border:none !important; } /* weißer Rand rechts */
+  #loginsearch .hint-wrapper::after, /* Pfeil rechts */
+  #loginsearch .hint-error::after {
+    display:none !important;
+  }
+  #loginsearch .hint { height:auto !important; }
+  #loginsearch .hint a { text-decoration:underline !important; }
+  
+  .hint-btn { display:none !important; } /* Zurück zum Login Button */
+  
+  .hint-error { background:#f66 !important; }
+  .hint-error h2 { line-height:48px !important; }
+  .hint-error p {
+    margin:0 auto !important;
+    padding:10px !important;
+    width:250px !important;
+  }
+  .hint-error p strong {
+    display:block !important;
+    margin-top:8px !important;
+  }
 }
 
 
 @-moz-document regexp("^https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/($|free_ssl\\?status=login-failed.*|\\?status=session-expired.*)") {
-    /*** Login-Seite ausputzen ***/	
-	if login-clean {
-		* {
-			visibility:hidden !important;
-			overflow:hidden !important; }
+  /*** Login-Seite ausputzen ***/
+  if login-clean {
+    * {
+      visibility:hidden !important;
+      overflow:hidden !important;
+    }
+    .form-login, .form-login *,
+    .btn-xs, .btn-xs *,
+    #logo, #logo * {
+      visibility:visible !important;
+      display:block !important;
+    }
+    .btn-wrapper { overflow:visible !important; }
 
-		.form-login, .form-login *,
-		.btn-xs, .btn-xs *,
-		#logo, #logo * {
-			visibility:visible !important;
-			display:block !important; }
+    img,
+    a,
+    .teaser, .news, .lotto {
+      display:none !important;
+    }
 
-		.btn-wrapper { overflow:visible !important; }
+    body > .wrapper-center:nth-of-type(n+3) { position:fixed !important; }
 
-		img,
-		a,
-		.teaser, .news, .lotto { display:none !important; }
-
-		body > .wrapper-center:nth-of-type(n+3) { position:fixed !important; }
-
-		#loginsearch-login form.form-login {
-			position:fixed !important;
-			width:50% !important;
-			min-width:250px !important;
-			top:37% !important;
-			left:30% !important; }
-
-		#logo {
-			position:fixed !important;
-			top:calc(35% - 30px) !important;
-			left:42% !important;
-			filter:brightness(0) !important; }
-
-		.hint-wrapper { 
-			position:fixed !important;
-			margin-top:0 !important;
-			width: 380px !important;
-			top:2% !important;
-			left:42% !important;
-			overflow:hidden !important;
-			margin-left:-120px !important; }
-		.hint-wrapper > .r4,
-		.hint {
-			height:initial !important;  /* red error wrapper */
-			width:300px !important; }
-		.hint-error p {
-			width:260px !important;  /* SessionExpired-Text */
-			margin-left:0px !important;
-			padding:10px !important; }
-	}
+    #loginsearch-login form.form-login {
+      position:fixed !important;
+      width:50% !important;
+      min-width:250px !important;
+      top:37% !important;
+      left:30% !important;
+    }
+    #logo {
+      position:fixed !important;
+      top:calc(35% - 30px) !important;
+      left:42% !important;
+      filter:brightness(0) !important;
+    }
+    .hint-wrapper {
+      position:fixed !important;
+      margin-top:0 !important;
+      width: 380px !important;
+      top:2% !important;
+      left:42% !important;
+      overflow:hidden !important;
+      margin-left:-120px !important;
+    }
+    .hint-wrapper > .r4,
+    .hint {
+      height:initial !important;  /* red error wrapper */
+      width:300px !important;
+    }
+    .hint-error p {
+      width:260px !important;  /* SessionExpired-Text */
+      margin-left:0px !important;
+      padding:10px !important;
+    }
+  }
 }
 
 
 
 @-moz-document regexp("^https?:\\/\\/www\\.gmx\\.net\\/(magazine\\/logout\\/.*|logoutlounge\\/.*)") {
-/*** Logout-Seite ***/
-    * {
-        visibility:hidden !important;
-        overflow:hidden !important; }
-
-    .logout, .logout *,
-    #organization, #organization *,
-    .logout-notification, .logout-notification * {
-        visibility:visible !important;
-        display:block !important; }
-
-    .logout { position:fixed !important; }
-
-    .logout-notification {
-        position:fixed !important;
-        width:50% !important;
-        min-width:250px !important;
-        top:40% !important;
-        left:22% !important; }
-
-    .hint-wrapper > .r4 { width:initial !important; }
-
-    div.hint:not(.hint-error) > p:first-of-type,
-    div.hint:not(.hint-error) h2 + p { display:none !important; }
-
-    #organization { background:#1C449B !important; }
-    #logo {
-        visibility:visible !important;
-        position:fixed !important;
-        top:calc(35% - 30px) !important;
-        left:42% !important;
-        filter:brightness(0) !important;  }
+  /*** Logout-Seite ***/
+  * {
+    visibility:hidden !important;
+    overflow:hidden !important;
+  }
+  
+  .logout, .logout *,
+  #organization, #organization *,
+  .logout-notification, .logout-notification * {
+    visibility:visible !important;
+    display:block !important; }
+  
+  .logout { position:fixed !important; }
+  
+  .logout-notification {
+    position:fixed !important;
+    width:50% !important;
+    min-width:250px !important;
+    top:40% !important;
+    left:22% !important;
+  }
+  
+  .hint-wrapper > .r4 { width:initial !important; }
+  
+  div.hint:not(.hint-error) > p:first-of-type,
+  div.hint:not(.hint-error) h2 + p {
+    display:none !important;
+  }
+  
+  #organization { background:#1C449B !important; }
+  #logo {
+    visibility:visible !important;
+    position:fixed !important;
+    top:calc(35% - 30px) !important;
+    left:42% !important;
+    filter:brightness(0) !important;
+  }
 }
 
 
 @-moz-document domain("gmx.net"), domain("gmx.at"), domain("gmx.ch") {
-	/*************************/
-	/***** GMX Darkstyle *****/
-	if darkstyle-enable {
-		body, body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon) { 
-			color:#fafafa !important;
-			background-color:#000 !important;
-			background-image:none !important;  }
+  /*************************/
+  /***** GMX Darkstyle *****/
+  if darkstyle-enable {
+    body, body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon) {
+      color:#fafafa !important;
+      background-color:#000 !important;
+      background-image:none !important;
+    }
 
-		/* Email schreiben */
-		input[placeholder="Suche"], 
-		.compose-header_object input { color:#fafafa !important; }
+    /* Email schreiben */
+    input[placeholder="Suche"],
+    .compose-header_object input {
+      color:#fafafa !important;
+    }
+    .simple-icon_attachment-upload,
+    .cke_button_icon,
+    .cke_button_label {
+      filter:invert(100%) !important;
+    }
+    #cke_1_top.collapsed { padding-bottom:0 !important; }
 
-		.simple-icon_attachment-upload,
-		.cke_button_icon,
-		.cke_button_label { filter:invert(100%) !important; }
+    /* Startseite */
+    .mail.active::before { display:none !important; }
 
-		#cke_1_top.collapsed { padding-bottom:0 !important; }
+    .inbox-container > li { border-bottom:1px solid white !important; }
 
-		/* Startseite */
-		.mail.active::before { display:none !important; }
+    #home .item:hover a, /* Linke Navi */
+    #innercontent .inbox-container > li:hover, /* Mail-Übersicht */
+    #innercontent .inbox-container > li:hover *, /* ID wird für Spezifität benötigt */
 
-		.inbox-container > li { border-bottom:1px solid white !important; }
+    /* Postfach */
+    #mail-list tr:hover *,
+    #navigation li:hover *,
+    #section-0 .is-hovered { background-color:#333 !important; } /* E-Mail schreiben Button */
+    .symbol { color:#000 !important; } /* Briefsymbol */
+    /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
+    input.menu-item { color:#fafafa !important; } /* Dropdown */
+    .drop-down li:hover * { background-color:#333 !important; } /* z.B. bei checkbox Auswahl */
+    #panel-mail-table .inactive * { color:darkgrey !important; }
+    #panel-mail-table li:hover:not(.inactive) { background-color:#fafafa !important; }
+    #panel-mail-display .area span.dropdown,
+    #panel-mail-table .area span.dropdown {  /* Dropdown downarrow */
+      border-style: solid !important;
+      width: 0 !important;
+      height: 0 !important;
+      border-bottom:none !important;
+      border-left: 5px solid black !important;
+      border-right: 5px solid black !important;
+      border-top: 5px solid darkgrey !important;
+    }
+    /* Trennstrich bei Mailvorschau rechts */
+    .system-folder-message.js-box-vertical,
+    .mail-display-wrapper.js-box-vertical {
+      border-left:1px solid #C9D6E7 !important;
+    }
+    /* Email Details toggle workaround */
+    /* sonst müssen oben :not(li):not(.gui-toggle-trigger) eingetragen werden */
+    #mail-head .gui-toggle-trigger * {
+      background-image:url("https://cdn.gmxpro.net/cdn/mail/client/wicket/resource/static-res/--chrome/mc/img/themes/densely/intenseblue/sprite-st-3735663261653630.png") !important;
+      background-position:-40px -960px !important;
+      background-color:darkblue !important;
+      filter:grayscale(100%) !important;
+    }
+    ::-moz-placeholder { color: #afafaf !important; }
 
-		#home .item:hover a, /* Linke Navi */
-		#innercontent .inbox-container > li:hover, /* Mail-Übersicht */
-		#innercontent .inbox-container > li:hover *, /* ID wird für Spezifität benötigt */
-
-		/* Postfach */
-		#mail-list tr:hover *,
-		#navigation li:hover *,
-		#section-0 .is-hovered { background-color:#333 !important; } /* E-Mail schreiben Button */
-		.symbol { color:#000 !important; } /* Briefsymbol */
-		/* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
-		input.menu-item { color:#fafafa !important; } /* Dropdown */
-		.drop-down li:hover * { background-color:#333 !important; } /* z.B. bei checkbox Auswahl */
-		#panel-mail-table .inactive * { color:darkgrey !important; }
-		#panel-mail-table li:hover:not(.inactive) { background-color:#fafafa !important; }
-		#panel-mail-display .area span.dropdown,
-		#panel-mail-table .area span.dropdown {  /* Dropdown downarrow */
-			border-style: solid !important;
-			width: 0 !important;
-			height: 0 !important;
-			border-bottom:none !important;
-			border-left: 5px solid black !important;
-			border-right: 5px solid black !important;
-			border-top: 5px solid darkgrey !important; }
-		/* Trennstrich bei Mailvorschau rechts */
-		.system-folder-message.js-box-vertical,
-		.mail-display-wrapper.js-box-vertical { border-left:1px solid #C9D6E7 !important; }
-		/* Email Details toggle workaround */
-		/* sonst müssen oben :not(li):not(.gui-toggle-trigger) eingetragen werden */
-		#mail-head .gui-toggle-trigger * { 
-			background-image:url("https://cdn.gmxpro.net/cdn/mail/client/wicket/resource/static-res/--chrome/mc/img/themes/densely/intenseblue/sprite-st-3735663261653630.png") !important;
-			background-position:-40px -960px !important;
-			background-color:darkblue !important;
-			filter:grayscale(100%) !important;
-		}
-		::-moz-placeholder { color: #afafaf !important; }
-
-		/* Adressbuch */
-		.fc-toolbar > .fc-left h2 { color:#eee !important; }
-		#worker-iframe ~ .container .fc-view-container * {
-			color:#eee !important; 
-			background:transparent !important; }
-		#worker-iframe ~ .container .fc-bgevent { background:#8fdf82 !important; }
-		#worker-iframe ~ .container .fc-today,
-		#worker-iframe ~ .container .fc-nonbusiness { background:#333 !important; }
-		#worker-iframe ~ .container .event-bordered { background:#a33 !important; }
-	}
-	/***** GMX Darkstyle *****/
-	/*************************/
+    /* Adressbuch */
+    .fc-toolbar > .fc-left h2 { color:#eee !important; }
+    #worker-iframe ~ .container .fc-view-container * {
+      color:#eee !important;
+      background:transparent !important;
+    }
+    #worker-iframe ~ .container .fc-bgevent { background:#8fdf82 !important; }
+    #worker-iframe ~ .container .fc-today,
+    #worker-iframe ~ .container .fc-nonbusiness {
+      background:#333 !important;
+    }
+    #worker-iframe ~ .container .event-bordered { background:#a33 !important; }
+  }
+  /***** GMX Darkstyle *****/
+  /*************************/
 }
 
 @-moz-document regexp("^https?:\\/\\/www\\.gmx\\.net\\/(magazine\\/logout\\/.*|logoutlounge\\/.*)"),
                regexp("^https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/($|free_ssl\\?status=login-failed.*|\\?status=session-expired.*)") {
-	/*************************/
-	/***** GMX Darkstyle *****/
-	if darkstyle-enable  {
-		/*** Login BLACK, Logout BLACK ***/
+  /*************************/
+  /***** GMX Darkstyle *****/
+  if darkstyle-enable  {
+    /*** Login BLACK, Logout BLACK ***/
+    html { background-color:black !important; }
 
-		html { background-color:black !important; }
+    #logo * { background:none !important; }
+    #logo {
+      background-image:url("https://img.ui-portal.de/homepage/img/gmx/logo.svg") !important;
+      filter:invert(0%) !important;
+    }
 
-		#logo * { background:none !important; }
-		#logo { background-image:url("https://img.ui-portal.de/homepage/img/gmx/logo.svg") !important;
-				filter:invert(0%) !important; }
+    #header .logout-notification .hint:not(.hint-error) > .link-list * {
+      color:#222 !important; text-shadow:none !important;
+    }
 
-		#header .logout-notification .hint:not(.hint-error) > .link-list * { color:#222 !important; text-shadow:none !important; }
+    #header .logout-notification .hint:not(.hint-error),
+    #header .logout-notification .hint:not(.hint-error) > .link-list > li:first-of-type * {
+      background:darkgrey !important;
+    }
+    #header .logout-notification .hint:not(.hint-error) > .link-list > li:last-of-type * { background:green !important; }
 
-		#header .logout-notification .hint:not(.hint-error),
-		#header .logout-notification .hint:not(.hint-error) > .link-list > li:first-of-type * { background:darkgrey !important; }
-		#header .logout-notification .hint:not(.hint-error) > .link-list > li:last-of-type * { background:green !important; }
-
-		.logout-notification .link-list li > a { margin-right:0 !important; padding-right:15px !important; }
-	}
-	/***** GMX Darkstyle *****/
-	/*************************/
+    .logout-notification .link-list li > a { margin-right:0 !important; padding-right:15px !important; }
+  }
+  /***** GMX Darkstyle *****/
+  /*************************/
 }
