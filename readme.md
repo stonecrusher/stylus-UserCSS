@@ -40,7 +40,7 @@ Danke dafür an Johnny English!
 
 ### Direkte Weiterleitung bei Dateianhängen
 Ebenfalls empfehlenswert ist folgendes Skript, das die nervige Weiterleitungsseite vor dem Zugriff auf Dateianhänge überspringt:
-<a>https://greasyfork.org/de/scripts/37084-deref-gmx-instant-redirection</a>
+<a>https://greasyfork.org/de/scripts/37084</a>
 
 
 ## Known Bugs / "Features"
