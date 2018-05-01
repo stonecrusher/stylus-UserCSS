@@ -210,13 +210,13 @@ https://userstyles.org/styles/134069/
     visibility:visible !important;
   }
   .hint-wrapper {
-      position:fixed !important;
-      z-index:5 !important;
-      top:2% !important;
-      left:calc(42% + 50px) !important;
-      overflow:hidden !important;
-      width:300px !important;
-      margin-left:-150px !important; }
+    position:fixed !important;
+    z-index:5 !important;
+    top:2% !important;
+    left:calc(42% + 50px) !important;
+    overflow:hidden !important;
+    width:300px !important;
+    margin-left:-150px !important; }
   #loginsearch .hint-wrapper .r4 { border:none !important; } /* weißer Rand rechts */
   #loginsearch .hint-wrapper::after, /* Pfeil rechts */
   #loginsearch .hint-error::after {
@@ -346,7 +346,8 @@ https://userstyles.org/styles/134069/
   /*************************/
   /***** GMX Darkstyle *****/
   if darkstyle-enable {
-    body, body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon) {
+    body,
+    body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon) {
       color:#fafafa !important;
       background-color:#000 !important;
       background-image:none !important;
