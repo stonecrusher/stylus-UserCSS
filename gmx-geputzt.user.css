@@ -1,6 +1,9 @@
 /* ==UserStyle==
 @name         GMX FreeMail ausgeputzt
-@description  Login-, Logout-, Vorschalt- und Errorseite sowie Posteingang für gmx.net / .de / .at / .ch radikal geputzt und sämtliche (Eigen)werbung entfernt. Optionaler "dark style" und Einblenden bestimmter Features (siehe Advanced style settings). *** Not working for gmx.fr / CaraMail / gmx.com ***
+@description  Login-, Logout-, Vorschalt- und Errorseite sowie Posteingang für gmx.net / .de / .at / .ch radikal geputzt
+              und sämtliche (Eigen)werbung entfernt.
+              Optionaler "dark style" und Einblenden bestimmter Features (siehe Advanced style settings).
+              *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
 @version      1.0.2
@@ -8,6 +11,7 @@
 @supportURL   https://github.com/stonecrusher/UserCSS-GMX/Issues
 @license      CC-BY-NC-SA-4.0
 @preprocessor stylus
+
 @var color    logoutbutton-color 'Farbe des Logout-Buttons' #FF8800
 @var checkbox darkstyle-enable   'Darkstyle' 1
 @var checkbox login-clean        'Loginseite ausputzen' 1
