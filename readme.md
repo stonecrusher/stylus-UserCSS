@@ -1,3 +1,7 @@
+# Installation
+
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/UserCSS-GMX/master/gmx-ausgeputzt.user.css)
+
 # Additional Info
 
 ## Ladezeiten verkürzen / Ressourcen ganz blockieren
