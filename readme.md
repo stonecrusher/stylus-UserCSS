@@ -28,7 +28,7 @@ Dann
 - **Adblock Plus**:  
   Filtereinstellungen --> Eigene Filter --> Filtergruppe hinzufügen (und z.B. "Blockierregeln GMX" nennen) --> Aktionen --> Filter anzeigen --> Auf der neu erschienenen rechten Seite Rechtsklick und einfügen.
 
-Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs überschneiden sich) findest du [hier](https://pastebin.com/z9vnQNxx).
+Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs überschneiden sich) findest du [hier](https://github.com/stonecrusher/UserCSS-GMX/blob/master/blockierregeln-gmx-webde).
 
 
 ## Weitere Skripte
