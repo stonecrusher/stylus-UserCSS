@@ -1,6 +1,6 @@
 # Installation
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/UserCSS-GMX/master/gmx-ausgeputzt.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://github.com/stonecrusher/UserCSS-GMX/raw/master/gmx-geputzt.user.css)
 
 # Additional Info
 
