@@ -2,7 +2,7 @@
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://github.com/stonecrusher/UserCSS-GMX/raw/master/gmx-geputzt.user.css)
 
-# Additional Info
+# Weitere Informationen
 
 ## Ladezeiten verkürzen / Ressourcen ganz blockieren
 
@@ -51,6 +51,12 @@ Ebenfalls empfehlenswert ist folgendes Skript, das die nervige Weiterleitungssei
 - Fehlerfrei nur mit User-Agent für Desktop (Desktopvariante der Webseite).
 
 
+## Sonstiges
+
+Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/UserCSS-GMX/issues)).  
+Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
+
+
 ## Changelog
 
 - 2018-04-07: Update Startseite.
@@ -91,9 +97,3 @@ Ebenfalls empfehlenswert ist folgendes Skript, das die nervige Weiterleitungssei
 - 2016-11-29: Falsches Datum entfernt, URL hinzugefügt.
 - 2016-11-24: Nochmal Vorschaltseiten gefixed (lässt sich so schlecht testen) & Infotext "Werbung entfernt." hinzugefügt; Sofort-Antwort default Einstellung auf "zeigen" geändert; ".mailcheck" versteckt.
 - 2016-11-20: Vorschaltseiten gefixed, linke Navi gefixed.
-
-
-## Sonstiges
-
-Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/UserCSS-GMX/issues) bzgl. Tablets usw.).  
-Nur kostenloses FreeMail. ProMail und TopMail sind ungetestet!
