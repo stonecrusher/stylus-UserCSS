@@ -33,14 +33,10 @@ Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs über
 
 ## Weitere Skripte
 
-### Automatische Weiterleitung zum Posteingang
-Es gibt auch ein Userscript für [Greasemonkey](https://www.greasespot.net/) / [Tampermonkey](https://tampermonkey.net/) o.Ä., das nach dem Login automatisch auf den Posteingang weiterleitet:
-<a>https://greasyfork.org/de/scripts/32228</a>  
-Danke dafür an Johnny English!
+Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://www.greasespot.net/) / [Tampermonkey](https://tampermonkey.net/) oder ähnlichen Addons) stehen folgende praktische Skripte zur Verfügung:
 
-### Direkte Weiterleitung bei Dateianhängen
-Ebenfalls empfehlenswert ist folgendes Skript, das die nervige Weiterleitungsseite vor dem Zugriff auf Dateianhänge überspringt:
-<a>https://greasyfork.org/de/scripts/37084</a>
+- [Automatische Weiterleitung zum Posteingang](https://greasyfork.org/de/scripts/32228)
+- [Überspringen der Weiterleitungsseite bei Dateianhängen](https://greasyfork.org/de/scripts/37084)
 
 
 ## Known Bugs / "Features"
