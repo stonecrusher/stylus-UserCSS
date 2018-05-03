@@ -1,3 +1,14 @@
+# Beschreibung
+
+Neuer Style für gmx.net - realisiert durch CSS, welches durch ein Browseraddon wie [Stylus](https://add0n.com/stylus.html) injiziert wird.
+
+Login-, Logout-, Vorschalt- und Errorseite sowie Posteingang für gmx.net / .de / .at / .ch radikal geputzt und sämtliche (Eigen)werbung entfernt.
+
+Optionaler "darkstyle" und Einblenden bestimmter Features (siehe style settings nach der Installation).
+
+*** Not working for gmx.fr / CaraMail / gmx.com ***
+
+
 # Installation
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://github.com/stonecrusher/UserCSS-GMX/raw/master/gmx-geputzt.user.css)
