@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      1.0.2
+@version      1.0.3
 @homepageURL  https://github.com/stonecrusher/UserCSS-GMX
 @supportURL   https://github.com/stonecrusher/UserCSS-GMX/Issues
 @license      CC-BY-NC-SA-4.0
@@ -195,11 +195,11 @@ https://userstyles.org/styles/134069/
   .atl-third-party-dialog__blocker { /* Neues Overlay 2018-03 */
     display:none !important;
   }
-  
+
   /* Info auf leeren Vorschaltseiten hinzufügen */
   /*.splash-agb.agb-table.splash-treue .goto-next::before */
   .splash-agb .btn-right-top::before { content:"Werbung entfernt.\00a0" !important; }
-  
+
   /* Höhe der Startseite vergrößern */
   .nav-tabs,
   .tab-mail.active,
@@ -207,7 +207,10 @@ https://userstyles.org/styles/134069/
     height:350px !important;
   }
   div.no-mails { margin-top:110px !important; }
-  
+
+  /* Höhe des Posteingang vergrößern (hängt von Adblockdetektion ab) */
+  .no-sky.can-have-adb .section-1 > .section-container { bottom:0 !important; }
+
   /* Fehlerbenachrichtigung beim Login */
   .hint-wrapper,
   .hint-wrapper * {
@@ -228,9 +231,9 @@ https://userstyles.org/styles/134069/
   }
   #loginsearch .hint { height:auto !important; }
   #loginsearch .hint a { text-decoration:underline !important; }
-  
+
   .hint-btn { display:none !important; } /* Zurück zum Login Button */
-  
+
   .hint-error { background:#f66 !important; }
   .hint-error h2 { line-height:48px !important; }
   .hint-error p {
@@ -311,15 +314,15 @@ https://userstyles.org/styles/134069/
     visibility:hidden !important;
     overflow:hidden !important;
   }
-  
+
   .logout, .logout *,
   #organization, #organization *,
   .logout-notification, .logout-notification * {
     visibility:visible !important;
     display:block !important; }
-  
+
   .logout { position:fixed !important; }
-  
+
   .logout-notification {
     position:fixed !important;
     width:50% !important;
@@ -327,14 +330,14 @@ https://userstyles.org/styles/134069/
     top:40% !important;
     left:22% !important;
   }
-  
+
   .hint-wrapper > .r4 { width:initial !important; }
-  
+
   div.hint:not(.hint-error) > p:first-of-type,
   div.hint:not(.hint-error) h2 + p {
     display:none !important;
   }
-  
+
   #organization { background:#1C449B !important; }
   #logo {
     visibility:visible !important;
