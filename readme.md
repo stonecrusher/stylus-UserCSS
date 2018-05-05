@@ -66,6 +66,7 @@ Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 ## Changelog
 
+- 2018-05-05: Unteren Rand bei Posteingang entfernt wenn kein Adblocker erkannt wurde.
 - 2018-04-07: Update Startseite.
 - 2018-03-26: Update der Beschreibung.
 - 2018-03-07: Fix für neues Logo; Ein bisschen alten Code entfernt; Loginfehler Hintergrundfarbe wieder rot; Neues Overlay entfernt; Erste Verbesserungen Darkstyle Adressbuch; Kommentare nur innerhalb der @-moz-Regeln, damit sie bei Import nicht verworfen werden; Scrollen bei geputztem login zuverlässiger verhindern (sonst kommt Sprung zu fixed header); Neuer Feedback-Reiter unten rechts.
