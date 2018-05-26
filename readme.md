@@ -66,6 +66,7 @@ Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 ## Changelog
 
+- 2018-05-26: GMX-Struktur hat sich geändert: Linke Navi, Übersichtsbreite, Hover-Farben (Darkstyle), Obere Navi.
 - 2018-05-05: Unteren Rand bei Posteingang entfernt wenn kein Adblocker erkannt wurde.
 - 2018-04-07: Update Startseite.
 - 2018-03-26: Update der Beschreibung.
