@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      1.0.3
+@version      1.1.0
 @homepageURL  https://github.com/stonecrusher/UserCSS-GMX
 @supportURL   https://github.com/stonecrusher/UserCSS-GMX/Issues
 @license      CC-BY-NC-SA-4.0
@@ -21,9 +21,8 @@
 @var checkbox mailcheck-hide     'MailCheck verstecken' 1
 @var checkbox demail-hide        'DE-Mail verstecken' 1
 @var checkbox sms-hide           'Verschlüsselte, Fax, SMS verstecken' 1
-@var checkbox calendar-hide      'Kalender, Fotoalbum, Pinwand verstecken' 1
+@var checkbox calendar-hide      'Kalender, Dok-Manager, Pinnwand verstecken' 1
 @var checkbox grusskarten-hide   'Grußkarten verstecken' 1
-@var checkbox onlineoffice-hide  'Online-Office verstecken' 1
 ==/UserStyle== */
 
 /*
@@ -43,44 +42,29 @@ https://userstyles.org/styles/134069/
 
   /* Posteingang bis zum rechten Rand dehnen? */
   if posteingang-dehnen {
-    /* Dehnen - Startseite */
-    /* Navi groß */
-    #container > #home .navigation.component {
-      width:120px !important;
-      padding:0px 5px 0 5px !important;
-    }
-    .navcollapse {
-      left:111px !important;
-    }
-
-    /* Nach Hierarchie */
-    #home {
-      min-width:initial !important;
+    /* Startseite Breite */
+    #desk > .cockpit > .grid-left,
+    #desk ul.section.col-2 {
       width:100% !important;
     }
-    #contentwrapper { width:calc(100% - 135px) !important; }  /* linke Navi abziehen */
-    #innercontent { width:100% !important; }
-    .mailbox { width:initial !important; }
-    .tab-mail { padding-bottom:11px !important; }
-    .footer { margin-top:11px !important; }
-    .inbox-container { overflow-y:scroll !important; }
-    .inbox-container > li { min-width:99% !important; }
-    div.sender { width:200px !important; }
-    div.subject { width:calc(100% - 340px) !important; }  /* sender (210) und date (110) abziehen */
-
-    /* Dehnen - Postfach */
-    .section-1 { margin-right:0 !important; }  /* Email */
-    #regions { width:calc(100% - 20px) !important; }  /* Adressbuch */
+    html.can-have-sky .section-content { margin-right:0 !important; }
+    /* Startseite Innencontainer Höhe */
+    .component.mail.widget div.data-list { height:99% !important; }
+    /* Startseite Betreff Breite */
+    .component.mail.widget div.data-list ul { width:initial !important; }
+    .component.mail.widget div.data-list ul li > span.mail-subject { width:calc(100% - 140px - 70px - 10px) !important; }	
   }
 
   /* Farbe des Logout-Buttons */
   pos-icon-item[icon="core_logout"],
   .is-mobile .toolbar__icon[data-position="right"] { background-color:logoutbutton-color !important; }
 
-  /* Fotoalbum, Pinnwand, Kalender? */
+  /* Kalender, Dokumenten-Manager, Pinnwand? */
   if calendar-hide {
-    pos-icon-item:nth-of-type(4),
-    #js-orga, .item.orga {
+    atl-menu-item[data-item-name="calendar"],
+    #navigation > ul > li:nth-of-type(9),
+    #navigation > ul > li:nth-of-type(10),
+    #navigation > ul > li:nth-of-type(11) {
       display:none !important;
     }
   }
@@ -96,9 +80,7 @@ https://userstyles.org/styles/134069/
   /* DE-Mail? */
   if demail-hide {
     .demail-selection,
-    pos-icon-item:nth-of-type(8),
-    #home > .navigation > ul > li:nth-of-type(5),
-    #navigation li.item.komm:nth-of-type(5) {
+    #navigation > ul > li:nth-of-type(5) {
       display:none !important;
     }
   }
@@ -106,20 +88,16 @@ https://userstyles.org/styles/134069/
   /* Verschlüsselte, Fax, SMS? */
   if sms-hide {
     a[title="E-Mail schreiben"] + div.button-group-firstblockbutton_subgroup,
-    #home > .navigation > ul > li:nth-of-type(3),
-    #home > .navigation > ul > li:nth-of-type(10),
-    #home > .navigation > ul > li:nth-of-type(11),
-    #navigation li.item.komm:nth-of-type(3),
-    #navigation li.item.komm:nth-of-type(10),
-    #navigation li.item.komm:nth-of-type(11) {
+    #navigation > ul > li:nth-of-type(3),
+    #navigation > ul > li:nth-of-type(12),
+    #navigation > ul > li:nth-of-type(13) {
       display:none !important;
     }
   }
 
   /* MailCheck? */
   if mailcheck-hide {
-    #home > .navigation > ul > li:nth-of-type(6),
-    #navigation li.item.komm:nth-of-type(6),
+    #navigation > ul > li:nth-of-type(6),
     .mailcheck { /* Achtung, Änderungen? */
       display:none !important;
     }
@@ -127,18 +105,16 @@ https://userstyles.org/styles/134069/
 
   /* Grußkarten? */
   if grusskarten-hide {
-    #home > .navigation > ul > li:nth-of-type(4),
-      #navigation li.item.komm:nth-of-type(4) {
+    #navigation > ul > li:nth-of-type(4) {
         display:none !important;
       }
   }
-
-  /* Online-Office? */
-  if onlineoffice-hide {
-    #js-office,
-    .item.office {
-      display:none !important;
-    }
+  /* "Organisation" Gruppenpunkt Menü links */
+  if sms-hide && calendar-hide {
+    #navigation > ul > li:nth-of-type(7),
+    #navigation > ul > li:nth-of-type(8) {
+        display:none !important;
+      }
   }
 
   /* weiterer Kram zum Verstecken */
@@ -160,7 +136,7 @@ https://userstyles.org/styles/134069/
   .cke_toolbar.cke-custom-button-phxxxlstorage,
   div.helpservice-container, a.upsell,
   /* #footer, #footer-gap, */
-  div#footer > a:nth-of-type(n+4),
+  div#footer li:nth-of-type(n+4),
   .splash-agb > .hero,  /* Vorschaltseiten */
   /* .splash-agb > .content-part:not(:last-child), */
   .splash-agb > .content-part > .content-part:not(:last-child),
@@ -180,7 +156,6 @@ https://userstyles.org/styles/134069/
   tr.new.iba-uncertain,
   .inbox-container > .iba,
   .inbox-ad-panel,  /* Seitliche Werbung bei reduziertem Funktionsumfang */
-  #navigation li.item:nth-last-of-type(2), /* Linker Menüpunkt "Sicherheitsnummer" */
   #pkf.widget, /* Kasten mit JS-Inhalt Startseite unten links */
   #skyscraper, /* großer Werbekasten rechts Startseite */
   .login-security,  /* Aufforderung für Handynummer */
@@ -192,7 +167,12 @@ https://userstyles.org/styles/134069/
   #transferoption .form-item[id], /* "Einschreiben" bei Email schreiben optionen */
   #innercontent > div[id]:not([class]), /* Startseite textlink unter mailbox */
   .webcent, /* WEB.cent auf Startseite */
-  .atl-third-party-dialog__blocker { /* Neues Overlay 2018-03 */
+  .atl-third-party-dialog__blocker, /* Neues Overlay 2018-03 */
+  #desk > .cockpit > .grid-right,
+  #desk > .cockpit > .grid-left > .grid-container:last-child, /* Werbekram, Wetter, Hilfe & Tipps auf Startseite */
+  #navigation > ul > li:nth-of-type(n + 14):not(:nth-of-type(n + 25)), /* Linke Navi "Produkte" */
+  
+  #dummy {
     display:none !important;
   }
 
@@ -377,14 +357,14 @@ https://userstyles.org/styles/134069/
 
     .inbox-container > li { border-bottom:1px solid white !important; }
 
-    #home .item:hover a, /* Linke Navi */
-    #innercontent .inbox-container > li:hover, /* Mail-Übersicht */
-    #innercontent .inbox-container > li:hover *, /* ID wird für Spezifität benötigt */
+    #section-0 .mail-inbox > .mail-id:hover *, /* Mail-Übersicht */ /* ID wird für Spezifität benötigt */
 
     /* Postfach */
     #mail-list tr:hover *,
-    #navigation li:hover *,
-    #section-0 .is-hovered { background-color:#333 !important; } /* E-Mail schreiben Button */
+    #navigation > ul > li:hover *,
+    #section-0 .is-hovered  /* E-Mail schreiben Button */ {
+      background-color:#333 !important;
+    }
     .symbol { color:#000 !important; } /* Briefsymbol */
     /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
     input.menu-item { color:#fafafa !important; } /* Dropdown */
