@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      1.1.0
+@version      1.2.0
 @homepageURL  https://github.com/stonecrusher/UserCSS-GMX
 @supportURL   https://github.com/stonecrusher/UserCSS-GMX/Issues
 @license      CC-BY-NC-SA-4.0
@@ -23,6 +23,10 @@
 @var checkbox sms-hide           'Verschlüsselte, Fax, SMS verstecken' 1
 @var checkbox calendar-hide      'Kalender, Dok-Manager, Pinnwand verstecken' 1
 @var checkbox grusskarten-hide   'Grußkarten verstecken' 1
+
+@var color    var_schriftfarbe   'Schriftfarbe'      #eee
+@var color    var_hintergrund1   'Hintergrundfarbe'  #222
+@var color    var_hintergrund2   'Hintergrund hover' #444
 ==/UserStyle== */
 
 /*
@@ -335,15 +339,15 @@ https://userstyles.org/styles/134069/
   if darkstyle-enable {
     body,
     body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon) {
-      color:#fafafa !important;
-      background-color:#000 !important;
+      color:var_schriftfarbe !important;
+      background-color:var_hintergrund1 !important;
       background-image:none !important;
     }
 
     /* Email schreiben */
     input[placeholder="Suche"],
     .compose-header_object input {
-      color:#fafafa !important;
+      color:var_schriftfarbe !important;
     }
     .simple-icon_attachment-upload,
     .cke_button_icon,
@@ -355,7 +359,7 @@ https://userstyles.org/styles/134069/
     /* Startseite */
     .mail.active::before { display:none !important; }
 
-    .inbox-container > li { border-bottom:1px solid white !important; }
+    .inbox-container > li { border-bottom:1px solid var_schriftfarbe !important; }
 
     #section-0 .mail-inbox > .mail-id:hover *, /* Mail-Übersicht */ /* ID wird für Spezifität benötigt */
 
@@ -363,14 +367,14 @@ https://userstyles.org/styles/134069/
     #mail-list tr:hover *,
     #navigation > ul > li:hover *,
     #section-0 .is-hovered  /* E-Mail schreiben Button */ {
-      background-color:#333 !important;
+      background-color: var_hintergrund2 !important;
     }
-    .symbol { color:#000 !important; } /* Briefsymbol */
+    .symbol { color: var_hintergrund1 !important; } /* Briefsymbol */
     /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
-    input.menu-item { color:#fafafa !important; } /* Dropdown */
-    .drop-down li:hover * { background-color:#333 !important; } /* z.B. bei checkbox Auswahl */
-    #panel-mail-table .inactive * { color:darkgrey !important; }
-    #panel-mail-table li:hover:not(.inactive) { background-color:#fafafa !important; }
+    input.menu-item { color: var_schriftfarbe !important; } /* Dropdown */
+    .drop-down li:hover * { background-color: var_hintergrund2 !important; } /* z.B. bei checkbox Auswahl */
+    #panel-mail-table .inactive * { color: lighten(var_hintergrund2, 40%) !important; }
+    #panel-mail-table li:hover:not(.inactive) { background-color: var_schriftfarbe !important; }
     #panel-mail-display .area span.dropdown,
     #panel-mail-table .area span.dropdown {  /* Dropdown downarrow */
       border-style: solid !important;
@@ -394,12 +398,12 @@ https://userstyles.org/styles/134069/
       background-color:darkblue !important;
       filter:grayscale(100%) !important;
     }
-    ::-moz-placeholder { color: #afafaf !important; }
+    ::-moz-placeholder { color: #777 !important; }
 
     /* Adressbuch */
-    .fc-toolbar > .fc-left h2 { color:#eee !important; }
+    .fc-toolbar > .fc-left h2 { color:var_schriftfarbe !important; }
     #worker-iframe ~ .container .fc-view-container * {
-      color:#eee !important;
+      color:var_schriftfarbe !important;
       background:transparent !important;
     }
     #worker-iframe ~ .container .fc-bgevent { background:#8fdf82 !important; }
@@ -418,8 +422,8 @@ https://userstyles.org/styles/134069/
   /*************************/
   /***** GMX Darkstyle *****/
   if darkstyle-enable  {
-    /*** Login BLACK, Logout BLACK ***/
-    html { background-color:black !important; }
+    /*** Login & Logout DS ***/
+    html { background-color:var_hintergrund1 !important; }
 
     #logo * { background:none !important; }
     #logo {
@@ -428,7 +432,7 @@ https://userstyles.org/styles/134069/
     }
 
     #header .logout-notification .hint:not(.hint-error) > .link-list * {
-      color:#222 !important; text-shadow:none !important;
+      color:var_hintergrund1 !important; text-shadow:none !important;
     }
 
     #header .logout-notification .hint:not(.hint-error),
