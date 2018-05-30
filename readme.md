@@ -66,6 +66,7 @@ Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 ## Changelog
 
+- 2018-05-30: Optionsreihenfolge; Inaktive: Schriftfarbe abdunkeln statt Hintergrund aufhellen.
 - 2018-05-30: Farbvariablen hinzugefügt und Standardfarben aufgehellt.
 - 2018-05-26: GMX-Struktur hat sich geändert: Linke Navi, Übersichtsbreite, Hover-Farben (Darkstyle), Obere Navi.
 - 2018-05-05: Unteren Rand bei Posteingang entfernt wenn kein Adblocker erkannt wurde.
