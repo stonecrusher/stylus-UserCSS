@@ -6,14 +6,12 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      1.2.0
+@version      1.2.1
 @homepageURL  https://github.com/stonecrusher/UserCSS-GMX
 @supportURL   https://github.com/stonecrusher/UserCSS-GMX/Issues
 @license      CC-BY-NC-SA-4.0
 @preprocessor stylus
 
-@var color    logoutbutton-color 'Farbe des Logout-Buttons' #FF8800
-@var checkbox darkstyle-enable   'Darkstyle' 1
 @var checkbox login-clean        'Loginseite ausputzen' 1
 @var checkbox posteingang-dehnen 'Posteingang nach rechts dehnen' 1
 @var checkbox sofortantwort-hide 'Sofortantwort verstecken' 0
@@ -23,7 +21,9 @@
 @var checkbox sms-hide           'Verschlüsselte, Fax, SMS verstecken' 1
 @var checkbox calendar-hide      'Kalender, Dok-Manager, Pinnwand verstecken' 1
 @var checkbox grusskarten-hide   'Grußkarten verstecken' 1
+@var color    logoutbutton-color 'Farbe des Logout-Buttons' #FF8800
 
+@var checkbox darkstyle-enable   'Darkstyle' 1
 @var color    var_schriftfarbe   'Schriftfarbe'      #eee
 @var color    var_hintergrund1   'Hintergrundfarbe'  #222
 @var color    var_hintergrund2   'Hintergrund hover' #444
@@ -373,7 +373,7 @@ https://userstyles.org/styles/134069/
     /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
     input.menu-item { color: var_schriftfarbe !important; } /* Dropdown */
     .drop-down li:hover * { background-color: var_hintergrund2 !important; } /* z.B. bei checkbox Auswahl */
-    #panel-mail-table .inactive * { color: lighten(var_hintergrund2, 40%) !important; }
+    #panel-mail-table .inactive * { color: darken(var_schriftfarbe, 40%) !important; }
     #panel-mail-table li:hover:not(.inactive) { background-color: var_schriftfarbe !important; }
     #panel-mail-display .area span.dropdown,
     #panel-mail-table .area span.dropdown {  /* Dropdown downarrow */
@@ -441,7 +441,10 @@ https://userstyles.org/styles/134069/
     }
     #header .logout-notification .hint:not(.hint-error) > .link-list > li:last-of-type * { background:green !important; }
 
-    .logout-notification .link-list li > a { margin-right:0 !important; padding-right:15px !important; }
+    .logout-notification .link-list li > a {
+      margin-right:0 !important;
+      padding-right:15px !important;
+    }
   }
   /***** GMX Darkstyle *****/
   /*************************/
