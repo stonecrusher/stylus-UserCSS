@@ -60,7 +60,7 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 
 ## Sonstiges
 
-Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/issues)).  
+Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/stylus-UserCSS/issues)).  
 Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 
