@@ -22,7 +22,7 @@ Artikelseiten mit Kommentaren sind ca. 33% kürzer. Der Style ist nicht auf Sch�
 
 # Installation
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/UserCSS-zeit/master/zeit-condensed.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/zeit/zeit-condensed.user.css)
 
 
 
@@ -75,7 +75,7 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 
 ## Sonstiges
 
-Getestet mit Firefox59 & Chrome65 auf dem Desktop. Ich bin dankbar für [Feedback](https://github.com/stonecrusher/UserCSS-zeit/issues).
+Getestet mit Firefox59 & Chrome65 auf dem Desktop. Ich bin dankbar für [Feedback](https://github.com/stonecrusher/stylus-UserCSS/issues).
 
 
 ## Changelog
