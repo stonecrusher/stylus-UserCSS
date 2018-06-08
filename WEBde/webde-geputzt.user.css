@@ -1,0 +1,521 @@
+/* ==UserStyle==
+@name         web.de komplett geputzt - Login, Logout, Werbung
+@description  Reduziert web.de auf das Wesentliche, erweitert so die nutzbare Fläche und macht es übersichtlicher.
+              Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
+              Optionaler Darkstyle in den Settings verfügbar.
+@namespace    stonecrusher
+@author       stonecrusher
+@version      1.2.0
+@homepageURL  https://github.com/stonecrusher/UserCSS-WEBde
+@supportURL   https://github.com/stonecrusher/UserCSS-WEBde/Issues
+@license      CC-BY-NC-SA-4.0
+@preprocessor stylus
+
+@var checkbox weather-show          'Wetter bei Login anzeigen' 1
+@var checkbox sms-hide              'SMS Benachrichtigung verstecken' 1
+@var checkbox lowwidth-enable       'Anpassungen für Geräte mit geringer Breite' 0
+@var checkbox sofortantwort-hide    'Sofortantwort verstecken' 0
+@var checkbox keepmenu-enable       'Hauptmenü unangetastet lassen' 0
+@var color    var_logoutbuttonfarbe 'Logoutbuttonfarbe' #ff812e
+
+@var checkbox darkstyle-enable   'Darkstyle (DS)' 0
+@var color    var_schriftfarbe   'DS Schriftfarbe'         #eee
+@var color    var_hintergrund3   'DS Schriftfarbe inaktiv' #aaa
+@var color    var_hintergrund1   'DS Hintergrund'          #222
+@var color    var_hintergrund2   'DS Hintergrund hover'    #444
+==/UserStyle== */
+
+/*
+This Userstyle by stonecrusher can also be found at
+https://userstyles.org/styles/135368/
+*/
+
+/* Based on https://userstyles.org/styles/120173/ by Norwin */
+
+@-moz-document regexp("^https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
+  /**** Login & Logout ****/
+  #mainnav, #header-image-link, #helplinks, #promoline, #footer, [class^="ad-"],
+  #loginsearch-login .tab-nav, .breaking-news, #loginsearch-search,
+  [data-device-type="desktop"] .info-layer, .statistics, .googleadsense,
+  .mod-homepage > *:not(.mod-weathertool), .mod-teaser, .mod-searchbartool, .ad, /* mobile */
+  .specialad, .wrapper-center:not(.first),
+  #topper, /* browser update top bar */
+  .notification-alert[data-notification-browser], /* browser update top bar 2017-10-14 */
+  atl-feedback, /* 2018-02-26 */
+  .promo,
+  #rightnav {
+    display:none !important;
+  }
+  #header { background:transparent !important; }
+  body.defaultHero > .wrapper-center {
+    max-width:98% !important;
+    top: 5em !important;
+  }
+
+  /* Logout-Breite für sm */
+  body { min-width:100% !important; }
+  #header > .header-inner { width:100% !important; }
+
+  /* Login-Breite für sm */
+  html { width:calc(100% - 8px) !important; }
+
+  .adWithOutsideComponent .wrapper-center,
+  .adWithOutsideComponent .wrapper-border {
+    background:transparent !important;
+    top:0 !important;
+  }
+  #loginsearch {
+    display:inline !important;
+    min-width:250px !important;
+    max-width:60% !important;
+  }
+  .hint-wrapper { display:block !important; }
+  .logout-notification {
+    display:block !important;
+    min-width:400px !important;
+    max-width:60% !important;
+  }
+
+  #loginsearch-login .tab-contentPart { display:inline !important }
+  #loginsearch-login .tab-contentPart:not(:nth-child(2)),
+
+  .ie7fix ~ *,
+  #loginsearch-ad,
+
+  .hint > h2 + p,
+  .hint > p:first-child { display:none !important; }
+
+  [data-hint="timeout"].hint-error > p { display:block !important; } /* Timeout-Hinweis einblenden */
+  [translate="LOGGED_OUT_AUTOMATICALLY_TEXT"] > p {display:none !important;}
+
+  #loginsearch {
+    background:#D2E1EA !important;
+    margin-top:100px !important;
+    background-image:none !important;
+    padding:0 20px 30px !important;
+  }
+
+  /* Javascript-Hinweis entfernen, falls homepage.js geblockt ist und Seitenbreite für sm fixen */
+  .jsDisabled {
+    min-width:100% !important;
+    margin-top:0 !important;
+  }
+  .jsDisabled .wrapper-indent::before { content:none !important; }
+
+  /**** Navi ****/
+  li[title="Vorteile des WEB.DE Club 1 Monat kostenlos testen"] { display:none !important; }
+
+  pos-feedback { display:none !important; }
+  pos-icon-item[icon="core_logout"] { background: var_logoutbuttonfarbe !important; }
+  pos-icon-item[icon="core_logout"] span { color:#000 !important; }
+
+  /* Vorschaltseite */
+  .page-splash span[title="Kaufen"],  /* Kaufen-Button */
+  .page-splash > .module-splash,
+  .page-splash > .module-agb > .moduleContainer > .moduleContent > *:not(:last-child) {
+    display:none !important;
+  }
+  .page-splash > .module-agb > .moduleContainer::after { content:"Werbung entfernt." !important; }
+  .page-splash > .module-agb > .moduleContainer > div > span {  /* Button "zum Postfach" */
+    background-color:#D8E8F2 !important;
+    border-radius:3px !important;
+  }
+  /* Vorschaltseite 2017-05 */
+  #main.splash-agb > .hero,
+  #main.splash-agb .agb-note,
+  #main.splash-agb .btn-right-top > span.btn-wrapper {
+    display:none !important;
+  }
+  #main.splash-agb > .layer-close { font-weight:bold !important; }
+  #main.splash-agb .btn-right-top > .goto-mailbox::before {
+    content: "Werbung entfernt.\00a0" !important;
+    padding-right:20px !important;
+    font-weight:initial !important;
+  }
+  #main.splash-agb .layer-close::before {
+    content:'Werbung und Buttons entfernt. \A (\0022Weiter\0022\00a0 ist mal der linke, mal der rechte Button).\A\A' !important;
+    padding-right:20px !important;
+    font-weight:initial !important;
+    white-space:pre !important;
+  }
+  #main.splash-agb {
+    margin:0 !important;
+    padding:0 !important;
+    top:50px !important;
+    height:initial !important;
+    width:50% !important;
+  }
+  #main.splash-agb .layer-close {
+    margin:0 !important;
+    padding:30px !important;
+    height:initial !important;
+    width:initial !important;
+    float:none !important;
+    display:block !important;
+  }
+
+  /* Bei eingeschränkter Anzeige */
+  #contentnavi { display:none !important; }
+
+
+  /**** Startseite ****/
+  .grid-container.grid-left .grid-container > DIV:nth-child(1),
+  ul.lr,
+  .werbefrei,
+  #desk .grid-container.grid-right,
+  #desk iframe,
+  #kiosk,
+  #kiosk > iframe,
+  li[data-area="kiosk"], li[data-area="produkte"],
+  a[title="WEB.DE Club Center"], a[title="Musik-Flatrate"], a[title="Mobilfunk"],
+  a[title="Eigene Homepage"], a[title="PC-Sicherheit"], a[title="MillionenKlick"],
+  a[title="Millionenklick"], a[title="Lotto"], a[title="Games"], a[title="XXL-Speicher"],
+
+  #footer-gap,
+  /*div.content > div.component:first-of-type,/**/
+
+  .pos-third-party-dialog__blocker, /* webcent overlay */
+  .webcent,
+  atl-third-party-dialog, /* 2018-04-28 Online-Speicher Vollbildwerbung */
+  .login-security,
+
+  #flyoutFeatureTeaser {
+    display:none !important;
+  }
+
+  /* Fakemail-container von Startseite entfernen */
+  .nav-tabs > .tab-mail > .bulk-container { display:none !important; }
+  .nav-tabs > .tab-mail > .inbox-container { height:100% !important; }
+
+  /* Höhe der Emailliste auf der Startseite */
+  .component.mailbox .nav-tabs,
+  .component.mailbox .tab-mail {
+    height:auto !important;
+    max-height:100% !important;
+  }
+  /* Breite der Emailliste auf der Startseite */
+  .content > div { width:100% !important; }
+  .content > div > div { width:auto !important; }
+  .inbox-container .date { float:right !important; }
+  .component.mailbox ul.bulk-container li,
+  .component.mailbox ul.inbox-container li,
+  .component.mailbox ul.bulk-container li .subject,
+  .component.mailbox ul.inbox-container li .subject {
+    max-width:initial !important;
+  }
+
+
+  /* Seitenbreite Startseite */
+  /* Delete next line if your device width is less than 700px to get horizontal scrollbar back. */
+  #home { min-width:initial !important; }
+  #desk { width:initial !important; }
+
+
+  /**** Adressbuch ****/
+  #content-sky { display:none!important; }
+  #regions { width:auto !important; }
+
+  /**** Postfach ****/
+  /* Höhe der Emailliste */
+  .panel-body.js-box-columns { height:100% !important; }
+
+  .section-content { margin-right:0 !important; }
+
+  .ad.sky,
+  .iba, [class="iba"],   /* leave this to be sure to override with higher specifity */
+  [class="new iba"], .iba-uncertain, .iba-acceptable,
+  [class="iba selected marked marked-first marked-last"],
+  .mailcheck,
+  .upsell-link,
+  .upselling,
+  .pgp-empty-preview-teaser {
+    display:none !important;
+  }
+
+  /* Postfach Ansicht "Vorschau rechts" darkstyle Betreff fix */
+  .panel-mail-display-table-mail-horizontal .widget-mail-table .date { right:20px !important; }
+
+  if sofortantwort-hide {
+    #mail-instant-reply { display:none !important; }
+  }
+  #tracking, #billboard, #js-kiosk, #kiosk, #js-produkte, .produkte,
+  ul.link-menu li[title="WEB.DE-Premium-Vorteile 1 Monat kostenlos testen"],
+  ul.link-menu li[title="Jobs @ WEB.DE"],
+  ul.link-menu li[title="Jobs"],
+  .button-upsell,
+  a[title="Vorteile des WEB.DE Club 1 Monat kostenlos testen"],
+  .clublink {
+    display:none !important;
+  }
+  /* After sending email */
+  if sms-hide {
+    fieldset.smsNotification,
+    fieldset.smsNotification + fieldset {
+      display:none !important;
+    }
+  }
+  .pgp-invite-teaser,
+  .greeting-card-teaser,
+  #transferoption .form-item[id], /* Einschreiben Option */
+  .dialog-promo /* "Zeitversetzt senden" Popup während des Sendens */,
+  .cke_button__phxxxlstorage_label { /* XL-Speicher im Maileditor */
+    display:none !important;
+  }
+
+  /* Johnny English: */
+  if lowwidth-enable { /* Adaption for low-width devices (in mailbox) */
+    /* prevent horizontal scrolling on narrower devices */
+    .page { min-width: 50.7rem; }
+    /* hide useless buttons in email listing to prevent horizontal scrolling on narrower devices */
+    form[action^="./folder"] .button-container > ul:nth-child(3) { display: none !important; }
+    /* just a visual clutter */
+    .section-container { bottom: 0 !important; }
+    /* the invisible overlay protection at the message bottom */
+    #superbanner { display: none !important; }
+  }
+  /* Johnny English end */
+
+  /* Menüs unangetastet lassen? */
+  if not keepmenu-enable {
+    /* top menu */
+    /* 2018-02-26 new */
+    atl-menu-item[data-item-name="premiumclub_ha"],
+    atl-menu-item[data-item-name="maildomain_new"],
+    atl-menu-item[data-item-name="demail"],
+    atl-menu-item[data-item-name="allnet"],
+    atl-menu-item[data-item-name="digitaledienste"],
+    atl-menu-item[data-item-name="deezer"],
+    atl-menu-item[data-item-name="clubcenter"],
+    atl-menu-item[data-item-name="zattoo"],
+    /* left menu */
+    #navigation.component.navigation li:nth-of-type(4),  /* E-Mail-Verschlüsselung */
+    #navigation.component.navigation li:nth-of-type(5),  /* Grußkarten */
+    #navigation.component.navigation li:nth-of-type(6),  /* De-Mail */
+    #navigation.component.navigation li:nth-of-type(7),  /* MailCheck */
+    #navigation.component.navigation li:nth-of-type(8),  /* Placeholder */
+    #navigation.component.navigation li:nth-of-type(9),  /* Organisation */
+    #navigation.component.navigation li:nth-of-type(12), /* Dokumenten-Manager */
+    #navigation.component.navigation li:nth-of-type(13), /* Pinnwand */
+    #navigation.component.navigation li:nth-of-type(14), /* SMS/MMS */
+    #navigation.component.navigation li:nth-of-type(15), /* Fax */
+    #navigation.component.navigation li:nth-of-type(16), /* Placeholder */
+    #navigation.component.navigation li:nth-of-type(23), /* Virenschutz */
+    /* writing mails */
+    a[title="E-Mail schreiben"] + .button-group-firstblockbutton_subgroup,
+    .demail-selection {
+      display:none !important;
+    }
+  }
+
+  /* Wetter bei Login anzeigen? */
+  if not weather-show {
+    .header-inner > .weather { display:none !important; }
+  }
+}
+
+@-moz-document regexp("^https?:\\/\\/(bap\\.)?navigator\\.web\\.de\\/remindlogout\\?.*") {
+  /* Sicherheitshinweis bei Login vergessen - WEB.DE Service-Empfehlung */
+  .page-splash .info,
+  .page-splash #text > p:last-of-type,
+  #page-footer li:nth-of-type(2),
+  #page-footer li:nth-of-type(n+4) {
+    display:none !important;
+  }
+}
+
+@-moz-document regexp("^https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
+  /* Logout */
+  .ie7fix,
+  #wrapper2 > *:not(#header),
+  .header-inner .search-wrapper, /* 2017-10-14 */
+  .notification-alert[data-notification-browser], /* browser update top bar 2017-10-14 */
+  #topper {
+    display:none !important;
+  }
+  #container::before { height:100% !important; }
+}
+
+@-moz-document regexp("^https?:\\/\\/web\\.de\\/logoutlounge\\/fm\\?status=login-failed.*") {
+  /* Login failed */
+  .hint::before {
+    content:"Login fehlgeschlagen!" !important;
+    color:#c00 !important;
+    font-weight:bold !important;
+    vertical-align:sub !important;
+    padding-top:30px !important;
+  }
+}
+
+@-moz-document regexp("^https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
+  /***************   D A R K S T Y L E   S T A R T   ****************/
+  if darkstyle-enable {
+    html,
+    #loginsearch,
+    .wrapper-center.first::before,
+    .n7-dialog-bottom, .n7-dialog-input-text, .search-field .search-field-wrapper input[type="search"],
+    #n7-breadcrumb-fade-out,
+    .atl-actions-menu__item.atl-actions-menu__itemmore:hover, .atl-actions-menu__item.atl-actions-menu__itemmore--active, .atl-actions-menu__item.atl-actions-menu__itemmore--active:hover,
+    .button-secondary,
+    body,
+    html.resolution-1024 #navigation ul li,
+    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom) {
+      color:var_schriftfarbe !important;
+      background-color:var_hintergrund1 !important;
+    }
+
+    body,
+    .menubar,
+    #id5c,
+    .button-cta,
+    .form-input-type-text,
+    #id5a *:not(.icon),
+    .button-secondary,
+    .cke_top,
+    .mailobjectpanel-textfield .mailobjectpanel_content,
+    .mailobjectpanel-textfield .mailobjectpanel_label,
+    .objectivation,
+    a.cke_combo_button,
+    ul.button > li,
+    #toolbar, #toolbar *:not(.sprite),
+    .widget-mail-compose-body .form-navi,
+    .wrapper-center.first::before,
+    #content,
+    .fc-header-toolbar,
+    #mail-list .folder-section .container {
+      background-image: none !important;
+      color: var_schriftfarbe !important;
+    }
+    
+    .js-compose-send-button, /* Senden-Buttons */
+    #compose-form-submit-send,
+    #send,
+    #id132 {
+      color:black !important;
+    }
+    
+    .adWithOutsideComponent .wrapper-center.first .wrapper-border::before,
+    body::before {
+      border-bottom-color:var_hintergrund1 !important;
+    }
+    
+    .fc-toolbar > .fc-left h2 { color:var_schriftfarbe !important; } /* Kalender Datum */
+    
+    #mail-list .folder-section .container,
+    #mail-list .folder-section .container * {
+      background-color:var_hintergrund2 !important;
+    }
+    
+    
+    #logo a {
+      background-image:url("https://img.ui-portal.de/homepage/img/webde/logo-webde.png") !important;
+      filter:invert(0%) !important;
+      width:70px !important;
+      height:50px !important;
+    }
+    
+    /* Email schreiben */
+    input[placeholder="Suche"],
+    .compose-header_object input { color:var_schriftfarbe !important; }
+    
+    .simple-icon_attachment-upload,
+    .cke_button_icon,
+    .cke_button_label,
+    .symbol,
+    .widget-mail-table .tool a.icon.mail-star,
+    .widget-mail-mail .mail-star a { filter:invert(87%) !important; } /* Am besten je nach Hintergrundfarbe anpassen! */
+    
+    #cke_1_top.collapsed { padding-bottom:0 !important; }
+    
+    /* Startseite */
+    .mail.active::before { display:none !important; }
+    
+    .inbox-container > li { border-bottom:1px solid white !important; }
+    
+    #home .item:hover a, /* Linke Navi */
+    #innercontent .inbox-container > li:hover, /* Mail-Übersicht */
+    #innercontent .inbox-container > li:hover *, /* ID wird für Spezifität benötigt */
+    
+    #desk .component.mailbox ul.nav li.active,
+    #desk .component.mailbox ul.nav li.active > span { background:var_hintergrund2 !important; }
+    
+    #desk .storage { background:var_hintergrund2 !important;
+                 color:var_schriftfarbe !important; }
+    
+    #desk .component.mailbox ul.bulk-container li:hover,
+    #desk .component.mailbox ul.inbox-container li:hover,
+    #desk .component.mailbox ul.bulk-container li:hover *,
+    #desk .component.mailbox ul.inbox-container li:hover * { background-color:var_hintergrund2 !important; }
+    
+    /* Postfach */
+    #mail-list tr:hover *:not(.mail-star),
+    #navigation li:hover *,
+    #section-0 .is-hovered { background-color:var_hintergrund2 !important; } /* E-Mail schreiben Button */
+    .gui-toggle .gui-toggle-control { background-position: -40px -1080px !important; }
+    .gui-toggle.minimized .gui-toggle-control { background-position: -40px -1040px !important; }
+    .symbol { color:#000 !important; } /* Briefsymbol */
+    /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
+    input.menu-item { color:var_schriftfarbe !important; } /* Dropdown */
+    .drop-down li:hover * { background-color:var_hintergrund2 !important; } /* z.B. bei checkbox Auswahl */
+    #panel-mail-table .inactive * { color:var_hintergrund3 !important; }
+    #panel-mail-table form li:hover:not(.inactive),
+    #panel-mail-table form li:hover:not(.inactive) span {
+    background-color:var_hintergrund3 !important;
+    color:var_hintergrund1 !important; }
+    #panel-mail-display .area span.dropdown,
+    #panel-mail-table .area span.dropdown {  /* Dropdown downarrow */
+      border-style: solid !important;
+      width: 0 !important;
+      height: 0 !important;
+      border-bottom:none !important;
+      border-left: 5px solid var_hintergrund1 !important;
+      border-right: 5px solid var_hintergrund1 !important;
+      border-top: 5px solid var_hintergrund3 !important;
+    }
+    /* Trennstrich bei Mailvorschau rechts */
+    .system-folder-message.js-box-vertical,
+    .mail-display-wrapper.js-box-vertical {
+      border-left:1px solid #C9D6E7 !important;
+    }
+    
+    ::-moz-placeholder { color:var_hintergrund3 !important; }
+    
+    /* Menü hover */
+    #navigation a.active,
+    #navigation a.active > .text,
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active,
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active *,
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active:hover,
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active:hover *,
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover,
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover * {
+      background:var_hintergrund2 !important;
+    }
+  }
+}
+
+@-moz-document url("https://web.de/fm"), regexp("^https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
+  if darkstyle-enable {
+    /*** Login & Logout DS ***/
+    html,
+    body {
+      background:var_hintergrund1 !important;
+    }
+  
+    #logo {
+      background-image:url("https://img.ui-portal.de/homepage/img/webde/logo-webde.png") !important;
+      filter:invert(0%) !important;
+      width:70px !important;
+      height:50px !important;
+    }
+    #logo * { background:none !important; }
+    
+    #header .logout-notification .hint:not(.hint-error),
+    #header .logout-notification .hint:not(.hint-error) * {
+      background:var_hintergrund3 !important;
+    }
+    #header .logout-notification .btn-wrapper.btn-service * {
+      background:green !important; border-color:green !important;
+    }
+  }
+  /***************   D A R K S T Y L E   E N D   ****************/
+}
