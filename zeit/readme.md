@@ -80,6 +80,7 @@ Getestet mit Firefox59 & Chrome65 auf dem Desktop. Ich bin dankbar für [Feedbac
 
 ## Changelog
 
+- 2018-06-08: Anpassungen für Restrukturierung; Hintergrundfarbe änderbar; Artikelbild verstecken fix.
 - 2018-05-02: UserCSS-Version auf GitHub bereitgestellt; Fix für "Meistgelesene"-Sidebar; Fix für Artikel Headerbild; Namespace entfernt; Abstände Subheader auf Artikelseiten verkleinert.
 - 2017-08-20: Added Userscript to description; New setting "minimal header"; Hide .ad-container.
 - 2017-06-30: Changed default settings to my personal needs.
