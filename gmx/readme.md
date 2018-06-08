@@ -11,7 +11,7 @@ Optionaler "darkstyle" und Einblenden bestimmter Features (siehe style settings 
 
 # Installation
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://github.com/stonecrusher/UserCSS-GMX/raw/master/gmx-geputzt.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/gmx-geputzt.user.css)
 
 # Weitere Informationen
 
@@ -39,7 +39,7 @@ Dann
 - **Adblock Plus**:  
   Filtereinstellungen --> Eigene Filter --> Filtergruppe hinzufügen (und z.B. "Blockierregeln GMX" nennen) --> Aktionen --> Filter anzeigen --> Auf der neu erschienenen rechten Seite Rechtsklick und einfügen.
 
-Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs überschneiden sich) findest du [hier](https://github.com/stonecrusher/UserCSS-GMX/blob/master/blockierregeln-gmx-webde).
+Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs überschneiden sich) findest du [hier](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde).
 
 
 ## Weitere Skripte
@@ -60,7 +60,7 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 
 ## Sonstiges
 
-Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/UserCSS-GMX/issues)).  
+Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/issues)).  
 Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 
