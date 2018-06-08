@@ -3,14 +3,14 @@
 @description    Enlarge percentage bars of reviews
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        0.1.1
+@version        0.1.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
 
 // Amazon default is 185px
-@var text review-width 'Width of review bars' 300px
+@var text review-width 'Width of review bars' 250px
 ==/UserStyle== */
 
 @-moz-document regexp("https?:\\/\\/www\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
