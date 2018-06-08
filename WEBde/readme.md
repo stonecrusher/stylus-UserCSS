@@ -10,7 +10,7 @@ Optionaler Darkstyle in den Settings nach der Installation verfügbar.
 
 # Installation
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/UserCSS-WEBde/master/webde-geputzt.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/webde/webde-geputzt.user.css)
 
 
 
@@ -29,7 +29,7 @@ Stylus kann Elemente nur ausblenden. Wenn sie gar nicht erst geladen werden soll
 ||games.web.de^
 ||info.web.de^
 ```
-Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs überschneiden sich) findest du [hier](https://github.com/stonecrusher/UserCSS-GMX/blob/master/blockierregeln-gmx-webde).
+Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs überschneiden sich) findest du [hier](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde).
 
 ### Anleitung
 
@@ -51,7 +51,7 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 
 ## Sonstiges
 
-Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/UserCSS-GMX/issues)).  
+Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/stylus-UserCSS/issues)).  
 Nur kostenloses FreeMail. Die Bezahlvariante "web.de CLUB" ist ungetestet!
 
 # Changelog
