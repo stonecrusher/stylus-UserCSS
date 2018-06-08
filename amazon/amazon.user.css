@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name           Amazon review bar width
+@description    Enlarge percentage bars of reviews
+@namespace      Stonecrusher
+@author         Stonecrusher
+@version        0.1.0
+@license        CC-BY-NC-SA-4.0
+@preprocessor   stylus
+
+@var text review-width 'Width of review bars' 300px
+==/UserStyle== */
+
+@-moz-document regexp("https?:\\/\\/www\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
+  #reviewSummary > .a-fixed-left-grid > .a-fixed-left-grid-inner {
+    padding-left: review-width !important;
+  }
+  #reviewSummary > .a-fixed-left-grid > .a-fixed-left-grid-inner > .a-col-left {
+    width: review-width !important;
+    margin-left: -(review-width) !important;
+  }
+}
