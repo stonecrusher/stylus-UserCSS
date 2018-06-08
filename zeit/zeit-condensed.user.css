@@ -3,7 +3,7 @@
 @description  Komprimiert die Länge der Seite und bietet viele Optionen zum Entfernen von Elementen
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.1.0
+@version      2.1.1
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/zeit
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -27,7 +27,7 @@ https://userstyles.org/styles/133940/
 
 @-moz-document domain("zeit.de") {
   /* Hintergrundfarbe */  
-  .header { background-color: darken(hintergrundfarbe, 20%) !important; }
+  .header { background-color: darken(hintergrundfarbe, 30%) !important; }
   .main { background-color: hintergrundfarbe !important; }
   .parquet-meta { background-color: darken(hintergrundfarbe, 20%) !important; }
 
