@@ -10,7 +10,7 @@ Optionaler Darkstyle in den Settings nach der Installation verfügbar.
 
 # Installation
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/webde/webde-geputzt.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/WEBde/webde-geputzt.user.css)
 
 
 
