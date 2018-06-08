@@ -1,24 +1,37 @@
 /* ==UserStyle==
 @name           Amazon review bar width
 @description    Enlarge percentage bars of reviews
-@namespace      stonecrusher
-@author         stonecrusher
-@version        0.2.0
-@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
-@supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
+@namespace      Stonecrusher
+@author         Stonecrusher
+@version        1.0.0
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
 
 // Amazon default is 185px
-@var text review-width 'Width of review bars' 250px
+@var text review-width 'Width of review bars' 300px
 ==/UserStyle== */
 
 @-moz-document regexp("https?:\\/\\/www\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
+  /*** At the bottom of a product page ***/
   #reviewSummary > .a-fixed-left-grid > .a-fixed-left-grid-inner {
     padding-left: review-width !important;
   }
   #reviewSummary > .a-fixed-left-grid > .a-fixed-left-grid-inner > .a-col-left {
     width: review-width !important;
     margin-left: -(review-width) !important;
+  }
+  
+  /*** Separate review page ***/
+  /* container is 15px wider here by default */
+  #cm_cr-product_info > .a-fixed-left-grid-inner {
+    padding-left: (review-width - 15px) !important;
+  }
+  #cm_cr-product_info > .a-fixed-left-grid-inner > .a-col-left {
+    width: (review-width - 15px) !important;
+    margin-left: -(review-width - 15px) !important;
+  }
+  /* "Write new review" button */
+  #cm_cr-product_info + .ratings-solicitation > .a-fixed-left-grid-inner {
+    padding-left: (review-width - 15px) !important;
   }
 }
