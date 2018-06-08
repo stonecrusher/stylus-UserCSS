@@ -1,18 +1,22 @@
 ! uBlock Origin / Adblock Plus Blockierregeln für bereinigtes web.de und gmx.net
-! 2018-03-28 by stonecrusher
+! 2018-06-08 by stonecrusher
 
 ! WEB.DE
 ||i0.web.de/image/$image
 ||games.web.de^
 ||info.web.de^
-||web.de^*/generic_adition_*
+||web.de^*/generic_adition_
 ||trackbar.navigator.web.de^
+@@||img.ui-portal.de/homepage/img/webde/logo-webde.png|
 
 ! GMX.NET
 ||gmx.net/image/$image
 ||games.gmx.net^
-||gmx.net^*/generic_adition_*
+||gmx.net^*/generic_adition_
 ||trackbar.navigator.gmx.net^
+||img.ui-portal.de/apps/touchdown-templates/cockpit/widgets/tv/
+||img.ui-portal.de/nav-cdn/home-gmx/*/dist/img/cockpit/infotour_
+@@||img.ui-portal.de/homepage/img/gmx/logo.svg|
 
 ! WEB.DE & GMX.NET
 ||wa.ui-portal.de^
@@ -28,6 +32,5 @@
 ||img.ui-portal.de/homepage/img/
 @@||img.ui-portal.de/homepage/img/*/icons/mainnav-*/weather.svg|
 @@||img.ui-portal.de/homepage/img/*/icons/hint-*$image
-@@||img.ui-portal.de/homepage/img/*/logo*$image
 @@||img.ui-portal.de/homepage/img/*/btn/$image
 ||img.ui-portal.de/pos-cdn/*/themebg/background_gradient.png|
