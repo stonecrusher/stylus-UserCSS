@@ -2,15 +2,16 @@
 
 Neuer Style für web.de - realisiert durch CSS, welches durch ein Browseraddon wie [Stylus](https://add0n.com/stylus.html) injiziert wird.
 
-Reduziert web.de auf das Wesentliche, erweitert so die nutzbare Fläche und macht es übersichtlicher.
-Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
+Reduziert web.de auf das Wesentliche, erweitert so die nutzbare Fläche und macht es übersichtlicher.  
+Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.  
 Optionaler Darkstyle in den Settings nach der Installation verfügbar.
 
 
 
 # Installation
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/WEBde/webde-geputzt.user.css)
+1. Installiere die [Browsererweiterung Stylus](https://add0n.com/stylus.html) (Direktlinks auf der Seite oben rechts)
+2. Klicke hier: [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/WEBde/webde-geputzt.user.css)
 
 
 
@@ -18,27 +19,17 @@ Optionaler Darkstyle in den Settings nach der Installation verfügbar.
 
 ## Ladezeiten verkürzen / Ressourcen ganz blockieren
 
-Stylus kann Elemente nur ausblenden. Wenn sie gar nicht erst geladen werden sollen, dann braucht man z.B. das Addon "uBlock Origin". Die Ladezeiten (hauptsächlich für geputzte Login & Logoutseite) können signifikant verkürzt werden, indem man folgende Blockierregeln hinzufügt:
-```
-||img.ui-portal.de/fallback/$image
-||img.ui-portal.de/games/$image
-||i0.web.de/image/$image
-||img.ui-portal.de/cms/webde/produkte/$image
-||img.ui-portal.de/homepage/img/webde/icons/footer/$image
-||js.ui-portal.de/*/webde/*/homepage.js|
-||games.web.de^
-||info.web.de^
-```
-Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs überschneiden sich) findest du [hier](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde).
+Stylus kann Elemente nur ausblenden. Wenn sie gar nicht erst geladen werden sollen, dann braucht man ein Werbeblocker-Addon wie [uBlock Origin](https://github.com/gorhill/uBlock/wiki) (schaue bei "Install from" nach deinem Browser) oder [AdblockPlus](https://adblockplus.org/).  
+Die Ladezeiten (hauptsächlich für geputzte Login & Logoutseite) können signifikant verkürzt werden, indem man die entsprechende Filterliste abonniert.
 
-### Anleitung
+### Anleitung zum abonnieren von Filterlisten
+Füge folgende URL als Filterliste in deinem Adblocker hinzu:  
+https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde
 
-Den Textblock markieren & kopieren.  
-Dann
 - **uBlock Origin**:  
-  Dashboard öffnen (Schieberegler-Icon ganz rechts) --> Meine Filter --> Rechtsklick & Einfügen --> Änderungen anwenden
+  Dashboard öffnen --> Filterlisten --> Importieren --> URL einfügen --> Änderungen anwenden
 - **Adblock Plus**:  
-  Filtereinstellungen --> Eigene Filter --> Filtergruppe hinzufügen (und z.B. "Blockierregeln GMX" nennen) --> Aktionen --> Filter anzeigen --> Auf der neu erschienenen rechten Seite Rechtsklick und einfügen.
+  Optionen --> Erweitert --> Neue Filterliste hinzufügen --> Beliebigen Titel und URL einfügen --> Filterliste hinzufügen
 
 
 ## Weitere Skripte
