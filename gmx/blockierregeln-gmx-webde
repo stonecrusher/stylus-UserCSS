@@ -1,5 +1,14 @@
 ! uBlock Origin / Adblock Plus Blockierregeln für bereinigtes web.de und gmx.net
-! 2018-06-08 by stonecrusher
+!
+! Homepage: https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
+! Title: web.de und gmx Turbo
+! Expires: 14 days
+! Version: 20180608
+! Redirect: https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde
+!
+! Autor: Stonecrusher
+! Lizenz: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
+
 
 ! WEB.DE
 ||i0.web.de/image/$image
@@ -34,3 +43,8 @@
 @@||img.ui-portal.de/homepage/img/*/icons/hint-*$image
 @@||img.ui-portal.de/homepage/img/*/btn/$image
 ||img.ui-portal.de/pos-cdn/*/themebg/background_gradient.png|
+
+
+!!#if ext_ublock
+! ublock-spezifische filter hier rein
+!!#endif
