@@ -11,35 +11,24 @@ Optionaler "darkstyle" und Einblenden bestimmter Features (siehe style settings 
 
 # Installation
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/gmx-geputzt.user.css)
+1. Installiere die [Browsererweiterung Stylus](https://add0n.com/stylus.html) (Direktlinks auf der Seite oben rechts)
+2. Klicke hier: [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/gmx-geputzt.user.css)
 
 # Weitere Informationen
 
 ## Ladezeiten verkürzen / Ressourcen ganz blockieren
 
-Stylus kann Elemente nur ausblenden. Wenn sie gar nicht erst geladen werden sollen, dann braucht man z.B. das Addon "uBlock Origin". Die Ladezeiten (hauptsächlich für geputzte Login & Logoutseite) können signifikant verkürzt werden, indem man folgende Blockierregeln hinzufügt:
+Stylus kann Elemente nur ausblenden. Wenn sie gar nicht erst geladen werden sollen, dann braucht man ein Werbeblocker-Addon wie [uBlock Origin](https://github.com/gorhill/uBlock/wiki) (schaue bei "Install from" nach deinem Browser) oder [AdblockPlus](https://adblockplus.org/).  
+Die Ladezeiten (hauptsächlich für geputzte Login & Logoutseite) können signifikant verkürzt werden, indem man die entsprechende Filterliste abonniert.
 
-```
-||gmx.net/image
-||img.ui-portal.de/fallback/$image
-||img.ui-portal.de/games/$image
-||img.ui-portal.de/cms/gmx/produkte/$image
-||img.ui-portal.de/splash/$image
-||img.ui-portal.de/homepage/img/gmx/bg/$image
-||img.ui-portal.de/homepage/img/gmx/icons/footer/$image
-||js.ui-portal.de/*/gmx/*/homepage.js|
-```
+### Anleitung zum abonnieren von Filterlisten
+Füge folgende URL als Filterliste in deinem Adblocker hinzu:  
+https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde
 
-### Anleitung
-
-Den Textblock markieren & kopieren.  
-Dann
 - **uBlock Origin**:  
-  Dashboard öffnen (Schieberegler-Icon ganz rechts) --> Meine Filter --> Rechtsklick & Einfügen --> Änderungen anwenden
+  Dashboard öffnen --> Filterlisten --> Importieren --> URL einfügen --> Änderungen anwenden
 - **Adblock Plus**:  
-  Filtereinstellungen --> Eigene Filter --> Filtergruppe hinzufügen (und z.B. "Blockierregeln GMX" nennen) --> Aktionen --> Filter anzeigen --> Auf der neu erschienenen rechten Seite Rechtsklick und einfügen.
-
-Eine aktuellere Liste von Blockierregeln für web.de und gmx.net (die URLs überschneiden sich) findest du [hier](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde).
+  Optionen --> Erweitert --> Neue Filterliste hinzufügen --> Beliebigen Titel und URL einfügen --> Filterliste hinzufügen
 
 
 ## Weitere Skripte
@@ -53,8 +42,8 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 ## Known Bugs / "Features"
 
 - Darkstyle ist nicht mit "ungeputzter" Login-Seite kombinierbar.
-- Darkstyle beachtet nicht die gewählte Logoutbuttonfarbe.
-- Kurzes Ausblenden des Logos / des Fehlerkastens beim Logout in Chrome durch GMX-Scripte. Lässt sich nur durch Verwenden oben genannter Blockierregeln mit einem Adblocker beheben.
+- Darkstyle beachtet die gewählte Logoutbuttonfarbe nur eingeschränkt.
+- Kurzes Ausblenden des Logos / des Fehlerkastens beim Logout in Chrome durch GMX-Scripte möglich. Lässt sich nur durch Verwenden oben genannter Blockierregeln beheben.
 - Fehlerfrei nur mit User-Agent für Desktop (Desktopvariante der Webseite).
 
 
@@ -66,7 +55,7 @@ Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 ## Changelog
 
-- 2018-05-30: Optionsreihenfolge; Inaktive: Schriftfarbe abdunkeln statt Hintergrund aufhellen.
+- 2018-05-30: Optionsreihenfolge; Inaktive items: Schriftfarbe abdunkeln statt Hintergrund aufhellen.
 - 2018-05-30: Farbvariablen hinzugefügt und Standardfarben aufgehellt.
 - 2018-05-26: GMX-Struktur hat sich geändert: Linke Navi, Übersichtsbreite, Hover-Farben (Darkstyle), Obere Navi.
 - 2018-05-05: Unteren Rand bei Posteingang entfernt wenn kein Adblocker erkannt wurde.
