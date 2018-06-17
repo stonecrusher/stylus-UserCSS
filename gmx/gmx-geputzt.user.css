@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.0.0
+@version      2.0.1
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -338,7 +338,7 @@ https://userstyles.org/styles/134069/
   /***** GMX Darkstyle *****/
   if darkstyle-enable {
     body,
-    body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon) {
+    body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon):not(.scroll-shadow-top):not(.scroll-shadow-bottom) {
       color:var_schriftfarbe !important;
       background-color:var_hintergrund1 !important;
       background-image:none !important;
