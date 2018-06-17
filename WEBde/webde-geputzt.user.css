@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.0.0
+@version      2.1.0
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -15,7 +15,7 @@
 @var checkbox sms-hide              'SMS Benachrichtigung verstecken' 1
 @var checkbox lowwidth-enable       'Anpassungen für Geräte mit geringer Breite' 0
 @var checkbox sofortantwort-hide    'Sofortantwort verstecken' 0
-@var checkbox keepmenu-enable       'Hauptmenü unangetastet lassen' 0
+@var checkbox keepmenu-enable       'Hauptmenüs unangetastet lassen' 0
 @var color    var_logoutbuttonfarbe 'Logoutbuttonfarbe' #ff812e
 
 @var checkbox darkstyle-enable   'Darkstyle (DS)' 0
@@ -26,11 +26,11 @@
 ==/UserStyle== */
 
 /*
-This Userstyle by stonecrusher can also be found at
+This Userstyle can also be found at
 https://userstyles.org/styles/135368/
 */
 
-/* Based on https://userstyles.org/styles/120173/ by Norwin */
+/* Initial version based on https://userstyles.org/styles/120173/ by Norwin */
 
 @-moz-document regexp("^https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
   /**** Login & Logout ****/
@@ -172,6 +172,7 @@ https://userstyles.org/styles/135368/
   a[title="Millionenklick"], a[title="Lotto"], a[title="Games"], a[title="XXL-Speicher"],
 
   #footer-gap,
+  #desk .grid-container.grid-left > div:last-of-type,
   /*div.content > div.component:first-of-type,/**/
 
   .pos-third-party-dialog__blocker, /* webcent overlay */
@@ -180,36 +181,27 @@ https://userstyles.org/styles/135368/
   .login-security,
 
   #flyoutFeatureTeaser {
-    display:none !important;
+      display:none !important;
   }
 
   /* Fakemail-container von Startseite entfernen */
   .nav-tabs > .tab-mail > .bulk-container { display:none !important; }
   .nav-tabs > .tab-mail > .inbox-container { height:100% !important; }
 
-  /* Höhe der Emailliste auf der Startseite */
-  .component.mailbox .nav-tabs,
-  .component.mailbox .tab-mail {
-    height:auto !important;
-    max-height:100% !important;
-  }
-  /* Breite der Emailliste auf der Startseite */
-  .content > div { width:100% !important; }
-  .content > div > div { width:auto !important; }
-  .inbox-container .date { float:right !important; }
-  .component.mailbox ul.bulk-container li,
-  .component.mailbox ul.inbox-container li,
-  .component.mailbox ul.bulk-container li .subject,
-  .component.mailbox ul.inbox-container li .subject {
-    max-width:initial !important;
-  }
-
-
-  /* Seitenbreite Startseite */
-  /* Delete next line if your device width is less than 700px to get horizontal scrollbar back. */
-  #home { min-width:initial !important; }
-  #desk { width:initial !important; }
-
+  /* Startseite Emailliste Breite */
+  /* Außencontainer */
+  #cockpit { margin:0 0 auto 20px !important; width: initial !important; }
+  #desk { width:calc(100% - 210px) !important; }
+  #desk div.grid-container.grid-left,
+  #desk ul.section.col-2 { width: 100% !important; }
+  /* Einzelne Emails */
+  .component.widget.mail ul.inbox-container li { max-width: initial !important; }
+  .component.widget.mail ul.inbox-container li .sender { width: 200px !important; }
+  .component.widget.mail ul.inbox-container li .subject { width: calc(100% - 340px) !important; }
+  /* Startseite Emailliste Höhe */
+  .component.widget.mail > section,
+  .component.widget.mail .nav-tabs { height: initial !important; }
+  .component.widget.mail .tab-mail { height: auto !important; }
 
   /**** Adressbuch ****/
   #content-sky { display:none!important; }
@@ -288,18 +280,18 @@ https://userstyles.org/styles/135368/
     atl-menu-item[data-item-name="clubcenter"],
     atl-menu-item[data-item-name="zattoo"],
     /* left menu */
-    #navigation.component.navigation li:nth-of-type(4),  /* E-Mail-Verschlüsselung */
-    #navigation.component.navigation li:nth-of-type(5),  /* Grußkarten */
-    #navigation.component.navigation li:nth-of-type(6),  /* De-Mail */
-    #navigation.component.navigation li:nth-of-type(7),  /* MailCheck */
-    #navigation.component.navigation li:nth-of-type(8),  /* Placeholder */
-    #navigation.component.navigation li:nth-of-type(9),  /* Organisation */
-    #navigation.component.navigation li:nth-of-type(12), /* Dokumenten-Manager */
-    #navigation.component.navigation li:nth-of-type(13), /* Pinnwand */
-    #navigation.component.navigation li:nth-of-type(14), /* SMS/MMS */
-    #navigation.component.navigation li:nth-of-type(15), /* Fax */
-    #navigation.component.navigation li:nth-of-type(16), /* Placeholder */
-    #navigation.component.navigation li:nth-of-type(23), /* Virenschutz */
+    #navigation.component li:nth-of-type(4),  /* E-Mail-Verschlüsselung */
+    #navigation.component li:nth-of-type(5),  /* Grußkarten */
+    #navigation.component li:nth-of-type(6),  /* De-Mail */
+    #navigation.component li:nth-of-type(7),  /* MailCheck */
+    #navigation.component li:nth-of-type(8),  /* Placeholder */
+    #navigation.component li:nth-of-type(9),  /* Organisation */
+    #navigation.component li:nth-of-type(12), /* Dokumenten-Manager */
+    #navigation.component li:nth-of-type(13), /* Pinnwand */
+    #navigation.component li:nth-of-type(14), /* SMS/MMS */
+    #navigation.component li:nth-of-type(15), /* Fax */
+    #navigation.component li:nth-of-type(16), /* Placeholder */
+    #navigation.component li:nth-of-type(23), /* Virenschutz */
     /* writing mails */
     a[title="E-Mail schreiben"] + .button-group-firstblockbutton_subgroup,
     .demail-selection {
