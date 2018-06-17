@@ -350,7 +350,7 @@ https://userstyles.org/styles/135368/
     .button-secondary,
     body,
     html.resolution-1024 #navigation ul li,
-    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label) {
+    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label):not(.active) {
       color:var_schriftfarbe !important;
       background-color:var_hintergrund1 !important;
     }
@@ -485,6 +485,24 @@ https://userstyles.org/styles/135368/
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover,
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover * {
       background:var_hintergrund2 !important;
+    }
+    
+    /* Optionen */
+    /* Textboxen: Signatur, Automatische Antwort */
+    #html-tag.settings .panel-setting textarea { background: var_hintergrund2 !important; }
+    /* Whitelist Textbox */
+    #html-tag.settings .panel-setting input,
+    #html-tag.settings .panel-setting select { background: var_hintergrund2 !important; color: var_schriftfarbe !important; }
+    /* Einstellungsnavi */
+    #html-tag .menu-sub .menu-item.active,
+    #html-tag .menu-sub .menu-item.active:hover,
+    #html-tag .menu-sub li a.active,
+    #html-tag .menu-sub li a.active:hover,
+    #html-tag .menu-sub .menu-item.active > span,
+    #html-tag .menu-sub .menu-item.active:hover > span,
+    #html-tag .menu-sub li a.active > span,
+    #html-tag .menu-sub li a.active:hover > span {
+      background-color: var_hintergrund2 !important;
     }
   }
 }
