@@ -55,6 +55,7 @@ Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 ## Changelog
 
+- 2018-06-17: Scroll shadow fix.
 - 2018-05-30: Optionsreihenfolge; Inaktive items: Schriftfarbe abdunkeln statt Hintergrund aufhellen.
 - 2018-05-30: Farbvariablen hinzugefügt und Standardfarben aufgehellt.
 - 2018-05-26: GMX-Struktur hat sich geändert: Linke Navi, Übersichtsbreite, Hover-Farben (Darkstyle), Obere Navi.
