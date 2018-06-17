@@ -2,8 +2,8 @@
 !
 ! Homepage: https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 ! Title: web.de und gmx Turbo
-! Expires: 14 days
-! Version: 20180608
+! Expires: 7 days
+! Version: 20180617
 ! Redirect: https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde
 !
 ! Autor: Stonecrusher
@@ -17,7 +17,6 @@
 ||web.de^*/generic_adition_
 ||trackbar.navigator.web.de^
 @@||img.ui-portal.de/homepage/img/webde/logo-webde.png|
-@@||img.ui-portal.de/homepage/img/webde/icons/mainnav/weather.svg|
 
 ! GMX.NET
 ||gmx.net/image/$image
@@ -40,10 +39,10 @@
 ||img.ui-portal.de/games/
 ||img.ui-portal.de/*/promotion/
 ||img.ui-portal.de/homepage/img/
-@@||img.ui-portal.de/homepage/img/*/icons/mainnav-*/weather.svg|
-@@||img.ui-portal.de/homepage/img/*/icons/hint-*$image
-@@||img.ui-portal.de/homepage/img/*/btn/$image
 ||img.ui-portal.de/pos-cdn/*/themebg/background_gradient.png|
+@@||img.ui-portal.de/homepage/img/*/icons/mainnav*/weather.svg|
+@@||img.ui-portal.de/homepage/img/*/icons/hint*$image
+@@||img.ui-portal.de/homepage/img/*/btn/$image
 
 
 !!#if ext_ublock
