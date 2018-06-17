@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.1.0
+@version      2.2.0
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -270,15 +270,15 @@ https://userstyles.org/styles/135368/
   /* Menüs unangetastet lassen? */
   if not keepmenu-enable {
     /* top menu */
-    /* 2018-02-26 new */
     atl-menu-item[data-item-name="premiumclub_ha"],
     atl-menu-item[data-item-name="maildomain_new"],
-    atl-menu-item[data-item-name="demail"],
     atl-menu-item[data-item-name="allnet"],
     atl-menu-item[data-item-name="digitaledienste"],
     atl-menu-item[data-item-name="deezer"],
     atl-menu-item[data-item-name="clubcenter"],
     atl-menu-item[data-item-name="zattoo"],
+    /* top menu opened */
+    .atl-actions-menu__hidden--open > div:nth-of-type(3), /* Produkte */
     /* left menu */
     #navigation.component li:nth-of-type(4),  /* E-Mail-Verschlüsselung */
     #navigation.component li:nth-of-type(5),  /* Grußkarten */
@@ -291,7 +291,7 @@ https://userstyles.org/styles/135368/
     #navigation.component li:nth-of-type(14), /* SMS/MMS */
     #navigation.component li:nth-of-type(15), /* Fax */
     #navigation.component li:nth-of-type(16), /* Placeholder */
-    #navigation.component li:nth-of-type(23), /* Virenschutz */
+    #navigation.component li:nth-of-type(22), /* Virenschutz */
     /* writing mails */
     a[title="E-Mail schreiben"] + .button-group-firstblockbutton_subgroup,
     .demail-selection {
@@ -350,7 +350,7 @@ https://userstyles.org/styles/135368/
     .button-secondary,
     body,
     html.resolution-1024 #navigation ul li,
-    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom) {
+    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label) {
       color:var_schriftfarbe !important;
       background-color:var_hintergrund1 !important;
     }
@@ -377,67 +377,71 @@ https://userstyles.org/styles/135368/
       background-image: none !important;
       color: var_schriftfarbe !important;
     }
-    
+
+    .component.widget.mail .friends .number,
+    .component.widget.mail .unknown .number{ color: var_schriftfarbe !important; }
+
     .js-compose-send-button, /* Senden-Buttons */
     #compose-form-submit-send,
     #send,
     #id132 {
       color:black !important;
     }
-    
+
     .adWithOutsideComponent .wrapper-center.first .wrapper-border::before,
     body::before {
       border-bottom-color:var_hintergrund1 !important;
     }
-    
+
     .fc-toolbar > .fc-left h2 { color:var_schriftfarbe !important; } /* Kalender Datum */
-    
+
     #mail-list .folder-section .container,
     #mail-list .folder-section .container * {
       background-color:var_hintergrund2 !important;
     }
-    
-    
+
+
     #logo a {
       background-image:url("https://img.ui-portal.de/homepage/img/webde/logo-webde.png") !important;
       filter:invert(0%) !important;
       width:70px !important;
       height:50px !important;
     }
-    
+
     /* Email schreiben */
     input[placeholder="Suche"],
     .compose-header_object input { color:var_schriftfarbe !important; }
-    
+
     .simple-icon_attachment-upload,
     .cke_button_icon,
     .cke_button_label,
     .symbol,
     .widget-mail-table .tool a.icon.mail-star,
     .widget-mail-mail .mail-star a { filter:invert(87%) !important; } /* Am besten je nach Hintergrundfarbe anpassen! */
-    
+
     #cke_1_top.collapsed { padding-bottom:0 !important; }
-    
+
     /* Startseite */
     .mail.active::before { display:none !important; }
-    
+
     .inbox-container > li { border-bottom:1px solid white !important; }
-    
+
+
     #home .item:hover a, /* Linke Navi */
-    #innercontent .inbox-container > li:hover, /* Mail-Übersicht */
-    #innercontent .inbox-container > li:hover *, /* ID wird für Spezifität benötigt */
-    
+    #section-0 .inbox-container > li:hover, /* Mail-Übersicht */
+    #section-0 .inbox-container > li:hover *, /* ID wird für Spezifität benötigt */
+
     #desk .component.mailbox ul.nav li.active,
     #desk .component.mailbox ul.nav li.active > span { background:var_hintergrund2 !important; }
-    
+
     #desk .storage { background:var_hintergrund2 !important;
                  color:var_schriftfarbe !important; }
-    
+
     #desk .component.mailbox ul.bulk-container li:hover,
     #desk .component.mailbox ul.inbox-container li:hover,
     #desk .component.mailbox ul.bulk-container li:hover *,
     #desk .component.mailbox ul.inbox-container li:hover * { background-color:var_hintergrund2 !important; }
-    
+
     /* Postfach */
     #mail-list tr:hover *:not(.mail-star),
     #navigation li:hover *,
@@ -468,9 +472,9 @@ https://userstyles.org/styles/135368/
     .mail-display-wrapper.js-box-vertical {
       border-left:1px solid #C9D6E7 !important;
     }
-    
+
     ::-moz-placeholder { color:var_hintergrund3 !important; }
-    
+
     /* Menü hover */
     #navigation a.active,
     #navigation a.active > .text,
@@ -492,7 +496,7 @@ https://userstyles.org/styles/135368/
     body {
       background:var_hintergrund1 !important;
     }
-  
+
     #logo {
       background-image:url("https://img.ui-portal.de/homepage/img/webde/logo-webde.png") !important;
       filter:invert(0%) !important;
@@ -500,7 +504,7 @@ https://userstyles.org/styles/135368/
       height:50px !important;
     }
     #logo * { background:none !important; }
-    
+
     #header .logout-notification .hint:not(.hint-error),
     #header .logout-notification .hint:not(.hint-error) * {
       background:var_hintergrund3 !important;
