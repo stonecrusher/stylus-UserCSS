@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.0.1
+@version      2.0.2
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -23,10 +23,10 @@
 @var checkbox grusskarten-hide   'Grußkarten verstecken' 1
 @var color    logoutbutton-color 'Farbe des Logout-Buttons' #FF8800
 
-@var checkbox darkstyle-enable   'Darkstyle' 1
-@var color    var_schriftfarbe   'Schriftfarbe'      #eee
-@var color    var_hintergrund1   'Hintergrundfarbe'  #222
-@var color    var_hintergrund2   'Hintergrund hover' #444
+@var checkbox darkstyle-enable   'Darkstyle (DS)' 1
+@var color    var_schriftfarbe   'DS Schriftfarbe'      #eee
+@var color    var_hintergrund1   'DS Hintergrundfarbe'  #222
+@var color    var_hintergrund2   'DS Hintergrund hover' #444
 ==/UserStyle== */
 
 /*
