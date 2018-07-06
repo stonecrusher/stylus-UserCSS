@@ -3,7 +3,7 @@
 @description    Unicorn cursor, rainbow glowing links and Comic Sans MS everywhere!
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.0.0
+@version        1.0.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/aprilfools
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -12,12 +12,7 @@
 @-moz-document regexp("https?:\\/\\/.*"){
 body,
 body div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1, h2, h3, h4, h5, h6,
 a {
     font-family: "Comic Sans MS" !important;
 }
@@ -25,7 +20,13 @@ body {
     background-color: hotpink !important;
     background-image: none !important;
 }
-body div {
+body div,
+header,
+footer,
+section,
+article,
+h1, h2, h3, h4, h5, h6,
+button {
     background-color: hotpink !important;
 }
 
