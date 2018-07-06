@@ -9,7 +9,7 @@ Unicorn cursor, rainbow glowing links and Comic Sans MS everywhere!
 
 # Screenshot
 
-![april fools style screenshot](https://user-images.githubusercontent.com/1388389/42380932-ceb3c7e8-812f-11e8-8196-40a4f880643c.png)
+![april fools style screenshot](https://user-images.githubusercontent.com/1388389/42381327-fd0df6bc-8130-11e8-9351-06b0904d4418.png)
 
 # Changelog
 
