@@ -1,0 +1,193 @@
+/* ==UserStyle==
+@name           Anno 1404 Rechner
+@description    Darker colors, more compact layout, gets rid of the php error messages.
+@namespace      Stonecrusher
+@author         Stonecrusher
+@version        0.1.0
+@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/anno1404rechner
+@supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
+@license        CC-BY-NC-SA-4.0
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document domain("anno1404-rechner.de") {
+    /* Fehlermeldungen entfernen */
+    body,
+    #result,
+    #PKFrame {
+        visibility: hidden !important; }
+
+    body > *,
+    #result > *,
+    #PKFrame > * {
+        visibility: visible !important; }
+
+    body > b,
+    body > br,
+    #result > b,
+    #result > br,
+    #PKFrame > b,
+    #PKFrame > br {
+        display: none !important; }
+
+    /* Farben */
+    *:not(.red) {
+        color: #000 !important; }
+
+    #importFrame > label {
+        color: #d0baa3 !important; }
+
+    .aktivlink > a {
+        color: #d0baa3 !important; }
+
+    html,
+    #top {
+        background-color: #777 !important; }
+
+    .pkDisplayC {
+        background-color: darkgrey !important;
+        border: none !important; }
+
+    #tooltip {
+        background-color: lightgrey !important; }
+
+    /* header Formatierung */
+    .title {
+        display: none !important; }
+
+    .titlepic {
+        margin: -10px 0 10px 0 !important; }
+
+    .nav .red {
+        display: none !important; }
+
+
+    /*** Rechner ***/
+    #inputFrame .bewohner {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-end !important; }
+
+    #inputFrame .bewohner img {
+        margin-right: 5px !important; }
+
+    #inputFrame .bewohner ol {
+        display: flex !important;
+        flex-direction: column !important;
+        padding:0 0 0 15px !important; }
+
+    #inputFrame .bewohner ul > li {
+        display: inline-grid !important; }
+
+    #inputFrame .bewohner > ol > li {
+        margin: 2px 0 !important; }
+
+    #inputFrame .bewohner > ol > li > ul {
+        display: flex !important;
+        align-items: center !important; }
+
+    .bewohnerInput,
+    .hausInput {
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important; }
+
+    #inputFrame .items ol {
+        padding: 3px !important;
+        border: none !important; }
+
+    #inputFrame > .cmd { margin:0 0 10px !important; }
+
+    #result > .bordertable {
+        border-spacing: 0 !important; }
+
+    #result > .bordertable th,
+    #result > .bordertable td {
+        border: none !important;
+        padding: 3px !important; }
+
+    #result > .bordertable td:nth-of-type(14) {
+        padding-right: 15px !important; }
+
+    #inputFrame .items li:first-of-type {
+        background-color: white !important; }
+
+
+    /*** Produktionsketten ***/
+    #produktionsketten,
+    #produktionsketten + h2 {
+        display: none !important; }
+
+    /* Kategoriename platzsparend im Fluss */
+    h1 + .pkDisplayC {
+        margin-left: 240px !important; }
+
+    .pkDisplayCH1 {
+        margin-bottom: -65px !important; }
+
+    /* Unterteilungsstrich */
+    .pkDisplayCH1 {
+        border: 0 !important;
+        border-top: 3px solid #555 !important; }
+
+    /* Produktionsketten Kästen kleiner */
+    .pkDisplayC {
+        padding: 4px 10px !important; }
+
+    .pkDisplayC > p {
+        margin: 0 !important; }
+
+    /* Produktionsketten Kästen innen ausrichten */
+    .pkDisplayC {
+        display: inline-flex !important;
+        justify-content: space-around !important;
+        flex-wrap: wrap !important; }
+
+    .pkDisplayC > span {
+        align-self: center !important; }
+
+    .pkDisplayC > p {
+        flex-basis: 100% !important; }
+
+
+    /*.pkDisplayC > p { page-break-after:always !important;
+                        break-after:always !important; }/**/
+
+    /* Kastentitel */
+    .pkDisplayC > p {
+        letter-spacing: 0.1em !important;
+        text-decoration: underline !important; }
+
+    /* Operatoren größer */
+    .pkDisplayC > span {
+        font-size: 1.5em !important;
+        font-weight: bold !important; }
+
+    /* Faktoren größer */
+    .pkDisplayC > ol > li:first-of-type {
+        font-weight: bold !important;
+        margin-bottom: 3px !important; }
+
+
+    /*** Versorgung ***/
+    .bordertable {
+        border-spacing: 0 !important; }
+
+    .bordertable th,
+    .bordertable td {
+        border: none !important;
+        padding: 3px !important;
+        border-right: 1px solid black !important; }
+}
+
+@-moz-document url-prefix("http://www.anno1404-rechner.de/produktionsketten.php"),
+               url-prefix("https://www.anno1404-rechner.de/produktionsketten.php") {
+    /* Produktionsketten Breite */
+    .wrapper {
+        width: 90% !important; }
+}
+
+@-moz-document url-prefix("http://www.anno1404-rechner.de/index.php"),
+               url-prefix("https://www.anno1404-rechner.de/index.php") {
+    h2 { margin:0 0 -25px !important; }
+}
