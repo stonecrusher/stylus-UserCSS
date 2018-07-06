@@ -38,6 +38,6 @@ After
 
 - URL match jetzt als RegExp für Versionen mit/ohne `https` und mit/ohne `www.`
 - Die PHP Fehlermeldungen wurden einige Zeit, nachdem ich den Seitenbetreiber darauf angesprochen habe, behoben (siehe neue Screenshots).  
-Den Code lasse ich für evtl. erneute Fehler drin.
+  Den Code lasse ich für evtl. erneute Fehler drin.
 
 Ursprünglicher Style unter https://userstyles.org/styles/142038/
