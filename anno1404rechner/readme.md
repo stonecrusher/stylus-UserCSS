@@ -1,3 +1,5 @@
+Update: Error messages have been fixed by the page owner after I emailed him. I'm leaving the code in the style, in case errors come back.
+
 Before
 ![1](https://user-images.githubusercontent.com/1388389/42376555-d3b56680-811f-11e8-9816-8201bc142b1b.png)
 After
