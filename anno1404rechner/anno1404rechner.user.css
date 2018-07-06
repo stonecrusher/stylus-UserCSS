@@ -3,7 +3,7 @@
 @description    Darker colors, more compact layout, gets rid of the php error messages.
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.0.0
+@version        1.0.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/anno1404rechner
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -185,12 +185,12 @@
         border-right: 1px solid black !important; }
 }
 
-@-moz-document regexp("https?:\/\/(www\.)?anno1404-rechner\.de\/produktionsketten\.php.*"){
+@-moz-document regexp("https?:\\/\\/(www\\.)?anno1404-rechner\\.de\\/produktionsketten\\.php.*"){
     /* Produktionsketten Breite */
     .wrapper {
         width: var_PCwidth !important; }
 }
 
-@-moz-document regexp("https?:\/\/(www\.)?anno1404-rechner\.de\/index\.php.*"){
+@-moz-document regexp("https?:\\/\\/(www\\.)?anno1404-rechner\\.de\\/index\\.php.*"){
     h2 { margin:0 0 -25px !important; }
 }
