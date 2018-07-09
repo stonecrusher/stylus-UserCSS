@@ -1,0 +1,59 @@
+/* ==UserStyle==
+@name           CCleaner Update sanitized
+@description    Gets rid of unnecessary upgrade offers and the necessity to scroll down on update page.
+@namespace      Stonecrusher
+@author         Stonecrusher
+@version        1.0.0
+@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ccleaner
+@supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
+@license        CC-BY-NC-SA-4.0
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document regexp("https?:\\/\\/www\\.(piriform|ccleaner)\\.com\\/(.*\\/)?ccleaner\\/update.*") {
+    .product-update > div[data-vwo-target="product-update__notice"],
+    .product-update__features,
+    .productPromoBottomInner > h5,
+    .productPromoBottomInner > h6,
+    #GTM__buy--CCP-footer {
+        display: none !important;
+    }
+    /* Remake update button */
+    #GTM__link--CC-decline-footer {
+        font-size: 0 !important;
+    }
+    #GTM__link--CC-decline-footer::after {
+        content: "No one wants to upgrade, \A just gimme the UPDATE for free version!";
+        font-size: medium !important;
+        white-space: pre !important;
+    }
+    .btn--muted {
+        background-image: linear-gradient(to top,#75a01c 0%,#acce4e 50px) !important;
+    }
+}
+@-moz-document regexp("https?:\\/\\/www\\.(piriform|ccleaner)\\.com\\/(.*\\/)?ccleaner\\/download.*") {
+    tbody,
+    thead,
+    h1,
+    .feature-column,
+    .footer-spacer-cell,
+    .col1.text-semibold.fs-13,
+    .col2,
+    .col3,
+    .trustpilot-widget--slim-ccleaner-download,
+    .text-center.mb--0,
+    .text-center.fs-16.text-semibold,
+    .page-foot .grid,
+    .page-body > .band:not(:nth-child(1)),
+    .social-followers-proto {
+        display: none !important;
+    }
+    .price-table tfoot .btn {
+        margin: 10px !important;
+    }
+}
+@-moz-document regexp("https?:\\/\\/www\\.(piriform|ccleaner)\\.com\\/(.*\\/)?ccleaner\\/download\\?mac.*") {
+    .col2 {
+        display: block !important;
+    }
+}
