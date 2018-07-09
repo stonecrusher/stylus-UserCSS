@@ -12,4 +12,5 @@ Gets rid of unnecessary upgrade offers and the necessity to scroll down on updat
 # Screenshots
 
 ![a](https://user-images.githubusercontent.com/1388389/42456765-013d6de6-8396-11e8-9e9f-caf9f2f90aa9.png)
+
 ![b](https://user-images.githubusercontent.com/1388389/42456766-015d4d64-8396-11e8-96db-38cd02240862.png)
