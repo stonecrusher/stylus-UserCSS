@@ -47,6 +47,7 @@ Nur kostenloses FreeMail. Die Bezahlvariante "web.de CLUB" ist ungetestet!
 
 # Changelog
 
+- 2018-08-05: Cookie Hinweis entfernt (hat ohne uBO Regeln Login blockiert)
 - 2018-05-30: Standardfarben, Optionenreihenfolge und Label geändert #1; Login & Logout Hintergrund fix.
 - 2018-05-26: Virenschutz im Menü hat Platz gewechselt.
 - 2018-05-02: Update Additional Info; Jetzt auch als UserCSS auf GitHub verfügbar.
