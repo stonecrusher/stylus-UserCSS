@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.1
+@version      2.2.2
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -43,7 +43,8 @@ https://userstyles.org/styles/135368/
   .notification-alert[data-notification-browser], /* browser update top bar 2017-10-14 */
   atl-feedback, /* 2018-02-26 */
   .promo,
-  #rightnav {
+  #rightnav,
+  section.cookie-lasche-hp /* Cookie Hinweis */ {
     display:none !important;
   }
   #header { background:transparent !important; }
