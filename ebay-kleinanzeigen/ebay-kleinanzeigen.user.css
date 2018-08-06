@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        2.0.1
+@version        2.0.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -79,7 +79,8 @@
  	.mainnav-sub,
  	.dropdown-list,
  	.itemtile, .itemtile-condensed, .itemtile-fullpic,
- 	.actionlist-body {
+ 	.actionlist-body,
+ 	.mfp-popup, .mfp-popup-medium, .mfp-popup-small, .mfp-popup-large, .mfp-popup-huge {
 		background-color: var_bg2 !important;
 	}
 	.ad-listitem.is-highlight {
