@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.6
+@version      2.2.7
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -438,8 +438,8 @@ https://userstyles.org/styles/135368/
     #desk .component.mailbox ul.nav li.active > span { background:var_hintergrund2 !important; }
 
     #desk .storage {
-		background:var_hintergrund2 !important;
-        color:var_schriftfarbe !important; }
+	  background:var_hintergrund2 !important;
+	  color:var_schriftfarbe !important; }
 
     #desk .component.mailbox ul.bulk-container li:hover,
     #desk .component.mailbox ul.inbox-container li:hover,
@@ -461,8 +461,8 @@ https://userstyles.org/styles/135368/
     #panel-mail-table .inactive * { color:var_hintergrund3 !important; }
     #panel-mail-table form li:hover:not(.inactive),
     #panel-mail-table form li:hover:not(.inactive) span {
-    	background-color: var_hintergrund3 !important;
-    	color: var_hintergrund1 !important;	}
+      background-color: var_hintergrund3 !important;
+      color: var_hintergrund1 !important; }
     #panel-mail-display .area span.dropdown,
     #panel-mail-table .area span.dropdown {  /* Dropdown downarrow */
       border-style: solid !important;
