@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.5
+@version      2.2.6
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -553,7 +553,8 @@ https://userstyles.org/styles/135368/
     #logo * { background:none !important; }
 
     #header .logout-notification .hint:not(.hint-error),
-    #header .logout-notification .hint:not(.hint-error) * {
+    #header .logout-notification .hint:not(.hint-error) *,
+    .hint-error[data-hint="timeout"] {
       background:var_hintergrund3 !important;
     }
     #header .logout-notification .btn-wrapper.btn-service * {
