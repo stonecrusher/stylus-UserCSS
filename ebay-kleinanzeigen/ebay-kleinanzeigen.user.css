@@ -1,0 +1,166 @@
+/* ==UserStyle==
+@name           Kleinanzeigen Dark
+@description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
+@namespace      Stonecrusher
+@author         Stonecrusher
+@version        1.0.0
+@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
+@supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
+@license        CC-BY-NC-SA-4.0
+@preprocessor   stylus
+
+@var checkbox header-condense 'Header komprimieren'       1
+@var checkbox ads-remove      'Werbung entfernen'         1
+@var checkbox upsell-remove   'Upsell-Angebote entfernen' 1
+@var color var_schriftfarbe1 'Schriftfarbe'       #ccc
+@var color var_schriftfarbe2 'Schriftfarbe 2'     #0a0
+@var color var_schriftfarbe3 'Schriftfarbe 3'     #999
+@var color var_linkfarbe1    'Linkfarbe'          #70b7f5
+@var color var_bg1           'Hintergrundfarbe'   #444
+@var color var_bg2           'Hintergrundfarbe 2' #555
+==/UserStyle== */
+
+
+@-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
+	body,
+ 	#site-header,
+ 	.mainnav-item:hover .mainnav-item-inner,
+	.on .mainnav-item-inner,
+	.mainnav-item.on, .mainnav-item:hover {
+		color: var_schriftfarbe1 !important;
+		background-color: var_bg1 !important;
+	}
+	h1, h2, h3, h4, h5, h6,
+	.flexlist--header,
+	.aditem-addon, .savedsearchitem-addon,
+ 	#viewad-cntr-num,
+ 	.itemtile-body,
+ 	.dropdown-list > li,
+ 	.savedsearchitem, .followuseritem {
+		color: var_schriftfarbe1 !important;
+	}
+	.articleheader--price,
+ 	.button-secondary, .button-inverted,
+ 	.aditem-details > strong {
+		color: var_schriftfarbe2 !important;
+	}
+	.text-light,
+ 	.textcounter,
+ 	.headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .boxheader > h1, .boxheader-nomarginbottom > h1, .boxheader > h2, .boxheader-nomarginbottom > h2, .boxheader > h3, .boxheader-nomarginbottom > h3, .boxheader > h4, .boxheader-nomarginbottom > h4, .boxheader > h5, .boxheader-nomarginbottom > h5, .boxheader > h6, .boxheader-nomarginbottom > h6, .icon-headline, .icon-headline-small {
+		color: var_schriftfarbe3 !important;
+	}
+	a {
+		color: var_linkfarbe1 !important;
+	}
+	/* "Neueste zuerst" */
+	.textdropdown {
+		color: var_schriftfarbe3 !important;
+	}
+	/* Navi: Anzeige aufgeben, Meins */
+	.mainnav-item-inner {
+		color: var_schriftfarbe1 !important;
+	}
+ 	.bubblebox, .bubblebox h1 {
+		color: var_bg2 !important;
+	}
+	input,
+	.browsebox-selected-itembox {
+		color: var_bg1 !important;
+	}
+	.contentbox, .contentbox-unpadded, .contentbox-info, .contentbox-landingpage, .info-contentbox,
+ 	.mainnav-sub,
+ 	.dropdown-list,
+ 	.itemtile, .itemtile-condensed, .itemtile-fullpic,
+ 	.actionlist-body {
+		background-color: var_bg2 !important;
+	}
+	.ad-listitem.is-highlight {
+		background-color: lighten(var_bg2, 10%) !important;
+	}
+	.dropdown-list > li.is-active,
+	.dropdown-list > li:hover,
+	.attributelist-striped .attributelist--key:nth-of-type(2n+1),
+    .attributelist-striped .attributelist--value:nth-of-type(2n+1),
+ 	.manageaditem > footer, .savedsearchitem-footer, .followuseritem-footer, .aditem-footer,
+ 	.sectionbox {
+		background-color: var_bg1 !important;
+	}
+	.a-green.bar {
+		background-color: darken(var_schriftfarbe2,30%) !important;
+	}
+	.imagebox,
+	.imagebox-small,
+	.imagebox-storelogo-mini,
+	.imagebox-thumbnail,
+	.imagebox-storelogo {
+		background-color: darken(var_bg2,20%) !important;
+		border-color: darken(var_bg2,20%) !important;
+		border-radius: 5px !important;
+	}
+	.button-secondary,
+	.button-inverted {
+		background-color: var_bg1 !important;
+	  	&:hover {
+			background-color: darken(var_bg1,20%) !important;
+		}
+	}
+	.button-toggle,
+	.is-toggled {
+		background-color: darken(var_schriftfarbe3,20%) !important;
+		&:hover {
+			background-color: var_schriftfarbe3 !important;
+		}
+	}
+	/* Meine Nachrichten */
+	.listitem-container,
+ 	.conversationitem,
+ 	.msgbox-to {
+		background-color: var_bg2 !important;
+	}
+	.conversationitem:hover, .conversationitem.is-active,
+ 	.msgbox-from {
+		background-color: var_bg1 !important;
+	}
+	#msgbox-conversation-overview > ul > li:last-of-type {
+		border-bottom: 1px solid #cbcbcb !important;
+	}
+	.msgbox-to {
+		color: var_schriftfarbe1 !important;
+	}
+
+	if header-condense {
+		/* Header komprimieren */
+		.has-above-header-info #site-header {
+			border-top: 0 !important;
+			margin-bottom: 0 !important;
+		}
+		#site-header-top {
+			padding-top: 5px !important;
+			margin-bottom: 2px !important;
+		}
+		#site-header {
+			margin-bottom: 10px !important;
+		}
+		#site-signin.is-centered-button {
+			top: 18px !important;
+		}
+	}
+	if ads-remove {
+		/* Werbung */
+		#vip-atf-billboard, //Werbezeile head
+ 		#store-gallery,     //Einschub Unternehmensseiten
+		#home-gallery       //Galerie
+		{
+			display: none !important;
+		}
+		@css {
+			advertiser\:remarketing { display: none !important; }
+		}
+	}
+	if upsell-remove {
+		#postad-features,
+		.manageaditem-featuretable {
+			display: none !important;
+		}
+	}
+}
