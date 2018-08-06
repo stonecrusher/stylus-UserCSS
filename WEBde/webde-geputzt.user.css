@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.3
+@version      2.2.4
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -353,7 +353,7 @@ https://userstyles.org/styles/135368/
     .button-secondary,
     body,
     html.resolution-1024 #navigation ul li,
-    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label):not(.active) {
+    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label):not(.active):not(select):not(hr):not(.dialog-container) {
       color:var_schriftfarbe !important;
       background-color:var_hintergrund1 !important;
     }
@@ -450,8 +450,10 @@ https://userstyles.org/styles/135368/
     #mail-list tr:hover *:not(.mail-star),
     #navigation li:hover *,
     #section-0 .is-hovered { background-color:var_hintergrund2 !important; } /* E-Mail schreiben Button */
-    .gui-toggle .gui-toggle-control { background-position: -283px -32px !important; }
-    .gui-toggle.minimized .gui-toggle-control { background-position: -283px -48px !important; }
+    .gui-toggle > .panel-head .gui-toggle-control { background-position: -283px -32px !important; }
+    .gui-toggle.minimized > .panel-head .gui-toggle-control { background-position: -283px -48px !important; }
+	.gui-toggle > .menu-head .gui-toggle-control { background-position: -281px -32px !important; }
+    .gui-toggle.minimized > .menu-head .gui-toggle-control { background-position: -281px -48px !important; }
     .symbol { color:#000 !important; } /* Briefsymbol */
     /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
     input.menu-item { color:var_schriftfarbe !important; } /* Dropdown */
@@ -508,6 +510,8 @@ https://userstyles.org/styles/135368/
     #html-tag .menu-sub li a.active:hover > span {
       background-color: var_hintergrund2 !important;
     }
+	/* Abbrechen-Button */
+	.button-transparent { color:var_hintergrund3 !important; }
   }
 }
 
