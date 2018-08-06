@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.4
+@version      2.2.5
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -513,6 +513,27 @@ https://userstyles.org/styles/135368/
 	/* Abbrechen-Button */
 	.button-transparent { color:var_hintergrund3 !important; }
   }
+}
+
+@-moz-document regexp("^https?:\\/\\/(bap\\.)?navigator\\.web\\.de\\/remindlogout\\?.*") {
+  /* Logout reminder */
+  #content > #text::before {
+	  content:'WEB.DE Sicherheitshinweis\a Bitte loggen Sie sich immer aus!';
+	  white-space:pre !important;
+	  font-size:2em !important;
+	  line-height:1.5em !important;
+  }
+  .btn,
+  .btn a { background-image: none !important; }
+  .btn a {
+	  border:2px solid var_schriftfarbe !important;
+	  padding-right:6px !important;
+  	  border-radius:4px !important;
+	  &:hover {
+		  border-color:var_hintergrund3 !important;
+	  }
+  }
+  
 }
 
 @-moz-document url("https://web.de/fm"), regexp("^https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
