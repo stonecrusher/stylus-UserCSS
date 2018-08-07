@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        2.0.6
+@version        2.0.7
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -146,9 +146,13 @@
 	.msgbox-to {
 		color: var_schriftfarbe1 !important;
 	}
-	.browsebox-selected-itembox {
+	.browsebox-selected-itembox,
+ 	.tooltip {
 		background-color: var_bg1 !important;
 		color: var_schriftfarbe1 !important;
+	}
+	.pvap-paused-veil {
+		background-color: rgba(255, 169, 116, 0.4) !important;
 	}
 
 	if header-condense {
@@ -187,7 +191,8 @@
 	}
 	if upsell-remove {
 		#postad-features,
-		.manageaditem-featuretable {
+		.manageaditem-featuretable,
+ 		.manageadbox .featuretable {
 			display: none !important;
 		}
 	}
