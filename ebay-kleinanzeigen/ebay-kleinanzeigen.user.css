@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        2.0.3
+@version        2.0.4
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -12,27 +12,38 @@
 @var checkbox header-condense 'Header komprimieren'       1
 @var checkbox ads-remove      'Werbung entfernen'         1
 @var checkbox upsell-remove   'Upsell-Angebote entfernen' 1
-@var color var_schriftfarbe1 'Schriftfarbe'       #ccc
-@var color var_schriftfarbe2 'Schriftfarbe 2'     #0a0
-@var color var_schriftfarbe3 'Schriftfarbe 3'     #999
-@var color var_linkfarbe1    'Linkfarbe'          #70b7f5
-@var color var_bg1           'Hintergrundfarbe'   #444
-@var color var_bg2           'Hintergrundfarbe 2' #555
+@var color var_schriftfarbe1  'Schriftfarbe'              #ccc
+@var color var_schriftfarbe2  'Schriftfarbe 2'            #0a0
+@var color var_schriftfarbe3  'Schriftfarbe 3'            #999
+@var color var_linkfarbe1     'Linkfarbe'                 #70b7f5
+@var color var_bg1            'Hintergrundfarbe'          #444
+@var color var_bg2            'Hintergrundfarbe 2'        #555
 ==/UserStyle== */
 
 
 @-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
 	@css {
 		body,
-		#site-header,
-		.mainnav-item:hover .mainnav-item-inner,
-		.on .mainnav-item-inner,
-		.mainnav-item.on, .mainnav-item:hover {
+		#site-header {
 			color: var_schriftfarbe1 !important;
 			background-color: var_bg1 !important;
 			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAAB20lEQVRIx4XWuZXDMAwE0C0SAQtggIIYoAAEU+aKOHhYojTrYP2+QfOW/5QIJOih/q8HwF/pb3EX+UPIveYcQGgEHiu9hI+ihEc5Jz5KBIlRRRaJ1JtoSAl5Hw96hLB1/up1tnIXOck5jZQy+3iU2hAOKSH1JvwxHsp+5TLF5MOl1/MQXsVs1miXc+KDbYydyMeUgpPQreZ7fWidbNhkXNJSeAhc6qHmHD8AYovunYyEACWEbyIhNeB9fRrH3hFi0bGPLuEW7xCNaohw1vAlS805nfsrTspclB/hVdoqusg53eH7FWot+wjYpOViX8KbFFKTwlnzvj65P9H/vD0/hibYBGhPwlPO8TmxRsaxsNnrUmUXpNhirlJMPr6Hqq9k5Xn/8iYQHYIuQsWFC6Z87IOxLxHphSY4SpuiU87xJnJr5axfeRd+lnMExXpEWPpuZ1v7qZdNBOjiHzDREHX5fs5Zz9p6X0vVKbKKchlSl5rv+3p//FJ/PYvoKryI8vs+2G9lzRmnEKkh+BU8yDk515jDj/HAswu7CCz6U/Mxb/PnC9N41ndpU4hUU7JGk/C9PmP/M2xZYdvBW2PObyf1IUiIzoHmHW9yTncliYs9A9tVNppdShfgQaTLMf+j3X723tLeHgAAAABJRU5ErkJggg==);
 			background-blend-mode: hard-light !important;
 		}
+	}
+	.mainnav-item:hover .mainnav-item-inner,
+	.on .mainnav-item-inner,
+	.mainnav-item.on, .mainnav-item:hover {
+		color: var_bg1 !important;
+		background-color: var_schriftfarbe1 !important;
+	}
+	.formerror {
+		color: var_bg1 !important;
+		background-color: var_schriftfarbe1 !important;
+	}
+	.formerror::after,
+	.formerror.is-inline::after {
+		background-color: transparent !important
 	}
 	h1, h2, h3, h4, h5, h6,
 	.flexlist--header,
@@ -51,8 +62,7 @@
 	.text-light,
  	.textcounter,
  	.headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .boxheader > h1, .boxheader-nomarginbottom > h1, .boxheader > h2, .boxheader-nomarginbottom > h2, .boxheader > h3, .boxheader-nomarginbottom > h3, .boxheader > h4, .boxheader-nomarginbottom > h4, .boxheader > h5, .boxheader-nomarginbottom > h5, .boxheader > h6, .boxheader-nomarginbottom > h6, .icon-headline, .icon-headline-small,
- 	body#login,
- 	body#vap {
+ 	body#login,	body#vap, body#home, body#srchrslt,	body#msgbox, body#my-manageads,	body#my-settngs, body#wtchlst, body#my-followuser, body#my-savedsearches, body#postad-step1, body#pstad, body#prview, body#browseCtgry {
 		color: var_schriftfarbe1 !important;
 	}
 	a,
@@ -135,6 +145,10 @@
 	.msgbox-to {
 		color: var_schriftfarbe1 !important;
 	}
+	.browsebox-selected-itembox {
+		background-color: var_bg1 !important;
+		color: var_schriftfarbe1 !important;
+	}
 
 	if header-condense {
 		/* Header komprimieren */
@@ -155,14 +169,18 @@
 	}
 	if ads-remove {
 		/* Werbung */
-		#vip-atf-billboard, //Werbezeile head
- 		#store-gallery,     //Einschub Unternehmensseiten
-		#home-gallery       //Galerie
+		#vip-atf-billboard,   //Werbezeile head
+ 		#store-gallery,       //Einschub Unternehmensseiten
+		#home-gallery,        //Galerie
+		#vap_adsense-middle,  //Google Adsense
+		.adsenseplacement,
+		#brws_banner-supersize, //Top-result-banner
+		#srchrslt-adtable > .ad-listitem:not(.lazyload-item) //Einschub in Suchergebnisse
 		{
 			display: none !important;
 		}
 		@css {
-			advertiser\:remarketing { display: none !important; } /* Ding im Footer */
+			advertiser\:remarketing { display: none !important; } /* Ding im Footer und CookieContainer */
 		}
 	}
 	if upsell-remove {
