@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        2.0.7
+@version        2.0.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -63,7 +63,7 @@
 	.text-light,
  	.textcounter,
  	.headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .boxheader > h1, .boxheader-nomarginbottom > h1, .boxheader > h2, .boxheader-nomarginbottom > h2, .boxheader > h3, .boxheader-nomarginbottom > h3, .boxheader > h4, .boxheader-nomarginbottom > h4, .boxheader > h5, .boxheader-nomarginbottom > h5, .boxheader > h6, .boxheader-nomarginbottom > h6, .icon-headline, .icon-headline-small,
- 	body#login,	body#vap, body#home, body#srchrslt,	body#msgbox, body#my-manageads,	body#my-settngs, body#wtchlst, body#my-followuser, body#my-savedsearches, body#postad-step1, body#pstad, body#prview, body#browseCtgry, body#logout {
+ 	body#login,	body#vap, body#home, body#srchrslt,	body#msgbox, body#my-manageads,	body#my-settngs, body#wtchlst, body#my-followuser, body#my-savedsearches, body#postad-step1, body#pstad, body#pstrads, body#prview, body#browseCtgry, body#logout {
 		color: var_schriftfarbe1 !important;
 	}
 	a,
