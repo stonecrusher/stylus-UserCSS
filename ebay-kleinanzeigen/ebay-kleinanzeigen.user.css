@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        2.0.2
+@version        2.0.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -55,12 +55,9 @@
  	body#vap {
 		color: var_schriftfarbe1 !important;
 	}
-	a {
+	a,
+	.textdropdown { /* Sortierungslink */
 		color: var_linkfarbe1 !important;
-	}
-	/* "Neueste zuerst" */
-	.textdropdown {
-		color: var_schriftfarbe3 !important;
 	}
 	/* Navi: Anzeige aufgeben, Meins */
 	.mainnav-item-inner {
