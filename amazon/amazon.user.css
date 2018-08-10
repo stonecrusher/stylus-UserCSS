@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.1.0
+@version        1.2.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -46,7 +46,7 @@
 	--font6: var_font6;               /* #B12704 */
 }
 
-@-moz-document regexp("https?:\\/\\/www\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
+@-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
 	if darkstyle {
 		body,
 		#dp table[bgcolor="#ffffff"],
@@ -82,7 +82,13 @@
 		.dv-dp-top-wrapper,
 		#iv-tab-view-container .iv-box,
 		#iv-tab-view-container ul.iv-tab-views .iv-tab-heading.iv-active a, #iv-tab-view-container ul.iv-tab-views li.iv-active a,
-		.a-popover-wrapper {
+		.a-popover-wrapper,
+		/* Amazon Music */
+		.border-gradient2 .center,
+		.dragonfly section.menuPanel,
+		.dropdownSelector .dropdownMenu h3,
+		#contextMenu li,
+		.suggestions-list {
 			background: var(--bg1) !important;
 			color: var(--font1) !important;
 		}
@@ -103,7 +109,14 @@
 		.acs-wtfl-card-details,
 		.acs-wtfl-filtersort-sortby:hover,
 		textarea,
-		.aplus-v2 .a-color-alternate-background {
+		.aplus-v2 .a-color-alternate-background,
+		/* Amazon Music */
+		#contextMenuContainer li span:hover,
+		#contextMenuContainer li a:hover,
+		.playlistDetailsListItem:hover:not(.emptyRow):not(.header) td,
+		.button.secondary .buttonOption, #dragonflyTransport .rightControls .durationContainer .listViewDurationContextButton .secondary.listViewContextButton .buttonOption, #dragonflyTransport .rightControls .secondary.libraryButton .buttonOption, #dragonflyTransport .rightControls .secondary.thumbsUpButton .buttonOption, #dragonflyTransport .rightControls .secondary.thumbsDownButton .buttonOption, #dragonflyTransport .rightControls .secondary.repeatButton .buttonOption, #dragonflyTransport .rightControls .secondary.playerIconQueue .buttonOption, #dragonflyTransport .rightControls .secondary.shuffleButton .buttonOption, #dragonflyTransport .rightControls .secondary.volume .buttonOption, .sharingContainer .buttonContainer .secondary.shareButton .buttonOption,
+		.listViewDurationContextButton .listViewContextButton,
+		.suggestions-list {
 			background-color: var(--bg2) !important;
 		}
 		.a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
@@ -208,6 +221,10 @@
 				color: black !important;
 			}
 		}
+		/* Amazon Music Add / Remove buttons */
+		.listViewStatusButtonInLibrary .stroke {
+			background-color: var(--bg6) !important;
+		}
 		.a-addon-badge, .a-icon-addon,
 		.dv-action-purchase-button, .dv-play-btn a.dv-play-btn-content, .dv-sub-btn-content,
 		.a-button-primary .a-color-base.s-price {
@@ -222,7 +239,7 @@
 			background: var_bg7 !important;
 		}
 		.comparison_baseitem_column {
-			background: darken(var_bg7,30%) !important;
+			background: darken(var_bg7, 30%) !important;
 		}
 		#MediaMatrix #twister > div tr:hover,
  		ul.a-pagination li,
@@ -269,7 +286,10 @@
 		#iv-tab-view-container ul.iv-tab-views,
 		table.a-keyvalue td, table.a-keyvalue th,
 		table.a-keyvalue,
-		.s-result-card, .s-result-card-for-container .s-item-container {
+		.s-result-card, .s-result-card-for-container .s-item-container,
+		.playlistDetailsListItem.firstChild:not(.emptyRow) td,
+		.playlistDetailsListItem:not(.emptyRow) td,
+		.playlistDetailsListItem:hover:not(.emptyRow):not(.header) .hoverColumn, .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .selectColumn {
 			border-color: var(--bg5) !important;
 		}
 		@css{
@@ -396,7 +416,19 @@
 		#productDescription ul,
 		#iv-tab-view-container #ivTitle, #iv-tab-view-container #ivTitle360,
 		.a-alert-info .a-alert-container .a-alert-heading,
-		#rhf .rvi-container .no-rvi-message {
+		#rhf .rvi-container .no-rvi-message,
+		/* Amazon Music */
+		.grid-rails .genericTile .detailsWrapper .text, .grid-rails .genericTile .detailsWrapperWithIndex .text,
+		.grid-rails .genericTile .detailsWrapper .secondaryTitle, .grid-rails .genericTile .detailsWrapperWithIndex .secondaryTitle,
+		.primeBrowseHeader h1,
+		#dragonflyView .button.iconOnlyButton .playerIconWrapper .playerIcon, #dragonflyView #dragonflyTransport .rightControls .durationContainer .listViewDurationContextButton .iconOnlyButton.listViewContextButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .durationContainer .listViewDurationContextButton #dragonflyView .iconOnlyButton.listViewContextButton .playerIconWrapper .playerIcon, #dragonflyView #dragonflyTransport .rightControls .iconOnlyButton.libraryButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #dragonflyView .iconOnlyButton.libraryButton .playerIconWrapper .playerIcon, #dragonflyView #dragonflyTransport .rightControls .iconOnlyButton.thumbsUpButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #dragonflyView .iconOnlyButton.thumbsUpButton .playerIconWrapper .playerIcon, #dragonflyView #dragonflyTransport .rightControls .iconOnlyButton.thumbsDownButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #dragonflyView .iconOnlyButton.thumbsDownButton .playerIconWrapper .playerIcon, #dragonflyView #dragonflyTransport .rightControls .iconOnlyButton.repeatButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #dragonflyView .iconOnlyButton.repeatButton .playerIconWrapper .playerIcon, #dragonflyView #dragonflyTransport .rightControls .iconOnlyButton.playerIconQueue .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #dragonflyView .iconOnlyButton.playerIconQueue .playerIconWrapper .playerIcon, #dragonflyView #dragonflyTransport .rightControls .iconOnlyButton.shuffleButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #dragonflyView .iconOnlyButton.shuffleButton .playerIconWrapper .playerIcon, #dragonflyView #dragonflyTransport .rightControls .iconOnlyButton.volume .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #dragonflyView .iconOnlyButton.volume .playerIconWrapper .playerIcon, #dragonflyView .sharingContainer .buttonContainer .iconOnlyButton.shareButton .playerIconWrapper .playerIcon, .sharingContainer .buttonContainer #dragonflyView .iconOnlyButton.shareButton .playerIconWrapper .playerIcon, #dragonflyTransport .button.iconOnlyButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .durationContainer .listViewDurationContextButton .iconOnlyButton.listViewContextButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .iconOnlyButton.libraryButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .iconOnlyButton.thumbsUpButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .iconOnlyButton.thumbsDownButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .iconOnlyButton.repeatButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .iconOnlyButton.playerIconQueue .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .iconOnlyButton.shuffleButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .iconOnlyButton.volume .playerIconWrapper .playerIcon, #dragonflyTransport .sharingContainer .buttonContainer .iconOnlyButton.shareButton .playerIconWrapper .playerIcon, .sharingContainer .buttonContainer #dragonflyTransport .iconOnlyButton.shareButton .playerIconWrapper .playerIcon, #inactivityView .button.iconOnlyButton .playerIconWrapper .playerIcon, #inactivityView #dragonflyTransport .rightControls .durationContainer .listViewDurationContextButton .iconOnlyButton.listViewContextButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls .durationContainer .listViewDurationContextButton #inactivityView .iconOnlyButton.listViewContextButton .playerIconWrapper .playerIcon, #inactivityView #dragonflyTransport .rightControls .iconOnlyButton.libraryButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #inactivityView .iconOnlyButton.libraryButton .playerIconWrapper .playerIcon, #inactivityView #dragonflyTransport .rightControls .iconOnlyButton.thumbsUpButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #inactivityView .iconOnlyButton.thumbsUpButton .playerIconWrapper .playerIcon, #inactivityView #dragonflyTransport .rightControls .iconOnlyButton.thumbsDownButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #inactivityView .iconOnlyButton.thumbsDownButton .playerIconWrapper .playerIcon, #inactivityView #dragonflyTransport .rightControls .iconOnlyButton.repeatButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #inactivityView .iconOnlyButton.repeatButton .playerIconWrapper .playerIcon, #inactivityView #dragonflyTransport .rightControls .iconOnlyButton.playerIconQueue .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #inactivityView .iconOnlyButton.playerIconQueue .playerIconWrapper .playerIcon, #inactivityView #dragonflyTransport .rightControls .iconOnlyButton.shuffleButton .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #inactivityView .iconOnlyButton.shuffleButton .playerIconWrapper .playerIcon, #inactivityView #dragonflyTransport .rightControls .iconOnlyButton.volume .playerIconWrapper .playerIcon, #dragonflyTransport .rightControls #inactivityView .iconOnlyButton.volume .playerIconWrapper .playerIcon, #inactivityView .sharingContainer .buttonContainer .iconOnlyButton.shareButton .playerIconWrapper .playerIcon, .sharingContainer .buttonContainer #inactivityView .iconOnlyButton.shareButton .playerIconWrapper .playerIcon,
+		#rightPanel.dragonfly .title, #rightPanel.dragonfly .noRecsError, #rightPanel.dragonfly #searchPanelHeader, #rightPanel.dragonfly .empty, #rightPanel.dragonfly .showMoreTitle,
+		.viewHeader .viewTitle,
+		.viewHeader .viewDescription,
+		.playlistDetailsListItem .title,
+		#rightPanel.dragonfly .recFooter .linkLike,
+		.suggestions-list .title,
+		#a-page div.left_nav.browseBox h3 {
 			color: var(--font1) !important;
 		}
 		input, select, textarea,
@@ -408,7 +440,10 @@
  		.a-text-quote::before,
 		.a-text-quote::after,
 		ol.a-carousel,
-		#iv-tab-view-container .ivVariations {
+		#iv-tab-view-container .ivVariations,
+		/* Amazon Music */
+		.playlistDetailsListItem .duration,
+		.listViewTrackNumber {
 			color: var(--font3) !important;
 		}
 		hr,
@@ -488,6 +523,30 @@
 		.MusicCartReviewListEditColumn {
 			background: linear-gradient(to right,rgba(255,255,255,0) 0,var(--bg2) 10%)
 		}
+		/* Amazon Music buttons */
+		.navButton {
+			background-color: var(--bg2) !important;
+			&:hover {
+				background-color: var(--bg3) !important;
+			}
+		}
+		.navButton .buttonContainer .title {
+			color: var(--font1) !important;
+		}
+		/* Amazon Music Search Box */
+		.dragonfly .searchBox {
+			background-color: rgba(242,243,243,0.4) !important;
+			color: black !important;
+		}
+		.suggestions-list li:hover td {
+			background-color: var(--bg3) !important;
+			color: var(--font7) !important;
+		}
+		@css {
+			.albumArtWrapper {
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAMAAAD8CC+4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkZFRUQ0RkNFOUNDOTExRThBOTc2RDZEMkYyQThGNjQ0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZFRUQ0RkNGOUNDOTExRThBOTc2RDZEMkYyQThGNjQ0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkVFRDRGQ0M5Q0M5MTFFOEE5NzZENkQyRjJBOEY2NDQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkVFRDRGQ0Q5Q0M5MTFFOEE5NzZENkQyRjJBOEY2NDQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4SCTXjAAAAz1BMVEUAAAdRUVZMTFEE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) !important;
+			}
+		}
 	}
 	
 	/*** Conditionals ***/
@@ -518,7 +577,12 @@
  		#quickPromoBucketContent,
  		#gbox-ad-row-2\.0,
  		#csg-search-cu,
- 		#top table table img {
+ 		#top table table img,
+		/* Amazon Music */
+		.primeBrowseHeader + .carousel,
+		.barker,
+		#appUpsellBanner,
+		#bannerWrapper {
 			display: none !important;
 		}
 		
