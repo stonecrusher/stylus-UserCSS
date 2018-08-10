@@ -23,6 +23,8 @@ But the good thing is you are very free to change the colors - either via style 
 
 ![amazon2](https://user-images.githubusercontent.com/1388389/43968744-4d36c6d4-9cc8-11e8-9bab-467f4da63409.png)
 
+*Style settings*
+
 ![amazon3](https://user-images.githubusercontent.com/1388389/43968840-90dcadea-9cc8-11e8-801e-a8fa808916a6.png)
 
 *Review bar width*
