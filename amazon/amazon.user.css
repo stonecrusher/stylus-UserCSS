@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.2.5
+@version        1.2.6
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -92,7 +92,9 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .dragonfly section.menuPanel,
         .dropdownSelector .dropdownMenu h3,
         #contextMenu li,
-        .suggestions-list {
+        .suggestions-list,
+        .acs-product-card-for-container,
+        .acs-carousel .a-carousel-goto-nextpage, .acs-carousel .a-carousel-goto-prevpage {
             background: var(--bg1) !important;
             color: var(--font1) !important;
         }
@@ -301,7 +303,8 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .s-result-card, .s-result-card-for-container .s-item-container,
         .playlistDetailsListItem.firstChild:not(.emptyRow) td,
         .playlistDetailsListItem:not(.emptyRow) td,
-        .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .hoverColumn, .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .selectColumn {
+        .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .hoverColumn, .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .selectColumn,
+        .acs-product-card-for-container {
             border-color: var(--bg5) !important;
         }
         .arrow-left { border-right-color: var(--bg2) !important; }
@@ -321,6 +324,10 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
             .nav-catFlyout .nav-flyout-content .nav-hasPanel {
                 background-image:url(data:image/gif;base64,R0lGODlhBwAKAKIGAObm5vDw8Orq6u/v7+Xl5evr6wAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTJFNjMyN0U5QzFGMTFFOEIzNjBGQzE2QUI0MTlGM0QiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTJFNjMyN0Y5QzFGMTFFOEIzNjBGQzE2QUI0MTlGM0QiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxMkU2MzI3QzlDMUYxMUU4QjM2MEZDMTZBQjQxOUYzRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxMkU2MzI3RDlDMUYxMUU4QjM2MEZDMTZBQjQxOUYzRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAYALAAAAAAHAAoAAAMVaLoqwmaQx2SBlgVwVSBdBDJFCC0JADs=) !important;
             }
+        }
+        .a-carousel-goto-nextpage,
+        .a-carousel-goto-prevpage {
+            box-shadow: -2px 0 6px alpha(invert(var_bg), 0.4) !important;
         }
         .nav-tpl-discoveryPanelList .nav-divider, .nav-tpl-discoveryPanelSummary .nav-divider, .nav-tpl-itemList .nav-divider {
             background: var(--bg5) !important;
@@ -349,7 +356,9 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .feed-arrow,
         .nav-spinner,
         .dv-carousel-control .dv-icon,
-        i[id^="fst-cs-btn-arrow"] {
+        i[id^="fst-cs-btn-arrow"],
+        .a-icon-next,
+        .a-icon-previous {
             filter: invert(1) !important;
         }
         .nav-promo,
@@ -386,6 +395,8 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
             
         }
         #navbar.nav-bluebeacon,
+        #navbar.nav-bluebeacon #nav-belt,
+        #navbar.nav-bluebeacon #nav-main,
         #navFooter.navLeftFooter {
             background-color: var_bg9 !important;
         }
