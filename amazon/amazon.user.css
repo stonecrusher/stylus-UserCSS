@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.2.1
+@version        1.2.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -23,6 +23,11 @@
 /* Amazon default review bar width is 185px */
 
 /* Price color? #e13105 */
+
+/* TODO
+Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Popup
+*/
+
 
 @-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
 	/* Original colors in comment */
@@ -109,6 +114,7 @@
 		.acs-wtfl-filtersort-sortby:hover,
 		textarea,
 		.aplus-v2 .a-color-alternate-background,
+        .avu-section-alt,
 		/* Amazon Music */
 		#contextMenuContainer li span:hover,
 		#contextMenuContainer li a:hover,
@@ -220,6 +226,13 @@
 				color: black !important;
 			}
 		}
+        .av-button {
+            background-color: var(--bg8) !important;
+            color: var(--font1) !important;
+            &:hover {
+                background-color: var(--bg2) !important;
+            }
+        }
 		/* Amazon Music Add / Remove buttons */
 		.listViewStatusButtonInLibrary .stroke {
 			background-color: var(--bg6) !important;
@@ -291,6 +304,19 @@
 		.playlistDetailsListItem:hover:not(.emptyRow):not(.header) .hoverColumn, .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .selectColumn {
 			border-color: var(--bg5) !important;
 		}
+        .arrow-left { border-right-color: var(--bg2) !important; }
+        .arrow-right { border-left-color: var(--bg2) !important; }
+        .arrow-bottom { border-top-color: var(--bg2) !important; }
+        .arrow-top { border-bottom-color: var(--bg2) !important; }
+        .a-popover.a-arrow-bottom .a-arrow {
+			border-bottom-color: var(--bg2) !important;
+		}
+		.a-popover.a-arrow-top .a-arrow {
+			border-top-color: var(--bg1) !important;
+		}
+		.a-popover.a-arrow-top .a-arrow-border {
+			border-top-color: var(--bg5) !important;
+		}
 		@css{
 			.nav-catFlyout .nav-flyout-content .nav-hasPanel {
 				background-image:url(data:image/gif;base64,R0lGODlhBwAKAKIGAObm5vDw8Orq6u/v7+Xl5evr6wAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTJFNjMyN0U5QzFGMTFFOEIzNjBGQzE2QUI0MTlGM0QiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTJFNjMyN0Y5QzFGMTFFOEIzNjBGQzE2QUI0MTlGM0QiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxMkU2MzI3QzlDMUYxMUU4QjM2MEZDMTZBQjQxOUYzRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxMkU2MzI3RDlDMUYxMUU4QjM2MEZDMTZBQjQxOUYzRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAEAAAYALAAAAAAHAAoAAAMVaLoqwmaQx2SBlgVwVSBdBDJFCC0JADs=) !important;
@@ -349,15 +375,7 @@
 		.a-button-close {
 			filter: brightness(0.8) !important;
 		}
-		.a-popover.a-arrow-bottom .a-arrow {
-			border-bottom-color: var(--bg2) !important;
-		}
-		.a-popover.a-arrow-top .a-arrow {
-			border-top-color: var(--bg1) !important;
-		}
-		.a-popover.a-arrow-top .a-arrow-border {
-			border-top-color: var(--bg5) !important;
-		}
+
 		.wishlist-left-nav {
 			background-color: transparent !important;
 		}
@@ -416,6 +434,7 @@
 		#iv-tab-view-container #ivTitle, #iv-tab-view-container #ivTitle360,
 		.a-alert-info .a-alert-container .a-alert-heading,
 		#rhf .rvi-container .no-rvi-message,
+        .av-synopsis,
 		/* Amazon Music */
 		.grid-rails .genericTile .detailsWrapper .text, .grid-rails .genericTile .detailsWrapperWithIndex .text,
 		.grid-rails .genericTile .detailsWrapper .secondaryTitle, .grid-rails .genericTile .detailsWrapperWithIndex .secondaryTitle,
@@ -440,6 +459,7 @@
 		.a-text-quote::after,
 		ol.a-carousel,
 		#iv-tab-view-container .ivVariations,
+        .av-badge-text,
 		/* Amazon Music */
 		.playlistDetailsListItem .duration,
 		.listViewTrackNumber {
@@ -554,6 +574,7 @@
 
  		#amsSparkleAdWrapper,
 		#nav-swmslot,
+        #desktop-banner,
 		#gw-desktop-herotator,
 		#content > div.a-section.dv-collection:first-of-type,
 		.billboardRowWrapper,
