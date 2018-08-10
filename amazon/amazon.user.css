@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.2.0
+@version        1.2.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -24,29 +24,28 @@
 
 /* Price color? #e13105 */
 
-/* Original colors in comment */
-:root {
-	--bg1: var_bg;                /* #fff    */
-	--bg8: lighten(var_bg, 10%);  /* #f6f6f6 */
-	--bg2: lighten(var_bg, 20%);  /* #fafafa */
-	--bg3: lighten(var_bg, 25%);  /* #F2F2F2, #eff7fe, #f3f3f3, #cdcdcd */
-	--bg4: lighten(var_bg, 30%);  /* #EAEDED, #eee, #e7e9ec */
-	--bg5: lighten(var_bg, 40%);  /* #ddd    */
-	--bg6: lighten(var_bg, 50%);  /* #d3d3d3 */
-	--bg7: var_bg7;               /* #fef8f2 */
-	--bg9: var_bg9;               /* #232f3e */
-	--font7: invert(var_bg);          /* #ffffff */
-	--font0: lighten(var_font1,20%);  /* #111111 */
-	--font1: var_font1;               /* #333333 */
-	--font2: darken(var_font1, 12%);  /* #444444 */
-	--font3: darken(var_font1, 20%);  /* #555555, #666666, #888888 */
-	--font4: var_font4;               /* #0066C0 */
-	--font8: darken(var_font4, 50%);  /* #0066c0 */
-	--font5: var_font5;               /* #c45500, #e47911 */
-	--font6: var_font6;               /* #B12704 */
-}
-
 @-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
+	/* Original colors in comment */
+	:root {
+		--bg1: var_bg;                /* #fff    */
+		--bg8: lighten(var_bg, 10%);  /* #f6f6f6 */
+		--bg2: lighten(var_bg, 20%);  /* #fafafa */
+		--bg3: lighten(var_bg, 25%);  /* #F2F2F2, #eff7fe, #f3f3f3, #cdcdcd */
+		--bg4: lighten(var_bg, 30%);  /* #EAEDED, #eee, #e7e9ec */
+		--bg5: lighten(var_bg, 40%);  /* #ddd    */
+		--bg6: lighten(var_bg, 50%);  /* #d3d3d3 */
+		--bg7: var_bg7;               /* #fef8f2 */
+		--bg9: var_bg9;               /* #232f3e */
+		--font7: invert(var_bg);          /* #ffffff */
+		--font0: lighten(var_font1,20%);  /* #111111 */
+		--font1: var_font1;               /* #333333 */
+		--font2: darken(var_font1, 12%);  /* #444444 */
+		--font3: darken(var_font1, 20%);  /* #555555, #666666, #888888 */
+		--font4: var_font4;               /* #0066C0 */
+		--font8: darken(var_font4, 50%);  /* #0066c0 */
+		--font5: var_font5;               /* #c45500, #e47911 */
+		--font6: var_font6;               /* #B12704 */
+	}
 	if darkstyle {
 		body,
 		#dp table[bgcolor="#ffffff"],
