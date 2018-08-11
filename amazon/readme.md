@@ -33,4 +33,4 @@ But the good thing is you are very free to change the colors - either via style 
 
 # Changelog
 
-See [commit history](https://github.com/stonecrusher/stylus-UserCSS/commits/master/amazon).
+See [commit history](https://github.com/stonecrusher/stylus-UserCSS/commits/master/amazon/amazon.user.css).
