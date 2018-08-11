@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.3.2
+@version        1.3.4
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -91,14 +91,16 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #iv-tab-view-container .iv-box,
         #iv-tab-view-container ul.iv-tab-views .iv-tab-heading.iv-active a, #iv-tab-view-container ul.iv-tab-views li.iv-active a,
         .a-popover-wrapper,
-        /* Amazon Music */
         .border-gradient2 .center,
         .dragonfly section.menuPanel,
         .dropdownSelector .dropdownMenu h3,
         #contextMenu li,
         .suggestions-list,
         .acs-product-card-for-container,
-        .acs-carousel .a-carousel-goto-nextpage, .acs-carousel .a-carousel-goto-prevpage {
+        .acs-carousel .a-carousel-goto-nextpage, .acs-carousel .a-carousel-goto-prevpage,
+        .ap_content[role="alertdialog"],
+        .ap_popover .ap_titlebar,
+        .ap_popover .ap_titlebar .ap_title {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -121,7 +123,6 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         textarea,
         .aplus-v2 .a-color-alternate-background,
         .avu-section-alt,
-        /* Amazon Music */
         #contextMenuContainer li span:hover,
         #contextMenuContainer li a:hover,
         .playlistDetailsListItem:hover:not(.emptyRow):not(.header) td,
@@ -457,7 +458,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .a-alert-info .a-alert-container .a-alert-heading,
         #rhf .rvi-container .no-rvi-message,
         .av-synopsis,
-        /* Amazon Music */
+        .displayAddressLI,
         .grid-rails .genericTile .detailsWrapper .text, .grid-rails .genericTile .detailsWrapperWithIndex .text,
         .grid-rails .genericTile .detailsWrapper .secondaryTitle, .grid-rails .genericTile .detailsWrapperWithIndex .secondaryTitle,
         .primeBrowseHeader h1,
@@ -468,7 +469,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .playlistDetailsListItem .title,
         #rightPanel.dragonfly .recFooter .linkLike,
         .suggestions-list .title,
-        #a-page div.left_nav.browseBox h3 {
+        #a-page div.left_nav.browseBox h3,
+        .topHitTile .details .primaryTitle, .topHitTile .details .primaryTitle a,
+        .topHitTile .details .secondaryTitle, .topHitTile .details .secondaryTitle a,
+        .stationTile.genericTile .details .primaryTitle {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -482,7 +486,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         ol.a-carousel,
         #iv-tab-view-container .ivVariations,
         .av-badge-text,
-        /* Amazon Music */
+        .avu-content .avu-section-alt .av-alert-inline-block--info,
         .playlistDetailsListItem .duration,
         .listViewTrackNumber,
         .avu-content .avu-section-alt .av-secondary {
@@ -495,7 +499,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         }
         .a-color-base,
         .a-checkbox label, .a-radio label,
-        .a-ordered-list .a-list-item, .a-unordered-list .a-list-item, ol .a-list-item, ul .a-list-item {
+        .a-ordered-list .a-list-item, .a-unordered-list .a-list-item, ol .a-list-item, ul .a-list-item,
+        #closeErrorDialog {
             color: var_font0 !important;
         }
         .fresh-shoveler .as-title-block .a-color-base,
