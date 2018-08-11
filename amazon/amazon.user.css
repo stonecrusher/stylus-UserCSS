@@ -28,9 +28,9 @@
     
  /* var_bg1    = selectable DS Background    // #fff */
     var_bg2    = lighten(var_bg1, 10%)       // #f6f6f6
+    var_bg2a7  = alpha(lighten(var_bg1, 10%),.7)
+    var_bg2a8  = alpha(lighten(var_bg1, 10%),.8)
     var_bg3    = lighten(var_bg1, 20%)       // #fafafa
-    var_bg3a7  = alpha(lighten(var_bg1, 10%),.7)
-    var_bg3a8  = alpha(lighten(var_bg1, 10%),.8)
     var_bg4    = lighten(var_bg1, 25%)       // #F2F2F2, #eff7fe, #f3f3f3, #cdcdcd
     var_bg5    = lighten(var_bg1, 30%)       // #EAEDED, #eee, #e7e9ec
     var_bg6    = lighten(var_bg1, 40%)       // #ddd
@@ -552,7 +552,7 @@
             background: linear-gradient(to right, rgba(255,255,255,0), var_bg3 10%) !important;
         }
         .aivDetailsGradient {
-            background: radial-gradient(ellipse at center, var_bg3a7 0, var_bg3a8 48%, var_bg2 70%, var_bg2 100%) !important;
+            background: radial-gradient(ellipse at center, var_bg2a7 0, var_bg2a8 48%, var_bg2 70%, var_bg2 100%) !important;
         }
         /* Amazon Music buttons */
         .navButton {
