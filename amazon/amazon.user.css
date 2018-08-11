@@ -551,10 +551,8 @@
         .MusicCartReviewListEditColumn {
             background: linear-gradient(to right, rgba(255,255,255,0), var_bg3 10%) !important;
         }
-        /* Stylus syntax problem! How to make these colors variable? alpha(var_bg3,.7) doesn't work! */
         .aivDetailsGradient {
             background: radial-gradient(ellipse at center, var_bg3a7 0, var_bg3a8 48%, var_bg2 70%, var_bg2 100%) !important;
-                      /*radial-gradient(ellipse at center, rgba(47,47,47,.7) 0, rgba(47,47,47,.8) 48%, #2f2f2f 70%, #2f2f2f 100%)*/
         }
         /* Amazon Music buttons */
         .navButton {
