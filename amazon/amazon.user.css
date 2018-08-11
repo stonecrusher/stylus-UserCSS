@@ -3,15 +3,15 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.2.6
+@version        1.2.7
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
 
 @var checkbox darkstyle    'Darkstyle (DS)'       1
-@var color    var_bg       'DS Background'        #333
-@var color    var_bg7      'DS Background 2'      #6e583a
+@var color    var_bg1      'DS Background'        #333
+@var color    var_bg8      'DS Background 2'      #6e583a
 @var color    var_bg9      'DS Header & footer background' #232f3e
 @var color    var_font1    'DS Font color'        #ccc
 @var color    var_font4    'DS Link color'        #75a9d7
@@ -22,35 +22,32 @@
 ==/UserStyle== */
 /* Amazon default review bar width is 185px */
 
-/* Price color? #e13105 */
-
-/* TODO
-Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Popup
-*/
-
-
 @-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
-    /* Original colors in comment */
-    :root {
-        --bg1: var_bg;                /* #fff    */
-        --bg8: lighten(var_bg, 10%);  /* #f6f6f6 */
-        --bg2: lighten(var_bg, 20%);  /* #fafafa */
-        --bg3: lighten(var_bg, 25%);  /* #F2F2F2, #eff7fe, #f3f3f3, #cdcdcd */
-        --bg4: lighten(var_bg, 30%);  /* #EAEDED, #eee, #e7e9ec */
-        --bg5: lighten(var_bg, 40%);  /* #ddd    */
-        --bg6: lighten(var_bg, 50%);  /* #d3d3d3 */
-        --bg7: var_bg7;               /* #fef8f2 */
-        --bg9: var_bg9;               /* #232f3e */
-        --font7: invert(var_bg);          /* #ffffff */
-        --font0: lighten(var_font1,20%);  /* #111111 */
-        --font1: var_font1;               /* #333333 */
-        --font2: darken(var_font1, 12%);  /* #444444 */
-        --font3: darken(var_font1, 20%);  /* #555555, #666666, #888888 */
-        --font4: var_font4;               /* #0066C0 */
-        --font8: darken(var_font4, 50%);  /* #0066c0 */
-        --font5: var_font5;               /* #c45500, #e47911 */
-        --font6: var_font6;               /* #B12704 */
-    }
+    /* Stylus variables */
+    /* Colors to be replaced are in the comment */
+    
+ /* var_bg1    = selectable DS Background    // #fff */
+    var_bg2    = lighten(var_bg1, 10%)       // #f6f6f6
+    var_bg3    = lighten(var_bg1, 20%)       // #fafafa
+    var_bg3a7  = alpha(lighten(var_bg1, 10%),.7)
+    var_bg3a8  = alpha(lighten(var_bg1, 10%),.8)
+    var_bg4    = lighten(var_bg1, 25%)       // #F2F2F2, #eff7fe, #f3f3f3, #cdcdcd
+    var_bg5    = lighten(var_bg1, 30%)       // #EAEDED, #eee, #e7e9ec
+    var_bg6    = lighten(var_bg1, 40%)       // #ddd
+    var_bg7    = lighten(var_bg1, 50%)       // #d3d3d3
+ /* var_bg8    = selectable DS Background 2  // #fef8f2, brownish golden */
+ /* var_bg9    = selectable DS Header & footer bg  // #232f3e, darkblue */
+    var_font7  = invert(var_bg1)             // #ffffff, white
+    var_font0  = lighten(var_font1,20%)      // #111111, black
+ /* var_font1  = selectable DS Font color    // #333333 */
+    var_font2  = darken(var_font1, 12%)      // #444444
+    var_font3  = darken(var_font1, 20%)      // #555555, #666666, #888888
+ /* var_font4  = selectable DS Link color    // #0066C0, blue */
+    var_font8  = darken(var_font4, 50%)      // #0066c0
+ /* var_font5  = selectable DS Hover color   // #c45500, #e47911, orange */
+ /* var_font6  = selectable DS Price color   // #B12704, red */
+    
+    /*** Start of code ***/
     if darkstyle {
         body,
         #dp table[bgcolor="#ffffff"],
@@ -95,8 +92,8 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .suggestions-list,
         .acs-product-card-for-container,
         .acs-carousel .a-carousel-goto-nextpage, .acs-carousel .a-carousel-goto-prevpage {
-            background: var(--bg1) !important;
-            color: var(--font1) !important;
+            background: var_bg1 !important;
+            color: var_font1 !important;
         }
         .acs-private-brands-container-background .s-item-container,
         #pageContent .sidebar, #sidebar,
@@ -124,67 +121,67 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .button.secondary .buttonOption, #dragonflyTransport .rightControls .durationContainer .listViewDurationContextButton .secondary.listViewContextButton .buttonOption, #dragonflyTransport .rightControls .secondary.libraryButton .buttonOption, #dragonflyTransport .rightControls .secondary.thumbsUpButton .buttonOption, #dragonflyTransport .rightControls .secondary.thumbsDownButton .buttonOption, #dragonflyTransport .rightControls .secondary.repeatButton .buttonOption, #dragonflyTransport .rightControls .secondary.playerIconQueue .buttonOption, #dragonflyTransport .rightControls .secondary.shuffleButton .buttonOption, #dragonflyTransport .rightControls .secondary.volume .buttonOption, .sharingContainer .buttonContainer .secondary.shareButton .buttonOption,
         .listViewDurationContextButton .listViewContextButton,
         .suggestions-list {
-            background-color: var(--bg2) !important;
+            background-color: var_bg3 !important;
         }
         .a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
         .a-color-alternate-background,
         a.a-link-section-expander:hover,
         .hud-white-dashboard .feed-carousel-control.feed-right, .hud-white-dashboard .feed-carousel-control.feed-left,
         .dv-watchlist-toggle:hover .dv-action-secondary {
-            background-color: var(--bg3) !important;
+            background-color: var_bg4 !important;
         }
         .dv-watchlist-toggle .dv-action-secondary,
         .s-result-card, .s-result-card-for-container .s-item-container {
-            background: var(--bg2) !important;
+            background: var_bg3 !important;
         }
         .dv-watchlist-toggle:hover .dv-action-secondary {
-            background: var(--bg3) !important;
+            background: var_bg4 !important;
         }
         div.pagn a, div.pagn a:visited, div.pagnBg span.pagnLink a, div.pagnBg span.pagnLink a:visited, div.pagnHy span.pagnLink a, div.pagnHy span.pagnLink a:visited,
         #pagnNextString {
-            color: var(--font8) !important;
+            color: var_font8 !important;
         }
         #nav-subnav,
         #navbar.nav-bluebeacon #nav-search .nav-search-scope,
         #bbopAndCartBox {
-            background-color: var(--bg2) !important;
+            background-color: var_bg3 !important;
         }
         .cr-lighthouse-term {
-            background-color: var(--bg5) !important;
+            background-color: var_bg6 !important;
         }
         #leftNav .s-pfsd-banner,
         center > div[style^="background-color:#eff7fe;"] {
-            background-color: var(--bg2) !important;
-            border-color: var(--bg4) !important;
+            background-color: var_bg3 !important;
+            border-color: var_bg5 !important;
         }
         .wl-list.selected,
         .GB-SUPPLE .filters,
         table.a-bordered tr:nth-child(2n),
         .acs-wtfl-filtersort-wrap {
-            background-color: var(--bg8) !important;
+            background-color: var_bg2 !important;
         }
         .dp-main,
         .dp-main h1 {
-            background-color: var(--bg8) !important;
-            color: var(--font1) !important;
+            background-color: var_bg2 !important;
+            color: var_font1 !important;
         }
         ul.a-tabs {
-            background-color: var(--bg8) !important;
-            border-color: var(--bg5) !important;
+            background-color: var_bg2 !important;
+            border-color: var_bg6 !important;
         }
         .a-box,
         #rhf .rhf-divider,
         #rhf .rhf-sign-in-button-box {
-            background-color: var(--bg1) !important;
-            border-color: var(--bg5) !important;
+            background-color: var_bg1 !important;
+            border-color: var_bg6 !important;
         }
         .a-color-offset-background,
         .a-dropdown-common .a-dropdown-link.a-active {
-            background-color: var(--bg8) !important;
+            background-color: var_bg2 !important;
         }
         .a-button {
-            border-color: var(--bg6) var(--bg4) var(--bg4) var(--bg6) !important;
-            background: var(--bg5) !important;
+            border-color: var_bg7 var_bg5 var_bg5 var_bg7 !important;
+            background: var_bg6 !important;
         }
         .a-button-inner {
             box-shadow: none !important;
@@ -195,7 +192,7 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         }
         /* Text on normal buttons */
         .a-button .a-button-text {
-            color: var(--font1) !important;
+            color: var_font1 !important;
         }
         /* Grey buttons */
         .a-button:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected),
@@ -205,16 +202,16 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .writeReviewButton,
         #p2dPopoverID-no-button {
             & .a-button-inner {
-                background: var(--bg3) !important;
+                background: var_bg4 !important;
             }
             &:hover .a-button-inner {
-                background: var(--bg4) !important;
+                background: var_bg5 !important;
             }
         }
         .a-carousel-button.a-button .a-button-inner {
-            background: var(--bg6) !important;
+            background: var_bg7 !important;
             &:hover {
-                background: lighten(var_bg, 70%) !important;
+                background: lighten(var_bg1, 70%) !important;
             }
         }
         /* Text on yellow buttons */
@@ -229,15 +226,15 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
             }
         }
         .av-button {
-            background-color: var(--bg8) !important;
-            color: var(--font1) !important;
+            background-color: var_bg2 !important;
+            color: var_font1 !important;
             &:hover {
-                background-color: var(--bg2) !important;
+                background-color: var_bg3 !important;
             }
         }
         /* Amazon Music Add / Remove buttons */
         .listViewStatusButtonInLibrary .stroke {
-            background-color: var(--bg6) !important;
+            background-color: var_bg7 !important;
         }
         .a-addon-badge, .a-icon-addon,
         .dv-action-purchase-button, .dv-play-btn a.dv-play-btn-content, .dv-sub-btn-content,
@@ -247,24 +244,24 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
 
         .a-button-toggle.a-button-selected .a-button-inner, .a-button-toggle.a-button-selected.a-button-focus .a-button-inner, .a-button-toggle.a-button-selected.a-button-focus:hover .a-button-inner, .a-button-toggle.a-button-selected:focus .a-button-inner, .a-button-toggle.a-button-selected:focus:hover .a-button-inner, .a-button-toggle.a-button-selected:hover .a-button-inner,
         #MediaMatrix #twister #binding_row_landing, #MediaMatrix #twister .top-level.selected-row {
-            background: var(--bg7) !important;
+            background: var_bg8 !important;
         }
         .comparison_table tr:nth-child(2n) td.comparison_baseitem_column {
-            background: var_bg7 !important;
+            background: var_bg8 !important;
         }
         .comparison_baseitem_column {
-            background: darken(var_bg7, 30%) !important;
+            background: darken(var_bg8, 30%) !important;
         }
         #MediaMatrix #twister > div tr:hover,
         ul.a-pagination li,
         ul.a-pagination li a {
-            background: var(--bg2) !important;
+            background: var_bg3 !important;
         }
         div.pagnHy,
         .feed-carousel .feed-scrollbar-track,
         #pageContent hr,
         .a-alert-info .a-alert-container {
-            background-color: var(--bg4) !important;
+            background-color: var_bg5 !important;
         }
         @css{
             /* billboard divider */
@@ -273,7 +270,7 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
             }
         }
         .quotes-bubble-arrow {
-            border-color: var(--bg3) transparent !important;
+            border-color: var_bg4 transparent !important;
         }
         #rhf .rhf-border,
         ul.a-tabs .a-tab-heading.a-active a, ul.a-tabs li.a-active a,
@@ -305,20 +302,20 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .playlistDetailsListItem:not(.emptyRow) td,
         .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .hoverColumn, .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .selectColumn,
         .acs-product-card-for-container {
-            border-color: var(--bg5) !important;
+            border-color: var_bg6 !important;
         }
-        .arrow-left { border-right-color: var(--bg2) !important; }
-        .arrow-right { border-left-color: var(--bg2) !important; }
-        .arrow-bottom { border-top-color: var(--bg2) !important; }
-        .arrow-top { border-bottom-color: var(--bg2) !important; }
+        .arrow-left { border-right-color: var_bg3 !important; }
+        .arrow-right { border-left-color: var_bg3 !important; }
+        .arrow-bottom { border-top-color: var_bg3 !important; }
+        .arrow-top { border-bottom-color: var_bg3 !important; }
         .a-popover.a-arrow-bottom .a-arrow {
-            border-bottom-color: var(--bg2) !important;
+            border-bottom-color: var_bg3 !important;
         }
         .a-popover.a-arrow-top .a-arrow {
-            border-top-color: var(--bg1) !important;
+            border-top-color: var_bg1 !important;
         }
         .a-popover.a-arrow-top .a-arrow-border {
-            border-top-color: var(--bg5) !important;
+            border-top-color: var_bg6 !important;
         }
         @css{
             .nav-catFlyout .nav-flyout-content .nav-hasPanel {
@@ -327,16 +324,16 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         }
         .a-carousel-goto-nextpage,
         .a-carousel-goto-prevpage {
-            box-shadow: -2px 0 6px alpha(invert(var_bg), 0.4) !important;
+            box-shadow: -2px 0 6px alpha(invert(var_bg1), 0.4) !important;
         }
         .nav-tpl-discoveryPanelList .nav-divider, .nav-tpl-discoveryPanelSummary .nav-divider, .nav-tpl-itemList .nav-divider {
-            background: var(--bg5) !important;
+            background: var_bg6 !important;
         }
         .nav-flyout .nav-arrow-inner {
-            border-bottom-color: var(--bg1) !important;
+            border-bottom-color: var_bg1 !important;
         }
         #dv-product-details .dv-outside-arrows .dv-carousel-control {
-            background: var(--bg5) !important;
+            background: var_bg6 !important;
             opacity: 0.95 !important;
         }
         /* Icons */
@@ -390,8 +387,8 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         }
         #ysh-cards-container li.recs-grid-item,
         #ys-center #ysh-cards-container .recs-grid-container {
-            border-color: var(--bg2) !important;
-            background: var(--bg1) !important;
+            border-color: var_bg3 !important;
+            background: var_bg1 !important;
             
         }
         #navbar.nav-bluebeacon,
@@ -406,10 +403,10 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         }
         #navbar.nav-bluebeacon #nav-search .nav-search-scope,
         .a-popover-wrapper {
-            border-color: var(--bg3) !important;
+            border-color: var_bg4 !important;
         }
         #dv-product-details table.product-details-meta {
-            border-bottom-color: var(--bg5) !important;
+            border-bottom-color: var_bg6 !important;
         }
 
         /*** Font colors ***/
@@ -458,7 +455,7 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         #rightPanel.dragonfly .recFooter .linkLike,
         .suggestions-list .title,
         #a-page div.left_nav.browseBox h3 {
-            color: var(--font1) !important;
+            color: var_font1 !important;
         }
         input, select, textarea,
         #nav-search .nav-search-facade .nav-search-label,
@@ -473,25 +470,26 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .av-badge-text,
         /* Amazon Music */
         .playlistDetailsListItem .duration,
-        .listViewTrackNumber {
-            color: var(--font3) !important;
+        .listViewTrackNumber,
+        .avu-content .avu-section-alt .av-secondary {
+            color: var_font3 !important;
         }
         hr,
         #nav-search .nav-search-facade .nav-icon,
         .a-box .a-divider.a-divider-break::after, .a-color-base-background .a-divider.a-divider-break::after, .a-divider.a-divider-break::after {
-            border-top-color: var(--font3) !important;
+            border-top-color: var_font3 !important;
         }
         .a-color-base,
         .a-checkbox label, .a-radio label,
         .a-ordered-list .a-list-item, .a-unordered-list .a-list-item, ol .a-list-item, ul .a-list-item {
-            color: var(--font0) !important;
+            color: var_font0 !important;
         }
         .fresh-shoveler .as-title-block .a-color-base,
         .nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text,
         #rhf .rhf-header,
         .aiv-container-limited.tancaccept,
         .acs-wtfl-filtersort-category:hover {
-            color: var(--font2) !important;
+            color: var_font2 !important;
         }
 
         a, a:active, a:link, a:visited,
@@ -501,7 +499,7 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         #dm-settings-page .dm-expander-header .link,
         .hud-white-dashboard .hud-profilecard-digital-preorders, .hud-white-dashboard .hud-profilecard-yourorders, .hud-white-dashboard .hud-profilecard-category, .hud-white-dashboard .hud-profilecard-name, .hud-white-dashboard .hud-profile-giftguide-text-only-option-text,
         .hud-white-dashboard .hud-card-subtext-line1, .hud-white-dashboard .hud-card-subtext-line2 {
-            color: var(--font4) !important;
+            color: var_font4 !important;
         }
         a:hover,
         .nav-tpl-discoveryPanelList .nav-link:focus .nav-text, .nav-tpl-discoveryPanelList .nav-link:hover .nav-text, .nav-tpl-discoveryPanelSummary .nav-link:focus .nav-text, .nav-tpl-discoveryPanelSummary .nav-link:hover .nav-text, .nav-tpl-itemList .nav-link:focus .nav-text, .nav-tpl-itemList .nav-link:hover .nav-text,
@@ -509,32 +507,32 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         .nav-text:hover,
         #hud-dashboard .customer-name a:active, #hud-dashboard .customer-name a:hover,
         .hud-carousel-element a:hover .subtext {
-            color: var(--font5) !important;
+            color: var_font5 !important;
         }
         .a-color-price,
         .bia-price,
         .bia-ppu {
-            color: var(--font6) !important;
+            color: var_font6 !important;
         }
         #navbar.nav-bluebeacon #nav-search-label, #navbar.nav-bluebeacon .nav-a-2 .nav-line-1, #navbar.nav-bluebeacon .nav-a-2 .nav-line-2,
         .swatchElement .a-button a, .swatchElement .a-button:hover a {
-            color: var(--font7) !important;
+            color: var_font7 !important;
         }
         
         .aplus-v2 th.apm-tablemodule-keyhead {
-            background-color: var(--bg2) !important;
-            color: var(--font1) !important;
+            background-color: var_bg3 !important;
+            color: var_font1 !important;
         }
         .aplus-v2 .a-color-secondary {
-            color: var(--font3) !important;
+            color: var_font3 !important;
         }
         .aplus-v2 .apm-tablemodule-valuecell.selected {
-            background-color: var(--bg8) !important;
+            background-color: var_bg2 !important;
         }
         .aplus-v2 table.apm-tablemodule-table,
         .aplus-v2 th.apm-tablemodule-keyhead,
         .aplus-v2 tr.apm-tablemodule-keyvalue td {
-            border-color: var(--bg5) !important;
+            border-color: var_bg6 !important;
         }
 
         /*** Gradients ***/
@@ -548,20 +546,25 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
         }
         .fadeGradient,
         .a-expander-content-fade {
-            background: linear-gradient(to top, var(--bg1) 15%, rgba(255, 255, 255, 0) 100% )
+            background: linear-gradient(to top, var_bg1 15%, rgba(255,255,255,0) 100%) !important;
         }
         .MusicCartReviewListEditColumn {
-            background: linear-gradient(to right,rgba(255,255,255,0) 0,var(--bg2) 10%)
+            background: linear-gradient(to right, rgba(255,255,255,0), var_bg3 10%) !important;
+        }
+        /* Stylus syntax problem! How to make these colors variable? alpha(var_bg3,.7) doesn't work! */
+        .aivDetailsGradient {
+            background: radial-gradient(ellipse at center, var_bg3a7 0, var_bg3a8 48%, var_bg2 70%, var_bg2 100%) !important;
+                      /*radial-gradient(ellipse at center, rgba(47,47,47,.7) 0, rgba(47,47,47,.8) 48%, #2f2f2f 70%, #2f2f2f 100%)*/
         }
         /* Amazon Music buttons */
         .navButton {
-            background-color: var(--bg2) !important;
+            background-color: var_bg3 !important;
             &:hover {
-                background-color: var(--bg3) !important;
+                background-color: var_bg4 !important;
             }
         }
         .navButton .buttonContainer .title {
-            color: var(--font1) !important;
+            color: var_font1 !important;
         }
         /* Amazon Music Search Box */
         .dragonfly .searchBox {
@@ -569,8 +572,8 @@ Kunden, die diesen Artikel angesehen haben, haben auch Folgendes angesehen - Pop
             color: black !important;
         }
         .suggestions-list li:hover td {
-            background-color: var(--bg3) !important;
-            color: var(--font7) !important;
+            background-color: var_bg4 !important;
+            color: var_font7 !important;
         }
         @css {
             .albumArtWrapper {
