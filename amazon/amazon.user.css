@@ -3,22 +3,24 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.2.7
+@version        1.2.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
 
-@var checkbox darkstyle    'Darkstyle (DS)'       1
-@var color    var_bg1      'DS Background'        #333
-@var color    var_bg8      'DS Background 2'      #6e583a
-@var color    var_bg9      'DS Header & footer background' #232f3e
-@var color    var_font1    'DS Font color'        #ccc
-@var color    var_font4    'DS Link color'        #75a9d7
-@var color    var_font5    'DS Hover color'       #cc5800
-@var color    var_font6    'DS Price color'       #ff3b14
-@var checkbox compact      'Compact mode'         1
-@var text     review-width 'Width of review bars' 300px
+@var checkbox darkstyle       'Darkstyle (DS)'         1
+@var color    var_bg1         'DS Background'          #333
+@var color    var_bg8         'DS Background 2'        #6e583a
+@var color    var_bg9         'DS Header & footer background' #232f3e
+@var color    var_font1       'DS Font color'          #ccc
+@var color    var_font4       'DS Link color'          #75a9d7
+@var color    var_font5       'DS Hover color'         #cc5800
+@var color    var_font6       'DS Price color'         #ff3b14
+@var checkbox compact         'Compact mode'           1
+@var checkbox mark-sponsored  'Mark sponsored results' 1
+@var checkbox av-pause-remove 'Remove Video pause overlay' 1
+@var text     review-width    'Width of review bars'   300px
 ==/UserStyle== */
 /* Amazon default review bar width is 185px */
 
@@ -48,6 +50,7 @@
  /* var_font6  = selectable DS Price color   // #B12704, red */
     
     /*** Start of code ***/
+
     if darkstyle {
         body,
         #dp table[bgcolor="#ffffff"],
@@ -618,6 +621,12 @@
             display: none !important;
         }
         
+        /* Sponsored results */
+        .s-item-container > h5.a-spacing-none ~ *,
+        #atfResults h5[class*="sponsored"] ~ * {
+            display: none !important;
+        }
+        
         /* Sidebar */
         #sidebar-top,
         #sidebar-bottom {
@@ -630,6 +639,34 @@
         /* Footer */
         #navFooter {
             display: none !important;
+        }
+    }
+    if mark-sponsored {
+        /* Mark sponsored search results */
+        .s-item-container > h5.a-spacing-none,
+        #atfResults h5[class*="sponsored"] {
+            color: black !important;
+            letter-spacing: 5px !important;
+            background-color: red !important;
+            font-weight: bold !important;
+        }
+    }
+    if av-pause-remove {
+        /* Amazon Video Pause-overlay transparent */
+        .cascadesContainer > div > .webPlayer .gradientOverlay {
+            background:none !important;
+        }
+        /*.cascadesContainer > div > .webPlayer .contentTitlePanel,
+        .time,/**/
+        .controlsOverlay,
+        .pausedOverlay {
+            text-shadow:  1px  1px 1px black,
+                          1px -1px 1px black,
+                         -1px  1px 1px black,
+                         -1px -1px 1px black !important;
+        }
+        .positionBar {
+            background-color: var_font6 !important;
         }
     }
     
@@ -656,4 +693,5 @@
     #cm_cr-product_info + .ratings-solicitation > .a-fixed-left-grid-inner {
         padding-left: (review-width - 15px) !important;
     }
+    /*** Review-width end ***/
 }
