@@ -30,3 +30,7 @@ But the good thing is you are very free to change the colors - either via style 
 *Review bar width*
 
 ![amazon-percentagebar](https://user-images.githubusercontent.com/1388389/41170969-0a9cc800-6b4f-11e8-999c-6d91646ec5c8.png)
+
+# Changelog
+
+See [commit history](https://github.com/stonecrusher/stylus-UserCSS/commits/master/amazon).
