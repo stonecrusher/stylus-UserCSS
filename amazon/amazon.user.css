@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.3.1
+@version        1.3.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -335,6 +335,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .a-carousel-goto-nextpage,
         .a-carousel-goto-prevpage {
             box-shadow: -2px 0 6px alpha(invert(var_bg1), 0.4) !important;
+        }
+        .feed-carousel .feed-carousel-control {
+            background-color: var_bg2 !important;
+            box-shadow: 0 1px 3px invert(var_bg2) !important;
         }
         .nav-tpl-discoveryPanelList .nav-divider, .nav-tpl-discoveryPanelSummary .nav-divider, .nav-tpl-itemList .nav-divider {
             background: var_bg6 !important;
