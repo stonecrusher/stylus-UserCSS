@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.2.9
+@version        1.3.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -167,10 +167,13 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .acs-wtfl-filtersort-wrap {
             background-color: var_bg2 !important;
         }
-        .dp-main,
-        .dp-main h1 {
+        .dp-main {
             background-color: var_bg2 !important;
             color: var_font1 !important;
+                & h1 {
+                    background-color: transparent !important;
+                    color: var_font1 !important;
+                }
         }
         ul.a-tabs {
             background-color: var_bg2 !important;
@@ -638,6 +641,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .tancaccept {
             display: none !important;
         }
+
         /* Prime Video Teaser Carousel */
         .a-section.a-spacing-small.dv-hero-carousel,
         .a-section.a-spacing-none.dv-hero-carousel.dv-superhero-carousel {
