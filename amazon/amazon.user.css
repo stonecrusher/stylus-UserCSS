@@ -3,24 +3,24 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.3.4
+@version        1.3.5
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
 
-@var checkbox darkstyle       'Darkstyle (DS)'         1
-@var color    var_bg1         'DS Background'          #333
-@var color    var_bg8         'DS Background 2'        #6e583a
-@var color    var_bg9         'DS Header & footer background' #232f3e
-@var color    var_font1       'DS Font color'          #ccc
-@var color    var_font4       'DS Link color'          #75a9d7
-@var color    var_font5       'DS Hover color'         #cc5800
-@var color    var_font6       'DS Price color'         #ff3b14
-@var checkbox compact         'Compact mode'           1
-@var checkbox mark-sponsored  'Mark sponsored results' 1
-@var checkbox av-pause-remove 'Remove Video pause overlay' 1
-@var text     review-width    'Width of review bars'   300px
+@var checkbox  darkstyle       'Darkstyle (DS)'     1
+@var color     var_bg1         'DS Background'      #333
+@var color     var_bg8         'DS Background 2'    #6e583a
+@var color     var_bg9         'DS Header & footer background' #232f3e
+@var color     var_font1       'DS Font color'      #ccc
+@var color     var_font4       'DS Link color'      #75a9d7
+@var color     var_font5       'DS Hover color'     #cc5800
+@var color     var_font6       'DS Price color'     #ff3b14
+@var checkbox  compact         'Compact mode'               1
+@var checkbox  mark-sponsored  'Mark sponsored results'     1
+@var checkbox  av-pause-remove 'Remove Video pause overlay' 1
+@var text      review-width    'Width of review bars'       300px
 ==/UserStyle== */
 /* Amazon default review bar width is 185px */
 
@@ -100,7 +100,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .acs-carousel .a-carousel-goto-nextpage, .acs-carousel .a-carousel-goto-prevpage,
         .ap_content[role="alertdialog"],
         .ap_popover .ap_titlebar,
-        .ap_popover .ap_titlebar .ap_title {
+        .ap_popover .ap_titlebar .ap_title,
+ 		#buyBoxAccordion .a-accordion-active .a-accordion-row,
+		.a-accordion .a-accordion-active .a-accordion-inner,
+ 		.a-accordion .a-accordion-row {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -165,7 +168,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .wl-list.selected,
         .GB-SUPPLE .filters,
         table.a-bordered tr:nth-child(2n),
-        .acs-wtfl-filtersort-wrap {
+        .acs-wtfl-filtersort-wrap,
+ 		.a-accordion .a-accordion-row:hover {
             background-color: var_bg2 !important;
         }
         .dp-main {
@@ -370,7 +374,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .dv-carousel-control .dv-icon,
         i[id^="fst-cs-btn-arrow"],
         .a-icon-next,
-        .a-icon-previous {
+        .a-icon-previous,
+ 		#prime-bbop-logo {
             filter: invert(1) !important;
         }
         .nav-promo,
@@ -384,7 +389,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .askInlineWidget .vote .up input[type="submit"], .askInlineWidget .vote .up input[disabled][type="submit"]:hover,
         .askInlineWidget .vote .down input[type="submit"], .askInlineWidget .vote .down input[disabled][type="submit"]:hover,
         #pet_your_prime .pet_prime_logo,
-        .csg-cat-sep {
+        .csg-cat-sep,
+        .GB-M-COMMON.GB-PC-FACEOUT .filterLink .filterImage {
             filter: invert(0.8) !important;
         }
         .nav-image {
@@ -472,7 +478,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #a-page div.left_nav.browseBox h3,
         .topHitTile .details .primaryTitle, .topHitTile .details .primaryTitle a,
         .topHitTile .details .secondaryTitle, .topHitTile .details .secondaryTitle a,
-        .stationTile.genericTile .details .primaryTitle {
+        .stationTile.genericTile .details .primaryTitle,
+ 		.askTypicalExamples {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -504,10 +511,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             color: var_font0 !important;
         }
         .fresh-shoveler .as-title-block .a-color-base,
-        .nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text,
         #rhf .rhf-header,
         .aiv-container-limited.tancaccept,
-        .acs-wtfl-filtersort-category:hover {
+        .acs-wtfl-filtersort-category:hover,
+ 		.nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text {
             color: var_font2 !important;
         }
 
@@ -525,7 +532,9 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         ul.a-tabs .a-tab-heading.a-active a, ul.a-tabs li.a-active a,
         .nav-text:hover,
         #hud-dashboard .customer-name a:active, #hud-dashboard .customer-name a:hover,
-        .hud-carousel-element a:hover .subtext {
+        .hud-carousel-element a:hover .subtext,
+ 		.nav-title > .nav-text,
+ 		.nav-hasPanel.nav-item.nav-active > .nav-text {
             color: var_font5 !important;
         }
         .a-color-price,
@@ -632,7 +641,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #quickPromoBucketContent,
         #gbox-ad-row-2\.0,
         #csg-search-cu,
-        #top table table img {
+        #top table table img,
+ 		.askQuestionExamples {
             display: none !important;
         }
 
