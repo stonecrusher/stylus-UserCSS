@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.0
+@version        1.4.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -11,7 +11,7 @@
 
 @var checkbox  darkstyle       'Darkstyle (DS)'      1
 @var color     var_bg1         'DS Background'       #333
-@var color     var_bg8         'DS Background 2'     #6e583a
+@var color     var_selected    'DS Background 2'     #6e583a
 @var color     var_headfoot    'DS Header & footer background' #232f3e
 @var color     var_font1       'DS Font color'       #ccc
 @var color     var_linkdefault 'DS Link color'       #75a9d7
@@ -42,7 +42,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
     var_bg6         = lighten(var_bg1, 40%)        // #ddd
     var_bg7         = lighten(var_bg1, 50%)        // #d3d3d3
  
- /* var_bg8         = selectable DS Background 2   // #fef8f2, brownish golden */
+ /* var_selected    = selectable DS Background 2   // #fef8f2, brownish golden */
  /* var_headfoot    = selectable DS Header & footer bg  // #232f3e, darkblue */
 
     var_font7       = invert(var_bg1)              // #ffffff, white
@@ -104,10 +104,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .ap_content[role="alertdialog"],
         .ap_popover .ap_titlebar,
         .ap_popover .ap_titlebar .ap_title,
- 		#buyBoxAccordion .a-accordion-active .a-accordion-row,
-		.a-accordion .a-accordion-active .a-accordion-inner,
- 		.a-accordion .a-accordion-row,
- 		#actionPanelWrapper.burj {
+        #buyBoxAccordion .a-accordion-active .a-accordion-row,
+        .a-accordion .a-accordion-active .a-accordion-inner,
+        .a-accordion .a-accordion-row,
+        #actionPanelWrapper.burj {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -162,20 +162,20 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background-color: var_bg3 !important;
         }
         .cr-lighthouse-term,
- 		.a-icon-text-separator, .a-text-separator {
+        .a-icon-text-separator, .a-text-separator {
             background-color: var_bg6 !important;
         }
         center > div[style^="background-color:#eff7fe;"] {
             background-color: var_bg3 !important;
         }
-		#leftNav .s-pfsd-banner {
-			background-color: var_bg2 !important;
-		}
+        #leftNav .s-pfsd-banner {
+            background-color: var_bg2 !important;
+        }
         .wl-list.selected,
         .GB-SUPPLE .filters,
         table.a-bordered tr:nth-child(2n),
         .acs-wtfl-filtersort-wrap,
- 		.a-accordion .a-accordion-row:hover {
+        .a-accordion .a-accordion-row:hover {
             background-color: var_bg2 !important;
         }
         .dp-main {
@@ -196,9 +196,9 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background-color: var_bg1 !important;
             border-color: var_bg6 !important;
         }
-		.a-dropdown-common .divider {
-			background-color: var_bg1 !important;
-		}
+        .a-dropdown-common .divider {
+            background-color: var_bg1 !important;
+        }
         .a-color-offset-background,
         .a-dropdown-common .a-dropdown-link.a-active {
             background-color: var_bg2 !important;
@@ -208,8 +208,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background: var_bg6 !important;
         }
         .a-button-inner,
- 		.a-carousel-goto-nextpage, .a-carousel-goto-prevpage,
- 		ul.a-pagination li a {
+        .a-carousel-goto-nextpage, .a-carousel-goto-prevpage,
+        ul.a-pagination li a {
             box-shadow: none !important;
         }
         .cBoxB,
@@ -269,23 +269,21 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         }
 
         .a-button-toggle.a-button-selected .a-button-inner, .a-button-toggle.a-button-selected.a-button-focus .a-button-inner, .a-button-toggle.a-button-selected.a-button-focus:hover .a-button-inner, .a-button-toggle.a-button-selected:focus .a-button-inner, .a-button-toggle.a-button-selected:focus:hover .a-button-inner, .a-button-toggle.a-button-selected:hover .a-button-inner,
-        #MediaMatrix #twister #binding_row_landing, #MediaMatrix #twister .top-level.selected-row {
-            background: var_bg8 !important;
-        }
+        #MediaMatrix #twister #binding_row_landing, #MediaMatrix #twister .top-level.selected-row,
         .comparison_table tr:nth-child(2n) td.comparison_baseitem_column {
-            background: var_bg8 !important;
+            background: var_selected !important;
         }
         .comparison_baseitem_column {
-            background: darken(var_bg8, 30%) !important;
+            background: darken(var_selected, 30%) !important;
         }
         #MediaMatrix #twister > div tr:hover,
         ul.a-pagination li,
         ul.a-pagination li a {
             background: var_bg3 !important;
         }
-		ul.a-pagination li a:hover {
-			background: var_bg4 !important;
-		}
+        ul.a-pagination li a:hover {
+            background: var_bg4 !important;
+        }
         div.pagnHy,
         .feed-carousel .feed-scrollbar-track,
         #pageContent hr,
@@ -331,12 +329,12 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .playlistDetailsListItem:not(.emptyRow) td,
         .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .hoverColumn, .playlistDetailsListItem:hover:not(.emptyRow):not(.header) .selectColumn,
         .acs-product-card-for-container,
- 		#leftNav .s-pfsd-banner,
- 		center > div[style^="background-color:#eff7fe;"],
- 		#leftNav #leftNavContainer,
- 		.a-viewoptions-section,
- 		#revDivider .a-divider-inner, hr.bucketDivider,
- 		#twister .swatches li {
+        #leftNav .s-pfsd-banner,
+        center > div[style^="background-color:#eff7fe;"],
+        #leftNav #leftNavContainer,
+        .a-viewoptions-section,
+        #revDivider .a-divider-inner, hr.bucketDivider,
+        #twister .swatches li {
             border-color: var_bg6 !important;
         }
         .arrow-left { border-right-color: var_bg3 !important; }
@@ -371,17 +369,17 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background: var_bg6 !important;
             opacity: 0.95 !important;
         }
-		#prodDetails table td.label {
-			background-color: var_bg2 !important;
-			color: var_font2 !important;
-		}
-		#twister .swatches li.swatchHover .a-button-text,
-		#twister .swatches li.swatchUnavailableHover .a-button-text {
-			background-color: var_bg2 !important;
-		}
-		#twister .swatches li.swatchSelect {
-			border-color: lighten(var_bg8, 40%) !important;
-		}
+        #prodDetails table td.label {
+            background-color: var_bg2 !important;
+            color: var_font2 !important;
+        }
+        #twister .swatches li.swatchHover .a-button-text,
+        #twister .swatches li.swatchUnavailableHover .a-button-text {
+            background-color: var_bg2 !important;
+        }
+        #twister .swatches li.swatchSelect {
+            border-color: lighten(var_selected, 40%) !important;
+        }
 
         /* Icons */
         .a-icon-popover,
@@ -403,7 +401,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         i[id^="fst-cs-btn-arrow"],
         .a-icon-next,
         .a-icon-previous,
- 		#prime-bbop-logo {
+        #prime-bbop-logo {
             filter: invert(1) !important;
         }
         .nav-promo,
@@ -507,11 +505,11 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .topHitTile .details .primaryTitle, .topHitTile .details .primaryTitle a,
         .topHitTile .details .secondaryTitle, .topHitTile .details .secondaryTitle a,
         .stationTile.genericTile .details .primaryTitle,
- 		.askTypicalExamples,
- 		#prodDetails #SalesRank ul li span.zg_hrsr_ladder, #prodDetails #SalesRank ul li span.zg_hrsr_rank, #prodDetails .wrapper, #prodDetails td,
- 		#prodDetails .content,
- 		.burj-body #AUI_A9AdsMiddleBoxTop h2, .burj-body #CustomerDiscussions h2, .burj-body #comparison_table_title, .burj-body #customer-discussions_feature_div h2, .burj-body #customerReviewsHeader, .burj-body #detailpage-click2call-header, .burj-body #giveaway h2, .burj-body #hmdFormDiv h2, .burj-body #need-help-deciding .secHeader, .burj-body #pf-fitment-wrapper h2, .burj-body #prodDetails h2, .burj-body #revMHLContainer h2, .burj-body #reviewBucketHeader, .burj-body #reviewContainer h2, .burj-body #rhfMainHeading, .burj-body #sponsored-products-dp_feature_div h2, .burj-body .bucket h2, .burj-body .cdInlineAskBoxTitle, .burj-body .cdQuestionAnswerHeader, .burj-body .pa_componentTitleTest h2, .burj-body h2.amtcmp, .burj-body h2.askWidgetHeader, .burj-body h2.featureHeading, .prestige_beauty.burj-body #cm_cr_dpwidget > h2,
-		ul.a-pagination li a {
+        .askTypicalExamples,
+        #prodDetails #SalesRank ul li span.zg_hrsr_ladder, #prodDetails #SalesRank ul li span.zg_hrsr_rank, #prodDetails .wrapper, #prodDetails td,
+        #prodDetails .content,
+        .burj-body #AUI_A9AdsMiddleBoxTop h2, .burj-body #CustomerDiscussions h2, .burj-body #comparison_table_title, .burj-body #customer-discussions_feature_div h2, .burj-body #customerReviewsHeader, .burj-body #detailpage-click2call-header, .burj-body #giveaway h2, .burj-body #hmdFormDiv h2, .burj-body #need-help-deciding .secHeader, .burj-body #pf-fitment-wrapper h2, .burj-body #prodDetails h2, .burj-body #revMHLContainer h2, .burj-body #reviewBucketHeader, .burj-body #reviewContainer h2, .burj-body #rhfMainHeading, .burj-body #sponsored-products-dp_feature_div h2, .burj-body .bucket h2, .burj-body .cdInlineAskBoxTitle, .burj-body .cdQuestionAnswerHeader, .burj-body .pa_componentTitleTest h2, .burj-body h2.amtcmp, .burj-body h2.askWidgetHeader, .burj-body h2.featureHeading, .prestige_beauty.burj-body #cm_cr_dpwidget > h2,
+        ul.a-pagination li a {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -546,7 +544,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #rhf .rhf-header,
         .aiv-container-limited.tancaccept,
         .acs-wtfl-filtersort-category:hover,
- 		.nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text {
+        .nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text {
             color: var_font2 !important;
         }
 
@@ -565,9 +563,9 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .nav-text:hover,
         #hud-dashboard .customer-name a:active, #hud-dashboard .customer-name a:hover,
         .hud-carousel-element a:hover .subtext,
- 		.nav-title > .nav-text,
- 		.nav-hasPanel.nav-item.nav-active > .nav-text,
- 		a.a-color-state {
+        .nav-title > .nav-text,
+        .nav-hasPanel.nav-item.nav-active > .nav-text,
+        a.a-color-state {
             color: var_linkhover !important;
         }
         .a-color-price,
@@ -595,19 +593,19 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .aplus-v2 tr.apm-tablemodule-keyvalue td {
             border-color: var_bg6 !important;
         }
-		.s-see-all-refinement-header {
-			background: darken(var_font8, 30%) !important;
-			border-color: var_linkdefault !important;
-		}
-		.s-see-all-refinement-header .pagn a, .s-see-all-refinement-header .pagn a:visited {
-			color: var_linkdefault !important;
-		}
-		.s-see-all-refinement-header .pagn a:active, .s-see-all-refinement-header .pagn a:hover {
-			background: var_font8 !important;
-		}
-		ul.a-pagination li.a-disabled {
-			background-color: transparent !important;
-		}
+        .s-see-all-refinement-header {
+            background: darken(var_font8, 30%) !important;
+            border-color: var_linkdefault !important;
+        }
+        .s-see-all-refinement-header .pagn a, .s-see-all-refinement-header .pagn a:visited {
+            color: var_linkdefault !important;
+        }
+        .s-see-all-refinement-header .pagn a:active, .s-see-all-refinement-header .pagn a:hover {
+            background: var_font8 !important;
+        }
+        ul.a-pagination li.a-disabled {
+            background-color: transparent !important;
+        }
 
         /*** Gradients ***/
         hr.bucketDivider::after,
@@ -616,12 +614,12 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #gw-content-grid-bottom > div, #gw-content-grid-top > div,
         .a-box .a-divider.a-divider-section .a-divider-inner::after, .a-color-base-background .a-divider.a-divider-section .a-divider-inner::after, .a-divider.a-divider-section .a-divider-inner::after,
         .kfs-bg-container,
- 		.a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner {
+        .a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner {
             background-image: none !important;
         }
-		.a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner {
-			border-top: 1px solid var_font3 !important;
-		}
+        .a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner {
+            border-top: 1px solid var_font3 !important;
+        }
         .fadeGradient,
         .a-expander-content-fade {
             background: linear-gradient(to top, var_bg1 15%, rgba(255,255,255,0) 100%) !important;
@@ -632,10 +630,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .aivDetailsGradient {
             background: radial-gradient(ellipse at center, var_bg2a7 0, var_bg2a8 48%, var_bg2 70%, var_bg2 100%) !important;
         }
-		.a-form-actions {
-			background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
-			border-top-color: var_bg6 !important;
-		}
+        .a-form-actions {
+            background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
+            border-top-color: var_bg6 !important;
+        }
         /* Amazon Music buttons */
         .navButton {
             background-color: var_bg3 !important;
@@ -696,7 +694,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #gbox-ad-row-2\.0,
         #csg-search-cu,
         #top table table img,
- 		.askQuestionExamples {
+        .askQuestionExamples {
             display: none !important;
         }
 
