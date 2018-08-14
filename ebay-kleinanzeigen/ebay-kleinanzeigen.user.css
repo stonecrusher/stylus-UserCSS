@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        2.0.9
+@version        2.0.10
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -23,184 +23,184 @@
 
 
 @-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
-	@css {
-		body,
-		#site-header {
-			color: var_schriftfarbe1 !important;
-			background-color: var_bg1 !important;
-			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAAB20lEQVRIx4XWuZXDMAwE0C0SAQtggIIYoAAEU+aKOHhYojTrYP2+QfOW/5QIJOih/q8HwF/pb3EX+UPIveYcQGgEHiu9hI+ihEc5Jz5KBIlRRRaJ1JtoSAl5Hw96hLB1/up1tnIXOck5jZQy+3iU2hAOKSH1JvwxHsp+5TLF5MOl1/MQXsVs1miXc+KDbYydyMeUgpPQreZ7fWidbNhkXNJSeAhc6qHmHD8AYovunYyEACWEbyIhNeB9fRrH3hFi0bGPLuEW7xCNaohw1vAlS805nfsrTspclB/hVdoqusg53eH7FWot+wjYpOViX8KbFFKTwlnzvj65P9H/vD0/hibYBGhPwlPO8TmxRsaxsNnrUmUXpNhirlJMPr6Hqq9k5Xn/8iYQHYIuQsWFC6Z87IOxLxHphSY4SpuiU87xJnJr5axfeRd+lnMExXpEWPpuZ1v7qZdNBOjiHzDREHX5fs5Zz9p6X0vVKbKKchlSl5rv+3p//FJ/PYvoKryI8vs+2G9lzRmnEKkh+BU8yDk515jDj/HAswu7CCz6U/Mxb/PnC9N41ndpU4hUU7JGk/C9PmP/M2xZYdvBW2PObyf1IUiIzoHmHW9yTncliYs9A9tVNppdShfgQaTLMf+j3X723tLeHgAAAABJRU5ErkJggg==);
-			background-blend-mode: hard-light !important;
-		}
-	}
-	.mainnav-item:hover .mainnav-item-inner,
-	.on .mainnav-item-inner,
-	.mainnav-item.on, .mainnav-item:hover {
-		color: var_bg1 !important;
-		background-color: var_schriftfarbe1 !important;
-	}
-	.formerror {
-		color: var_bg1 !important;
-		background-color: var_schriftfarbe1 !important;
-	}
-	.formerror::after,
-	.formerror.is-inline::after {
-		background-color: transparent !important
-	}
-	h1, h2, h3, h4, h5, h6,
-	.flexlist--header,
-	.aditem-addon, .savedsearchitem-addon,
- 	#viewad-cntr-num,
- 	.itemtile-body,
- 	.dropdown-list > li,
- 	.savedsearchitem, .followuseritem {
-		color: var_schriftfarbe1 !important;
-	}
-	.articleheader--price,
- 	.button-secondary, .button-inverted,
- 	.aditem-details > strong {
-		color: var_schriftfarbe2 !important;
-	}
-	.text-light,
- 	.textcounter,
- 	.headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .boxheader > h1, .boxheader-nomarginbottom > h1, .boxheader > h2, .boxheader-nomarginbottom > h2, .boxheader > h3, .boxheader-nomarginbottom > h3, .boxheader > h4, .boxheader-nomarginbottom > h4, .boxheader > h5, .boxheader-nomarginbottom > h5, .boxheader > h6, .boxheader-nomarginbottom > h6, .icon-headline, .icon-headline-small,
- 	body#login,	body#vap, body#home, body#srchrslt,	body#msgbox, body#my-manageads,	body#my-settngs, body#wtchlst, body#my-followuser, body#my-savedsearches, body#postad-step1, body#pstad, body#pstrads, body#prview, body#browseCtgry, body#logout {
-		color: var_schriftfarbe1 !important;
-	}
-	a,
-	.textdropdown { /* Sortierungslink */
-		color: var_linkfarbe1 !important;
-	}
-	/* Navi: Anzeige aufgeben, Meins */
-	.mainnav-item-inner {
-		color: var_schriftfarbe1 !important;
-	}
-	
- 	.bubblebox, .bubblebox h1 {
-		color: var_bg2 !important;
-	}
-	input,
-	.browsebox-selected-itembox,
- 	.outcomebox-success h1 {
-		color: var_bg1 !important;
-	}
-	.contentbox, .contentbox-unpadded, .contentbox-info, .contentbox-landingpage, .info-contentbox,
- 	.mainnav-sub,
- 	.dropdown-list,
- 	.itemtile, .itemtile-condensed, .itemtile-fullpic,
- 	.actionlist-body,
- 	.mfp-popup, .mfp-popup-medium, .mfp-popup-small, .mfp-popup-large, .mfp-popup-huge {
-		background-color: var_bg2 !important;
-	}
-	.ad-listitem.is-highlight {
-		background-color: lighten(var_bg2, 10%) !important;
-	}
-	.dropdown-list > li.is-active,
-	.dropdown-list > li:hover,
-	.attributelist-striped .attributelist--key:nth-of-type(2n+1),
-    .attributelist-striped .attributelist--value:nth-of-type(2n+1),
- 	.manageaditem > footer, .savedsearchitem-footer, .followuseritem-footer, .aditem-footer,
- 	.sectionbox,
- 	.outcomebox-error .conditionalcomment-outcomeboxbody, .outcomebox-success .conditionalcomment-outcomeboxbody, .outcomebox-warning .conditionalcomment-outcomeboxbody, .outcomebox-error .outcomebox--body, .outcomebox-success .outcomebox--body, .outcomebox-warning .outcomebox--body,
- 	.login-overlay {
-		background-color: var_bg1 !important;
-	}
-	.a-green.bar {
-		background-color: darken(var_schriftfarbe2,30%) !important;
-	}
-	.imagebox,
-	.imagebox-small,
-	.imagebox-storelogo-mini,
-	.imagebox-thumbnail,
-	.imagebox-storelogo {
-		background-color: darken(var_bg2,20%) !important;
-		border-color: darken(var_bg2,20%) !important;
-		border-radius: 5px !important;
-	}
-	.button-secondary,
-	.button-inverted {
-		background-color: var_bg1 !important;
-	  	&:hover {
-			background-color: darken(var_bg1,20%) !important;
-		}
-	}
-	.button-toggle,
-	.is-toggled {
-		background-color: darken(var_schriftfarbe3,20%) !important;
-		&:hover {
-			background-color: var_schriftfarbe3 !important;
-		}
-	}
-	
-	/*** Meine Nachrichten ***/
-	.listitem-container,
- 	.conversationitem,
- 	.msgbox-to {
-		background-color: var_bg2 !important;
-	}
-	.conversationitem:hover, .conversationitem.is-active,
- 	.msgbox-from {
-		background-color: var_bg1 !important;
-	}
-	#msgbox-conversation-overview > ul > li:last-of-type {
-		border-bottom: 1px solid #cbcbcb !important;
-	}
-	.msgbox-to {
-		color: var_schriftfarbe1 !important;
-	}
-	.browsebox-selected-itembox,
- 	.tooltip {
-		background-color: var_bg1 !important;
-		color: var_schriftfarbe1 !important;
-	}
-	.pvap-paused-veil {
-		background-color: rgba(255, 169, 116, 0.4) !important;
-	}
+    @css {
+        body,
+        #site-header {
+            color: var_schriftfarbe1 !important;
+            background-color: var_bg1 !important;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAAB20lEQVRIx4XWuZXDMAwE0C0SAQtggIIYoAAEU+aKOHhYojTrYP2+QfOW/5QIJOih/q8HwF/pb3EX+UPIveYcQGgEHiu9hI+ihEc5Jz5KBIlRRRaJ1JtoSAl5Hw96hLB1/up1tnIXOck5jZQy+3iU2hAOKSH1JvwxHsp+5TLF5MOl1/MQXsVs1miXc+KDbYydyMeUgpPQreZ7fWidbNhkXNJSeAhc6qHmHD8AYovunYyEACWEbyIhNeB9fRrH3hFi0bGPLuEW7xCNaohw1vAlS805nfsrTspclB/hVdoqusg53eH7FWot+wjYpOViX8KbFFKTwlnzvj65P9H/vD0/hibYBGhPwlPO8TmxRsaxsNnrUmUXpNhirlJMPr6Hqq9k5Xn/8iYQHYIuQsWFC6Z87IOxLxHphSY4SpuiU87xJnJr5axfeRd+lnMExXpEWPpuZ1v7qZdNBOjiHzDREHX5fs5Zz9p6X0vVKbKKchlSl5rv+3p//FJ/PYvoKryI8vs+2G9lzRmnEKkh+BU8yDk515jDj/HAswu7CCz6U/Mxb/PnC9N41ndpU4hUU7JGk/C9PmP/M2xZYdvBW2PObyf1IUiIzoHmHW9yTncliYs9A9tVNppdShfgQaTLMf+j3X723tLeHgAAAABJRU5ErkJggg==);
+            background-blend-mode: hard-light !important;
+        }
+    }
+    .mainnav-item:hover .mainnav-item-inner,
+    .on .mainnav-item-inner,
+    .mainnav-item.on, .mainnav-item:hover {
+        color: var_bg1 !important;
+        background-color: var_schriftfarbe1 !important;
+    }
+    .formerror {
+        color: var_bg1 !important;
+        background-color: var_schriftfarbe1 !important;
+    }
+    .formerror::after,
+    .formerror.is-inline::after {
+        background-color: transparent !important
+    }
+    h1, h2, h3, h4, h5, h6,
+    .flexlist--header,
+    .aditem-addon, .savedsearchitem-addon,
+     #viewad-cntr-num,
+     .itemtile-body,
+     .dropdown-list > li,
+     .savedsearchitem, .followuseritem {
+        color: var_schriftfarbe1 !important;
+    }
+    .articleheader--price,
+     .button-secondary, .button-inverted,
+     .aditem-details > strong {
+        color: var_schriftfarbe2 !important;
+    }
+    .text-light,
+     .textcounter,
+     .headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .boxheader > h1, .boxheader-nomarginbottom > h1, .boxheader > h2, .boxheader-nomarginbottom > h2, .boxheader > h3, .boxheader-nomarginbottom > h3, .boxheader > h4, .boxheader-nomarginbottom > h4, .boxheader > h5, .boxheader-nomarginbottom > h5, .boxheader > h6, .boxheader-nomarginbottom > h6, .icon-headline, .icon-headline-small,
+     body#login,    body#vap, body#home, body#srchrslt,    body#msgbox, body#my-manageads,    body#my-settngs, body#wtchlst, body#my-followuser, body#my-savedsearches, body#postad-step1, body#pstad, body#pstrads, body#prview, body#browseCtgry, body#logout {
+        color: var_schriftfarbe1 !important;
+    }
+    a,
+    .textdropdown { /* Sortierungslink */
+        color: var_linkfarbe1 !important;
+    }
+    /* Navi: Anzeige aufgeben, Meins */
+    .mainnav-item-inner {
+        color: var_schriftfarbe1 !important;
+    }
     
-	/*** Conditionals ***/
-	if header-condense {
-		/* Header komprimieren */
-		.has-above-header-info #site-header {
-			border-top: 0 !important;
-			margin-bottom: 7px !important;
-		}
-		#site-header-top {
-			padding-top: 5px !important;
-			margin-bottom: 2px !important;
-		}
-		#site-header {
-			margin-bottom: 10px !important;
-		}
-		#site-signin.is-centered-button {
-			top: 18px !important;
-		}
-	}
-	if ads-remove {
-		/* Werbung */
-		#vip-atf-billboard,     //Werbezeile head
- 		#store-gallery,         //Einschub Unternehmensseiten
-		#home-gallery,          //Galerie
-		#vap_adsense-middle,    //Google Adsense
-		.adsenseplacement,
-		#brws_banner-supersize, //Top-result-banner
-		#srchrslt-adtable > .ad-listitem:not(.lazyload-item), //Einschub in Suchergebnissen
-		#vap #pla-container     //Google Vorschläge auf Detailseite
-		{
-			display: none !important;
-		}
-		@css {
-			advertiser\:remarketing { display: none !important; } /* Ding im Footer und CookieContainer */
-		}
-	}
-	if upsell-remove {
-		#postad-features,
-		.manageaditem-featuretable,
- 		.manageadbox .featuretable {
-			display: none !important;
-		}
-	}
-	if social-remove {
-		.socialshare {
-			display: none !important;
-		}
-	}
+     .bubblebox, .bubblebox h1 {
+        color: var_bg2 !important;
+    }
+    input,
+    .browsebox-selected-itembox,
+     .outcomebox-success h1 {
+        color: var_bg1 !important;
+    }
+    .contentbox, .contentbox-unpadded, .contentbox-info, .contentbox-landingpage, .info-contentbox,
+     .mainnav-sub,
+     .dropdown-list,
+     .itemtile, .itemtile-condensed, .itemtile-fullpic,
+     .actionlist-body,
+     .mfp-popup, .mfp-popup-medium, .mfp-popup-small, .mfp-popup-large, .mfp-popup-huge {
+        background-color: var_bg2 !important;
+    }
+    .ad-listitem.is-highlight {
+        background-color: lighten(var_bg2, 10%) !important;
+    }
+    .dropdown-list > li.is-active,
+    .dropdown-list > li:hover,
+    .attributelist-striped .attributelist--key:nth-of-type(2n+1),
+    .attributelist-striped .attributelist--value:nth-of-type(2n+1),
+     .manageaditem > footer, .savedsearchitem-footer, .followuseritem-footer, .aditem-footer,
+     .sectionbox,
+     .outcomebox-error .conditionalcomment-outcomeboxbody, .outcomebox-success .conditionalcomment-outcomeboxbody, .outcomebox-warning .conditionalcomment-outcomeboxbody, .outcomebox-error .outcomebox--body, .outcomebox-success .outcomebox--body, .outcomebox-warning .outcomebox--body,
+     .login-overlay {
+        background-color: var_bg1 !important;
+    }
+    .a-green.bar {
+        background-color: darken(var_schriftfarbe2,30%) !important;
+    }
+    .imagebox,
+    .imagebox-small,
+    .imagebox-storelogo-mini,
+    .imagebox-thumbnail,
+    .imagebox-storelogo {
+        background-color: darken(var_bg2,20%) !important;
+        border-color: darken(var_bg2,20%) !important;
+        border-radius: 5px !important;
+    }
+    .button-secondary,
+    .button-inverted {
+        background-color: var_bg1 !important;
+         &:hover {
+            background-color: darken(var_bg1,20%) !important;
+        }
+    }
+    .button-toggle,
+    .is-toggled {
+        background-color: darken(var_schriftfarbe3,20%) !important;
+        &:hover {
+            background-color: var_schriftfarbe3 !important;
+        }
+    }
+    
+    /*** Meine Nachrichten ***/
+    .listitem-container,
+     .conversationitem,
+     .msgbox-to {
+        background-color: var_bg2 !important;
+    }
+    .conversationitem:hover, .conversationitem.is-active,
+     .msgbox-from {
+        background-color: var_bg1 !important;
+    }
+    #msgbox-conversation-overview > ul > li:last-of-type {
+        border-bottom: 1px solid #cbcbcb !important;
+    }
+    .msgbox-to {
+        color: var_schriftfarbe1 !important;
+    }
+    .browsebox-selected-itembox,
+     .tooltip {
+        background-color: var_bg1 !important;
+        color: var_schriftfarbe1 !important;
+    }
+    .pvap-paused-veil {
+        background-color: rgba(255, 169, 116, 0.4) !important;
+    }
+    
+    /*** Conditionals ***/
+    if header-condense {
+        /* Header komprimieren */
+        .has-above-header-info #site-header {
+            border-top: 0 !important;
+            margin-bottom: 7px !important;
+        }
+        #site-header-top {
+            padding-top: 5px !important;
+            margin-bottom: 2px !important;
+        }
+        #site-header {
+            margin-bottom: 10px !important;
+        }
+        #site-signin.is-centered-button {
+            top: 18px !important;
+        }
+    }
+    if ads-remove {
+        /* Werbung */
+        #vip-atf-billboard,     //Werbezeile head
+        #store-gallery,         //Einschub Unternehmensseiten
+        #home-gallery,          //Galerie
+        #vap_adsense-middle,    //Google Adsense
+        .adsenseplacement,
+        #brws_banner-supersize, //Top-result-banner
+        #srchrslt-adtable > .ad-listitem:not(.lazyload-item), //Einschub in Suchergebnissen
+        #vap #pla-container     //Google Vorschläge auf Detailseite
+        {
+            display: none !important;
+        }
+        @css {
+            advertiser\:remarketing { display: none !important; } /* Ding im Footer und CookieContainer */
+        }
+    }
+    if upsell-remove {
+        #postad-features,
+        .manageaditem-featuretable,
+        .manageadbox .featuretable {
+            display: none !important;
+        }
+    }
+    if social-remove {
+        .socialshare {
+            display: none !important;
+        }
+    }
 }
