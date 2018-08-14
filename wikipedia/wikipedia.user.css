@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      2.0.2
+@version      10.0.0
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -473,5 +473,20 @@
   /* External link icon */
   .mw-parser-output .external {
     background-image: linear-gradient(transparent,transparent),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22%3E %3Cpath fill=%22%23333%22 stroke=%22%2336c%22 d=%22M1.5 4.518h5.982V10.5H1.5z%22/%3E %3Cpath fill=%22%2336c%22 d=%22M5.765 1H11v5.39L9.427 7.937l-1.31-1.31L5.393 9.35l-2.69-2.688 2.81-2.808L4.2 2.544z%22/%3E %3Cpath fill=%22%23bbb%22 d=%22M9.995 2.004l.022 4.885L8.2 5.07 5.32 7.95 4.09 6.723l2.882-2.88-1.85-1.852z%22/%3E %3C/svg%3E") !important;
+  }
+  /* Wikitionary logo */
+  .mw-wiki-logo {
+    filter: invert(0.8) !important;
+  }
+  /* Wikitionary titles */
+  .ns-0 #mw-content-text h1,
+  .ns-0 #mw-content-text h2,
+  .ns-0 #mw-content-text h3,
+  .ns-0 #mw-content-text h4 {
+    background-color: #333 !important;
+  }
+  /* Wikitionary tables */
+  td[bgcolor="#F7F7F9"] {
+    background-color: #2a2a2a !important;
   }
 }
