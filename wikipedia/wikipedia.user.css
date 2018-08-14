@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      10.0.0
+@version      20.0.3
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -53,7 +53,8 @@
   .referencetooltip > li + li, div.vectorTabs ul li, tr[style*="background:#F5FFFA" i],
   th[style*="background-color: #fff" i], .mw-echo-notifications-badge,
   .ext-cards-card-list .ext-cards-card, .infobox span.plainlinks *,
-  .tracklist, blockquote[style*="background-color: white" i] {
+  .tracklist, blockquote[style*="background-color: white" i]/*,
+  .ns-0 ul, .ns-0 ol li, table.flextable, table.flextable .invisible*/ {
     background-color: transparent !important;
   }
 
@@ -64,8 +65,7 @@
   /*** Overall ***/
   td, p, li, th:not([style*="background"]), caption, div,
   /*span:not([class*="color"]):not([class*="wikEd"]):not([style*="background"]),*/
-  p code, label code, dl code, .oo-ui-widget div, .oo-ui-widget label,
-  .mw-ui-button {
+  p code, label code, dl code, .oo-ui-widget div, .oo-ui-widget label {
     color: #9a9a9a;
   }
 
@@ -73,7 +73,7 @@
   div[style*="color"], input[type="search"], input[type="submit"],
   input[type="number"], select, .suggestions-result, input,
   .central-featured-lang .link-box em, .central-featured-lang .link-box small {
-    color: #ccc !important;
+    color: #9a9a9a !important;
   }
 
   a, .CategoryTreeToggle, #toc a, #toc a span, body .ui-button {
@@ -114,6 +114,11 @@
     /*[[bg-options]]*/
   }
 
+  .mw-ui-button, .mw-ui-button *, button[type="submit"] {
+    background-color: var(--base-color) !important;
+    color: #fff !important;
+  }
+
   #mw-page-base, div.vectorTabs, div.vectorTabs *, .wikiEditor-ui-toolbar, #p-cactions-label,
   .client-js #preftoc, .client-js #preftoc li, .client-js #preftoc li.selected a,
   .ui-widget-content, .ext-cards-card-list h3:after, #simpleSearch, .mw-mmv-ttf-ellipsis:before {
@@ -152,9 +157,8 @@
   tr[style*="background-color:white" i], tr[style*="background:#f9f9f9" i], td[bgcolor="#FFFFFF" i],
   tr[style*="background:#ddd" i], td[style*="background: #F2F2F2" i], tr[style*="background-color:#F2F2F2" i],
   tr[style*="background-color:#FFF5EE" i], tr[bgcolor="FFF5EE" i], td[bgcolor="FFF5EE" i],
-  .wikitable.charts-zebragrey > tbody > tr:nth-of-type(odd), td > span[style*="background-color:#eee" i],
-	.mw-mmv-download-pane,
-	div.thumbinner {
+  .wikitable.charts-zebragrey > tbody > tr:nth-of-type(odd), td > span[style*="background-color:#eee" i]/*,
+  #mw-content-text div:not(.toctitle) > h2, table.flextable th*/ {
     background-color: #222 !important;
   }
 
@@ -171,7 +175,7 @@
   td[style*="background:#F9F9F9" i], th[style*="background:gainsboro" i], td[style*="background:gainsboro" i],
   h2[style*="background:#eeeeee" i], h2[style*="background:#efefef" i], tr[bgcolor*="#eee" i],
   tr[style*="background-color:#eee" i], .wikitable.charts-zebragrey > tbody > tr:nth-of-type(even),
-  tr[style*="background:#fbf8d6" i] {
+  tr[style*="background:#fbf8d6" i]/*, table.flextable td*/ {
     background-color: #282828 !important;
   }
 
@@ -271,7 +275,7 @@
   }
 
   /*** Border ***/
-  fieldset {
+  fieldset/*, button[type="submit"]*/ {
     border-color: var(--base-color) !important;
   }
 
@@ -323,6 +327,10 @@
     background: #222 !important;
     border: 1px solid #555 !important;
   }
+  /*input, button {		
+    border-style: solid !important;		
+    border-width: 1px !important;		
+  }*/
 
   /* arrow down */
   .referencetooltip > li + li, .referencetooltip > li + li::after {
@@ -368,7 +376,7 @@
   /*** Text ***/
   .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
   table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
-    color: #ccc !important;
+    color: #fff !important;
   }
 
   .CategoryTreeEmptyBullet, .table-na {
@@ -489,4 +497,43 @@
   td[bgcolor="#F7F7F9"] {
     background-color: #2a2a2a !important;
   }
+  .mw-ui-button, .mw-ui-button *, button[type="submit"] {
+    background-color: var(--base-color) !important;
+    color: #9a9a9a !important;
+  }
+  body, h1, h2, h3, h4, h5, h6, #footer li, .infobox th[style*="background"],
+  div[style*="color"], input[type="search"], input[type="submit"],
+  input[type="number"], select, .suggestions-result, input,
+  .central-featured-lang .link-box em, .central-featured-lang .link-box small {
+    color: #ccc !important;
+  }
+  .mw-mmv-download-pane,
+  div.thumbinner {
+    background-color: #222 !important;
+  }
+  #mw-content-text div:not(.toctitle) > h2, table.flextable th,
+  table.flextable td {
+    background-color: transparent !important;
+  }
+  button[type="submit"] {
+    border-color: transparent !important;
+  }
+  input, button {
+    border-style: initial !important;
+    border-width: 1px !important;
+  }
+  .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
+  table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
+    color: #ccc !important;
+  }
+  /*** Text ***/
+  .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
+  table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
+    color: #ccc !important;
+  }
+
+  .CategoryTreeEmptyBullet, .table-na {
+    color: #fff !important;
+  }
+
 }
