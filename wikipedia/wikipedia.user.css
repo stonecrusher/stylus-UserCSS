@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.3
+@version      20.0.4
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -491,7 +491,7 @@
   .ns-0 #mw-content-text h2,
   .ns-0 #mw-content-text h3,
   .ns-0 #mw-content-text h4 {
-    background-color: #333 !important;
+    background-color: transparent !important;
   }
   /* Wikitionary tables */
   td[bgcolor="#F7F7F9"] {
@@ -535,5 +535,10 @@
   .CategoryTreeEmptyBullet, .table-na {
     color: #fff !important;
   }
-
+  td[bgcolor="#C8D8FF"] {
+    background-color: #333 !important;
+  }
+  td[style*="background:#F7F7F7"] {
+    background: #222 !important;
+  }
 }
