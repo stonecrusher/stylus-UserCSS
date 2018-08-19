@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.4
+@version      20.0.6
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -538,7 +538,19 @@
   td[bgcolor="#C8D8FF"] {
     background-color: #333 !important;
   }
-  td[style*="background:#F7F7F7"] {
+  td[style^="background:#F7F7F7"] {
     background: #222 !important;
+  }
+  .wikitable tr[style^="background:#E1E9F3"] {
+    background: #333 !important;
+  }
+  .wikitable tr[style^="background:#EEEEEE"] {
+    background: #222 !important;
+  }
+  div.vectorTabs li.selected, .client-js #preftoc li.selected {
+    background: linear-gradient(to top, #e08b26, #e08b2611 8%, transparent) !important;
+  }
+  #mw-indicator-mw-helplink a {
+    filter: invert(1) !important;
   }
 }
