@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.0.0
+@version        3.0.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -20,6 +20,11 @@
 @var color var_bg1            'Hintergrundfarbe'          #444
 @var color var_bg2            'Hintergrundfarbe 2'        #555
 ==/UserStyle== */
+
+/* TODO
+Suche ordnen: .textdropdown-options
+*/
+
 
 @-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
     @css {
@@ -48,6 +53,7 @@
     #viewad-cntr-num,
     .itemtile-body,
     .dropdown-list > li,
+    .textdropdown-options > li,
     .savedsearchitem, .followuseritem,
     .modal-dialog > header, .modal-dialog-content {
         color: var_font1 !important;
@@ -83,6 +89,7 @@
     .contentbox, .contentbox-unpadded, .contentbox-info, .contentbox-landingpage, .info-contentbox,
     .mainnav-sub,
     .dropdown-list,
+    .textdropdown-options,
     .itemtile, .itemtile-condensed, .itemtile-fullpic,
     .actionlist-body,
     .mfp-popup, .mfp-popup-medium, .mfp-popup-small, .mfp-popup-large, .mfp-popup-huge {
@@ -93,6 +100,8 @@
     }
     .dropdown-list > li.is-active,
     .dropdown-list > li:hover,
+    .textdropdown-options > li.is-active,
+    .textdropdown-options > li:hover,
     .attributelist-striped .attributelist--key:nth-of-type(2n+1),
     .attributelist-striped .attributelist--value:nth-of-type(2n+1),
     .manageaditem > footer, .savedsearchitem-footer, .followuseritem-footer, .aditem-footer,
@@ -105,6 +114,7 @@
         background-color: var_bg1 !important;
         color: var_bg1 !important;
     }
+    .textdropdown-options:after,
     .dropdown-list::after {
         background-color: var_bg2 !important;
     }
@@ -138,7 +148,11 @@
     .ad-gallery .ad-thumb-list > li.ad-active .imagebox-thumbnail, .ad-gallery-horizontal .ad-thumb-list > li.ad-active .imagebox-thumbnail {
         border-color: var_font3 !important;
     }
-    
+    @css {
+        .link-open-section, .textdropdown-input {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjgiIGhlaWdodD0iNSIgdmlld0JveD0iMCAwLjggOCA1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMC44IDggNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM1Mi4wMDAwMDAsIC0xODY5LjAwMDAwMCkiPjxwYXRoIGZpbGw9IiM3MGI3ZjUiIGQ9Ik0zNTIgMTg2OS44aDhsLTQgNUwzNTIgMTg2OS44eiIvPjwvZz48L3N2Zz4=) !important;
+        }
+    }
     /*** Meine Nachrichten ***/
     .listitem-container,
     .conversationitem,
