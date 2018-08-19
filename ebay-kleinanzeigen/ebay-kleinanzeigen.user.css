@@ -21,12 +21,6 @@
 @var color var_bg2            'Hintergrundfarbe 2'        #555
 ==/UserStyle== */
 
-/* TODO
-https://www.ebay.de/sch/fritzbox%207330sl
-Filterleiste + dropdowns
-*/
-
-
 @-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
     @css {
         body,
