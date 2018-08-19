@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.1
+@version        1.4.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -66,9 +66,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .a-input-text, input[type="text"], input[type="number"], input[type="tel"], input[type="password"], input[type="date"], input[type="email"], input[type="search"],
         .nav-flyout,
         .a-popover-inner,
-        .a-popover-header,
         .a-popover-modal .a-popover-footer,
         #quantity,
+        #rcxsubsQuan,
+        #rcxOrdFreq,
         #nav-prime-tooltip,
         .nav-npt-text-detail, a.nav-npt-a,
         #sort,
@@ -107,9 +108,15 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #buyBoxAccordion .a-accordion-active .a-accordion-row,
         .a-accordion .a-accordion-active .a-accordion-inner,
         .a-accordion .a-accordion-row,
-        #actionPanelWrapper.burj {
+        #actionPanelWrapper.burj,
+        #content {
             background: var_bg1 !important;
             color: var_font1 !important;
+        }
+        #leftNav .s-pfsd-banner,
+        .a-box.a-color-alternate-background,
+        .a-divider.a-divider-break.sc-one-click-divider > h5 {
+            background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
         #pageContent .sidebar, #sidebar,
@@ -137,6 +144,17 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .listViewDurationContextButton .listViewContextButton,
         .suggestions-list {
             background-color: var_bg3 !important;
+        }
+        .a-alert-error .a-alert-container {
+            background-color: var_bg2 !important;
+            box-shadow: 0 0 0 4px #921915 inset !important;
+        }
+        .a-alert-success .a-alert-container {
+            background-color: var_bg2 !important;
+            box-shadow: 0 0 0 4px #0d6c0d inset !important;
+        }
+        .deals-shoveler.fresh-shoveler {
+            background: var_bg1 !important;
         }
         .a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
         .a-color-alternate-background,
@@ -168,14 +186,13 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         center > div[style^="background-color:#eff7fe;"] {
             background-color: var_bg3 !important;
         }
-        #leftNav .s-pfsd-banner {
-            background-color: var_bg2 !important;
-        }
         .wl-list.selected,
         .GB-SUPPLE .filters,
         table.a-bordered tr:nth-child(2n),
         .acs-wtfl-filtersort-wrap,
-        .a-accordion .a-accordion-row:hover {
+        .a-accordion .a-accordion-row:hover,
+        #huc-v2-order-row-items,
+        #huc-v2-order-row-messages {
             background-color: var_bg2 !important;
         }
         .dp-main {
@@ -196,20 +213,23 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background-color: var_bg1 !important;
             border-color: var_bg6 !important;
         }
-        .a-dropdown-common .divider {
+        .a-dropdown-common .divider,
+        .aplus-v2 .apm-sidemodule {
             background-color: var_bg1 !important;
         }
         .a-color-offset-background,
         .a-dropdown-common .a-dropdown-link.a-active {
             background-color: var_bg2 !important;
         }
-        .a-button {
+        /* :not "buy now" */
+        .a-button:not(.a-button-primary) {
             border-color: var_bg7 var_bg5 var_bg5 var_bg7 !important;
             background: var_bg6 !important;
         }
         .a-button-inner,
         .a-carousel-goto-nextpage, .a-carousel-goto-prevpage,
-        ul.a-pagination li a {
+        ul.a-pagination li a,
+        .acs-product-card-for-container {
             box-shadow: none !important;
         }
         .cBoxB,
@@ -290,6 +310,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .a-alert-info .a-alert-container {
             background-color: var_bg5 !important;
         }
+        /* Automotive stripe */
+        #automotiveStripe {
+            background: var_bg2 !important;
+        }
         @css{
             /* billboard divider */
             #a-page .billboardRow {
@@ -334,7 +358,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #leftNav #leftNavContainer,
         .a-viewoptions-section,
         #revDivider .a-divider-inner, hr.bucketDivider,
-        #twister .swatches li {
+        #twister .swatches li,
+        .bit-aa-install-widget {
             border-color: var_bg6 !important;
         }
         .arrow-left { border-right-color: var_bg3 !important; }
@@ -380,8 +405,16 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #twister .swatches li.swatchSelect {
             border-color: lighten(var_selected, 40%) !important;
         }
+        .address-row {
+            border: none !important;
+        }
+        .list-address-selected {
+            background: var_selected !important;
+            border: 1px solid lighten(var_selected, 20%) !important;
+        }
 
-        /* Icons */
+
+        /*** Icons / Filter images ***/
         .a-icon-popover,
         .kicsPopover img,
         .a-icon-search, .a-link-emphasis::after,
@@ -401,7 +434,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         i[id^="fst-cs-btn-arrow"],
         .a-icon-next,
         .a-icon-previous,
-        #prime-bbop-logo {
+        #prime-bbop-logo,
+        .a-icon-collapse, .a-icon-expand {
             filter: invert(1) !important;
         }
         .nav-promo,
@@ -472,6 +506,9 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .a-price[data-a-color="base"],
         #navFooter.navLeftFooter .navFooterColHead,
         #productDescription,
+        #productDescription ul,
+        #productDescription h1, #productDescription h2, #productDescription h3, #productDescription h4, #productDescription h5, #productDescription h6,
+        #productDescription .aplus p,
         .askInlineWidget .vote,
         .a-profile-name,
         .hud-carousel-element a:active .value, .hud-carousel-element a:focus .value, .hud-carousel-element a:hover .value, .hud-carousel-element a:link .value, .hud-carousel-element a:visited .value,
@@ -485,7 +522,6 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .a-ordered-list.a-nostyle, .a-unordered-list.a-nostyle, ol.a-nostyle, ul.a-nostyle,
         .acs-wtfl-filtersort-category-selected,
         .vse-related-videos-container.a-carousel-container.vse-vertical-scroll .a-carousel-card.active .vse-video-content .vse-video-title .vse-video-title-prefix-text, .vse-related-videos-container.a-carousel-container.vse-vertical-scroll .a-carousel-card.active .vse-video-content .vse-video-title h4.vse-video-title-text,
-        #productDescription ul,
         #iv-tab-view-container #ivTitle, #iv-tab-view-container #ivTitle360,
         .a-alert-info .a-alert-container .a-alert-heading,
         #rhf .rvi-container .no-rvi-message,
@@ -509,7 +545,12 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #prodDetails #SalesRank ul li span.zg_hrsr_ladder, #prodDetails #SalesRank ul li span.zg_hrsr_rank, #prodDetails .wrapper, #prodDetails td,
         #prodDetails .content,
         .burj-body #AUI_A9AdsMiddleBoxTop h2, .burj-body #CustomerDiscussions h2, .burj-body #comparison_table_title, .burj-body #customer-discussions_feature_div h2, .burj-body #customerReviewsHeader, .burj-body #detailpage-click2call-header, .burj-body #giveaway h2, .burj-body #hmdFormDiv h2, .burj-body #need-help-deciding .secHeader, .burj-body #pf-fitment-wrapper h2, .burj-body #prodDetails h2, .burj-body #revMHLContainer h2, .burj-body #reviewBucketHeader, .burj-body #reviewContainer h2, .burj-body #rhfMainHeading, .burj-body #sponsored-products-dp_feature_div h2, .burj-body .bucket h2, .burj-body .cdInlineAskBoxTitle, .burj-body .cdQuestionAnswerHeader, .burj-body .pa_componentTitleTest h2, .burj-body h2.amtcmp, .burj-body h2.askWidgetHeader, .burj-body h2.featureHeading, .prestige_beauty.burj-body #cm_cr_dpwidget > h2,
-        ul.a-pagination li a {
+        ul.a-pagination li a,
+        .deals-shoveler .dealPrice,
+        .displayAddressDiv .displayAddressUL li,
+        a.no-link, a.no-link:active, a.no-link:link, a.no-link:visited,
+        a.no-link:hover,
+        #asTitle {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -565,7 +606,9 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .hud-carousel-element a:hover .subtext,
         .nav-title > .nav-text,
         .nav-hasPanel.nav-item.nav-active > .nav-text,
-        a.a-color-state {
+        a.a-color-state,
+        #productDescription .aplus h1, #productDescription .aplus h2, #productDescription .aplus h3, #productDescription .aplus h4,
+        #productDescription_feature_div > h1.default, #productDescription_feature_div > h2.default, #productDescription_feature_div > h3.default, #productDescription_feature_div > h4.default {
             color: var_linkhover !important;
         }
         .a-color-price,
@@ -630,9 +673,11 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .aivDetailsGradient {
             background: radial-gradient(ellipse at center, var_bg2a7 0, var_bg2a8 48%, var_bg2 70%, var_bg2 100%) !important;
         }
-        .a-form-actions {
+        .a-form-actions,
+        .a-popover-header,
+        .banner-border {
             background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
-            border-top-color: var_bg6 !important;
+            border-color: var_bg6 !important;
         }
         /* Amazon Music buttons */
         .navButton {
@@ -661,6 +706,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         /* Review bars */
         .a-meter {
             background: linear-gradient(to bottom, var_bg3, var_bg5) !important;
+        }
+        /* "Send to this address" */
+        .a-box-title .a-box-inner {
+            background: linear-gradient(to bottom, darken(var_bg2, 20%), var_bg2) !important;
         }
     }
     
@@ -694,7 +743,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #gbox-ad-row-2\.0,
         #csg-search-cu,
         #top table table img,
-        .askQuestionExamples {
+        .askQuestionExamples,
+        .prime-ad-banner-content {
             display: none !important;
         }
 
@@ -735,6 +785,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         /* Footer */
         #navFooter {
             display: none !important;
+        }
+        /* "Items other people bought after looking at this" (maybe affecting Prime Video Movie-Metadata?)*/
+        #view_to_purchase-sims-feature > .a-section > .a-section > .a-unordered-list {
+            display: flex !important;
         }
     }
     if mark-sponsored {
