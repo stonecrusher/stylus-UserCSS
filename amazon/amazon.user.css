@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.3
+@version        1.4.4
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -115,7 +115,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         }
         #leftNav .s-pfsd-banner,
         .a-box.a-color-alternate-background,
-        .a-divider.a-divider-break.sc-one-click-divider > h5 {
+        .a-divider.a-divider-break.sc-one-click-divider > h5,
+        .a-alert-info .a-alert-container {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -306,8 +307,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         }
         div.pagnHy,
         .feed-carousel .feed-scrollbar-track,
-        #pageContent hr,
-        .a-alert-info .a-alert-container {
+        #pageContent hr {
             background-color: var_bg5 !important;
         }
         /* Automotive stripe */
@@ -414,7 +414,7 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         }
 
 
-        /*** Icons / Filter images ***/
+        /*** Filter images / Icons ***/
         .a-icon-popover,
         .kicsPopover img,
         .a-icon-search, .a-link-emphasis::after,
@@ -461,6 +461,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         }
         .a-button-close {
             filter: brightness(0.8) !important;
+        }
+        /* Car Parts top bar */
+        .atsCaret, .atsCenter, .atsContent, .atsDDLL, .atsDDLR, .atsDDUL, .atsDDUR, .atsLL, .atsLR, .atsUL, .atsUR {
+            color: black !important;
         }
 
         .wishlist-left-nav {
@@ -550,7 +554,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .displayAddressDiv .displayAddressUL li,
         a.no-link, a.no-link:active, a.no-link:link, a.no-link:visited,
         a.no-link:hover,
-        #asTitle {
+        #asTitle,
+        .apl_message_tips,
+        .apl_m_font_title,
+        .apl_l_orange, .apl_l_black {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -567,7 +574,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .avu-content .avu-section-alt .av-alert-inline-block--info,
         .playlistDetailsListItem .duration,
         .listViewTrackNumber,
-        .avu-content .avu-section-alt .av-secondary {
+        .avu-content .avu-section-alt .av-secondary,
+        .cs-help-content p.lead {
             color: var_font3 !important;
         }
         hr,
@@ -657,7 +665,9 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #gw-content-grid-bottom > div, #gw-content-grid-top > div,
         .a-box .a-divider.a-divider-section .a-divider-inner::after, .a-color-base-background .a-divider.a-divider-section .a-divider-inner::after, .a-divider.a-divider-section .a-divider-inner::after,
         .kfs-bg-container,
-        .a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner {
+        .a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner,
+        .atsDDCC, .atsDDCL, .atsDDCR,
+        .atsDDFBC, .atsDDFBL, .atsDDFBR, .atsDDFCC, .atsDDFCL, .atsDDFCR, .atsDDHBC, .atsDDHBL, .atsDDHBR, .atsDDHCC, .atsDDHCL, .atsDDHCR, .atsDDHTC, .atsDDHTL, .atsDDHTR, .atsDDLC, .atsDDLL, .atsDDLR, .atsDDUC, .atsDDUL, .atsDDUR {
             background-image: none !important;
         }
         .a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner {
