@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.4
+@version        1.4.5
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -113,10 +113,14 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background: var_bg1 !important;
             color: var_font1 !important;
         }
+
         #leftNav .s-pfsd-banner,
         .a-box.a-color-alternate-background,
         .a-divider.a-divider-break.sc-one-click-divider > h5,
-        .a-alert-info .a-alert-container {
+        .a-alert-info .a-alert-container,
+        #dmusicTracklist_feature_div .sample-button,
+        .pauseIcon,
+        #dmusicTracklist_feature_div #dmusic_tracklist_content tr.NowPlaying.darkenOnHover, #dmusicTracklist_feature_div #dmusic_tracklist_content tr:hover.darkenOnHover {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -357,11 +361,13 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         center > div[style^="background-color:#eff7fe;"],
         #leftNav #leftNavContainer,
         .a-viewoptions-section,
-        #revDivider .a-divider-inner, hr.bucketDivider,
         #twister .swatches li,
-        .bit-aa-install-widget {
+        .bit-aa-install-widget,
+        #dmusicTracklist_feature_div .sample-button,
+        #revDivider .a-divider-inner, hr.bucketDivider {
             border-color: var_bg6 !important;
         }
+
         .arrow-left { border-right-color: var_bg3 !important; }
         .arrow-right { border-left-color: var_bg3 !important; }
         .arrow-bottom { border-top-color: var_bg3 !important; }
@@ -435,7 +441,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .a-icon-next,
         .a-icon-previous,
         #prime-bbop-logo,
-        .a-icon-collapse, .a-icon-expand {
+        .a-icon-collapse, .a-icon-expand,
+        .a-icon-add-to-mp3-cart {
             filter: invert(1) !important;
         }
         .nav-promo,
@@ -557,7 +564,9 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #asTitle,
         .apl_message_tips,
         .apl_m_font_title,
-        .apl_l_orange, .apl_l_black {
+        .apl_l_orange, .apl_l_black,
+        .TrackNumber-Default-Color,
+        .content ul li {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -657,6 +666,37 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         ul.a-pagination li.a-disabled {
             background-color: transparent !important;
         }
+        
+        /* Song controls */
+        /* inactive */
+        #dmusicTracklist_feature_div .sample-button#sample-previous-button.stopped::before,
+        #dmusicTracklist_feature_div .sample-button#sample-next-button.stopped::after {
+            background-color: var_bg1 !important;
+        }
+        #dmusicTracklist_feature_div .sample-button#sample-previous-button.stopped::after {
+            border-color: transparent var_bg1 transparent transparent !important;
+        }
+        #dmusicTracklist_feature_div .sample-button#sample-next-button.stopped::before {
+            border-color: transparent transparent transparent var_bg1 !important;
+        }
+        /* active */
+        #dmusicTracklist_feature_div .sample-button.disabled + .overlay .icon, #dmusicTracklist_feature_div .sample-button.stopped + .overlay .icon,
+        #dmusicTracklist_feature_div .sample-button#sample-next-button::before {
+            border-color: transparent transparent transparent var_font1 !important;
+        }
+        #dmusicTracklist_feature_div .sample-button#sample-previous-button::after {
+            border-color: transparent var_font1 transparent transparent !important;
+        }
+        #dmusicTracklist_feature_div .sample-all-container:hover .sample-button.playing, #dmusicTracklist_feature_div .sample-all-container:hover .sample-button.stopped, #dmusicTracklist_feature_div .sample-container:hover .sample-button.playing, #dmusicTracklist_feature_div .sample-container:hover .sample-button.stopped,
+        #dmusicTracklist_feature_div .sample-button#sample-next-button.playing:hover, #dmusicTracklist_feature_div .sample-button#sample-previous-button.playing:hover {
+            border-color: var_font1 !important;
+        }
+        #dmusicTracklist_feature_div .sample-button.loading + .overlay .icon, #dmusicTracklist_feature_div .sample-button.playing + .overlay .icon, #dmusicTracklist_feature_div .sample-button.playing.sample-all + .overlay .icon,
+        #dmusicTracklist_feature_div .sample-button#sample-previous-button::before,
+        #dmusicTracklist_feature_div .sample-button#sample-next-button::after {
+            background-color: var_font1 !important;
+        }
+
 
         /*** Gradients ***/
         hr.bucketDivider::after,
@@ -748,7 +788,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .dv-product-offer,
         #nav-upnav,
         div[name="goKindleStaticPopDiv"],
+        /* not #productDetails + hr.bucketDivider
+        https://www.amazon.de/dp/B001SP9N86/
         hr.bucketDivider:not(.a-divider-normal),
+        */
         #quickPromoBucketContent,
         #gbox-ad-row-2\.0,
         #csg-search-cu,
