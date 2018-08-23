@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.9
+@version      2.2.10
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -369,7 +369,8 @@ https://userstyles.org/styles/135368/
       color: var_schriftfarbe;
       background-color: var_hintergrund1;
     }
-    td[style="background-color: #FFFFFF;"] {
+    td[style="background-color: #FFFFFF;"],
+    td[style="background-color: #F3F3F3;"] {
       background-color: var_hintergrund1 !important;
     }
 
@@ -394,10 +395,12 @@ https://userstyles.org/styles/135368/
     #panel-mail-table.panel-mail-display-table-mail-horizontal tr.marked:hover .subject, #panel-mail-table.panel-mail-display-table-mail-horizontal tr:hover .subject,
     .fc,
     .bottom-links li,
-    .calendar-list .body > ul > li {
+    .calendar-list .body > ul > li,
+    .menu-sub-flyout.drop-down .menu-item.active {
       background-image: none !important;
       color: var_schriftfarbe !important;
     }
+
     /* E-Mail schreiben button */
     .button-cta,
     .button.secondary {
@@ -481,18 +484,19 @@ https://userstyles.org/styles/135368/
     .gui-toggle.minimized > .panel-head .gui-toggle-control { background-position: -283px -48px !important; }
 	.gui-toggle > .menu-head .gui-toggle-control { background-position: -281px -32px !important; }
     .gui-toggle.minimized > .menu-head .gui-toggle-control { background-position: -281px -48px !important; }
-    .symbol { color:#000 !important; } /* Briefsymbol */
+    .symbol { /* Briefsymbol */
+      color:#000 !important; } 
     /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
-    input.menu-item { color:var_schriftfarbe !important; } /* Dropdown */
-    .drop-down li:hover * { background-color:var_hintergrund2 !important; } /* z.B. bei checkbox Auswahl */
-    #panel-mail-table .inactive * { color:var_hintergrund3 !important; }
+    input.menu-item { color: var_schriftfarbe !important; } /* Dropdown */
+    .drop-down li:hover * { background-color: var_hintergrund2 !important; } /* z.B. bei checkbox Auswahl */
+    #panel-mail-table .inactive * { color: var_hintergrund3 !important; }
     #panel-mail-table form li:hover:not(.inactive),
     #panel-mail-table form li:hover:not(.inactive) span {
       background-color: var_hintergrund3 !important;
       color: var_hintergrund1 !important; }
+    /* Dropdown arrow */
     #panel-mail-display .area span.dropdown,
-    #panel-mail-table .area span.dropdown {  /* Dropdown downarrow */
-      border-style: solid !important;
+    #panel-mail-table .area span.dropdown {
       width: 0 !important;
       height: 0 !important;
       border-bottom:none !important;
@@ -500,10 +504,20 @@ https://userstyles.org/styles/135368/
       border-right: 5px solid var_hintergrund1 !important;
       border-top: 5px solid var_hintergrund3 !important;
     }
+    #panel-mail-display li:hover:not(.inactive) .area span.dropdown,
+    #panel-mail-table li:hover:not(.inactive) .area span.dropdown {
+      border-left: 5px solid var_hintergrund3 !important;
+      border-right: 5px solid var_hintergrund3 !important;
+      border-top: 5px solid var_hintergrund1 !important;
+    }
+    #panel-mail-display li:hover:not(.inactive) .area,
+    #panel-mail-table li:hover:not(.inactive) .area {
+      background: var_hintergrund3 !important;
+    }
     /* Trennstrich bei Mailvorschau rechts */
     .system-folder-message.js-box-vertical,
     .mail-display-wrapper.js-box-vertical {
-      border-left:1px solid #C9D6E7 !important;
+      border-left: 1px solid #C9D6E7 !important;
     }
 
     ::-moz-placeholder { color:var_hintergrund3 !important; }
