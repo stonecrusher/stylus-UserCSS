@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.8
+@version      2.2.9
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -368,6 +368,9 @@ https://userstyles.org/styles/135368/
     html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label):not(.active):not(select):not(hr):not(.dialog-container) {
       color: var_schriftfarbe;
       background-color: var_hintergrund1;
+    }
+    td[style="background-color: #FFFFFF;"] {
+      background-color: var_hintergrund1 !important;
     }
 
     body,
