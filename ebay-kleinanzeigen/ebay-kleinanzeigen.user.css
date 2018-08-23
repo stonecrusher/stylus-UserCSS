@@ -3,22 +3,24 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.0.3
+@version        3.1.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
 
-@var checkbox header-condense 'Header komprimieren'       1
-@var checkbox ads-remove      'Werbung entfernen'         1
-@var checkbox upsell-remove   'Upsell-Angebote entfernen' 1
-@var checkbox social-remove   'Teilen in soz. Medien entfernen' 0
 @var color var_font1          'Schriftfarbe'              #ccc
 @var color var_font2          'Schriftfarbe 2'            #0a0
 @var color var_font3          'Schriftfarbe 3'            #999
 @var color var_linkfarbe1     'Linkfarbe'                 #70b7f5
 @var color var_bg1            'Hintergrundfarbe'          #444
 @var color var_bg2            'Hintergrundfarbe 2'        #555
+
+@var checkbox header-condense 'Header komprimieren'       1
+@var checkbox ads-remove      'Werbung entfernen'         1
+@var checkbox upsell-remove   'Upsell-Angebote entfernen' 1
+@var checkbox topads-remove   'TopAds entfernen'          1
+@var checkbox social-remove   'Teilen in soz. Medien entfernen' 0
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
@@ -221,6 +223,11 @@
         #postad-features,
         .manageaditem-featuretable,
         .manageadbox .featuretable {
+            display: none !important;
+        }
+    }
+    if topads-remove {
+        .srchrslt-adtable-topads {
             display: none !important;
         }
     }
