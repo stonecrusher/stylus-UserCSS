@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.0.2
+@version        3.0.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -42,6 +42,8 @@
     .formerror.is-inline::after {
         background-color: transparent !important
     }
+    body,
+    .mainnav-sub-header,
     h1, h2, h3, h4, h5, h6,
     .flexlist--header,
     .aditem-addon, .savedsearchitem-addon,
@@ -57,6 +59,9 @@
     .button-secondary, .button-inverted,
     .aditem-details > strong {
         color: var_font2 !important;
+    }
+    .outcomebox-error > header h1, .outcomebox-success > header h1, .outcomebox-warning > header h1, .outcomebox-error > header h2, .outcomebox-success > header h2, .outcomebox-warning > header h2, .outcomebox-error > header h3, .outcomebox-success > header h3, .outcomebox-warning > header h3, .outcomebox-error > header h4, .outcomebox-success > header h4, .outcomebox-warning > header h4, .outcomebox-error > header h5, .outcomebox-success > header h5, .outcomebox-warning > header h5, .outcomebox-error > header h6, .outcomebox-success > header h6, .outcomebox-warning > header h6 {
+        color: black !important;
     }
     .text-light,
     .textcounter,
