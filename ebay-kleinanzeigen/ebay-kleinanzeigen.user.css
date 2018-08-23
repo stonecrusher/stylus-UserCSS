@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.0.1
+@version        3.0.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -20,11 +20,6 @@
 @var color var_bg1            'Hintergrundfarbe'          #444
 @var color var_bg2            'Hintergrundfarbe 2'        #555
 ==/UserStyle== */
-
-/* TODO
-Suche ordnen: .textdropdown-options
-*/
-
 
 @-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
     @css {
@@ -72,6 +67,10 @@ Suche ordnen: .textdropdown-options
     a,
     .textdropdown { /* Sortierungslink */
         color: var_linkfarbe1 !important;
+    }
+    /* Link in notice box (green background) */
+    .outcomemessage-error a, .outcomemessage-success a, .outcomemessage-warning a {
+        color: darken(var_linkfarbe1, 40%) !important;
     }
     /* Navi: Anzeige aufgeben, Meins */
     .mainnav-item-inner {
