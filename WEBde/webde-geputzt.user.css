@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.7
+@version      2.2.8
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -32,8 +32,8 @@ https://userstyles.org/styles/135368/
 
 /* Initial version based on https://userstyles.org/styles/120173/ by Norwin */
 
-@-moz-document regexp("^https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
-  /**** Login & Logout ****/
+@-moz-document regexp("https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
+  /*** Login & Logout ***/
   #mainnav, #header-image-link, #helplinks, #promoline, #footer, [class^="ad-"],
   #loginsearch-login .tab-nav, .breaking-news, #loginsearch-search,
   [data-device-type="desktop"] .info-layer, .statistics, .googleadsense,
@@ -44,7 +44,8 @@ https://userstyles.org/styles/135368/
   atl-feedback, /* 2018-02-26 */
   .promo,
   #rightnav,
-  section.cookie-lasche-hp /* Cookie Hinweis */ {
+  section.cookie-lasche-hp, /* Cookie Hinweis */
+  .cloud-storage-bar--extend-link {
     display:none !important;
   }
   #header { background:transparent !important; }
@@ -70,6 +71,7 @@ https://userstyles.org/styles/135368/
     min-width:250px !important;
     max-width:60% !important;
   }
+  
   .hint-wrapper { display:block !important; }
   .logout-notification {
     display:block !important;
@@ -103,12 +105,11 @@ https://userstyles.org/styles/135368/
   }
   .jsDisabled .wrapper-indent::before { content:none !important; }
 
-  /**** Navi ****/
+  /*** Navi ***/
   li[title="Vorteile des WEB.DE Club 1 Monat kostenlos testen"] { display:none !important; }
 
   pos-feedback { display:none !important; }
   pos-icon-item[icon="core_logout"] { background: var_logoutbuttonfarbe !important; }
-  pos-icon-item[icon="core_logout"] span { color:#000 !important; }
 
   /* Vorschaltseite */
   .page-splash span[title="Kaufen"],  /* Kaufen-Button */
@@ -204,11 +205,16 @@ https://userstyles.org/styles/135368/
   .component.widget.mail .nav-tabs { height: initial !important; }
   .component.widget.mail .tab-mail { height: auto !important; }
 
-  /**** Adressbuch ****/
+  /*** Email Editor ***/
+  #transferoption {
+    background-color: var_hintergrund1 !important;
+  }
+
+  /*** Adressbuch ***/
   #content-sky { display:none!important; }
   #regions { width:auto !important; }
 
-  /**** Postfach ****/
+  /*** Postfach ***/
   /* Höhe der Emailliste */
   .panel-body.js-box-columns { height:100% !important; }
 
@@ -308,7 +314,7 @@ https://userstyles.org/styles/135368/
   }
 }
 
-@-moz-document regexp("^https?:\\/\\/(bap\\.)?navigator\\.web\\.de\\/remindlogout\\?.*") {
+@-moz-document regexp("https?:\\/\\/(bap\\.)?navigator\\.web\\.de\\/remindlogout\\?.*") {
   /* Sicherheitshinweis bei Login vergessen - WEB.DE Service-Empfehlung */
   .page-splash .info,
   .page-splash #text > p:last-of-type,
@@ -318,7 +324,7 @@ https://userstyles.org/styles/135368/
   }
 }
 
-@-moz-document regexp("^https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
+@-moz-document regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
   /* Logout */
   .ie7fix,
   #wrapper2 > *:not(#header),
@@ -330,7 +336,7 @@ https://userstyles.org/styles/135368/
   #container::before { height:100% !important; }
 }
 
-@-moz-document regexp("^https?:\\/\\/web\\.de\\/logoutlounge\\/fm\\?status=login-failed.*") {
+@-moz-document regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/fm\\?status=login-failed.*") {
   /* Login failed */
   .hint::before {
     content:"Login fehlgeschlagen!" !important;
@@ -341,7 +347,8 @@ https://userstyles.org/styles/135368/
   }
 }
 
-@-moz-document regexp("^https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
+@-moz-document regexp("https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/(?!navigator\\/jump\\/to\\/calendar\\?sid).*") {
+  /* todo: kalender (regexp "kalender" alternative) */
   /***************   D A R K S T Y L E   S T A R T   ****************/
   if darkstyle-enable {
     html,
@@ -353,15 +360,19 @@ https://userstyles.org/styles/135368/
     .button-secondary,
     body,
     html.resolution-1024 #navigation ul li,
+    #navigation li a,
+    .cke_combo_on *,
+    #edit-content,
+    body.webde #welcome .welcome-content,
+    body.webde #welcome p,
     html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label):not(.active):not(select):not(hr):not(.dialog-container) {
-      color:var_schriftfarbe !important;
-      background-color:var_hintergrund1 !important;
+      color: var_schriftfarbe;
+      background-color: var_hintergrund1;
     }
 
     body,
     .menubar,
     #id5c,
-    .button-cta,
     .form-input-type-text,
     #id5a *:not(.icon),
     .button-secondary,
@@ -376,20 +387,28 @@ https://userstyles.org/styles/135368/
     .wrapper-center.first::before,
     #content,
     .fc-header-toolbar,
-    #mail-list .folder-section .container {
+    #mail-list .folder-section .container,
+    #panel-mail-table.panel-mail-display-table-mail-horizontal tr.marked:hover .subject, #panel-mail-table.panel-mail-display-table-mail-horizontal tr:hover .subject,
+    .fc,
+    .bottom-links li,
+    .calendar-list .body > ul > li {
       background-image: none !important;
       color: var_schriftfarbe !important;
+    }
+    /* E-Mail schreiben button */
+    .button-cta,
+    .button.secondary {
+      background: linear-gradient(to bottom, var_hintergrund2, var_hintergrund1) !important;
+      color: var_schriftfarbe !important;
+    }
+    .button-cta.is-hovered,
+    .button-secondary.is-hovered, .button-secondary.has-open-flyout,
+    .button.secondary:hover {
+      background: var_hintergrund2 !important;
     }
 
     .component.widget.mail .friends .number,
     .component.widget.mail .unknown .number{ color: var_schriftfarbe !important; }
-
-    .js-compose-send-button, /* Senden-Buttons */
-    #compose-form-submit-send,
-    #send,
-    #id132 {
-      color:black !important;
-    }
 
     .adWithOutsideComponent .wrapper-center.first .wrapper-border::before,
     body::before {
@@ -411,7 +430,7 @@ https://userstyles.org/styles/135368/
       height:50px !important;
     }
 
-    /* Email schreiben */
+    /*** Email Editor ***/
     input[placeholder="Suche"],
     .compose-header_object input { color:var_schriftfarbe !important; }
 
@@ -424,7 +443,12 @@ https://userstyles.org/styles/135368/
 
     #cke_1_top.collapsed { padding-bottom:0 !important; }
 
-    /* Startseite */
+    /* Stylingbuttons hover */
+    a.cke_button_off:hover, a.cke_button_off:focus, a.cke_button_off:active, a.cke_button_disabled:hover, a.cke_button_disabled:focus, a.cke_button_disabled:active {
+        background: linear-gradient(to bottom, lighten(var_hintergrund2,20%), var_hintergrund2) !important;
+    }
+
+    /*** Startseite ***/
     .mail.active::before { display:none !important; }
 
     .inbox-container > li { border-bottom:1px solid white !important; }
@@ -446,10 +470,10 @@ https://userstyles.org/styles/135368/
     #desk .component.mailbox ul.bulk-container li:hover *,
     #desk .component.mailbox ul.inbox-container li:hover * { background-color:var_hintergrund2 !important; }
 
-    /* Postfach */
-    #mail-list tr:hover *:not(.mail-star),
-    #navigation li:hover *,
-    #section-0 .is-hovered { background-color:var_hintergrund2 !important; } /* E-Mail schreiben Button */
+    /*** Postfach ***/
+    #mail-list tr:hover *:not(.mail-star), 
+    #navigation li:hover *, /* Seitenmenüpunkte */
+    #section-0 .is-hovered { background-color: var_hintergrund2 !important; } /* E-Mail schreiben Button */
     .gui-toggle > .panel-head .gui-toggle-control { background-position: -283px -32px !important; }
     .gui-toggle.minimized > .panel-head .gui-toggle-control { background-position: -283px -48px !important; }
 	.gui-toggle > .menu-head .gui-toggle-control { background-position: -281px -32px !important; }
@@ -481,7 +505,7 @@ https://userstyles.org/styles/135368/
 
     ::-moz-placeholder { color:var_hintergrund3 !important; }
 
-    /* Menü hover */
+    /*** Menü hover ***/
     #navigation a.active,
     #navigation a.active > .text,
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active,
@@ -490,10 +514,10 @@ https://userstyles.org/styles/135368/
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active:hover *,
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover,
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover * {
-      background:var_hintergrund2 !important;
+      background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important;
     }
     
-    /* Optionen */
+    /*** Optionen ***/
     /* Textboxen: Signatur, Automatische Antwort */
     #html-tag.settings .panel-setting textarea { background: var_hintergrund2 !important; }
     /* Whitelist Textbox */
@@ -512,16 +536,19 @@ https://userstyles.org/styles/135368/
     }
 	/* Abbrechen-Button */
 	.button-transparent { color:var_hintergrund3 !important; }
+    /* Filter Überschrift */
+    .table_header-row > .table_field {
+        background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important; }
   }
 }
 
-@-moz-document regexp("^https?:\\/\\/(bap\\.)?navigator\\.web\\.de\\/remindlogout\\?.*") {
+@-moz-document regexp("https?:\\/\\/(bap\\.)?navigator\\.web\\.de\\/remindlogout\\?.*") {
   /* Logout reminder */
   #content > #text::before {
-	  content:'WEB.DE Sicherheitshinweis\a Bitte loggen Sie sich immer aus!';
-	  white-space:pre !important;
-	  font-size:2em !important;
-	  line-height:1.5em !important;
+	  content: 'WEB.DE Sicherheitshinweis\a Bitte loggen Sie sich immer aus!';
+	  white-space: pre !important;
+	  font-size: 2em !important;
+	  line-height: 1.5em !important;
   }
   .btn,
   .btn a { background-image: none !important; }
@@ -530,18 +557,19 @@ https://userstyles.org/styles/135368/
 	  padding-right:6px !important;
   	  border-radius:4px !important;
 	  &:hover {
-		  border-color:var_hintergrund3 !important;
+		  border-color: var_hintergrund3 !important;
 	  }
   }
   
 }
 
-@-moz-document url("https://web.de/fm"), regexp("^https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
+@-moz-document url-prefix("https://web.de/fm"), regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
   if darkstyle-enable {
     /*** Login & Logout DS ***/
     html,
-    body {
-      background:var_hintergrund1 !important;
+    body,
+    #loginsearch {
+      background: var_hintergrund1 !important;
     }
 
     #logo {
@@ -555,7 +583,7 @@ https://userstyles.org/styles/135368/
     #header .logout-notification .hint:not(.hint-error),
     #header .logout-notification .hint:not(.hint-error) *,
     .hint-error[data-hint="timeout"] {
-      background:var_hintergrund3 !important;
+      background: var_hintergrund3 !important;
     }
     #header .logout-notification .btn-wrapper.btn-service * {
       background:green !important; border-color:green !important;
