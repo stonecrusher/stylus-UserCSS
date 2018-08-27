@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.6
+@version      20.0.7
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -175,7 +175,8 @@
   td[style*="background:#F9F9F9" i], th[style*="background:gainsboro" i], td[style*="background:gainsboro" i],
   h2[style*="background:#eeeeee" i], h2[style*="background:#efefef" i], tr[bgcolor*="#eee" i],
   tr[style*="background-color:#eee" i], .wikitable.charts-zebragrey > tbody > tr:nth-of-type(even),
-  tr[style*="background:#fbf8d6" i]/*, table.flextable td*/ {
+  tr[style*="background:#fbf8d6" i], /*, table.flextable td*/
+  td[style*="background:#F2F2F4"] {
     background-color: #282828 !important;
   }
 
@@ -190,7 +191,8 @@
   th[style*="background:#ddd" i], .infobox th[style*="background"], .infobox td[style*="background"],
   td[style*="background:#F2F2F2" i], table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i],
   .tlheader, th[style*="background:whitesmoke" i], td[style*="background:whitesmoke" i],
-  th[style*="#FFEBAD" i] {
+  th[style*="#FFEBAD" i],
+  table.wikitable.zebra > tbody > :nth-child(2n):not([class*="hintergrundfarbe"]) {
     background-color: #333 !important;
   }
 
@@ -254,7 +256,9 @@
   td[style*="background:#CEDFF2" i], tr[bgcolor="#CEDFF2" i], table[style*="background-color:#cef2e0" i] *,
   div[style*="background-color: #cee0f2" i], div[style*="background-color: #cedff2" i],
   div[role="region"] h2, div[role="region"] .plainlinks, tr[style*="background-color: #cedff2" i],
-  td[bgcolor*="#f0f0ff" i], tr[style*="background-color:#E1E9F3" i], th[style*="background:#d1dbdf" i] {
+  td[bgcolor*="#f0f0ff" i], tr[style*="background-color:#E1E9F3" i], th[style*="background:#d1dbdf" i],
+  table > * > tr.hintergrundfarbe5 > th, table > * > tr > th.hintergrundfarbe5, table.hintergrundfarbe5, .hintergrundfarbe5,
+  td[style^="background:#EECFA1"], th[style^="background:#EECFA1"] {
     background-color: #182030 !important;
   }
 
