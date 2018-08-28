@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.11
+@version      2.2.12
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -24,13 +24,6 @@
 @var color    var_hintergrund1   'DS Hintergrund'          #222
 @var color    var_hintergrund2   'DS Hintergrund hover'    #444
 ==/UserStyle== */
-
-/*
-This Userstyle can also be found at
-https://userstyles.org/styles/135368/
-*/
-
-/* Initial version based on https://userstyles.org/styles/120173/ by Norwin */
 
 @-moz-document regexp("https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
   /*** Login & Logout ***/
@@ -523,6 +516,10 @@ https://userstyles.org/styles/135368/
     ::-moz-placeholder { color:var_hintergrund3 !important; }
 
     /*** Menü hover ***/
+    .atl-actions-menu__hiddenitem:hover * {
+      background: transparent !important;
+    }
+
     #navigation a.active,
     #navigation a.active > .text,
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active,
@@ -530,7 +527,8 @@ https://userstyles.org/styles/135368/
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active:hover,
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active:hover *,
     #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover,
-    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover * {
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover *,
+    .atl-actions-menu__hiddenitem:hover .pos-icon-item__wrapper {
       background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important;
     }
     
@@ -555,7 +553,8 @@ https://userstyles.org/styles/135368/
 	.button-transparent { color:var_hintergrund3 !important; }
     /* Filter Überschrift */
     .table_header-row > .table_field {
-        background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important; }
+        background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important;
+    }
   }
 }
 
@@ -576,8 +575,7 @@ https://userstyles.org/styles/135368/
 	  &:hover {
 		  border-color: var_hintergrund3 !important;
 	  }
-  }
-  
+  }  
 }
 
 @-moz-document url-prefix("https://web.de/fm"), regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
