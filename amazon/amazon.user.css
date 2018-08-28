@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.5
+@version        1.4.7
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -23,10 +23,6 @@
 @var text      review-width    'Width of review bars'       300px
 ==/UserStyle== */
 /* Amazon default review bar width is 185px */
-
-/* TODO
-https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
-*/
 
 @-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
     /* Stylus variables */
@@ -158,7 +154,10 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background-color: var_bg2 !important;
             box-shadow: 0 0 0 4px #0d6c0d inset !important;
         }
-        .deals-shoveler.fresh-shoveler {
+        .deals-shoveler.fresh-shoveler,
+        .dsv-whiteBox,
+        .dsv-whiteBox table,
+        .dsv-primary, .dsv-secEyebrow h2 {
             background: var_bg1 !important;
         }
         .a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
@@ -185,7 +184,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background-color: var_bg3 !important;
         }
         .cr-lighthouse-term,
-        .a-icon-text-separator, .a-text-separator {
+        .a-icon-text-separator, .a-text-separator,
+        .dsv-cBoxR {
             background-color: var_bg6 !important;
         }
         center > div[style^="background-color:#eff7fe;"] {
@@ -364,8 +364,14 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         #twister .swatches li,
         .bit-aa-install-widget,
         #dmusicTracklist_feature_div .sample-button,
-        #revDivider .a-divider-inner, hr.bucketDivider {
+        #revDivider .a-divider-inner, hr.bucketDivider,
+        .dsv-secondary, .dsv-secEyebrow, .dsv-primary,
+        .dsv-cBoxB {
             border-color: var_bg6 !important;
+        }
+        
+        .dsv-cBoxB {
+            background: none !important;
         }
 
         .arrow-left { border-right-color: var_bg3 !important; }
@@ -474,7 +480,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             color: black !important;
         }
 
-        .wishlist-left-nav {
+        .wishlist-left-nav,
+        hr[style*="background-color: white"] {
             background-color: transparent !important;
         }
         #ysh-cards-container li.recs-grid-item,
@@ -566,7 +573,8 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
         .apl_m_font_title,
         .apl_l_orange, .apl_l_black,
         .TrackNumber-Default-Color,
-        .content ul li {
+        .content ul li,
+        p[id^="boost-aplus-module"] {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -697,6 +705,11 @@ https://www.amazon.de/gp/swvgdtt/your-account/manage-downloads.html
             background-color: var_font1 !important;
         }
 
+        /* Games and software library */
+        .dsv-cBoxTL, .dsv-cBoxTR, .dsv-cBoxBL, .dsv-cBoxBR,
+        .dsv-whiteBoxTL, .dsv-whiteBoxTR, .dsv-whiteBoxBL, .dsv-whiteBoxBR {
+            background-image: none !important;
+        }
 
         /*** Gradients ***/
         hr.bucketDivider::after,
