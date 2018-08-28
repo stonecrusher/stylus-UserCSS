@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.10
+@version      2.2.11
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -92,7 +92,7 @@ https://userstyles.org/styles/135368/
   [translate="LOGGED_OUT_AUTOMATICALLY_TEXT"] > p {display:none !important;}
 
   #loginsearch {
-    background:#D2E1EA !important;
+    background:#D2E1EA;
     margin-top:100px !important;
     background-image:none !important;
     padding:0 20px 30px !important;
