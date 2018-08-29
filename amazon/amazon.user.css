@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.7
+@version        1.4.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -105,7 +105,8 @@
         .a-accordion .a-accordion-active .a-accordion-inner,
         .a-accordion .a-accordion-row,
         #actionPanelWrapper.burj,
-        #content {
+        #content,
+        #techSpecSoftlines table {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -116,7 +117,8 @@
         .a-alert-info .a-alert-container,
         #dmusicTracklist_feature_div .sample-button,
         .pauseIcon,
-        #dmusicTracklist_feature_div #dmusic_tracklist_content tr.NowPlaying.darkenOnHover, #dmusicTracklist_feature_div #dmusic_tracklist_content tr:hover.darkenOnHover {
+        #dmusicTracklist_feature_div #dmusic_tracklist_content tr.NowPlaying.darkenOnHover, #dmusicTracklist_feature_div #dmusic_tracklist_content tr:hover.darkenOnHover,
+        #techSpecSoftlines .td1 {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -366,7 +368,8 @@
         #dmusicTracklist_feature_div .sample-button,
         #revDivider .a-divider-inner, hr.bucketDivider,
         .dsv-secondary, .dsv-secEyebrow, .dsv-primary,
-        .dsv-cBoxB {
+        .dsv-cBoxB,
+        #techSpecSoftlines td, #techSpecSoftlines th {
             border-color: var_bg6 !important;
         }
         
@@ -574,7 +577,8 @@
         .apl_l_orange, .apl_l_black,
         .TrackNumber-Default-Color,
         .content ul li,
-        p[id^="boost-aplus-module"] {
+        p[id^="boost-aplus-module"],
+        #techSpecSoftlines td[class^="td"] {
             color: var_font1 !important;
         }
         input, select, textarea,
