@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.13
+@version      2.2.14
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -444,7 +444,7 @@
 
     /* Stylingbuttons hover */
     a.cke_button_off:hover, a.cke_button_off:focus, a.cke_button_off:active, a.cke_button_disabled:hover, a.cke_button_disabled:focus, a.cke_button_disabled:active {
-        background: linear-gradient(to bottom, lighten(var_hintergrund2,20%), var_hintergrund2) !important;
+      background: linear-gradient(to bottom, lighten(var_hintergrund2,20%), var_hintergrund2) !important;
     }
 
     /*** Startseite ***/
@@ -461,8 +461,8 @@
     #desk .component.mailbox ul.nav li.active > span { background:var_hintergrund2 !important; }
 
     #desk .storage {
-	  background:var_hintergrund2 !important;
-	  color:var_schriftfarbe !important; }
+      background:var_hintergrund2 !important;
+      color:var_schriftfarbe !important; }
 
     #desk .component.mailbox ul.bulk-container li:hover,
     #desk .component.mailbox ul.inbox-container li:hover,
@@ -475,7 +475,7 @@
     #section-0 .is-hovered { background-color: var_hintergrund2 !important; } /* E-Mail schreiben Button */
     .gui-toggle > .panel-head .gui-toggle-control { background-position: -283px -32px !important; }
     .gui-toggle.minimized > .panel-head .gui-toggle-control { background-position: -283px -48px !important; }
-	.gui-toggle > .menu-head .gui-toggle-control { background-position: -281px -32px !important; }
+    .gui-toggle > .menu-head .gui-toggle-control { background-position: -281px -32px !important; }
     .gui-toggle.minimized > .menu-head .gui-toggle-control { background-position: -281px -48px !important; }
     .symbol { /* Briefsymbol */
       color:#000 !important; } 
@@ -522,14 +522,15 @@
 
     #navigation a.active,
     #navigation a.active > .text,
-    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active,
-    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active *,
-    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active:hover,
-    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active:hover *,
-    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover,
-    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover *,
     .atl-actions-menu__hiddenitem:hover .pos-icon-item__wrapper {
       background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important;
+    }
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active,
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item--active:hover,
+    #app-logo ~ atlas-app .atl-actions-menu__visible .atl-actions-menu__item:hover {
+      & * {
+        background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important;
+      }
     }
     
     /*** Optionen ***/
@@ -540,20 +541,25 @@
     #html-tag.settings .panel-setting select { background: var_hintergrund2 !important; color: var_schriftfarbe !important; }
     /* Einstellungsnavi */
     #html-tag .menu-sub .menu-item.active,
-    #html-tag .menu-sub .menu-item.active:hover,
-    #html-tag .menu-sub li a.active,
-    #html-tag .menu-sub li a.active:hover,
-    #html-tag .menu-sub .menu-item.active > span,
-    #html-tag .menu-sub .menu-item.active:hover > span,
-    #html-tag .menu-sub li a.active > span,
-    #html-tag .menu-sub li a.active:hover > span {
+    #html-tag .menu-sub li a.active {
       background-color: var_hintergrund2 !important;
+      
+      &:hover {
+        background-color: var_hintergrund2 !important;
+        
+        & > span {
+          background-color: var_hintergrund2 !important;
+        }
+      }
+      & > span {
+        background-color: var_hintergrund2 !important;
+      }
     }
-	/* Abbrechen-Button */
-	.button-transparent { color:var_hintergrund3 !important; }
+    /* Abbrechen-Button */
+    .button-transparent { color:var_hintergrund3 !important; }
     /* Filter Überschrift */
     .table_header-row > .table_field {
-        background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important;
+      background: linear-gradient(to bottom, var_hintergrund2, darken(var_hintergrund2, 40%)) !important;
     }
   }
 }
@@ -561,20 +567,21 @@
 @-moz-document regexp("https?:\\/\\/(bap\\.)?navigator\\.web\\.de\\/remindlogout\\?.*") {
   /* Logout reminder */
   #content > #text::before {
-	  content: 'WEB.DE Sicherheitshinweis\a Bitte loggen Sie sich immer aus!';
-	  white-space: pre !important;
-	  font-size: 2em !important;
-	  line-height: 1.5em !important;
+    content: 'WEB.DE Sicherheitshinweis\a Bitte loggen Sie sich immer aus!';
+    white-space: pre !important;
+    font-size: 2em !important;
+    line-height: 1.5em !important;
   }
   .btn,
   .btn a { background-image: none !important; }
   .btn a {
-	  border:2px solid var_schriftfarbe !important;
-	  padding-right:6px !important;
-  	  border-radius:4px !important;
-	  &:hover {
-		  border-color: var_hintergrund3 !important;
-	  }
+    border:2px solid var_schriftfarbe !important;
+    padding-right:6px !important;
+    border-radius:4px !important;
+    
+    &:hover {
+      border-color: var_hintergrund3 !important;
+    }
   }  
 }
 
