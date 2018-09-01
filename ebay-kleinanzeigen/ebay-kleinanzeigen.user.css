@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.1.1
+@version        3.1.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -56,22 +56,34 @@
     .dropdown-list > li,
     .textdropdown-options > li,
     .savedsearchitem, .followuseritem,
-    .modal-dialog > header, .modal-dialog-content {
+    .modal-dialog > header, .modal-dialog-content,
+    .text-light,
+    .textcounter,
+    .headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .icon-headline, .icon-headline-small {
         color: var_font1 !important;
+    }
+    .boxheader,
+    .boxheader-nomarginbottom {
+        & > h1,& > h2,& > h3,& > h4,& > h5,& > h6 {
+            color: var_font1 !important;
+        }
+    }
+    body {
+        &#login,&#vap,&#home,&#srchrslt,&#msgbox,&#my-manageads,&#my-settngs,&#wtchlst,&#my-followuser,&#my-savedsearches,&#postad-step1,&#pstad,&#pstrads,&#prview,&#browseCtgry,&#logout {
+            color: var_font1 !important;
+        }
     }
     .articleheader--price,
     .button-secondary, .button-inverted,
     .aditem-details > strong {
         color: var_font2 !important;
     }
-    .outcomebox-error > header h1, .outcomebox-success > header h1, .outcomebox-warning > header h1, .outcomebox-error > header h2, .outcomebox-success > header h2, .outcomebox-warning > header h2, .outcomebox-error > header h3, .outcomebox-success > header h3, .outcomebox-warning > header h3, .outcomebox-error > header h4, .outcomebox-success > header h4, .outcomebox-warning > header h4, .outcomebox-error > header h5, .outcomebox-success > header h5, .outcomebox-warning > header h5, .outcomebox-error > header h6, .outcomebox-success > header h6, .outcomebox-warning > header h6 {
-        color: black !important;
-    }
-    .text-light,
-    .textcounter,
-    .headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .boxheader > h1, .boxheader-nomarginbottom > h1, .boxheader > h2, .boxheader-nomarginbottom > h2, .boxheader > h3, .boxheader-nomarginbottom > h3, .boxheader > h4, .boxheader-nomarginbottom > h4, .boxheader > h5, .boxheader-nomarginbottom > h5, .boxheader > h6, .boxheader-nomarginbottom > h6, .icon-headline, .icon-headline-small,
-    body#login, body#vap, body#home, body#srchrslt, body#msgbox, body#my-manageads, body#my-settngs, body#wtchlst, body#my-followuser, body#my-savedsearches, body#postad-step1, body#pstad, body#pstrads, body#prview, body#browseCtgry, body#logout {
-        color: var_font1 !important;
+    .outcomebox-error > header,
+    .outcomebox-success > header,
+    .outcomebox-warning > header {
+        & h1,& h2,& h3,& h4,& h5,& h6{
+            color: black !important;
+        }
     }
     a,
     .textdropdown { /* Sortierungslink */
