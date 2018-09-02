@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.1.2
+@version        3.1.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -85,6 +85,14 @@
             color: black !important;
         }
     }
+    /* Eigene Anzeige (beiger Hintergrund) */
+    .manageadbox * {
+        color: black !important;
+    }
+    .manageadbox a {
+        color: darken(var_linkfarbe1, 50%) !important;
+    }
+    
     a,
     .textdropdown { /* Sortierungslink */
         color: var_linkfarbe1 !important;
