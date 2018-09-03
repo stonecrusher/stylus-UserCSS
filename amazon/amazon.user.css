@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.8
+@version        1.4.11
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -106,7 +106,8 @@
         .a-accordion .a-accordion-row,
         #actionPanelWrapper.burj,
         #content,
-        #techSpecSoftlines table {
+        #techSpecSoftlines table,
+        .a-native-dropdown {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -159,7 +160,8 @@
         .deals-shoveler.fresh-shoveler,
         .dsv-whiteBox,
         .dsv-whiteBox table,
-        .dsv-primary, .dsv-secEyebrow h2 {
+        .dsv-primary, .dsv-secEyebrow h2,
+        .cs-help-header {
             background: var_bg1 !important;
         }
         .a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
@@ -238,6 +240,9 @@
         ul.a-pagination li a,
         .acs-product-card-for-container {
             box-shadow: none !important;
+        }
+        #s-result-info-bar {
+            box-shadow: 0 0 10px var_bg3 !important;
         }
         .cBoxB,
         .cBoxR {
@@ -369,7 +374,8 @@
         #revDivider .a-divider-inner, hr.bucketDivider,
         .dsv-secondary, .dsv-secEyebrow, .dsv-primary,
         .dsv-cBoxB,
-        #techSpecSoftlines td, #techSpecSoftlines th {
+        #techSpecSoftlines td, #techSpecSoftlines th,
+        #s-result-info-bar {
             border-color: var_bg6 !important;
         }
         
@@ -427,31 +433,33 @@
             background: var_selected !important;
             border: 1px solid lighten(var_selected, 20%) !important;
         }
+        .transparentTwisterDropdownBorder {
+            border-color: var_bg1 !important;
+        }
 
 
         /*** Filter images / Icons ***/
-        .a-icon-popover,
         .kicsPopover img,
-        .a-icon-search, .a-link-emphasis::after,
         .a-button-close,
         #contextualIngressPtPin,
         #MediaMatrix #twister .a-icon-arrow, #formats .a-icon-arrow,
         #bookDescription_feature_div .a-icon-expand,
-        .a-icon-extender-expand,
+        .a-icon-popover,
+        .a-icon-search, .a-link-emphasis::after,
+        .a-icon-extender-expand, .a-icon-extender-collapse,
         .a-icon-dropdown,
         .a-icon-close,
-        .a-icon-section-expand,
-        .a-icon-section-collapse,
+        .a-icon-section-expand, .a-icon-section-collapse,
         .a-icon-supplemental,
+        .a-icon-next, .a-icon-previous,
+        .a-icon-collapse, .a-icon-expand,
+        .a-icon-add-to-mp3-cart,
         .feed-arrow,
         .nav-spinner,
         .dv-carousel-control .dv-icon,
         i[id^="fst-cs-btn-arrow"],
-        .a-icon-next,
-        .a-icon-previous,
         #prime-bbop-logo,
-        .a-icon-collapse, .a-icon-expand,
-        .a-icon-add-to-mp3-cart {
+        .cr-helpful-icon {
             filter: invert(1) !important;
         }
         .nav-promo,
@@ -578,7 +586,10 @@
         .TrackNumber-Default-Color,
         .content ul li,
         p[id^="boost-aplus-module"],
-        #techSpecSoftlines td[class^="td"] {
+        #techSpecSoftlines td[class^="td"],
+        #productDescription_feature_div > h1.softlines,
+        #productDescription_feature_div > h2.softlines,
+        #productDescription_feature_div > h3.softlines {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -637,7 +648,8 @@
         .nav-hasPanel.nav-item.nav-active > .nav-text,
         a.a-color-state,
         #productDescription .aplus h1, #productDescription .aplus h2, #productDescription .aplus h3, #productDescription .aplus h4,
-        #productDescription_feature_div > h1.default, #productDescription_feature_div > h2.default, #productDescription_feature_div > h3.default, #productDescription_feature_div > h4.default {
+        #productDescription_feature_div > h1.default, #productDescription_feature_div > h2.default, #productDescription_feature_div > h3.default, #productDescription_feature_div > h4.default,
+        .cs-help-header .cs-help-title {
             color: var_linkhover !important;
         }
         .a-color-price,
@@ -742,10 +754,19 @@
         }
         .a-form-actions,
         .a-popover-header,
-        .banner-border {
+        .banner-border,
+        table.a-bordered tr:first-child th {
             background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
             border-color: var_bg6 !important;
         }
+        hr.bucketDivider,
+        .a-divider-normal.bucketDivider {
+            background: linear-gradient(to bottom, var_bg5, lighten(var_bg1,3%) 3px, var_bg1) !important;
+            &::after {
+                background: linear-gradient(to left, var_bg1, transparent , var_bg1) !important;
+            }
+        }
+
         /* Amazon Music buttons */
         .navButton {
             background-color: var_bg3 !important;
@@ -859,6 +880,11 @@
         /* "Items other people bought after looking at this" (maybe affecting Prime Video Movie-Metadata?)*/
         #view_to_purchase-sims-feature > .a-section > .a-section > .a-unordered-list {
             display: flex !important;
+        }
+        /* Amazon Assistant (after ordering) */
+        .bit-aa-install-widget-contents,
+        #cs-app-prompt {
+            display: none !important;
         }
     }
     if mark-sponsored {
