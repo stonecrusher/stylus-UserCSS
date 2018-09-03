@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.7
+@version      20.0.9
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -35,526 +35,777 @@
 }
 @preprocessor uso
 ==/UserStyle== */
+@-moz-document domain("wikipedia.org"),
+domain("wikidata.org"),
+domain("mediawiki.org"),
+domain("wiktionary.org") {
+    /* Modified from https://userstyles.org/styles/47161/dark-wikipedia-rounded */
+    :root {
+        --base-color: /*[[base-color]]*/;
+        --visited-color: /*[[visited-color]]*/;
+        --bg-custom: /*[[bg-custom]]*/;
+        --bg-selected: /*[[bg-selected]]*/;
+        --bg-attachment: /*[[bg-attachment]]*/;
+    }
 
-@-moz-document domain("wikipedia.org"), domain("wikidata.org"), domain("mediawiki.org"), domain("wiktionary.org") {
-/* Modified from https://userstyles.org/styles/47161/dark-wikipedia-rounded */
+    /* transparent background */
+    div,
+    span:not(.legend-color):not([class*="wikEd"]):not([style*="background"]),
+    .MainPageBG,
+    .navbox-list,
+    div#mw-head,
+    .mw-wsmfinal-content,
+    #bodyContent,
+    .referencetooltip > li + li,
+    div.vectorTabs ul li,
+    tr[style*="background:#F5FFFA" i],
+    th[style*="background-color: #fff" i],
+    .mw-echo-notifications-badge,
+    .ext-cards-card-list .ext-cards-card,
+    .infobox span.plainlinks *,
+    .tracklist,
+    blockquote[style*="background-color: white" i]/*,
+  .ns-0 ul, .ns-0 ol li, table.flextable, table.flextable .invisible*/
+    {
+        background-color: transparent !important;
+    }
 
-  :root {
-    --base-color: /*[[base-color]]*/;
-    --visited-color: /*[[visited-color]]*/;
-    --bg-custom: /*[[bg-custom]]*/;
-    --bg-selected: /*[[bg-selected]]*/;
-    --bg-attachment: /*[[bg-attachment]]*/;
-  }
+    .lang-list-button {
+        outline-color: transparent !important;
+    }
 
-  /* transparent background */
-  div, span:not(.legend-color):not([class*="wikEd"]):not([style*="background"]),
-  .MainPageBG, .navbox-list,  div#mw-head, .mw-wsmfinal-content, #bodyContent,
-  .referencetooltip > li + li, div.vectorTabs ul li, tr[style*="background:#F5FFFA" i],
-  th[style*="background-color: #fff" i], .mw-echo-notifications-badge,
-  .ext-cards-card-list .ext-cards-card, .infobox span.plainlinks *,
-  .tracklist, blockquote[style*="background-color: white" i]/*,
-  .ns-0 ul, .ns-0 ol li, table.flextable, table.flextable .invisible*/ {
-    background-color: transparent !important;
-  }
+    /*** Overall ***/
+    td,
+    p,
+    li,
+    th:not([style*="background"]),
+    caption,
+    div,
+    /*span:not([class*="color"]):not([class*="wikEd"]):not([style*="background"]),*/
+    p code,
+    label code,
+    dl code,
+    .oo-ui-widget div,
+    .oo-ui-widget label {
+        color: #9a9a9a;
+    }
 
-  .lang-list-button {
-    outline-color: transparent !important;
-  }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    #footer li,
+    .infobox th[style*="background"],
+    div[style*="color"],
+    input[type="search"],
+    input[type="submit"],
+    input[type="number"],
+    select,
+    .suggestions-result,
+    input,
+    .central-featured-lang .link-box em,
+    .central-featured-lang .link-box small {
+        color: #9a9a9a !important;
+    }
 
-  /*** Overall ***/
-  td, p, li, th:not([style*="background"]), caption, div,
-  /*span:not([class*="color"]):not([class*="wikEd"]):not([style*="background"]),*/
-  p code, label code, dl code, .oo-ui-widget div, .oo-ui-widget label {
-    color: #9a9a9a;
-  }
+    a,
+    .CategoryTreeToggle,
+    #toc a,
+    #toc a span,
+    body .ui-button {
+        color: var(--base-color) !important;
+    }
 
-  body, h1, h2, h3, h4, h5, h6, #footer li, .infobox th[style*="background"],
-  div[style*="color"], input[type="search"], input[type="submit"],
-  input[type="number"], select, .suggestions-result, input,
-  .central-featured-lang .link-box em, .central-featured-lang .link-box small {
-    color: #9a9a9a !important;
-  }
+    a:visited,
+    #toc a:visited,
+    #toc a:visited span {
+        color: var(--visited-color) !important;
+    }
 
-  a, .CategoryTreeToggle, #toc a, #toc a span, body .ui-button {
-    color: var(--base-color) !important;
-  }
+    a:hover,
+    a:hover span,
+    #toc a:hover,
+    #toc a:hover span,
+    .suggestions-result .highlight,
+    .suggestions-special .special-query {
+        color: #fff !important;
+    }
 
-  a:visited, #toc a:visited, #toc a:visited span {
-    color: var(--visited-color) !important;
-  }
+    /* text selection */
+    ::selection {
+        background-color: var(--base-color) !important;
+        color: #fff !important;
+    }
+    ::-moz-selection {
+        background-color: var(--base-color) !important;
+        color: #fff !important;
+    }
 
-  a:hover, a:hover span, #toc a:hover, #toc a:hover span,
-  .suggestions-result .highlight, .suggestions-special .special-query {
-    color: #fff !important;
-  }
+    /*** Red links (non-existant pages) ***/
+    a.new {
+        color: #980000 !important;
+    }
 
-  /* text selection */
-  ::selection {
-    background-color: var(--base-color) !important;
-    color: #fff !important;
-  }
-  ::-moz-selection {
-    background-color: var(--base-color) !important;
-    color: #fff !important;
-  }
+    /*** Background ***/
+    html,
+    body {
+        background-color: #222 !important;
+        background-image: var(--bg-selected) !important;
+        background-clip: border-box !important;
+        background-origin: padding-box !important;
+        background-attachment: var(--bg-attachment) !important;
+        /*[[bg-options]]*/
+    }
 
-  /*** Red links (non-existant pages) ***/
-  a.new {
-    color: #980000 !important;
-  }
+    .mw-ui-button,
+    .mw-ui-button *,
+    button[type="submit"] {
+        background-color: var(--base-color) !important;
+        color: #fff !important;
+    }
 
-  /*** Background ***/
-  html, body {
-    background-color: #222 !important;
-    background-image: var(--bg-selected) !important;
-    background-clip: border-box !important;
-    background-origin: padding-box !important;
-    background-attachment: var(--bg-attachment) !important;
-    /*[[bg-options]]*/
-  }
+    #mw-page-base,
+    div.vectorTabs,
+    div.vectorTabs *,
+    .wikiEditor-ui-toolbar,
+    #p-cactions-label,
+    .client-js #preftoc,
+    .client-js #preftoc li,
+    .client-js #preftoc li.selected a,
+    .ui-widget-content,
+    .ext-cards-card-list h3:after,
+    #simpleSearch,
+    .mw-mmv-ttf-ellipsis:before {
+        background-image: none !important;
+    }
 
-  .mw-ui-button, .mw-ui-button *, button[type="submit"] {
-    background-color: var(--base-color) !important;
-    color: #fff !important;
-  }
+    /* fading linear gradient */
+    .mwe-popups-extract:after {
+        background-image: linear-gradient(to right, rgb(34, 34, 34, 0), rgb(34, 34, 34, 1) 50%) !important;
+    }
 
-  #mw-page-base, div.vectorTabs, div.vectorTabs *, .wikiEditor-ui-toolbar, #p-cactions-label,
-  .client-js #preftoc, .client-js #preftoc li, .client-js #preftoc li.selected a,
-  .ui-widget-content, .ext-cards-card-list h3:after, #simpleSearch, .mw-mmv-ttf-ellipsis:before {
-    background-image: none !important;
-  }
+    .ui-widget-overlay {
+        background: rgba(0, 0, 0, 0.8) !important;
+    }
 
-  /* fading linear gradient */
-  .mwe-popups-extract:after {
-    background-image: linear-gradient(to right, rgb(34, 34, 34, 0), rgb(34, 34, 34, 1) 50% ) !important;
-  }
+    #bodyContent pre,
+    #bodyContent code,
+    span.plainlinks * {
+        background-color: #111 !important;
+        border-color: #555 !important;
+        color: #b9b9b9 !important;
+    }
 
-  .ui-widget-overlay {
-    background: rgba(0, 0, 0, 0.8) !important;
-  }
+    td[style*="background:#FFFFFF" i],
+    .jfk-bubble,
+    .navpopup,
+    .popup_drop:hover .popup_menu,
+    .popup_drop .popup_menu:hover {
+        background-color: #181818 !important;
+    }
 
-  #bodyContent pre, #bodyContent code, span.plainlinks * {
-    background-color: #111 !important;
-    border-color: #555 !important;
-    color: #b9b9b9 !important;
-  }
+    table,
+    input,
+    button,
+    select,
+    textarea:not([class*="mw-editfont"]),
+    tr[style*="background: antiquewhite" i],
+    #toc,
+    td[style*="background-color"],
+    td[style*="background:#F5FAFF" i],
+    #mw-content-text div[style*="background: #"],
+    .vevent td,
+    .referencetooltip li,
+    .suggestions,
+    .mw-ui-button[style*="background"],
+    .mw-ui-button[style*="background"] *,
+    .wikiEditor-ui,
+    table.navbox.collapsible tr:nth-child(2) > td,
+    div.menu,
+    .oo-ui-popupWidget-popup,
+    .oo-ui-buttonElement-button,
+    .mw-notification,
+    .mwe-popups,
+    .mwe-popups-is-not-tall,
+    .mwe-popups-is-tall,
+    .ui-widget-content,
+    .oo-ui-window-body,
+    #pagehistory li.selected,
+    .tracklist tr,
+    .mw-searchresults-has-iw .iw-resultset,
+    .cx-callout-content,
+    .oo-ui-widget,
+    tr[style*="background:#f2f2f2" i],
+    th[style*="background:#EDF1F1" i],
+    td[style*="background:#EDF1F1" i],
+    tr[style*="background-color:white" i],
+    tr[style*="background:#f9f9f9" i],
+    td[bgcolor="#FFFFFF" i],
+    tr[style*="background:#ddd" i],
+    td[style*="background: #F2F2F2" i],
+    tr[style*="background-color:#F2F2F2" i],
+    tr[style*="background-color:#FFF5EE" i],
+    tr[bgcolor="FFF5EE" i],
+    td[bgcolor="FFF5EE" i],
+    .wikitable.charts-zebragrey > tbody > tr:nth-of-type(odd),
+    td > span[style*="background-color:#eee" i]/*,
+  #mw-content-text div:not(.toctitle) > h2, table.flextable th*/
+    {
+        background-color: #222 !important;
+    }
 
-  td[style*="background:#FFFFFF" i], .jfk-bubble, .navpopup,
-  .popup_drop:hover .popup_menu, .popup_drop .popup_menu:hover {
-    background-color: #181818 !important;
-  }
+    body .ui-button {
+        background: #282828 !important;
+        border-color: #555 !important;
+    }
 
-  table, input, button, select, textarea:not([class*="mw-editfont"]),
-  tr[style*="background: antiquewhite" i], #toc, td[style*="background-color"], td[style*="background:#F5FAFF" i],
-  #mw-content-text div[style*="background: #"], .vevent td, .referencetooltip li, .suggestions,
-  .mw-ui-button[style*="background"], .mw-ui-button[style*="background"] *, .wikiEditor-ui,
-  table.navbox.collapsible tr:nth-child(2) > td, div.menu, .oo-ui-popupWidget-popup,
-  .oo-ui-buttonElement-button, .mw-notification, .mwe-popups, .mwe-popups-is-not-tall, .mwe-popups-is-tall,
-  .ui-widget-content, .oo-ui-window-body, #pagehistory li.selected, .tracklist tr,
-  .mw-searchresults-has-iw .iw-resultset, .cx-callout-content, .oo-ui-widget,
-  tr[style*="background:#f2f2f2" i], th[style*="background:#EDF1F1" i], td[style*="background:#EDF1F1" i],
-  tr[style*="background-color:white" i], tr[style*="background:#f9f9f9" i], td[bgcolor="#FFFFFF" i],
-  tr[style*="background:#ddd" i], td[style*="background: #F2F2F2" i], tr[style*="background-color:#F2F2F2" i],
-  tr[style*="background-color:#FFF5EE" i], tr[bgcolor="FFF5EE" i], td[bgcolor="FFF5EE" i],
-  .wikitable.charts-zebragrey > tbody > tr:nth-of-type(odd), td > span[style*="background-color:#eee" i]/*,
-  #mw-content-text div:not(.toctitle) > h2, table.flextable th*/ {
-    background-color: #222 !important;
-  }
+    table[style*="background-color:#fff;" i],
+    .search-form fieldset,
+    table.ambox,
+    tr[style*="background-color: #fff;" i],
+    .mw-ui-button[style*="background-color:#008B6D" i],
+    tr[style*="background-color: #f5faff;" i],
+    tr[style*="background:#E9E9E9" i] > *,
+    table.infobox.hproduct > tbody > tr[style*="background: #F0F0F0;" i],
+    td[style*="background:lightyellow" i],
+    td[style*="background:#eeeeff" i],
+    td[style*="background:#ddddff" i],
+    .oo-ui-buttonElement-button:hover,
+    .tracklist tr[style*="background-color:#f7f7f7" i],
+    td[style*="background:#F9F9F9" i],
+    th[style*="background:gainsboro" i],
+    td[style*="background:gainsboro" i],
+    h2[style*="background:#eeeeee" i],
+    h2[style*="background:#efefef" i],
+    tr[bgcolor*="#eee" i],
+    tr[style*="background-color:#eee" i],
+    .wikitable.charts-zebragrey > tbody > tr:nth-of-type(even),
+    tr[style*="background:#fbf8d6" i],
+    /*, table.flextable td*/
+    td[style*="background:#F2F2F4"] {
+        background-color: #282828 !important;
+    }
 
-  body .ui-button {
-    background: #282828 !important;
-    border-color: #555 !important;
-  }
+    table.wikitable > tr > th,
+    table.wikitable > * > tr > th,
+    div.barbox > table > tbody > tr > th,
+    .cx-campaign-contributionsmenu li:hover {
+        background-color: #333;
+        /* don't include !important flag */
+    }
 
-  table[style*="background-color:#fff;" i], .search-form fieldset, table.ambox, tr[style*="background-color: #fff;" i],
-  .mw-ui-button[style*="background-color:#008B6D" i], tr[style*="background-color: #f5faff;" i],
-  tr[style*="background:#E9E9E9" i] > *, table.infobox.hproduct > tbody > tr[style*="background: #F0F0F0;" i],
-  td[style*="background:lightyellow" i], td[style*="background:#eeeeff" i], td[style*="background:#ddddff" i],
-  .oo-ui-buttonElement-button:hover, .tracklist tr[style*="background-color:#f7f7f7" i],
-  td[style*="background:#F9F9F9" i], th[style*="background:gainsboro" i], td[style*="background:gainsboro" i],
-  h2[style*="background:#eeeeee" i], h2[style*="background:#efefef" i], tr[bgcolor*="#eee" i],
-  tr[style*="background-color:#eee" i], .wikitable.charts-zebragrey > tbody > tr:nth-of-type(even),
-  tr[style*="background:#fbf8d6" i], /*, table.flextable td*/
-  td[style*="background:#F2F2F4"] {
-    background-color: #282828 !important;
-  }
+    td[style*="background: #ececec;" i],
+    th[style*="background:#eee" i],
+    th[style*="background-color: #eee" i],
+    tr[style*="background-color: #f7f7f7;" i],
+    th[style*="background:#F2F2F2" i],
+    #filetoc,
+    .toccolours,
+    th[style*="background:#F9F9F9" i],
+    table.plainlinks,
+    th[style*="background-color: lightgrey" i],
+    th[style*="background:#ddd" i],
+    .infobox th[style*="background"],
+    .infobox td[style*="background"],
+    td[style*="background:#F2F2F2" i],
+    table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i],
+    .tlheader,
+    th[style*="background:whitesmoke" i],
+    td[style*="background:whitesmoke" i],
+    th[style*="#FFEBAD" i],
+    table.wikitable.zebra > tbody > :nth-child(2n):not([class*="hintergrundfarbe"]) {
+        background-color: #333 !important;
+    }
 
-  table.wikitable > tr > th, table.wikitable > * > tr > th, div.barbox > table > tbody > tr > th,
-  .cx-campaign-contributionsmenu li:hover {
-    background-color: #333; /* don't include !important flag */
-  }
+    /* remove background image/gradient */
+    .keyboard-key,
+    div#editpage-specialchars a,
+    body div.ui-dialog .ui-widget-header {
+        background: #333 !important;
+        border-color: #555 !important;
+    }
 
-  td[style*="background: #ececec;" i], th[style*="background:#eee" i], th[style*="background-color: #eee" i],
-  tr[style*="background-color: #f7f7f7;" i], th[style*="background:#F2F2F2" i], #filetoc, .toccolours,
-  th[style*="background:#F9F9F9" i], table.plainlinks, th[style*="background-color: lightgrey" i],
-  th[style*="background:#ddd" i], .infobox th[style*="background"], .infobox td[style*="background"],
-  td[style*="background:#F2F2F2" i], table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i],
-  .tlheader, th[style*="background:whitesmoke" i], td[style*="background:whitesmoke" i],
-  th[style*="#FFEBAD" i],
-  table.wikitable.zebra > tbody > :nth-child(2n):not([class*="hintergrundfarbe"]) {
-    background-color: #333 !important;
-  }
-
-  /* remove background image/gradient */
-  .keyboard-key, div#editpage-specialchars a, body div.ui-dialog .ui-widget-header {
-    background: #333 !important;
-    border-color: #555 !important;
-  }
-
-  body .ui-button:hover {
-    background: #444 !important;
-    border-color: #555 !important;
-  }
-  /* add a white background to transparent images; see
+    body .ui-button:hover {
+        background: #444 !important;
+        border-color: #555 !important;
+    }
+    /* add a white background to transparent images; see
    * https://forum.userstyles.org/discussion/48549/x */
-  a.image img, a[href*=".svg"] img {
-    background: #ddd !important;
-  }
-  /* white background to wikEd - see #24 */
-  .wikEdFrameBodySyntax {
-    background: #fff !important;
-  }
+    a.image img,
+    a[href*=".svg"] img {
+        background: #ddd !important;
+    }
+    /* white background to wikEd - see #24 */
+    .wikEdFrameBodySyntax {
+        background: #fff !important;
+    }
 
-  .keyboard-key {
-    box-shadow: 0.1em 0.2em 0.2em #444 !important;
-  }
-  .mw-mmv-ttf-ellipsis, .navpopup, .oo-ui-popupWidget-popup,
-  .oo-ui-buttonElement-button, input + span,
-  .pure-form input[type=search] {
-    box-shadow: none !important;
-  }
+    .keyboard-key {
+        box-shadow: 0.1em 0.2em 0.2em #444 !important;
+    }
+    .mw-mmv-ttf-ellipsis,
+    .navpopup,
+    .oo-ui-popupWidget-popup,
+    .oo-ui-buttonElement-button,
+    input + span,
+    .pure-form input[type=search] {
+        box-shadow: none !important;
+    }
 
-  hr {
-    background-color: transparent !important;
-    border-color: #555 !important;
-  }
+    hr {
+        background-color: transparent !important;
+        border-color: #555 !important;
+    }
 
-  /*** Background Color Styles ***/
-  /* Red */
-  td[style*="background: #FDD;" i], .table-no, td[style*="background:#fdd" i],
-  td[style*="background: #ffdddd" i], tr[style*="background:#FFDDDD" i],
-  tr[style*="background:#fbb" i] {
-    background: #722 !important;
-    color: #ddd !important;
-  }
+    /*** Background Color Styles ***/
+    /* Red */
+    td[style*="background: #FDD;" i],
+    .table-no,
+    td[style*="background:#fdd" i],
+    td[style*="background: #ffdddd" i],
+    tr[style*="background:#FFDDDD" i],
+    tr[style*="background:#fbb" i] {
+        background: #722 !important;
+        color: #ddd !important;
+    }
 
-  /* Green */
-  #mp-left h2, #mp-left h2 span, td[style*="background: #99FF99;" i], .table-yes,
-  td[style*="background:#dfd" i], td[style*="background:#bfd" i], tr[style*="background:#DDFFDD" i],
-  tr[style*="background:#bfb" i], tr[style*="background-color:#CCFFCC" i] {
-    background: #244024 !important;
-    color: #ddd !important;
-  }
+    /* Green */
+    #mp-left h2,
+    #mp-left h2 span,
+    td[style*="background: #99FF99;" i],
+    .table-yes,
+    td[style*="background:#dfd" i],
+    td[style*="background:#bfd" i],
+    tr[style*="background:#DDFFDD" i],
+    tr[style*="background:#bfb" i],
+    tr[style*="background-color:#CCFFCC" i] {
+        background: #244024 !important;
+        color: #ddd !important;
+    }
 
-  /* Blue */
-  div[style*="background"] h2, div[style*="background"] h2 *, #mp-right h2, #mp-right h2 span, .navbox th,
-  .navbox-title, .navbox-title *, tr[style*="background-color:tan;" i],
-  div[style*="background: #444444;"], div[style*="background: #444444;"] *,
-  ol.references li:target, sup.reference:target, span.citation:target,
-  ol.references li:target *, sup.reference:target *, span.citation:target *,
-  td[style*="background:#CEDFF2" i], tr[bgcolor="#CEDFF2" i], table[style*="background-color:#cef2e0" i] *,
-  div[style*="background-color: #cee0f2" i], div[style*="background-color: #cedff2" i],
-  div[role="region"] h2, div[role="region"] .plainlinks, tr[style*="background-color: #cedff2" i],
-  td[bgcolor*="#f0f0ff" i], tr[style*="background-color:#E1E9F3" i], th[style*="background:#d1dbdf" i],
-  table > * > tr.hintergrundfarbe5 > th, table > * > tr > th.hintergrundfarbe5, table.hintergrundfarbe5, .hintergrundfarbe5,
-  td[style^="background:#EECFA1"], th[style^="background:#EECFA1"] {
-    background-color: #182030 !important;
-  }
+    /* Blue */
+    div[style*="background"] h2,
+    div[style*="background"] h2 *,
+    #mp-right h2,
+    #mp-right h2 span,
+    .navbox th,
+    .navbox-title,
+    .navbox-title *,
+    tr[style*="background-color:tan;" i],
+    div[style*="background: #444444;"],
+    div[style*="background: #444444;"] *,
+    ol.references li:target,
+    sup.reference:target,
+    span.citation:target,
+    ol.references li:target *,
+    sup.reference:target *,
+    span.citation:target *,
+    td[style*="background:#CEDFF2" i],
+    tr[bgcolor="#CEDFF2" i],
+    table[style*="background-color:#cef2e0" i] *,
+    div[style*="background-color: #cee0f2" i],
+    div[style*="background-color: #cedff2" i],
+    div[role="region"] h2,
+    div[role="region"] .plainlinks,
+    tr[style*="background-color: #cedff2" i],
+    td[bgcolor*="#f0f0ff" i],
+    tr[style*="background-color:#E1E9F3" i],
+    th[style*="background:#d1dbdf" i],
+    table > * > tr.hintergrundfarbe5 > th,
+    table > * > tr > th.hintergrundfarbe5,
+    table.hintergrundfarbe5,
+    .hintergrundfarbe5,
+    td[style^="background:#EECFA1"],
+    th[style^="background:#EECFA1"] {
+        background-color: #182030 !important;
+    }
 
-  .navbox-abovebelow, th.navbox-group, .navbox-subgroup .navbox-title,
-  .navbox-abovebelow *, th.navbox-group *, .navbox-subgroup .navbox-title *, tr[bgcolor*="#E1E9F3" i] {
-    background-color: #212C43 !important;
-  }
+    .navbox-abovebelow,
+    th.navbox-group,
+    .navbox-subgroup .navbox-title,
+    .navbox-abovebelow *,
+    th.navbox-group *,
+    .navbox-subgroup .navbox-title *,
+    tr[bgcolor*="#E1E9F3" i] {
+        background-color: #212C43 !important;
+    }
 
-  /* Purple */
-  #mp-bottom h2, #mp-bottom h2 span, th[style*="background:lavender" i], td[style*="background:lavender" i] {
-    background-color: #382B4A !important;
-  }
+    /* Purple */
+    #mp-bottom h2,
+    #mp-bottom h2 span,
+    th[style*="background:lavender" i],
+    td[style*="background:lavender" i] {
+        background-color: #382B4A !important;
+    }
 
-  /* Brown */
-  #mp-center h2, #mp-center h2 span, .table-partial, tr[style*="background:orange" i],
-  td[style*="background:#ffd" i] {
-    background-color: #321 !important;
-  }
+    /* Brown */
+    #mp-center h2,
+    #mp-center h2 span,
+    .table-partial,
+    tr[style*="background:orange" i],
+    td[style*="background:#ffd" i] {
+        background-color: #321 !important;
+    }
 
-  /*** Border ***/
-  fieldset/*, button[type="submit"]*/ {
-    border-color: var(--base-color) !important;
-  }
+    /*** Border ***/
+    fieldset/*, button[type="submit"]*/
+    {
+        border-color: var(--base-color) !important;
+    }
 
-  div:not([style*="-color"]), div[style*="background-color"], span:not([class*="color"]),
-  table, tr:not([style*="border-bottom"]), th, td:not([style*="border-bottom"]),
-  h1, h2, h3, h4, h5, h6, ul, li, input, select, #bodyContent code, .lang-list-button:hover {
-    border-color: #555 !important;
-  }
+    div:not([style*="-color"]),
+    div[style*="background-color"],
+    span:not([class*="color"]),
+    table,
+    tr:not([style*="border-bottom"]),
+    th,
+    td:not([style*="border-bottom"]),
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    li,
+    input,
+    select,
+    #bodyContent code,
+    .lang-list-button:hover {
+        border-color: #555 !important;
+    }
 
-  td[style*="border-bottom"] {
-    border-right-color: #555 !important;
-    border-left-color: #555 !important;
-    border-top-color: #555 !important;
-  }
+    td[style*="border-bottom"] {
+        border-right-color: #555 !important;
+        border-left-color: #555 !important;
+        border-top-color: #555 !important;
+    }
 
-  .mwe-popups:before {
-    border-bottom-color: #555 !important;
-  }
-  .mwe-popups.flipped_y:before, .mwe-popups.flipped_x_y:before,
-  .wikiEditor-toolbar-dialog .ui-dialog-buttonpane,
-  .mwe-popups.flipped-y:before, .mwe-popups.flipped-x-y:before {
-    border-top-color: #555 !important;
-  }
-  .mwe-popups:after,
-  .oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor:before,
-  .oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor:after {
-    border-bottom-color: #222 !important;
-  }
-  .mwe-popups.flipped_y:after, .mwe-popups.flipped_x_y:after,
-  .mwe-popups.flipped-y:after, .mwe-popups.flipped-x-y:after,
-  .oo-ui-popupWidget-anchored-bottom .oo-ui-popupWidget-anchor:before,
-  .oo-ui-popupWidget-anchored-bottom .oo-ui-popupWidget-anchor:after {
-    border-top-color: #222 !important;
-  }
-  .mwe-popups, .mwe-popups-is-not-tall, .mwe-popups-is-tall,
-  .oo-ui-popupWidget-popup {
-    border: 1px solid #555 !important;
-  }
-  .mwe-popups-settings-icon:hover, .mwe-popups-settings-icon:active {
-    background-color: #444 !important;
-  }
+    .mwe-popups:before {
+        border-bottom-color: #555 !important;
+    }
+    .mwe-popups.flipped_y:before,
+    .mwe-popups.flipped_x_y:before,
+    .wikiEditor-toolbar-dialog .ui-dialog-buttonpane,
+    .mwe-popups.flipped-y:before,
+    .mwe-popups.flipped-x-y:before {
+        border-top-color: #555 !important;
+    }
+    .mwe-popups:after,
+    .oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor:before,
+    .oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor:after {
+        border-bottom-color: #222 !important;
+    }
+    .mwe-popups.flipped_y:after,
+    .mwe-popups.flipped_x_y:after,
+    .mwe-popups.flipped-y:after,
+    .mwe-popups.flipped-x-y:after,
+    .oo-ui-popupWidget-anchored-bottom .oo-ui-popupWidget-anchor:before,
+    .oo-ui-popupWidget-anchored-bottom .oo-ui-popupWidget-anchor:after {
+        border-top-color: #222 !important;
+    }
+    .mwe-popups,
+    .mwe-popups-is-not-tall,
+    .mwe-popups-is-tall,
+    .oo-ui-popupWidget-popup {
+        border: 1px solid #555 !important;
+    }
+    .mwe-popups-settings-icon:hover,
+    .mwe-popups-settings-icon:active {
+        background-color: #444 !important;
+    }
 
-  div.vectorTabs li:not(.selected), .oo-ui-popupWidget-anchor:after,
-  .oo-ui-popupWidget-head {
-    border-bottom: #555 1px solid !important;
-  }
+    div.vectorTabs li:not(.selected),
+    .oo-ui-popupWidget-anchor:after,
+    .oo-ui-popupWidget-head {
+        border-bottom: #555 1px solid !important;
+    }
 
-  .referencetooltip > li {
-    background: #222 !important;
-    border: 1px solid #555 !important;
-  }
-  /*input, button {		
+    .referencetooltip > li {
+        background: #222 !important;
+        border: 1px solid #555 !important;
+    }
+    /*input, button {		
     border-style: solid !important;		
     border-width: 1px !important;		
   }*/
+    /* arrow down */
+    .referencetooltip > li + li,
+    .referencetooltip > li + li::after {
+        border-top-color: #222 !important;
+        border-right-color: transparent !important;
+        border-left-color: transparent !important;
+    }
+    .referencetooltip > li + li {
+        border-top: 12px #555 solid !important;
+    }
+    .referencetooltip.RTflipped > li + li {
+        border-bottom-color: #222 !important;
+    }
+    .referencetooltip.RTflipped > li + li::after {
+        border-bottom-color: transparent !important;
+    }
 
-  /* arrow down */
-  .referencetooltip > li + li, .referencetooltip > li + li::after {
-    border-top-color: #222 !important;
-    border-right-color: transparent !important;
-    border-left-color: transparent !important;
-  }
-  .referencetooltip > li + li {
-    border-top: 12px #555 solid !important;
-  }
-  .referencetooltip.RTflipped > li + li {
-    border-bottom-color: #222 !important;
-  }
-  .referencetooltip.RTflipped > li + li::after {
-    border-bottom-color: transparent !important;
-  }
+    /* Bookmark Icon */
+    #ca-watch.icon a {
+        background-image: url('data:image/svg+xml,<%3Fxml%20version%3D"1.0"%20encoding%3D"UTF-8"%3F><svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"16"%20height%3D"16"><path%20d%3D"M8.103%201.146l2.175%204.408%204.864.707-3.52%203.431.831%204.845-4.351-2.287-4.351%202.287.831-4.845-3.52-3.431%204.864-.707z"%20fill%3D"transparent"%20stroke%3D"%237cb5d1"%20stroke-width%3D"1"%2F><%2Fsvg>') !important;
+    }
+    #ca-unwatch.icon a {
+        background-image: url('data:image/svg+xml,<%3Fxml%20version%3D"1.0"%20encoding%3D"UTF-8"%3F><svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20xmlns%3Axlink%3D"http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink"%20width%3D"16"%20height%3D"16"><defs><linearGradient%20id%3D"a"><stop%20offset%3D"0"%20stop-color%3D"%23c2edff"%2F><stop%20offset%3D".5"%20stop-color%3D"%2368bdff"%2F><stop%20offset%3D"1"%20stop-color%3D"%23fff"%2F><%2FlinearGradient><linearGradient%20x1%3D"13.47"%20y1%3D"14.363"%20x2%3D"4.596"%20y2%3D"3.397"%20id%3D"b"%20xlink%3Ahref%3D"%23a"%20gradientUnits%3D"userSpaceOnUse"%2F><%2Fdefs><path%20d%3D"M8.103%201.146l2.175%204.408%204.864.707-3.52%203.431.831%204.845-4.351-2.287-4.351%202.287.831-4.845-3.52-3.431%204.864-.707z"%20fill%3D"url%28%23b%29"%20stroke%3D"%237cb5d1"%20stroke-width%3D"1"%2F><%2Fsvg>') !important;
+    }
 
-  /* Bookmark Icon */
-  #ca-watch.icon a {
-    background-image: url('data:image/svg+xml,<%3Fxml%20version%3D"1.0"%20encoding%3D"UTF-8"%3F><svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"16"%20height%3D"16"><path%20d%3D"M8.103%201.146l2.175%204.408%204.864.707-3.52%203.431.831%204.845-4.351-2.287-4.351%202.287.831-4.845-3.52-3.431%204.864-.707z"%20fill%3D"transparent"%20stroke%3D"%237cb5d1"%20stroke-width%3D"1"%2F><%2Fsvg>') !important;
-  }
-  #ca-unwatch.icon a {
-    background-image: url('data:image/svg+xml,<%3Fxml%20version%3D"1.0"%20encoding%3D"UTF-8"%3F><svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20xmlns%3Axlink%3D"http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink"%20width%3D"16"%20height%3D"16"><defs><linearGradient%20id%3D"a"><stop%20offset%3D"0"%20stop-color%3D"%23c2edff"%2F><stop%20offset%3D".5"%20stop-color%3D"%2368bdff"%2F><stop%20offset%3D"1"%20stop-color%3D"%23fff"%2F><%2FlinearGradient><linearGradient%20x1%3D"13.47"%20y1%3D"14.363"%20x2%3D"4.596"%20y2%3D"3.397"%20id%3D"b"%20xlink%3Ahref%3D"%23a"%20gradientUnits%3D"userSpaceOnUse"%2F><%2Fdefs><path%20d%3D"M8.103%201.146l2.175%204.408%204.864.707-3.52%203.431.831%204.845-4.351-2.287-4.351%202.287.831-4.845-3.52-3.431%204.864-.707z"%20fill%3D"url%28%23b%29"%20stroke%3D"%237cb5d1"%20stroke-width%3D"1"%2F><%2Fsvg>') !important;
-  }
+    /* Orange */
+    #centralNotice > div {
+        border-color: #e08b26 !important;
+    }
 
-  /* Orange */
-  #centralNotice > div {
-    border-color: #e08b26 !important;
-  }
+    table.ambox-content,
+    table.ambox-style {
+        border-left-color: #e08b26 !important;
+    }
 
-  table.ambox-content, table.ambox-style {
-    border-left-color: #e08b26 !important;
-  }
+    /* add border */
+    div.vectorTabs li,
+    #p-cactions-label,
+    .client-js #preftoc li {
+        border-right: #555 1px solid !important;
+    }
+    div.vectorTabs li.selected,
+    .client-js #preftoc li.selected {
+        border-bottom: #e08b26 1px solid !important;
+    }
 
-  /* add border */
-  div.vectorTabs li, #p-cactions-label, .client-js #preftoc li {
-    border-right: #555 1px solid !important;
-  }
-  div.vectorTabs li.selected, .client-js #preftoc li.selected {
-    border-bottom: #e08b26 1px solid !important;
-  }
+    /*** Text ***/
+    .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
+    table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
+        color: #fff !important;
+    }
 
-  /*** Text ***/
-  .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
-  table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
-    color: #fff !important;
-  }
+    .CategoryTreeEmptyBullet,
+    .table-na {
+        color: #ccc !important;
+    }
 
-  .CategoryTreeEmptyBullet, .table-na {
-    color: #ccc !important;
-  }
+    /*** Misc ***/
+    #p-cactions li.selected a,
+    #p-cactions li a,
+    #p-cactions li a:hover {
+        padding: 0 1em 0.1em !important;
+    }
 
-  /*** Misc ***/
-  #p-cactions li.selected a, #p-cactions li a, #p-cactions li a:hover {
-    padding: 0 1em 0.1em !important;
-  }
+    ul,
+    .portlet li {
+        list-style-image: none !important;
+    }
 
-  ul, .portlet li {
-    list-style-image: none !important;
-  }
+    table[style*="border:4px ridge"],
+    .jfk-bubble-closebtn {
+        border: none !important;
+    }
 
-  table[style*="border:4px ridge"], .jfk-bubble-closebtn {
-    border: none !important;
-  }
+    /*** diff pages ***/
+    .diff-context {
+        background-color: #222 !important;
+    }
+    .wikEdDiffButtonUnchecked {
+        border-color: #444 !important;
+    }
+    td.diff-deletedline .diffchange,
+    .wikEdDiffDelete {
+        background-color: rgba(213, 154, 0, .6) !important;
+        color: #ddd !important;
+    }
+    td.diff-deletedline {
+        border-color: rgba(213, 154, 0, .6) !important;
+    }
+    .wikEdDiffFragment:hover .wikEdDiffDelete {
+        background-color: rgba(213, 154, 0, .65) !important;
+    }
+    td.diff-addedline {
+        border-color: rgba(0, 112, 213, .6) !important;
+    }
+    td.diff-addedline .diffchange,
+    .wikEdDiffInsert {
+        background-color: rgba(0, 112, 213, .6) !important;
+        color: #ddd !important;
+    }
 
-  /*** diff pages ***/
-  .diff-context {
-    background-color: #222 !important;
-  }
-  .wikEdDiffButtonUnchecked {
-    border-color: #444 !important;
-  }
-  td.diff-deletedline .diffchange, .wikEdDiffDelete {
-    background-color: rgba(213, 154, 0, .6) !important;
-    color: #ddd !important;
-  }
-  td.diff-deletedline {
-    border-color: rgba(213, 154, 0, .6) !important;
-  }
-  .wikEdDiffFragment:hover .wikEdDiffDelete {
-    background-color: rgba(213, 154, 0, .65) !important;
-  }
-  td.diff-addedline {
-    border-color: rgba(0, 112, 213, .6) !important;
-  }
-  td.diff-addedline .diffchange, .wikEdDiffInsert {
-    background-color: rgba(0, 112, 213, .6) !important;
-    color: #ddd !important;
-  }
+    /*** invert images ***/
+    img[title="Wikipedia"],
+    .bookshelf-container .bookend,
+    img.mwe-math-fallback-image-inline,
+    #mw-wsmfinal-close,
+    img[src*="Speaker_Icon"],
+    .infobox img[alt*="structure"][src*=".svg"],
+    img[src*=".png"]:active,
+    img[src*=".svg"][height="16"],
+    img[src*=".svg"][height="17"],
+    img[src*=".svg"][height="18"],
+    .oo-ui-iconElement-icon:not(.mw-echo-notifications-badge),
+    .RTsettings,
+    #gtx-host,
+    .jfk-bubble-closebtn,
+    #pt-notifications-notice .mw-echo-notifications-badge:before,
+    .oo-ui-pendingElement-pending,
+    #pt-notifications-alert .mw-echo-notifications-badge:before,
+    img.mwe-math-fallback-image-display {
+        -webkit-filter: invert(100%) !important;
+        filter: invert(100%) !important;
+        background-color: transparent !important;
+    }
+    .central-textlogo__image,
+    .unicode.haudio a img {
+        filter: invert(60.5%) !important;
+    }
+    .central-featured-logo {
+        filter: brightness(60.5%) !important;
+    }
+    #p-logo a {
+        background-position: center -155px !important;
+        display: table-cell !important;
+        vertical-align: middle !important;
+    }
+    #p-logo a::before,
+    #p-logo a::after {
+        display: block !important;
+        background: inherit !important;
+        content: "" !important;
+    }
+    #p-logo a::before {
+        background-position: center 0 !important;
+        filter: brightness(60.5%) !important;
+        height: 108px !important;
+    }
+    #p-logo a::after {
+        background-position: center -108px !important;
+        filter: invert(60.5%) !important;
+        height: 47px !important;
+    }
+    .oo-ui-icon-bell,
+    .mw-widget-calendarWidget-day-additional {
+        opacity: 0.7 !important;
+    }
+    /*** Dark comfort improvements ***/
+    .thumbcaption {
+        color: #ccc !important;
+    }
+    .thumbcaption a {
+        color: #fff !important;
+    }
+    /* Keyboard keys */
+    kbd {
+        background: linear-gradient(rgba(255, 255, 255, .4), rgba(127, 127, 127, .2)) !important;
+        text-shadow: none !important;
+        color: #ccc !important;
+        border-color: #aaa #888 #888 #aaa !important;
+    }
+    kbd > img {
+        filter: invert(0.8) !important;
+    }
+    /* Table sort icon */
+    table.jquery-tablesorter th.headerSort {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAJCAYAAADdA2d2AAAACXBIWXMAAAsSAAALEgHS3X78AAAAcklEQVQokaXSzQmAMAyG4VdxDg91EBE3cTQXEQfoCAp2ET1oTzY/YiCUlvLwQVLFGHFUC8zABOzW59oJLkD/nOEvmsEg3D+jEmDCjYImoNMSSWUl3YCz0AdKUg1NwMB72tK7Cy0BJuhBMzQCK/damXt6AScMHXllByCjAAAAAElFTkSuQmCC") !important;
+    }
+    /* External link icon */
+    .mw-parser-output .external {
+        background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22%3E %3Cpath fill=%22%23333%22 stroke=%22%2336c%22 d=%22M1.5 4.518h5.982V10.5H1.5z%22/%3E %3Cpath fill=%22%2336c%22 d=%22M5.765 1H11v5.39L9.427 7.937l-1.31-1.31L5.393 9.35l-2.69-2.688 2.81-2.808L4.2 2.544z%22/%3E %3Cpath fill=%22%23bbb%22 d=%22M9.995 2.004l.022 4.885L8.2 5.07 5.32 7.95 4.09 6.723l2.882-2.88-1.85-1.852z%22/%3E %3C/svg%3E") !important;
+    }
+    /* Wikitionary logo */
+    .mw-wiki-logo {
+        filter: invert(0.8) !important;
+    }
+    /* Wikitionary titles */
+    .ns-0 #mw-content-text h1,
+    .ns-0 #mw-content-text h2,
+    .ns-0 #mw-content-text h3,
+    .ns-0 #mw-content-text h4 {
+        background-color: transparent !important;
+    }
+    /* Wikitionary tables */
+    td[bgcolor="#F7F7F9"] {
+        background-color: #2a2a2a !important;
+    }
+    .mw-ui-button,
+    .mw-ui-button *,
+    button[type="submit"] {
+        background-color: var(--base-color) !important;
+        color: #9a9a9a !important;
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    #footer li,
+    .infobox th[style*="background"],
+    div[style*="color"],
+    input[type="search"],
+    input[type="submit"],
+    input[type="number"],
+    select,
+    .suggestions-result,
+    input,
+    .central-featured-lang .link-box em,
+    .central-featured-lang .link-box small {
+        color: #ccc !important;
+    }
+    .mw-mmv-download-pane,
+    div.thumbinner {
+        background-color: #222 !important;
+    }
+    #mw-content-text div:not(.toctitle) > h2,
+    table.flextable th,
+    table.flextable td {
+        background-color: transparent !important;
+    }
+    button[type="submit"] {
+        border-color: transparent !important;
+    }
+    input,
+    button {
+        border-style: initial !important;
+        border-width: 1px !important;
+    }
+    .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
+    table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
+        color: #ccc !important;
+    }
+    /*** Text ***/
+    .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
+    table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
+        color: #ccc !important;
+    }
 
-  /*** invert images ***/
-  img[title="Wikipedia"], .bookshelf-container .bookend, img.mwe-math-fallback-image-inline,
-  #mw-wsmfinal-close, img[src*="Speaker_Icon"], .infobox img[alt*="structure"][src*=".svg"], img[src*=".png"]:active,
-  img[src*=".svg"][height="16"], img[src*=".svg"][height="17"], img[src*=".svg"][height="18"],
-  .oo-ui-iconElement-icon:not(.mw-echo-notifications-badge), .RTsettings, #gtx-host, .jfk-bubble-closebtn,
-  #pt-notifications-notice .mw-echo-notifications-badge:before, .oo-ui-pendingElement-pending,
-  #pt-notifications-alert .mw-echo-notifications-badge:before, img.mwe-math-fallback-image-display {
-    -webkit-filter: invert(100%) !important;
-            filter: invert(100%) !important;
-    background-color: transparent !important;
-  }
-  .central-textlogo__image, .unicode.haudio a img {
-    filter: invert(60.5%) !important;
-  }
-  .central-featured-logo {
-    filter: brightness(60.5%) !important;
-  }
-  #p-logo a {
-    background-position: center -155px !important;
-    display: table-cell !important;
-    vertical-align: middle !important;
-  }
-  #p-logo a::before, #p-logo a::after {
-    display: block !important;
-    background: inherit !important;
-    content: "" !important;
-  }
-  #p-logo a::before {
-    background-position: center 0 !important;
-    filter: brightness(60.5%) !important;
-    height: 108px !important;
-  }
-  #p-logo a::after {
-    background-position: center -108px !important;
-    filter: invert(60.5%) !important;
-    height: 47px !important;
-  }
-  .oo-ui-icon-bell, .mw-widget-calendarWidget-day-additional {
-    opacity: 0.7 !important;
-  }
-  /*** Dark comfort improvements ***/
-  .thumbcaption {		color: #ccc !important; }
-  .thumbcaption a { color: #fff !important; }
-  /* Keyboard keys */
-  kbd {
-    background: linear-gradient(rgba(255,255,255,.4),rgba(127,127,127,.2)) !important;
-    text-shadow: none !important;
-    color: #ccc !important;
-    border-color: #aaa #888 #888 #aaa !important;
-  }
-  kbd > img {
-    filter: invert(0.8) !important;
-  }
-  /* Table sort icon */
-  table.jquery-tablesorter th.headerSort {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAJCAYAAADdA2d2AAAACXBIWXMAAAsSAAALEgHS3X78AAAAcklEQVQokaXSzQmAMAyG4VdxDg91EBE3cTQXEQfoCAp2ET1oTzY/YiCUlvLwQVLFGHFUC8zABOzW59oJLkD/nOEvmsEg3D+jEmDCjYImoNMSSWUl3YCz0AdKUg1NwMB72tK7Cy0BJuhBMzQCK/damXt6AScMHXllByCjAAAAAElFTkSuQmCC") !important;
-  }
-  /* External link icon */
-  .mw-parser-output .external {
-    background-image: linear-gradient(transparent,transparent),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22%3E %3Cpath fill=%22%23333%22 stroke=%22%2336c%22 d=%22M1.5 4.518h5.982V10.5H1.5z%22/%3E %3Cpath fill=%22%2336c%22 d=%22M5.765 1H11v5.39L9.427 7.937l-1.31-1.31L5.393 9.35l-2.69-2.688 2.81-2.808L4.2 2.544z%22/%3E %3Cpath fill=%22%23bbb%22 d=%22M9.995 2.004l.022 4.885L8.2 5.07 5.32 7.95 4.09 6.723l2.882-2.88-1.85-1.852z%22/%3E %3C/svg%3E") !important;
-  }
-  /* Wikitionary logo */
-  .mw-wiki-logo {
-    filter: invert(0.8) !important;
-  }
-  /* Wikitionary titles */
-  .ns-0 #mw-content-text h1,
-  .ns-0 #mw-content-text h2,
-  .ns-0 #mw-content-text h3,
-  .ns-0 #mw-content-text h4 {
-    background-color: transparent !important;
-  }
-  /* Wikitionary tables */
-  td[bgcolor="#F7F7F9"] {
-    background-color: #2a2a2a !important;
-  }
-  .mw-ui-button, .mw-ui-button *, button[type="submit"] {
-    background-color: var(--base-color) !important;
-    color: #9a9a9a !important;
-  }
-  body, h1, h2, h3, h4, h5, h6, #footer li, .infobox th[style*="background"],
-  div[style*="color"], input[type="search"], input[type="submit"],
-  input[type="number"], select, .suggestions-result, input,
-  .central-featured-lang .link-box em, .central-featured-lang .link-box small {
-    color: #ccc !important;
-  }
-  .mw-mmv-download-pane,
-  div.thumbinner {
-    background-color: #222 !important;
-  }
-  #mw-content-text div:not(.toctitle) > h2, table.flextable th,
-  table.flextable td {
-    background-color: transparent !important;
-  }
-  button[type="submit"] {
-    border-color: transparent !important;
-  }
-  input, button {
-    border-style: initial !important;
-    border-width: 1px !important;
-  }
-  .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
-  table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
-    color: #ccc !important;
-  }
-  /*** Text ***/
-  .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
-  table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
-    color: #ccc !important;
-  }
-
-  .CategoryTreeEmptyBullet, .table-na {
-    color: #fff !important;
-  }
-  td[bgcolor="#C8D8FF"] {
-    background-color: #333 !important;
-  }
-  td[style^="background:#F7F7F7"] {
-    background: #222 !important;
-  }
-  .wikitable tr[style^="background:#E1E9F3"] {
-    background: #333 !important;
-  }
-  .wikitable tr[style^="background:#EEEEEE"] {
-    background: #222 !important;
-  }
-  div.vectorTabs li.selected, .client-js #preftoc li.selected {
-    background: linear-gradient(to top, #e08b26, #e08b2611 8%, transparent) !important;
-  }
-  #mw-indicator-mw-helplink a {
-    filter: invert(1) !important;
-  }
+    .CategoryTreeEmptyBullet,
+    .table-na {
+        color: #fff !important;
+    }
+    td[bgcolor="#C8D8FF"] {
+        background-color: #333 !important;
+    }
+    td[style^="background:#F7F7F7"] {
+        background: #222 !important;
+    }
+    table.sortable tr[style^="background:#E8E8E8"],
+    .wikitable tr[style^="background:#E1E9F3"] {
+        background: #333 !important;
+    }
+    .wikitable tr[style^="background:#EEEEEE"] {
+        background: #222 !important;
+    }
+    div.vectorTabs li.selected,
+    .client-js #preftoc li.selected {
+        background: linear-gradient(to top, #e08b26, #e08b2611 8%, transparent) !important;
+    }
+    #mw-indicator-mw-helplink a {
+        filter: invert(1) !important;
+    }
+    .hintergrundfarbe6 {
+        color: black !important;
+    }
 }
