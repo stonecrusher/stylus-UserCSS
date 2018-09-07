@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.14
+@version      2.2.15
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -519,7 +519,7 @@
     .atl-actions-menu__hiddenitem:hover * {
       background: transparent !important;
     }
-
+    .atl-actions-menu__item:hover, .atl-actions-menu__item--active, .atl-actions-menu__item--active:hover,
     #navigation a.active,
     #navigation a.active > .text,
     .atl-actions-menu__hiddenitem:hover .pos-icon-item__wrapper {
