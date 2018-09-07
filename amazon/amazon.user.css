@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.12
+@version        1.4.13
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -839,7 +839,9 @@
         #csg-search-cu,
         #top table table img,
         .askQuestionExamples,
-        .prime-ad-banner-content {
+        .prime-ad-banner-content,
+        #productAlert_feature_div,
+        #universalHQP_feature_div {
             display: none !important;
         }
 
