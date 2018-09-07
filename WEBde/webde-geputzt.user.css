@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.15
+@version      2.2.16
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -279,6 +279,9 @@
     atl-menu-item[data-item-name="deezer"],
     atl-menu-item[data-item-name="clubcenter"],
     atl-menu-item[data-item-name="zattoo"],
+    /* Cannot select parent wrapper to hide
+    atl-menu-item[data-item-name="blog"],
+    atl-menu-item[data-item-name="releasenotes"],
     /* top menu opened */
     .atl-actions-menu__hidden--open > div:nth-of-type(3), /* Produkte */
     /* left menu */
@@ -293,7 +296,8 @@
     #navigation.component li:nth-of-type(14), /* SMS/MMS */
     #navigation.component li:nth-of-type(15), /* Fax */
     #navigation.component li:nth-of-type(16), /* Placeholder */
-    #navigation.component li:nth-of-type(22), /* Virenschutz */
+    #navigation.component li:nth-of-type(22), /* Eigene Homepage */
+    #navigation.component li:nth-of-type(23), /* Virenschutz */
     /* writing mails */
     a[title="E-Mail schreiben"] + .button-group-firstblockbutton_subgroup,
     .demail-selection {
