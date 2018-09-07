@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.9
+@version      20.0.10
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -785,7 +785,10 @@ domain("wiktionary.org") {
     .table-na {
         color: #fff !important;
     }
-    td[bgcolor="#C8D8FF"] {
+    td[bgcolor="#C8D8FF"],
+    tr[style^="background:#EAECF0"],
+    tr[style^="background:#F3F3F3"],
+    table > * > tr.hintergrundfarbe2 > th, table > * > tr > th.hintergrundfarbe2, table.hintergrundfarbe2, .hintergrundfarbe2 {
         background-color: #333 !important;
     }
     td[style^="background:#F7F7F7"] {
@@ -807,5 +810,8 @@ domain("wiktionary.org") {
     }
     .hintergrundfarbe6 {
         color: black !important;
+    }
+    #pagehistory li.selected {
+        color: #ccc !important;
     }
 }
