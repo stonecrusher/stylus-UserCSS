@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.13
+@version        1.4.14
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -23,6 +23,9 @@
 @var text      review-width    'Width of review bars'       300px
 ==/UserStyle== */
 /* Amazon default review bar width is 185px */
+
+
+/* TODO: suggestion dropdown hover */
 
 @-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
     /* Stylus variables */
