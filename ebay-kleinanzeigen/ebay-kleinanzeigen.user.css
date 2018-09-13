@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.2.0
+@version        3.3.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -17,11 +17,9 @@
 @var color var_bg2         'Hintergrundfarbe 2'        #555
 
 @var checkbox header-condense   'Header komprimieren'             1
-@var checkbox ads-remove        'Werbung entfernen'               1
+@var checkbox ads-remove        'Werbung, TopAds, Newsletter und Alternative Anzeigen entfernen' 1
 @var checkbox upsell-remove     'Upsell-Angebote entfernen'       1
-@var checkbox topads-remove     'TopAds entfernen'                1
 @var checkbox social-remove     'Teilen in soz. Medien entfernen' 0
-@var checkbox newsletter-remove 'Newsletterangebot entfernen'     1
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
@@ -234,7 +232,11 @@
         .adsenseplacement,
         #brws_banner-supersize, //Top-result-banner
         #srchrslt-adtable > .ad-listitem:not(.lazyload-item), //Einschub in Suchergebnissen
-        #vap #pla-container     //Google Vorschläge auf Detailseite
+        #vap #pla-container,    //Google Vorschläge auf Detailseite
+        #postad-publish div.l-row.a-double-margin.l-container-row, //Newsletter
+        #srchrslt-adtable-topads, //TopAds
+        #srchrslt-content-header + div.position-relative,
+        #srchrslt-content-header + div.position-relative + .a-horizontal-padded //Am Anfang der Suchergebnisse: Alternative Anzeigen in der Umgebung
         {
             display: none !important;
         }
@@ -249,18 +251,8 @@
             display: none !important;
         }
     }
-    if topads-remove {
-        #srchrslt-adtable-topads {
-            display: none !important;
-        }
-    }
     if social-remove {
         .socialshare {
-            display: none !important;
-        }
-    }
-    if newsletter-remove {
-        #postad-publish div.l-row.a-double-margin.l-container-row {
             display: none !important;
         }
     }
