@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.3.0
+@version        3.3.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -234,9 +234,7 @@
         #srchrslt-adtable > .ad-listitem:not(.lazyload-item), //Einschub in Suchergebnissen
         #vap #pla-container,    //Google Vorschläge auf Detailseite
         #postad-publish div.l-row.a-double-margin.l-container-row, //Newsletter
-        #srchrslt-adtable-topads, //TopAds
-        #srchrslt-content-header + div.position-relative,
-        #srchrslt-content-header + div.position-relative + .a-horizontal-padded //Am Anfang der Suchergebnisse: Alternative Anzeigen in der Umgebung
+        #srchrslt-adtable-topads //TopAds
         {
             display: none !important;
         }
