@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.12
+@version      20.0.14
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -49,7 +49,7 @@ domain("wiktionary.org") {
     }
 
     /* transparent background */
-    div,
+    div:not([style*="background"]),
     span:not(.legend-color):not([class*="wikEd"]):not([style*="background"]),
     .MainPageBG,
     .navbox-list,
@@ -206,8 +206,7 @@ domain("wiktionary.org") {
     .popup_drop .popup_menu:hover {
         background-color: #181818 !important;
     }
-
-    table,
+    .wikitable,
     input,
     button,
     select,
@@ -688,6 +687,8 @@ domain("wiktionary.org") {
     .mw-widget-calendarWidget-day-additional {
         opacity: 0.7 !important;
     }
+
+    /*********************************/
     /*** Dark comfort improvements ***/
     .thumbcaption {
         color: #ccc !important;
@@ -803,6 +804,9 @@ domain("wiktionary.org") {
     td[style^="background:#F7F7F7"] {
         background: #222 !important;
     }
+    div[style="background:#DFE0E3;"] {
+        background: #2a2a2a !important;
+    }
     table.sortable tr[style^="background:#E8E8E8"],
     .wikitable tr[style^="background:#E1E9F3"] {
         background: #333 !important;
@@ -817,14 +821,51 @@ domain("wiktionary.org") {
     #mw-indicator-mw-helplink a {
         filter: invert(1) !important;
     }
-    .hintergrundfarbe6 {
-        color: black !important;
-    }
     #pagehistory li.selected {
         color: #ccc !important;
     }
     .mw-interlanguage-selector,
-    .uls-menu {
+    .uls-menu,
+    .hintergrundfarbe1,
+    tr[bgcolor="#f8f8f8"],
+    tr[bgcolor="#e0e0e0"],
+    tr[bgcolor="#efefef"],
+    [style*="background:#F9F9F9;"] {
         background-color: #333 !important;
+    }
+    .mw-parser-output table.taxobox,
+    .suggestions-results,
+    .suggestions-special {
+        background: #222 !important;
+    }
+    .mw-body, .parsoid-body,
+    #mw-page-base,
+    #simpleSearch {
+        background-color: transparent !important;
+    }
+    [bgcolor="#b0ceff"],
+    [bgcolor="#b0ceff"] > td,
+    [bgcolor="#ffb6b6"],
+    [bgcolor="#ffb6b6"] > td,
+    #mw-content-text [style^="background:#F7F6A8;"],
+    #mw-content-text [style^="background:#FFDAB9;"],
+    #mw-content-text [style^="background:#DCE5E5;"],
+    .mw-parser-output table.taxobox > * > * > th,
+    tr[style*="background-color:#ABCDEF;"] > th,
+    .hintergrundfarbe6 {
+        color: black !important;
+    }
+    .catlinks,
+    [style*="background:#efefef;"],
+    [style*="background:#f5f5f5;"] {
+        background-color: #939351 !important;
+        color: black !important;
+    }
+    [style="background:lightsteelblue;"],
+    .infobox [style*="background:lightsteelblue;"],
+    .infobox .hintergrundfarbe5[style*="background:lightsteelblue;"],
+    .NavHead[style="background:lightsteelblue;"],
+    div.NavHead {
+        background-color: #000064 !important;
     }
 }
