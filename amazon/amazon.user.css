@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.15
+@version        1.4.18
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -462,7 +462,8 @@
         .dv-carousel-control .dv-icon,
         i[id^="fst-cs-btn-arrow"],
         #prime-bbop-logo,
-        .cr-helpful-icon {
+        .cr-helpful-icon,
+        #nav-subnav .nav-categ-image, #nav-subnav .nav-image {
             filter: invert(1) !important;
         }
         .nav-promo,
@@ -864,10 +865,9 @@
         }
         
         /* Prime Video ToC note */
-        .tancaccept {
-            display: none !important;
-        }
-
+        .tancaccept,
+        /* Prime Video watch on TV */
+        .dv-dp-top-banner,
         /* Prime Video Teaser Carousel */
         .a-section.a-spacing-small.dv-hero-carousel,
         .a-section.a-spacing-none.dv-hero-carousel.dv-superhero-carousel {
