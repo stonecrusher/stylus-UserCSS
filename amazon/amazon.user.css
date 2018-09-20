@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.18
+@version        1.4.19
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -110,7 +110,8 @@
         .a-native-dropdown,
         .w-success-msg span,
         .w-popover-header,
-        .w-box {
+        .w-box,
+        .ryp__card__horizontal-padding-container {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -122,7 +123,9 @@
         #dmusicTracklist_feature_div .sample-button,
         .pauseIcon,
         #dmusicTracklist_feature_div #dmusic_tracklist_content tr.NowPlaying.darkenOnHover, #dmusicTracklist_feature_div #dmusic_tracklist_content tr:hover.darkenOnHover,
-        #techSpecSoftlines .td1 {
+        #techSpecSoftlines .td1,
+        .ryp__desktop .ryp__profile,
+        .ryp__media-upload-square-button-container {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
