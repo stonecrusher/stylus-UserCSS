@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.14
+@version      20.0.17
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -49,7 +49,8 @@ domain("wiktionary.org") {
     }
 
     /* transparent background */
-    div:not([style*="background"]),
+    /*div:not([style*="background"]),*/
+    .mw-search-profile-tabs,
     span:not(.legend-color):not([class*="wikEd"]):not([style*="background"]),
     .MainPageBG,
     .navbox-list,
@@ -778,7 +779,8 @@ domain("wiktionary.org") {
     }
     /*** Text ***/
     .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
-    table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
+    table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > *,
+    .ui-widget-header {
         color: #ccc !important;
     }
 
@@ -791,7 +793,18 @@ domain("wiktionary.org") {
     tr[style^="background:#F3F3F3"],
     tr[bgcolor="#FFF5EE"],
     td[bgcolor="#FFF5EE"],
-    table > * > tr.hintergrundfarbe2 > th, table > * > tr > th.hintergrundfarbe2, table.hintergrundfarbe2, .hintergrundfarbe2 {
+    table > * > tr.hintergrundfarbe2 > th, table > * > tr > th.hintergrundfarbe2, table.hintergrundfarbe2, .hintergrundfarbe2,
+    .mw-interlanguage-selector,
+    .uls-menu,
+    .hintergrundfarbe1,
+    tr[bgcolor="#f8f8f8"],
+    tr[bgcolor="#e0e0e0"],
+    tr[bgcolor="#efefef"],
+    tr[bgcolor="eeeeee"],
+    [style*="background:#F9F9F9;"],
+    .infobox,
+    table[style*="background:#f9f9f9"],
+    .mwe-popups *{
         background-color: #333 !important;
     }
     table > * > tr.hintergrundfarbe8 > th, table > * > tr > th.hintergrundfarbe8, table.hintergrundfarbe8, .hintergrundfarbe8 {
@@ -808,7 +821,8 @@ domain("wiktionary.org") {
         background: #2a2a2a !important;
     }
     table.sortable tr[style^="background:#E8E8E8"],
-    .wikitable tr[style^="background:#E1E9F3"] {
+    .wikitable tr[style^="background:#E1E9F3"],
+    table[style*="background:WhiteSmoke;"] {
         background: #333 !important;
     }
     .wikitable tr[style^="background:#EEEEEE"] {
@@ -824,15 +838,6 @@ domain("wiktionary.org") {
     #pagehistory li.selected {
         color: #ccc !important;
     }
-    .mw-interlanguage-selector,
-    .uls-menu,
-    .hintergrundfarbe1,
-    tr[bgcolor="#f8f8f8"],
-    tr[bgcolor="#e0e0e0"],
-    tr[bgcolor="#efefef"],
-    [style*="background:#F9F9F9;"] {
-        background-color: #333 !important;
-    }
     .mw-parser-output table.taxobox,
     .suggestions-results,
     .suggestions-special {
@@ -843,17 +848,8 @@ domain("wiktionary.org") {
     #simpleSearch {
         background-color: transparent !important;
     }
-    [bgcolor="#b0ceff"],
-    [bgcolor="#b0ceff"] > td,
-    [bgcolor="#ffb6b6"],
-    [bgcolor="#ffb6b6"] > td,
-    #mw-content-text [style^="background:#F7F6A8;"],
-    #mw-content-text [style^="background:#FFDAB9;"],
-    #mw-content-text [style^="background:#DCE5E5;"],
-    .mw-parser-output table.taxobox > * > * > th,
-    tr[style*="background-color:#ABCDEF;"] > th,
-    .hintergrundfarbe6 {
-        color: black !important;
+    div.mw-graph {
+        background-color: white !important;
     }
     .catlinks,
     [style*="background:#efefef;"],
@@ -867,5 +863,21 @@ domain("wiktionary.org") {
     .NavHead[style="background:lightsteelblue;"],
     div.NavHead {
         background-color: #000064 !important;
+    }
+    [bgcolor="#b0ceff"],
+    [bgcolor="#b0ceff"] > td,
+    [bgcolor="#ffb6b6"],
+    [bgcolor="#ffb6b6"] > td,
+    #mw-content-text [style^="background:#F7F6A8;"],
+    #mw-content-text [style^="background:#FFDAB9;"],
+    #mw-content-text [style^="background:#DCE5E5;"],
+    .mw-parser-output table.taxobox > * > * > th,
+    tr[style*="background-color:#ABCDEF;"] > th,
+    .hintergrundfarbe6 {
+        color: black !important;
+    }
+    .ui-icon,
+    .oo-ui-indicatorElement-indicator {
+        filter: invert(1) !important;
     }
 }
