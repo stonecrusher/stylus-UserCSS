@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.19
+@version        1.4.20
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -111,7 +111,8 @@
         .w-success-msg span,
         .w-popover-header,
         .w-box,
-        .ryp__card__horizontal-padding-container {
+        .ryp__card__horizontal-padding-container,
+        .imageInformation {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
