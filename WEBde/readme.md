@@ -31,6 +31,15 @@ https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockie
 - **Adblock Plus**:  
   Optionen --> Erweitert --> Neue Filterliste hinzufügen --> Beliebigen Titel und URL einfügen --> Filterliste hinzufügen
 
+### uBlock Origin im erweiterten Modus
+Wer uBO im erweiterten Modus nutzt und z.B. Skripte von Drittseiten standardmäßig für alle Seiten verboten hat, dem sollten folgende Regeln weiterhelfen, um die Seite wieder benutzbar zu machen:
+```
+web.de s.uicdn.com * noop
+web.de ui-portal.de * noop
+web.de uimserv.net * noop
+web.de web.de * noop
+```
+
 
 ## Weitere Skripte
 
