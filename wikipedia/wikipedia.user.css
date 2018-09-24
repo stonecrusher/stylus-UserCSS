@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.17
+@version      20.0.19
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -38,7 +38,8 @@
 @-moz-document domain("wikipedia.org"),
 domain("wikidata.org"),
 domain("mediawiki.org"),
-domain("wiktionary.org") {
+domain("wiktionary.org"),
+domain("wikimedia.org") {
     /* Modified from https://userstyles.org/styles/47161/dark-wikipedia-rounded */
     :root {
         --base-color: /*[[base-color]]*/;
@@ -252,7 +253,7 @@ domain("wiktionary.org") {
     td[bgcolor="FFF5EE" i],
     .wikitable.charts-zebragrey > tbody > tr:nth-of-type(odd),
     td > span[style*="background-color:#eee" i]/*,
-  #mw-content-text div:not(.toctitle) > h2, table.flextable th*/
+    #mw-content-text div:not(.toctitle) > h2, table.flextable th*/
     {
         background-color: #222 !important;
     }
@@ -458,7 +459,7 @@ domain("wiktionary.org") {
 
     div:not([style*="-color"]),
     div[style*="background-color"],
-    span:not([class*="color"]),
+    span:not([class*="color"]):not([style*="border-left-color"]),
     table,
     tr:not([style*="border-bottom"]),
     th,
@@ -688,7 +689,7 @@ domain("wiktionary.org") {
     .mw-widget-calendarWidget-day-additional {
         opacity: 0.7 !important;
     }
-
+/***********************************************************************************************************/
     /*********************************/
     /*** Dark comfort improvements ***/
     .thumbcaption {
@@ -757,7 +758,9 @@ domain("wiktionary.org") {
         color: #ccc !important;
     }
     .mw-mmv-download-pane,
-    div.thumbinner {
+    div.thumbinner,
+    .mw-mmv-post-image,
+    .mw-mmv-image-metadata {
         background-color: #222 !important;
     }
     #mw-content-text div:not(.toctitle) > h2,
@@ -788,44 +791,58 @@ domain("wiktionary.org") {
     .table-na {
         color: #fff !important;
     }
-    td[bgcolor="#C8D8FF"],
-    tr[style^="background:#EAECF0"],
-    tr[style^="background:#F3F3F3"],
-    tr[bgcolor="#FFF5EE"],
-    td[bgcolor="#FFF5EE"],
+    td[bgcolor="#C8D8FF" i],
+    tr[style^="background:#EAECF0" i],
+    tr[style^="background:#F3F3F3" i],
+    tr[bgcolor="#FFF5EE" i],
+    td[bgcolor="#FFF5EE" i],
     table > * > tr.hintergrundfarbe2 > th, table > * > tr > th.hintergrundfarbe2, table.hintergrundfarbe2, .hintergrundfarbe2,
     .mw-interlanguage-selector,
     .uls-menu,
     .hintergrundfarbe1,
-    tr[bgcolor="#f8f8f8"],
-    tr[bgcolor="#e0e0e0"],
-    tr[bgcolor="#efefef"],
-    tr[bgcolor="eeeeee"],
-    [style*="background:#F9F9F9;"],
+    tr[bgcolor="#f8f8f8" i],
+    tr[bgcolor="#e0e0e0" i],
+    tr[bgcolor="#efefef" i],
+    tr[bgcolor="eeeeee" i],
+    [style*="background:#F9F9F9;" i],
     .infobox,
-    table[style*="background:#f9f9f9"],
-    .mwe-popups *{
+    table[style*="background:#f9f9f9" i],
+    .mwe-popups *,
+    tr[style*="background:#FFFFFF;" i],
+    td.fileinfo-paramfield,
+    table[style*="background-color:#f7f8ff;" i],
+    .mw_metadata th,
+    .mw_metadata td {
         background-color: #333 !important;
+    }
+    [style*="background-color:#D0D0D0;"] {
+        background-color: #111 !important;
     }
     table > * > tr.hintergrundfarbe8 > th, table > * > tr > th.hintergrundfarbe8, table.hintergrundfarbe8, .hintergrundfarbe8 {
         background-color: #554913 !important;
     }
-    td[style*="background: #DDE5EE;"] {
+    td[style*="background: #DDE5EE;" i] {
         background:#335 !important;
         border-color: #555 !important;
     }
-    td[style^="background:#F7F7F7"] {
+    td[style^="background:#F7F7F7" i] {
         background: #222 !important;
     }
-    div[style="background:#DFE0E3;"] {
+    div[style="background:#DFE0E3;" i] {
         background: #2a2a2a !important;
     }
-    table.sortable tr[style^="background:#E8E8E8"],
-    .wikitable tr[style^="background:#E1E9F3"],
-    table[style*="background:WhiteSmoke;"] {
+    table[style*="background: #E3E3E3;" i],
+    table[style*="background:#E5E5E5;" i] {
+        background: #444 !important;
+    }
+    table.sortable tr[style^="background:#E8E8E8" i],
+    .wikitable tr[style^="background:#E1E9F3" i],
+    table[style*="background:WhiteSmoke;" i],
+    td[style*="background: #ffffff;" i],
+    table[style*="background:#ffffff;" i] {
         background: #333 !important;
     }
-    .wikitable tr[style^="background:#EEEEEE"] {
+    .wikitable tr[style^="background:#EEEEEE" i] {
         background: #222 !important;
     }
     div.vectorTabs li.selected,
@@ -852,32 +869,57 @@ domain("wiktionary.org") {
         background-color: white !important;
     }
     .catlinks,
-    [style*="background:#efefef;"],
-    [style*="background:#f5f5f5;"] {
+    [style*="background:#efefef;" i],
+    [style*="background:#f5f5f5;" i] {
         background-color: #939351 !important;
         color: black !important;
     }
-    [style="background:lightsteelblue;"],
-    .infobox [style*="background:lightsteelblue;"],
-    .infobox .hintergrundfarbe5[style*="background:lightsteelblue;"],
-    .NavHead[style="background:lightsteelblue;"],
-    div.NavHead {
+    [style="background:lightsteelblue;" i],
+    .infobox [style*="background:lightsteelblue;" i],
+    .infobox .hintergrundfarbe5[style*="background:lightsteelblue;" i],
+    .NavHead[style="background:lightsteelblue;" i],
+    div.NavHead,
+    [style*="background:#F8F8FF;" i] {
         background-color: #000064 !important;
     }
     [bgcolor="#b0ceff"],
     [bgcolor="#b0ceff"] > td,
     [bgcolor="#ffb6b6"],
     [bgcolor="#ffb6b6"] > td,
-    #mw-content-text [style^="background:#F7F6A8;"],
-    #mw-content-text [style^="background:#FFDAB9;"],
-    #mw-content-text [style^="background:#DCE5E5;"],
+    #mw-content-text [style^="background:#F7F6A8;" i],
+    #mw-content-text [style^="background:#FFDAB9;" i],
+    #mw-content-text [style^="background:#DCE5E5;" i],
     .mw-parser-output table.taxobox > * > * > th,
-    tr[style*="background-color:#ABCDEF;"] > th,
-    .hintergrundfarbe6 {
+    tr[style*="background-color:#ABCDEF;" i] > th,
+    .hintergrundfarbe6,
+    [bgcolor="#ffdddd"],
+    [style="background: #FF8C00;" i],
+    [style="background: #FFA500;" i],
+    [style="background: #FFCC66;" i],
+    [style="background: #FFFF99;" i],
+    [style="background: #CFE8FF;" i],
+    [style="background: #B9D3FF;" i],
+    [style="background: #8AB0FF;" i],
+    [style="background: #4169E1;" i],
+    [style="background: #6495ED;" i],
+    [style="background: #828BD9;" i],
+    [style="background: #607CD2;" i],
+    [style="background: #F0F8FF;" i],
+    #mw-content-text [style^="background:#CCEEFF;" i],
+    [style*="background:#cef;" i],
+    .fullMedia .mw-ui-button,
+    #mw-hidden-catlinks {
         color: black !important;
     }
     .ui-icon,
     .oo-ui-indicatorElement-indicator {
         filter: invert(1) !important;
+    }
+    td[style*="border-left"][style*="border-right"] {
+        border-color: #444 !important;
+    }
+    /* Wikimedia banner */
+    #wlm-de {
+        display: none !important;
     }
 }
