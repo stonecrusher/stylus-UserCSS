@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.19
+@version      20.0.22
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -690,6 +690,8 @@ domain("wikimedia.org") {
         opacity: 0.7 !important;
     }
 /***********************************************************************************************************/
+/***********************************************************************************************************/
+/***********************************************************************************************************/
     /*********************************/
     /*** Dark comfort improvements ***/
     .thumbcaption {
@@ -832,18 +834,17 @@ domain("wikimedia.org") {
         background: #2a2a2a !important;
     }
     table[style*="background: #E3E3E3;" i],
-    table[style*="background:#E5E5E5;" i] {
+    table[style*="background:#E5E5E5;" i],
+    td[style="background:#BBBBBB;" i] {
         background: #444 !important;
     }
     table.sortable tr[style^="background:#E8E8E8" i],
     .wikitable tr[style^="background:#E1E9F3" i],
     table[style*="background:WhiteSmoke;" i],
     td[style*="background: #ffffff;" i],
-    table[style*="background:#ffffff;" i] {
+    table[style*="background:#ffffff;" i],
+    table[style*="background:#E0E0E0;" i] {
         background: #333 !important;
-    }
-    .wikitable tr[style^="background:#EEEEEE" i] {
-        background: #222 !important;
     }
     div.vectorTabs li.selected,
     .client-js #preftoc li.selected {
@@ -857,7 +858,14 @@ domain("wikimedia.org") {
     }
     .mw-parser-output table.taxobox,
     .suggestions-results,
-    .suggestions-special {
+    .suggestions-special,
+    table[style*="background-color:#FFFFFF;" i],
+    th[style*="background:white" i],
+    td[style*="background:white" i],
+    th[style*="background: #F0F0F0;" i],
+    .wikitable tr[style^="background:#EEEEEE" i],
+    table[style*="background:transparent;" i],
+    .navbox, .navbox-subgroup {
         background: #222 !important;
     }
     .mw-body, .parsoid-body,
@@ -908,14 +916,17 @@ domain("wikimedia.org") {
     #mw-content-text [style^="background:#CCEEFF;" i],
     [style*="background:#cef;" i],
     .fullMedia .mw-ui-button,
-    #mw-hidden-catlinks {
+    #mw-hidden-catlinks,
+    td[style*="background: #BCD2F4;" i] {
         color: black !important;
     }
     .ui-icon,
-    .oo-ui-indicatorElement-indicator {
+    .oo-ui-indicatorElement-indicator,
+    #mw-fr-revisiontag {
         filter: invert(1) !important;
     }
-    td[style*="border-left"][style*="border-right"] {
+    td[style*="border-left"][style*="border-right"],
+    .wikitable td {
         border-color: #444 !important;
     }
     /* Wikimedia banner */
