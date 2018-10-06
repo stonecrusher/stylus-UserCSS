@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.20
+@version        1.4.22
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -112,7 +112,9 @@
         .w-popover-header,
         .w-box,
         .ryp__card__horizontal-padding-container,
-        .imageInformation {
+        .imageInformation,
+        #desktop-grid-1-D2,
+        #squished-desktop-row {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -126,7 +128,8 @@
         #dmusicTracklist_feature_div #dmusic_tracklist_content tr.NowPlaying.darkenOnHover, #dmusicTracklist_feature_div #dmusic_tracklist_content tr:hover.darkenOnHover,
         #techSpecSoftlines .td1,
         .ryp__desktop .ryp__profile,
-        .ryp__media-upload-square-button-container {
+        .ryp__media-upload-square-button-container,
+        .text-link-stripe {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -153,7 +156,10 @@
         .playlistDetailsListItem:hover:not(.emptyRow):not(.header) td,
         .button.secondary .buttonOption, #dragonflyTransport .rightControls .durationContainer .listViewDurationContextButton .secondary.listViewContextButton .buttonOption, #dragonflyTransport .rightControls .secondary.libraryButton .buttonOption, #dragonflyTransport .rightControls .secondary.thumbsUpButton .buttonOption, #dragonflyTransport .rightControls .secondary.thumbsDownButton .buttonOption, #dragonflyTransport .rightControls .secondary.repeatButton .buttonOption, #dragonflyTransport .rightControls .secondary.playerIconQueue .buttonOption, #dragonflyTransport .rightControls .secondary.shuffleButton .buttonOption, #dragonflyTransport .rightControls .secondary.volume .buttonOption, .sharingContainer .buttonContainer .secondary.shareButton .buttonOption,
         .listViewDurationContextButton .listViewContextButton,
-        .suggestions-list {
+        .suggestions-list,
+        .atsDD,
+        .gw-card-layout .a-cardui,
+        .adcenterRowWrapper, .billboardRowWrapper, .desktop-row {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -168,7 +174,8 @@
         .dsv-whiteBox,
         .dsv-whiteBox table,
         .dsv-primary, .dsv-secEyebrow h2,
-        .cs-help-header {
+        .cs-help-header,
+        #pageContent {
             background: var_bg1 !important;
         }
         .a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
@@ -230,7 +237,10 @@
             border-color: var_bg6 !important;
         }
         .a-dropdown-common .divider,
-        .aplus-v2 .apm-sidemodule {
+        .aplus-v2 .apm-sidemodule,
+        #automotiveStripe.asDoesFit #automotiveStripeMain,
+        #asNotesWrapper #asNotesCarousel,
+        #asNotesContainer .asNotesGroup {
             background-color: var_bg1 !important;
         }
         .a-color-offset-background,
@@ -328,6 +338,14 @@
         #pageContent hr {
             background-color: var_bg5 !important;
         }
+        .atsCenter, .atsContent, .atsDDLL, .atsDDLR, .atsDDUL, .atsDDUR, .atsLL, .atsLR, .atsUL, .atsUR {
+            background-color: var_bg5 !important;
+            background-image: none !important;
+        }
+        .atsWrap {
+            border: 2px solid var_bg6 !important;
+            border-radius: 3px !important;
+        }
         /* Automotive stripe */
         #automotiveStripe {
             background: var_bg2 !important;
@@ -382,7 +400,8 @@
         .dsv-secondary, .dsv-secEyebrow, .dsv-primary,
         .dsv-cBoxB,
         #techSpecSoftlines td, #techSpecSoftlines th,
-        #s-result-info-bar {
+        #s-result-info-bar,
+        #wl-item-search {
             border-color: var_bg6 !important;
         }
         
@@ -440,7 +459,8 @@
             background: var_selected !important;
             border: 1px solid lighten(var_selected, 20%) !important;
         }
-        .transparentTwisterDropdownBorder {
+        .transparentTwisterDropdownBorder,
+        #squished-desktop-row .desktop-row {
             border-color: var_bg1 !important;
         }
 
@@ -637,7 +657,8 @@
         #rhf .rhf-header,
         .aiv-container-limited.tancaccept,
         .acs-wtfl-filtersort-category:hover,
-        .nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text {
+        .nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text,
+        .asNotesValue {
             color: var_font2 !important;
         }
 
