@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.22
+@version      20.0.25
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -814,7 +814,8 @@ domain("wikimedia.org") {
     td.fileinfo-paramfield,
     table[style*="background-color:#f7f8ff;" i],
     .mw_metadata th,
-    .mw_metadata td {
+    .mw_metadata td,
+    [style*="background:#E3E3E3;" i] {
         background-color: #333 !important;
     }
     [style*="background-color:#D0D0D0;"] {
@@ -835,7 +836,8 @@ domain("wikimedia.org") {
     }
     table[style*="background: #E3E3E3;" i],
     table[style*="background:#E5E5E5;" i],
-    td[style="background:#BBBBBB;" i] {
+    td[style="background:#BBBBBB;" i],
+    tr[style^="background:#AABBCC" i] {
         background: #444 !important;
     }
     table.sortable tr[style^="background:#E8E8E8" i],
@@ -843,7 +845,9 @@ domain("wikimedia.org") {
     table[style*="background:WhiteSmoke;" i],
     td[style*="background: #ffffff;" i],
     table[style*="background:#ffffff;" i],
-    table[style*="background:#E0E0E0;" i] {
+    table[style*="background:#E0E0E0;" i],
+    td[style*="background:#eeeeee;" i],
+    th[style*="background: #E3E3E3;" i] {
         background: #333 !important;
     }
     div.vectorTabs li.selected,
@@ -865,7 +869,8 @@ domain("wikimedia.org") {
     th[style*="background: #F0F0F0;" i],
     .wikitable tr[style^="background:#EEEEEE" i],
     table[style*="background:transparent;" i],
-    .navbox, .navbox-subgroup {
+    .navbox, .navbox-subgroup,
+    tr[style="background:#FFFFFF" i] {
         background: #222 !important;
     }
     .mw-body, .parsoid-body,
