@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.25
+@version      20.0.27
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -815,7 +815,8 @@ domain("wikimedia.org") {
     table[style*="background-color:#f7f8ff;" i],
     .mw_metadata th,
     .mw_metadata td,
-    [style*="background:#E3E3E3;" i] {
+    [style*="background:#E3E3E3;" i],
+    [style*="background-color:#F5FAFE;" i] {
         background-color: #333 !important;
     }
     [style*="background-color:#D0D0D0;"] {
@@ -892,7 +893,9 @@ domain("wikimedia.org") {
     .infobox .hintergrundfarbe5[style*="background:lightsteelblue;" i],
     .NavHead[style="background:lightsteelblue;" i],
     div.NavHead,
-    [style*="background:#F8F8FF;" i] {
+    [style*="background:#F8F8FF;" i],
+    [style*="background-color: #EFF5FB;" i],
+    [style*="background-color: #F5FAFE;" i] {
         background-color: #000064 !important;
     }
     [bgcolor="#b0ceff"],
@@ -905,6 +908,8 @@ domain("wikimedia.org") {
     .mw-parser-output table.taxobox > * > * > th,
     tr[style*="background-color:#ABCDEF;" i] > th,
     .hintergrundfarbe6,
+    .hintergrundfarbe7,
+    .hintergrundfarbe7 > *,
     [bgcolor="#ffdddd"],
     [style="background: #FF8C00;" i],
     [style="background: #FFA500;" i],
