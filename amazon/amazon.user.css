@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.22
+@version        1.4.26
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -114,7 +114,9 @@
         .ryp__card__horizontal-padding-container,
         .imageInformation,
         #desktop-grid-1-D2,
-        #squished-desktop-row {
+        #squished-desktop-row,
+        .huc-v2-pinned-order-row-with-divider,
+        .dp-accordion .unselected .rbbHeader {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -129,7 +131,8 @@
         #techSpecSoftlines .td1,
         .ryp__desktop .ryp__profile,
         .ryp__media-upload-square-button-container,
-        .text-link-stripe {
+        .text-link-stripe,
+        .dv-episode-container {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -215,7 +218,9 @@
         .acs-wtfl-filtersort-wrap,
         .a-accordion .a-accordion-row:hover,
         #huc-v2-order-row-items,
-        #huc-v2-order-row-messages {
+        #huc-v2-order-row-messages,
+        #s-result-info-bar.s-refinements-on-top,
+        #refinementsOnTop {
             background-color: var_bg2 !important;
         }
         .dp-main {
@@ -639,7 +644,8 @@
         .playlistDetailsListItem .duration,
         .listViewTrackNumber,
         .avu-content .avu-section-alt .av-secondary,
-        .cs-help-content p.lead {
+        .cs-help-content p.lead,
+        .dv-el-attr-key {
             color: var_font3 !important;
         }
         hr,
@@ -658,7 +664,8 @@
         .aiv-container-limited.tancaccept,
         .acs-wtfl-filtersort-category:hover,
         .nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text,
-        .asNotesValue {
+        .asNotesValue,
+        .dv-el-attr-value {
             color: var_font2 !important;
         }
 
