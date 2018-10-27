@@ -3,7 +3,7 @@
 ! Homepage: https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 ! Title: web.de und gmx Turbo
 ! Expires: 7 days
-! Version: 20180621
+! Version: 20181027
 ! Redirect: https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde
 !
 ! Autor: Stonecrusher
@@ -41,7 +41,7 @@
 ||img.ui-portal.de/homepage/img/
 ||img.ui-portal.de/pos-cdn/*/themebg/background_gradient.png|
 ||cloudfront.net$domain=gmx.net|web.de
-@@||img.ui-portal.de/homepage/img/*/icons/mainnav*/weather.svg|
+@@||img.ui-portal.de/homepage/img/*/icons/mainnav*/weather*.svg|
 @@||img.ui-portal.de/homepage/img/*/icons/hint*$image
 @@||img.ui-portal.de/homepage/img/*/btn/$image
 
