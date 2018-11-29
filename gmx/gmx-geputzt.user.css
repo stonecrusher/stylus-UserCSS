@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.0.2
+@version      2.0.3
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -54,9 +54,11 @@ https://userstyles.org/styles/134069/
     html.can-have-sky .section-content { margin-right:0 !important; }
     /* Startseite Innencontainer Höhe */
     .component.mail.widget div.data-list { height:99% !important; }
-    /* Startseite Betreff Breite */
-    .component.mail.widget div.data-list ul { width:initial !important; }
-    .component.mail.widget div.data-list ul li > span.mail-subject { width:calc(100% - 140px - 70px - 10px) !important; }	
+    /* Startseite Metadaten Breite */
+    .component.mail.widget div.tab-mail > ul.inbox-container > li { max-width:initial !important; }
+    .component.mail.widget div.tab-mail > ul.inbox-container > li > .sender { width: 180px !important; }
+    .component.mail.widget div.tab-mail > ul.inbox-container > li > .subject { width: calc(100% - 260px - 50px) !important; }
+    .component.mail.widget div.tab-mail > ul.inbox-container > li > .date { width: 80px !important; }
   }
 
   /* Farbe des Logout-Buttons */
