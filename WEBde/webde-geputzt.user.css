@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.17
+@version      2.2.18
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -186,6 +186,9 @@
   /* Fakemail-container von Startseite entfernen */
   .nav-tabs > .tab-mail > .bulk-container { display:none !important; }
   .nav-tabs > .tab-mail > .inbox-container { height:100% !important; }
+
+  /* Keine ungelesenen Mails */
+  .component.widget.mail .tab-mail .no-mails.hide { display:none !important; }
 
   /* Startseite Emailliste Breite */
   /* Außencontainer */
