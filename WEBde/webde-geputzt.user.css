@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.18
+@version      2.2.19
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -187,9 +187,6 @@
   .nav-tabs > .tab-mail > .bulk-container { display:none !important; }
   .nav-tabs > .tab-mail > .inbox-container { height:100% !important; }
 
-  /* Keine ungelesenen Mails */
-  .component.widget.mail .tab-mail .no-mails.hide { display:none !important; }
-
   /* Startseite Emailliste Breite */
   /* Außencontainer */
   #cockpit { margin:0 0 auto 20px !important; width: initial !important; }
@@ -204,6 +201,8 @@
   .component.widget.mail > section,
   .component.widget.mail .nav-tabs { height: initial !important; }
   .component.widget.mail .tab-mail { height: auto !important; }
+  /* Keine ungelesenen Mails */
+  .component.widget.mail .tab-mail .no-mails.hide { display:none !important; }
 
   /*** Email Editor ***/
   #transferoption {
