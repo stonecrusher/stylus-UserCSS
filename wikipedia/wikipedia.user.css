@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.30
+@version      20.0.31
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -868,6 +868,9 @@ domain("wikimedia.org") {
     }
     #mw-indicator-mw-helplink a {
         filter: invert(1) !important;
+    }
+    img[src*="Loudspeaker.svg"] {
+        filter: invert(0.8) !important;
     }
     #pagehistory li.selected {
         color: #ccc !important;
