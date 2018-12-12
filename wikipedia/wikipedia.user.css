@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.31
+@version      20.0.32
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -645,7 +645,7 @@ domain("wikimedia.org") {
     img[src*=".svg"][height="16"],
     img[src*=".svg"][height="17"],
     img[src*=".svg"][height="18"],
-    .oo-ui-iconElement-icon:not(.mw-echo-notifications-badge),
+    .oo-ui-iconElement-icon:not(.mw-echo-notifications-badge):not(.oo-ui-checkboxInputWidget-checkIcon),
     .RTsettings,
     #gtx-host,
     .jfk-bubble-closebtn,
@@ -703,7 +703,8 @@ domain("wikimedia.org") {
 
     /*********************************/
     /*** Dark comfort improvements ***/
-    .thumbcaption {
+    .thumbcaption,
+    .oo-ui-tagItemWidget.oo-ui-widget-enabled {
         color: #ccc !important;
     }
     .thumbcaption a {
@@ -886,7 +887,9 @@ domain("wikimedia.org") {
     table[style*="background:transparent;" i],
     .navbox, .navbox-subgroup,
     tr[style="background:#FFFFFF" i],
-    #hauptseite .inhalt {
+    #hauptseite .inhalt,
+    .mw-advancedSearch-namespace-selection,
+    .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle {
         background: #222 !important;
     }
     .mw-body, .parsoid-body,
@@ -957,5 +960,10 @@ domain("wikimedia.org") {
     /* Wikimedia banner */
     #wlm-de {
         display: none !important;
+    }
+    /* Failed search */
+    .oo-ui-tagMultiselectWidget-input.oo-ui-widget.oo-ui-widget-enabled.oo-ui-inputWidget.oo-ui-iconElement.oo-ui-textInputWidget.oo-ui-textInputWidget-type-text {
+        border-style: solid !important;
+        border-width: 1px 2px 2px !important;
     }
 }
