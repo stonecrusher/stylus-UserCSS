@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.28
+@version        1.4.29
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -17,7 +17,7 @@
 @var color     var_linkdefault 'DS Link color'       #75a9d7
 @var color     var_linkhover   'DS Link hover color' #cc5800
 @var color     var_price       'DS Price color'      #ff3b14
-@var checkbox  compact         'Compact mode'               1
+@var checkbox  compact         'Compact mode & No Ads'      1
 @var checkbox  mark-sponsored  'Mark sponsored results'     1
 @var checkbox  av-pause-remove 'Remove Video pause overlay' 1
 @var text      review-width    'Width of review bars'       300px
@@ -116,7 +116,9 @@
         #desktop-grid-1-D2,
         #squished-desktop-row,
         .huc-v2-pinned-order-row-with-divider,
-        .dp-accordion .unselected .rbbHeader {
+        .dp-accordion .unselected .rbbHeader,
+        #pet_your_prime .pet_your_prime_subheader,
+        #pet_your_prime .pet_cta_detail {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -881,7 +883,8 @@
         .askQuestionExamples,
         .prime-ad-banner-content,
         #productAlert_feature_div,
-        #universalHQP_feature_div {
+        #universalHQP_feature_div,
+        #huc-v2-cobrand-stripe /* Before payment VISA banner */ {
             display: none !important;
         }
 
@@ -905,7 +908,8 @@
         .dv-dp-top-banner,
         /* Prime Video Teaser Carousel */
         .a-section.a-spacing-small.dv-hero-carousel,
-        .a-section.a-spacing-none.dv-hero-carousel.dv-superhero-carousel {
+        .a-section.a-spacing-none.dv-hero-carousel.dv-superhero-carousel,
+        .DigitalVideoWebNodeStorefront_Collection__AboveNav.DigitalVideoWebNodeStorefront_Collection__containsSuperHero {
             display: none !important;
         }
         
