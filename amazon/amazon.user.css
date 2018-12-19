@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.29
+@version        1.4.30
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -537,7 +537,6 @@
         #ys-center #ysh-cards-container .recs-grid-container {
             border-color: var_bg3 !important;
             background: var_bg1 !important;
-            
         }
         #navbar.nav-bluebeacon,
         #navbar.nav-bluebeacon #nav-belt,
@@ -735,6 +734,9 @@
         }
         ul.a-pagination li.a-disabled {
             background-color: transparent !important;
+        }
+        .swSprite::before {
+            color: transparent !important;
         }
         
         /* Song controls */
