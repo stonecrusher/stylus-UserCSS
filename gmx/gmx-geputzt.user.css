@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.0.3
+@version      2.0.4
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -27,6 +27,7 @@
 @var color    var_schriftfarbe   'DS Schriftfarbe'      #eee
 @var color    var_hintergrund1   'DS Hintergrundfarbe'  #222
 @var color    var_hintergrund2   'DS Hintergrund hover' #444
+@var color    var_btnFarbe       'Buttonfarbe'          #486303
 ==/UserStyle== */
 
 /*
@@ -357,6 +358,21 @@ https://userstyles.org/styles/134069/
       filter:invert(100%) !important;
     }
     #cke_1_top.collapsed { padding-bottom:0 !important; }
+    /* Senden Buttons */
+    #section-0 .m-button.button-size-large.button-block.button-link, /* Email Schreiben Button */
+    #compose-form .js-compose-send-button, /* Senden Button top right */
+    #compose-form-submit-send /* Senden Button bottom right */ {
+      background-image: linear-gradient(to bottom,var_btnFarbe,darken(var_btnFarbe, 30%)) !important;
+        &.is-hovered { background-image: linear-gradient(to bottom, lighten(var_btnFarbe,10%),var_btnFarbe) !important; }
+    }
+    #compose-form-submit-send { margin-left: 10px !important; }
+    /* Angefangene E-Mail / Entwürfe */
+    #section-0 .panel-composition ul.drafts a { border: 1px solid var_hintergrund2 !important; }
+    #section-0 .panel-composition ul.drafts li.active a { background-color: var_hintergrund2 !important; }
+    #section-0 .panel-composition ul.drafts li.active:hover a,
+    #section-0 .panel-composition ul.drafts li:hover a {
+      background-color: var_hintergrund2 !important;
+    }
 
     /* Startseite */
     .mail.active::before { display:none !important; }
