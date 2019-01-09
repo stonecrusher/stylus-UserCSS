@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.0.4
+@version      2.1.0
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -28,6 +28,7 @@
 @var color    var_hintergrund1   'DS Hintergrundfarbe'  #222
 @var color    var_hintergrund2   'DS Hintergrund hover' #444
 @var color    var_btnFarbe       'Buttonfarbe'          #486303
+@var color    var_accent         'Akzentfarbe'          #406ed2
 ==/UserStyle== */
 
 /*
@@ -193,7 +194,7 @@ https://userstyles.org/styles/134069/
   ul.inbox-container {
     height:350px !important;
   }
-  div.no-mails { margin-top:110px !important; }
+  div.no-mails { margin-top:80px !important; }
 
   /* Höhe des Posteingang vergrößern (hängt von Adblockdetektion ab) */
   .no-sky.can-have-adb .section-1 > .section-container { bottom:0 !important; }
@@ -341,10 +342,15 @@ https://userstyles.org/styles/134069/
   /***** GMX Darkstyle *****/
   if darkstyle-enable {
     body,
-    body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon):not(.scroll-shadow-top):not(.scroll-shadow-bottom) {
+    body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.envelope) {
       color:var_schriftfarbe !important;
       background-color:var_hintergrund1 !important;
       background-image:none !important;
+    }
+
+    /* Menüleiste oben */
+    .atl-actions-menu__item--active .pos-icon-item__icon, .atl-actions-menu__item:hover .pos-icon-item__icon, .atl-actions-menu__item--active:hover .pos-icon-item__icon {
+      fill: var_accent !important;
     }
 
     /* Email schreiben */
@@ -358,6 +364,20 @@ https://userstyles.org/styles/134069/
       filter:invert(100%) !important;
     }
     #cke_1_top.collapsed { padding-bottom:0 !important; }
+    #cke_editor a.cke_button_off:hover,
+    #cke_editor a.cke_button_off:focus,
+    #cke_editor a.cke_button_off:active {
+      background-image: linear-gradient(to bottom,var_hintergrund2,darken(var_hintergrund2,20%)) !important;
+    }
+    #cke_editor a.cke_button_on {
+      background-image: linear-gradient(to bottom,var_hintergrund2,lighten(var_hintergrund2,20%)) !important;
+    }
+    #cke_editor a.cke_button_disabled:hover,
+    #cke_editor a.cke_button_disabled:focus,
+    #cke_editor a.cke_button_disabled:active {
+      background-image: linear-gradient(to bottom,var_hintergrund1,darken(var_hintergrund1,20%)) !important;
+    }
+
     /* Senden Buttons */
     #section-0 .m-button.button-size-large.button-block.button-link, /* Email Schreiben Button */
     #compose-form .js-compose-send-button, /* Senden Button top right */
@@ -380,6 +400,12 @@ https://userstyles.org/styles/134069/
     .inbox-container > li { border-bottom:1px solid var_schriftfarbe !important; }
 
     #section-0 .mail-inbox > .mail-id:hover *, /* Mail-Übersicht */ /* ID wird für Spezifität benötigt */
+    /* Neue Mails / Pluszeichen */
+    #section-0 ul.nav li.add,
+    #section-0 ul.nav li.active,
+    #section-0 ul.nav li.active > * {
+      background-color: var_hintergrund2 !important;
+    }
 
     /* Postfach */
     #mail-list tr:hover *,
@@ -410,13 +436,29 @@ https://userstyles.org/styles/134069/
     }
     /* Email Details toggle workaround */
     /* sonst müssen oben :not(li):not(.gui-toggle-trigger) eingetragen werden */
-    #mail-head .gui-toggle-trigger * {
-      background-image:url("https://cdn.gmxpro.net/cdn/mail/client/wicket/resource/static-res/--chrome/mc/img/themes/densely/intenseblue/sprite-st-3735663261653630.png") !important;
-      background-position:-40px -960px !important;
-      background-color:darkblue !important;
+    #mail-head .gui-toggle.minimized ul.gui-toggle-control li,
+    #mail-head .gui-toggle ul.gui-toggle-control li,
+    #html-tag .gui-toggle.minimized ul.gui-toggle-control li,
+    #html-tag .gui-toggle ul.gui-toggle-control li {
+      background-image:url("https://cdn.gmxpro.net/cdn/mail/client/wicket/resource/static-res/---/uic/img/themes/unified/intenseblue/sprite-st-6538373036353439.png") !important;
+      background-position:-230px -246px !important;
+      background-color: var_hintergrund1 !important;
       filter:grayscale(100%) !important;
     }
+    #mail-head .gui-toggle ul.gui-toggle-control li,
+    #html-tag .gui-toggle ul.gui-toggle-control li {
+      background-position: -264px 0 !important;
+    }
+    #html-tag .gui-toggle .menu-head .gui-toggle-control {
+      width: 15px !important;
+      line-height: 1.35em !important;
+    }
     ::-moz-placeholder { color: #777 !important; }
+    .paging input {
+      background-color: lighten(var_hintergrund2,20%) !important;
+      background-image: none !important;
+      font-weight: bold !important;
+    }
 
     /* Adressbuch */
     .fc-toolbar > .fc-left h2 { color:var_schriftfarbe !important; }
@@ -430,6 +472,40 @@ https://userstyles.org/styles/134069/
       background:#333 !important;
     }
     #worker-iframe ~ .container .event-bordered { background:#a33 !important; }
+    
+    /* Einstellungen */
+    /* Seitenmenü */
+    .panel-setting .panel-head h2 { color: var_schriftfarbe !important; }
+    #html-tag .menu-sub .menu-item.active,
+    #html-tag .menu-sub .menu-item.active > span,
+    #html-tag .menu-sub .menu-item.active:hover,
+    #html-tag .menu-sub .menu-item.active:hover > span,
+    #html-tag .menu-sub li a.active,
+    #html-tag .menu-sub li a.active > span,
+    #html-tag .menu-sub li a.active:hover,
+    #html-tag .menu-sub li a.active:hover > span,
+    #navigation .nav-item .label.active,
+    #navigation .nav-item .label.active > span {
+      background-color: lighten(var_hintergrund2,10%) !important;
+      color: var_schriftfarbe !important;
+    }
+    #html-tag .menu-sub .menu-item:hover,
+    #html-tag .menu-sub .menu-item:hover > span,
+    #html-tag .menu-sub li a:hover,
+    #html-tag .menu-sub li a:hover > span,
+    #navigation > div > div:not(#navigation-function) .nav-item > .label:hover,
+    #navigation > div > div:not(#navigation-function) .nav-item > .label:hover > span {
+      background-color: var_hintergrund2 !important;
+      color: var_schriftfarbe !important;
+    }
+    #html-tag ul.menu ul.menu-top > li {
+      color: lighten(var_accent,10%) !important;
+      font-weight: bold !important;
+    }
+    #html-tag a.text-link {
+      color: lighten(var_accent,10%) !important;
+    }
+    #html-tag .splitpanel_slider { background-color: var_schriftfarbe !important; }
   }
   /***** GMX Darkstyle *****/
   /*************************/
