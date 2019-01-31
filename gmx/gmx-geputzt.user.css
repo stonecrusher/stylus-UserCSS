@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.1.1
+@version      2.1.2
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -493,7 +493,8 @@ https://userstyles.org/styles/134069/
     #html-tag .menu-sub li a.active:hover > span,
     #navigation .nav-item .label.active,
     #navigation .nav-item .label.active > span,
-    #thirdPartyFrame_home .setting-switcher-panel li:hover {
+    #thirdPartyFrame_home .setting-switcher-panel li:hover,
+    #desk .settingspanel li:hover > a {
       background-color: lighten(var_hintergrund2,10%) !important;
       color: var_schriftfarbe !important;
     }
@@ -502,7 +503,8 @@ https://userstyles.org/styles/134069/
     #html-tag .menu-sub li a:hover,
     #html-tag .menu-sub li a:hover > span,
     #navigation > div > div:not(#navigation-function) .nav-item > .label:hover,
-    #navigation > div > div:not(#navigation-function) .nav-item > .label:hover > span {
+    #navigation > div > div:not(#navigation-function) .nav-item > .label:hover > span,
+    #desk .settingspanel li:hover > a.active {
       background-color: var_hintergrund2 !important;
       color: var_schriftfarbe !important;
     }
