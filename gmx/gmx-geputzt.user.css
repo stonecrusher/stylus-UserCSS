@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.1.0
+@version      2.1.1
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -70,9 +70,9 @@ https://userstyles.org/styles/134069/
   /* Kalender, Dokumenten-Manager, Pinnwand? */
   if calendar-hide {
     atl-menu-item[data-item-name="calendar"],
-    #navigation > ul > li:nth-of-type(9),
-    #navigation > ul > li:nth-of-type(10),
-    #navigation > ul > li:nth-of-type(11) {
+    #cockpit #navigation > ul > li:nth-of-type(9),
+    #cockpit #navigation > ul > li:nth-of-type(10),
+    #cockpit #navigation > ul > li:nth-of-type(11) {
       display:none !important;
     }
   }
@@ -88,7 +88,7 @@ https://userstyles.org/styles/134069/
   /* DE-Mail? */
   if demail-hide {
     .demail-selection,
-    #navigation > ul > li:nth-of-type(5) {
+    #cockpit #navigation > ul > li:nth-of-type(5) {
       display:none !important;
     }
   }
@@ -96,16 +96,16 @@ https://userstyles.org/styles/134069/
   /* Verschlüsselte, Fax, SMS? */
   if sms-hide {
     a[title="E-Mail schreiben"] + div.button-group-firstblockbutton_subgroup,
-    #navigation > ul > li:nth-of-type(3),
-    #navigation > ul > li:nth-of-type(12),
-    #navigation > ul > li:nth-of-type(13) {
+    #cockpit #navigation > ul > li:nth-of-type(3),
+    #cockpit #navigation > ul > li:nth-of-type(12),
+    #cockpit #navigation > ul > li:nth-of-type(13) {
       display:none !important;
     }
   }
 
   /* MailCheck? */
   if mailcheck-hide {
-    #navigation > ul > li:nth-of-type(6),
+    #cockpit #navigation > ul > li:nth-of-type(6),
     .mailcheck { /* Achtung, Änderungen? */
       display:none !important;
     }
@@ -113,14 +113,14 @@ https://userstyles.org/styles/134069/
 
   /* Grußkarten? */
   if grusskarten-hide {
-    #navigation > ul > li:nth-of-type(4) {
+    #cockpit #navigation > ul > li:nth-of-type(4) {
         display:none !important;
       }
   }
   /* "Organisation" Gruppenpunkt Menü links */
   if sms-hide && calendar-hide {
-    #navigation > ul > li:nth-of-type(7),
-    #navigation > ul > li:nth-of-type(8) {
+    #cockpit #navigation > ul > li:nth-of-type(7),
+    #cockpit #navigation > ul > li:nth-of-type(8) {
         display:none !important;
       }
   }
@@ -135,7 +135,7 @@ https://userstyles.org/styles/134069/
   div#innercontent > div:nth-of-type(2),  /* footer-Werbung */
   #page-footer li:nth-of-type(n+4), /* kleiner Footer Eigenwerbung */
   /* Premium-Werbung in den Startseite-Einstellungen */
-  div.setting-dialog.settings-startpage > div > div:first-of-type,
+  /*div.setting-dialog.settings-startpage > div > div:first-of-type,*/
   p#id12ed, /* Werbelink in Einstellungen Newsletter Vorteilswelt */
   p#id7c2, /* Werbelink in Einstellungen Newsletter Vorteilswelt */
   /* Top-Toolbar */
@@ -178,7 +178,7 @@ https://userstyles.org/styles/134069/
   .atl-third-party-dialog__blocker, /* Neues Overlay 2018-03 */
   #desk > .cockpit > .grid-right,
   #desk > .cockpit > .grid-left > .grid-container:last-child, /* Werbekram, Wetter, Hilfe & Tipps auf Startseite */
-  #navigation > ul > li:nth-of-type(n + 14):not(:nth-of-type(n + 25)), /* Linke Navi "Produkte" */
+  #cockpit #navigation > ul > li:nth-of-type(n + 14):not(:nth-of-type(n + 25)), /* Linke Navi "Produkte" */
   
   #dummy {
     display:none !important;
@@ -222,7 +222,7 @@ https://userstyles.org/styles/134069/
 
   .hint-btn { display:none !important; } /* Zurück zum Login Button */
 
-  .hint-error { background:#f66 !important; }
+  .hint-error { background:#f66 !important; border-radius:0 !important; }
   .hint-error h2 { line-height:48px !important; }
   .hint-error p {
     margin:0 auto !important;
@@ -277,7 +277,7 @@ https://userstyles.org/styles/134069/
       margin-top:0 !important;
       width: 380px !important;
       top:2% !important;
-      left:42% !important;
+      left:43% !important;
       overflow:hidden !important;
       margin-left:-120px !important;
     }
@@ -291,6 +291,13 @@ https://userstyles.org/styles/134069/
       margin-left:0px !important;
       padding:10px !important;
     }
+    /*** Z-INDEX LAYERS ***/
+    .ie7fix { z-index:50000 !important; position:relative !important; }
+
+    #loginsearch { z-index:200 !important; position:absolute !important; }
+    #loginsearch-login form.form-login { top:40% !important; }
+
+    #logo, #header { z-index: 100 !important; }
   }
 }
 
@@ -315,7 +322,7 @@ https://userstyles.org/styles/134069/
     position:fixed !important;
     width:50% !important;
     min-width:250px !important;
-    top:40% !important;
+    top:48% !important;
     left:22% !important;
   }
 
@@ -485,7 +492,8 @@ https://userstyles.org/styles/134069/
     #html-tag .menu-sub li a.active:hover,
     #html-tag .menu-sub li a.active:hover > span,
     #navigation .nav-item .label.active,
-    #navigation .nav-item .label.active > span {
+    #navigation .nav-item .label.active > span,
+    #thirdPartyFrame_home .setting-switcher-panel li:hover {
       background-color: lighten(var_hintergrund2,10%) !important;
       color: var_schriftfarbe !important;
     }
@@ -502,10 +510,19 @@ https://userstyles.org/styles/134069/
       color: lighten(var_accent,10%) !important;
       font-weight: bold !important;
     }
-    #html-tag a.text-link {
-      color: lighten(var_accent,10%) !important;
+    #main .choose-permission,
+    #main .personal_data_box,
+    #main .choose-permission *,
+    #main .personal_data_box * {
+      background-color: var_hintergrund2 !important;
     }
+    .headline-wrapper h2 { color: var_schriftfarbe !important; }
+    #html-tag a.text-link { color: lighten(var_accent,10%) !important; }
     #html-tag .splitpanel_slider { background-color: var_schriftfarbe !important; }
+
+    /* Automatische Abmeldung */
+    #pos-modal-wrapper .pos-message-modal__wrapper * { background-color: var_hintergrund2 !important; }
+    #pos-modal-wrapper .pos-message-modal__wrapper .pos-button { background-color: var_hintergrund1 !important; }
   }
   /***** GMX Darkstyle *****/
   /*************************/
