@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.30
+@version        1.4.31
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -275,7 +275,8 @@
             background: none !important;
         }
         /* Text on normal buttons */
-        .a-button .a-button-text {
+        .a-button .a-button-text,
+        .dv-button-text {
             color: var_font1 !important;
         }
         /* Grey buttons */
