@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.34
-@description  Wikipedia Dark theme
+@version      20.1.0
+@description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/Issues
@@ -693,10 +693,10 @@ domain("wikimedia.org") {
 
 
 
-
-/***********************************************************************************************************/
-/***********************************************************************************************************/
-/***********************************************************************************************************/
+/* The above was taken from https://raw.githubusercontent.com/StylishThemes/Wikipedia-Dark/master/wikipedia-dark.user.css */
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
 
 
 
@@ -704,6 +704,249 @@ domain("wikimedia.org") {
 
     /*********************************/
     /*** Dark comfort improvements ***/
+    /*** BACKGROUND ***/
+    [style*="background:#c9c9c9" i],
+    [style*="background:#ececec" i],
+    [style*="background-color:#fff6d9" i] 
+    table[style*="background: #e3e3e3" i],
+    table[style*="background:#e5e5e5" i],
+    td[style="background:#bbbbbb;" i],
+    tr[style^="background:#aabbcc;" i],
+    li.gallerybox div.thumb {
+      background: #444 !important;
+    }
+    [style*="background-color:#ffffff" i],
+    [style*="background-color: #ffffff" i],
+    [style*="background-color:#fff;" i],
+    [style*="background-color: #fff;" i],
+    [style*="background:#f9f9f9" i],
+    [style*="background-color:#f9f9f9" i],
+    [style*="background:#e3e3e3" i],
+    [style*="background-color:#f5fafe" i],
+    td[bgcolor="#c8d8ff" i],
+    td[bgcolor="#fff5ee" i],
+    tr[bgcolor="#fff5ee" i],
+    tr[bgcolor="#f8f8f8" i],
+    tr[bgcolor="#e0e0e0" i],
+    tr[bgcolor="#efefef" i],
+    tr[bgcolor="eeeeee" i],
+    tr[style^="background:#eaecf0" i],
+    tr[style^="background:#f3f3f3" i],
+    table[style*="background-color:#f7f8ff" i],
+    .hintergrundfarbe2,
+    .mw-interlanguage-selector,
+    .uls-menu,
+    .hintergrundfarbe1,
+    .infobox,
+    .prettytable,
+    td.fileinfo-paramfield,
+    table.hintergrundfarbe2,
+    .mwe-popups *,
+    .mw_metadata th,
+    .mw_metadata td,
+    table > * > tr.hintergrundfarbe2 > th,
+    table > * > tr > th.hintergrundfarbe2 {
+      background-color: #333 !important;
+    }
+    [style*="background:#ffffff" i],
+    [style*="background: #ffffff" i],
+    [style*="background:#fff" i],
+    [style*="background: #fff" i],
+    [style*="background:#e0e0e0" i],
+    [style*="background:#eeeeee" i],
+    [style*="background: #e3e3e3" i],
+    .wikitable tr[style^="background:#e1e9f3" i],
+    table.sortable tr[style^="background:#e8e8e8" i],
+    table[style*="background:WhiteSmoke" i] {
+      background: #333 !important;
+    }
+    [style*="background:#f5f5f5" i],
+    div[style="background:#dfe0e3;" i] {
+      background: #2a2a2a !important;
+    }
+    [style*="background:#efefef" i],
+    [style*="background:#f5f5f5" i],
+    [style*="background-color:#f5f5f5" i],
+    [style*="background:white" i],
+    [style*="background: white" i],
+    [style*="background:#f0f0f0" i],
+    [style*="background: #f0f0f0" i],
+    [style*="background-color:#f0f0f0" i],
+    [style*="background-color:#d8e8ff" i],
+    td[style^="background:#f7f7f7" i],
+    table[style*="background-color:#ffffff" i],
+    .wikitable tr[style^="background:#eeeeee" i],
+    table[style*="background:transparent" i],
+    tr[style="background:#ffffff" i],
+    .mw-datatable td
+    .suggestions-results,
+    .suggestions-special,
+    .navbox,
+    .navbox-subgroup,
+    .mw-advancedSearch-namespace-selection,
+    .mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend,
+    .mw-parser-output table.taxobox,
+    #hauptseite .inhalt,
+    .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle {
+      background: #222 !important;
+    }
+    .mw-mmv-download-pane,
+    .mw-mmv-post-image,
+    .mw-mmv-image-metadata,
+    div.thumbinner {
+      background-color: #222 !important;
+    }
+    [style*="background-color:#d0d0d0;" i] {
+      background-color: #111 !important;
+    }
+    div.mw-graph {
+      background-color: white !important;
+    }
+    [style="background:lightsteelblue;" i],
+    [style*="background:#f8f8ff" i],
+    [style*="background-color: #eff5fb" i],
+    [style*="background-color: #f5fafe" i],
+    .infobox [style*="background:lightsteelblue;" i],
+    .infobox .hintergrundfarbe5[style*="background:lightsteelblue;" i],
+    .NavHead[style="background:lightsteelblue;" i],
+    div.NavHead {
+      background-color: #000064 !important;
+    }
+    table > * > tr.hintergrundfarbe8 > th,
+    table > * > tr > th.hintergrundfarbe8,
+    table.hintergrundfarbe8,
+    .hintergrundfarbe8 {
+      background-color: #554913 !important;
+    }
+    div.vectorTabs li.selected,
+    .client-js #preftoc li.selected {
+      background: linear-gradient(totop,#e08b26,#e08b2611 8%,transparent) !important;
+    }
+    #mw-content-text div:not(.toctitle) > h2,
+    table.flextable th,
+    table.flextable td,
+    .mw-body,
+    .parsoid-body,
+    #mw-page-base,
+    #simpleSearch {
+      background-color: transparent !important;
+    }
+
+    /*** TEXT COLOR ***/
+    body,
+    h1,h2,h3,h4,h5,h6,
+    #footer li,
+    .infobox th[style*="background"],
+    div[style*="color"],
+    input[type="search"],
+    input[type="submit"],
+    input[type="number"],
+    select,
+    .suggestions-result,
+    input,
+    .central-featured-lang .link-box em,
+    .central-featured-lang .link-box small,
+    .mwe-popups-title,
+    .thumbcaption,
+    .oo-ui-tagItemWidget.oo-ui-widget-enabled,
+    .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
+    table.wikitable > tbody > tr[style*="background-color:#f6f6f6" i] > td > *,
+    .ui-widget-header,
+    #pagehistory li.selected {
+      color: #ccc !important;
+    }
+    [bgcolor="#b0ceff" i],
+    [bgcolor="#b0ceff" i] > td,
+    [bgcolor="#ffb6b6" i],
+    [bgcolor="#ffb6b6" i] > td,
+    [bgcolor="#ffff99" i],
+    [bgcolor="#ffdddd" i],
+    [style*="background: #ff8c00;" i],
+    [style*="background: #ffa500;" i],
+    [style*="background: #ffcc66;" i],
+    [style*="background: #ffff99;" i],
+    [style*="background: #cfe8ff;" i],
+    [style*="background: #b9d3ff;" i],
+    [style*="background: #8ab0ff;" i],
+    [style*="background: #4169e1;" i],
+    [style*="background: #6495ed;" i],
+    [style*="background: #828bd9;" i],
+    [style*="background: #607cd2;" i],
+    [style*="background: #f0f8ff;" i],
+    [style*="background: #bcd2f4" i],
+    [style*="background: #0a0;" i],
+    [style*="background: #4c4;" i],
+    [style*="background: #8f8;" i],
+    [style*="background: #bfb;" i],
+    [style*="background: #6e6;" i],
+    [style*="background: #88f;" i],
+    [style*="background: #f88;" i],
+    [style*="background: #b0c4de" i],
+    [style*="background:yellow;" i],
+    [style*="background:#cef;" i],
+    [style*="background:#cc9966" i],
+    [style*="background:#ffd700" i],
+    [style*="background:#c0c0c0" i],
+    [style*="background-color:#b9ffc5" i],
+    [style*="background-color:#e2ffd9" i],
+    [style*="background-color:#ffd9e2" i],
+    [style*="background-color:#e0e0ff" i],
+    [style*="background-color: #e5ffe5" i],
+    [style*="background-color:#e0e0ff" i] > p,
+    [style*="background-color: #e5ffe5" i]> p,
+    [style*="background-color:#fff68f" i] > td,
+    [style*="background-color:#ffe7ba" i] > td,
+    [style*="background-color:#bfefff" i] > td,
+    #mw-content-text [style^="background:#f7f6a8;" i],
+    #mw-content-text [style^="background:#ffdab9;" i],
+    #mw-content-text [style^="background:#dce5e5;" i],
+    #mw-content-text [style^="background:#cceeff;" i],
+    .hintergrundfarbe6,
+    .hintergrundfarbe7,
+    .hintergrundfarbe7 > *,
+    #mw-hidden-catlinks,
+    .fullMedia .mw-ui-button,
+    .mw-parser-output table.taxobox > * > * > th,
+    tr[style*="background-color:#abcdef" i] > th {
+      color: black !important;
+    }
+    .CategoryTreeEmptyBullet,
+    .table-na {
+      color: white !important;
+    }
+
+    /* BORDER */
+    td[style*="background: #dde5ee" i] {
+      background: #335 !important;
+      border-color: #555 !important;
+    }
+    td[style*="border-left"][style*="border-right"],
+    .wikitable td {
+      border-color: #444 !important;
+    }
+    input,
+    button {
+      border-style: initial !important;
+      border-width: 1px !important;
+    }
+    button[type="submit"] {
+      border-color: transparent !important;
+    }
+
+    /*** DIVERSE ***/
+    .catlinks {
+      background-color: #3e3e00 !important;
+      color: #999 !important;
+    }
+    img[src*="Loudspeaker.svg"] {
+      filter: invert(0.8) !important;
+    }
+    #mw-indicator-mw-helplink a,
+    .ui-icon,
+    .oo-ui-indicatorElement-indicator,
+    #mw-fr-revisiontag {
+      filter: invert(1) !important;
+    }
     .thumbcaption a {
         color: #fff !important;
     }
@@ -737,7 +980,7 @@ domain("wikimedia.org") {
         background-color: transparent !important;
     }
     /* Wikitionary tables */
-    td[bgcolor="#F7F7F9"] {
+    td[bgcolor="#f7f7f9" i] {
         background-color: #2a2a2a !important;
     }
     .mw-ui-button,
@@ -745,256 +988,6 @@ domain("wikimedia.org") {
     button[type="submit"] {
         background-color: var(--base-color) !important;
         color: #9a9a9a !important;
-    }
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    #footer li,
-    .infobox th[style*="background"],
-    div[style*="color"],
-    input[type="search"],
-    input[type="submit"],
-    input[type="number"],
-    select,
-    .suggestions-result,
-    input,
-    .central-featured-lang .link-box em,
-    .central-featured-lang .link-box small,
-    .mwe-popups-title,
-    .thumbcaption,
-    .oo-ui-tagItemWidget.oo-ui-widget-enabled {
-        color: #ccc !important;
-    }
-    .mw-mmv-download-pane,
-    div.thumbinner,
-    .mw-mmv-post-image,
-    .mw-mmv-image-metadata {
-        background-color: #222 !important;
-    }
-    #mw-content-text div:not(.toctitle) > h2,
-    table.flextable th,
-    table.flextable td {
-        background-color: transparent !important;
-    }
-    button[type="submit"] {
-        border-color: transparent !important;
-    }
-    /* input,
-    problem for filters on https://de.wikipedia.org/w/index.php?title=Liste_der_Altersstufen_im_deutschen_Recht&action=history */
-    button {
-        border-style: initial !important;
-        border-width: 1px !important;
-    }
-    .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
-    table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > * {
-        color: #ccc !important;
-    }
-    /*** Text ***/
-    .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
-    table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i] > td > *,
-    .ui-widget-header {
-        color: #ccc !important;
-    }
-
-    .CategoryTreeEmptyBullet,
-    .table-na {
-        color: #fff !important;
-    }
-    td[bgcolor="#C8D8FF" i],
-    tr[style^="background:#EAECF0" i],
-    tr[style^="background:#F3F3F3" i],
-    tr[bgcolor="#FFF5EE" i],
-    td[bgcolor="#FFF5EE" i],
-    table > * > tr.hintergrundfarbe2 > th, table > * > tr > th.hintergrundfarbe2, table.hintergrundfarbe2, .hintergrundfarbe2,
-    .mw-interlanguage-selector,
-    .uls-menu,
-    .hintergrundfarbe1,
-    tr[bgcolor="#f8f8f8" i],
-    tr[bgcolor="#e0e0e0" i],
-    tr[bgcolor="#efefef" i],
-    tr[bgcolor="eeeeee" i],
-    [style*="background:#F9F9F9" i],
-    [style*="background-color:#F9F9F9" i],
-    .infobox,
-    .mwe-popups *,
-    [style*="background-color:#FFFFFF" i],
-    [style*="background-color: #FFFFFF" i],
-    [style*="background-color:#FFF;" i],
-    [style*="background-color: #FFF;" i],
-    td.fileinfo-paramfield,
-    table[style*="background-color:#f7f8ff" i],
-    .mw_metadata th,
-    .mw_metadata td,
-    [style*="background:#E3E3E3" i],
-    [style*="background-color:#F5FAFE" i],
-    .prettytable {
-        background-color: #333 !important;
-    }
-    table.sortable tr[style^="background:#E8E8E8" i],
-    .wikitable tr[style^="background:#E1E9F3" i],
-    table[style*="background:WhiteSmoke" i],
-    [style*="background:#ffffff" i],
-    [style*="background: #ffffff" i],
-    [style*="background:#fff" i],
-    [style*="background: #fff" i],
-    [style*="background:#E0E0E0" i],
-    [style*="background:#eeeeee" i],
-    [style*="background: #E3E3E3" i] {
-        background: #333 !important;
-    }
-    [style*="background-color:#D0D0D0;"] {
-        background-color: #111 !important;
-    }
-    table > * > tr.hintergrundfarbe8 > th, table > * > tr > th.hintergrundfarbe8, table.hintergrundfarbe8, .hintergrundfarbe8 {
-        background-color: #554913 !important;
-    }
-    td[style*="background: #DDE5EE" i] {
-        background:#335 !important;
-        border-color: #555 !important;
-    }
-    td[style^="background:#F7F7F7" i],
-    .mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend,
-    [style*="background:#efefef" i],
-    [style*="background:#f5f5f5" i],
-    [style*="background-color:#f5f5f5" i] {
-        background: #222 !important;
-    }
-    div[style="background:#DFE0E3;" i],
-    [style*="background:#F5F5F5" i] {
-        background: #2a2a2a !important;
-    }
-    table[style*="background: #E3E3E3" i],
-    table[style*="background:#E5E5E5" i],
-    td[style="background:#BBBBBB;" i],
-    tr[style^="background:#AABBCC;" i],
-    li.gallerybox div.thumb,
-    [style*="background:#c9c9c9" i],
-    [style*="background:#ececec" i],
-    [style*="background-color:#fff6d9" i] {
-        background: #444 !important;
-    }
-    div.vectorTabs li.selected,
-    .client-js #preftoc li.selected {
-        background: linear-gradient(to top, #e08b26, #e08b2611 8%, transparent) !important;
-    }
-    #mw-indicator-mw-helplink a {
-        filter: invert(1) !important;
-    }
-    img[src*="Loudspeaker.svg"] {
-        filter: invert(0.8) !important;
-    }
-    #pagehistory li.selected {
-        color: #ccc !important;
-    }
-    .mw-parser-output table.taxobox,
-    .suggestions-results,
-    .suggestions-special,
-    table[style*="background-color:#FFFFFF" i],
-    [style*="background:white" i],
-    [style*="background: white" i],
-    [style*="background:#F0F0F0" i],
-    [style*="background: #F0F0F0" i],
-    .wikitable tr[style^="background:#EEEEEE" i],
-    table[style*="background:transparent" i],
-    .navbox, .navbox-subgroup,
-    tr[style="background:#FFFFFF" i],
-    #hauptseite .inhalt,
-    .mw-advancedSearch-namespace-selection,
-    .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle,
-    .mw-datatable td,
-    [style*="background-color:#F0F0F0" i],
-    [style*="background-color:#D8E8FF" i] {
-        background: #222 !important;
-    }
-    .mw-body, .parsoid-body,
-    #mw-page-base,
-    #simpleSearch {
-        background-color: transparent !important;
-    }
-    div.mw-graph {
-        background-color: white !important;
-    }
-    .catlinks {
-        background-color: #3e3e00 !important;
-        color: black !important;
-    }
-    [style="background:lightsteelblue;" i],
-    .infobox [style*="background:lightsteelblue;" i],
-    .infobox .hintergrundfarbe5[style*="background:lightsteelblue;" i],
-    .NavHead[style="background:lightsteelblue;" i],
-    div.NavHead,
-    [style*="background:#F8F8FF" i],
-    [style*="background-color: #EFF5FB" i],
-    [style*="background-color: #F5FAFE" i] {
-        background-color: #000064 !important;
-    }
-    [bgcolor="#b0ceff" i],
-    [bgcolor="#b0ceff" i] > td,
-    [bgcolor="#ffb6b6" i],
-    [bgcolor="#ffb6b6" i] > td,
-    [bgcolor="#FFFF99" i],
-    #mw-content-text [style^="background:#F7F6A8;" i],
-    #mw-content-text [style^="background:#FFDAB9;" i],
-    #mw-content-text [style^="background:#DCE5E5;" i],
-    .mw-parser-output table.taxobox > * > * > th,
-    tr[style*="background-color:#ABCDEF" i] > th,
-    .hintergrundfarbe6,
-    .hintergrundfarbe7,
-    .hintergrundfarbe7 > *,
-    [bgcolor="#ffdddd"],
-    [style="background: #FF8C00;" i],
-    [style="background: #FFA500;" i],
-    [style="background: #FFCC66;" i],
-    [style="background: #FFFF99;" i],
-    [style="background: #CFE8FF;" i],
-    [style="background: #B9D3FF;" i],
-    [style="background: #8AB0FF;" i],
-    [style="background: #4169E1;" i],
-    [style="background: #6495ED;" i],
-    [style="background: #828BD9;" i],
-    [style="background: #607CD2;" i],
-    [style="background: #F0F8FF;" i],
-    #mw-content-text [style^="background:#CCEEFF;" i],
-    [style*="background:#cef;" i],
-    .fullMedia .mw-ui-button,
-    #mw-hidden-catlinks,
-    [style*="background: #BCD2F4" i],
-    [style*="background: #0A0;" i],
-    [style*="background: #4c4;" i],
-    [style*="background: #8f8;" i],
-    [style*="background: #bfb;" i],
-    [style*="background: #6e6;" i],
-    [style*="background: #88f;" i],
-    [style*="background: #f88;" i],
-    [style*="background:yellow;" i],
-    [style*="background: #b0c4de" i],
-    [style*="background:#cc9966" i],
-    [style*="background:#ffd700" i],
-    [style*="background:#c0c0c0" i],
-    [style*="background-color:#FFF68F" i] > td,
-    [style*="background-color:#FFe7ba" i] > td,
-    [style*="background-color:#bfefff" i] > td,
-    [style*="background-color:#B9FFC5" i],
-    [style*="background-color:#e2ffd9" i],
-    [style*="background-color:#FFD9E2" i],
-    [style*="background-color:#E0E0FF" i],
-    [style*="background-color: #E5FFE5" i],
-    [style*="background-color:#E0E0FF" i] > p,
-    [style*="background-color: #E5FFE5" i]> p {
-        color: black !important;
-    }
-    .ui-icon,
-    .oo-ui-indicatorElement-indicator,
-    #mw-fr-revisiontag {
-        filter: invert(1) !important;
-    }
-    td[style*="border-left"][style*="border-right"],
-    .wikitable td {
-        border-color: #444 !important;
     }
     /* Wikimedia banner */
     #wlm-de {
