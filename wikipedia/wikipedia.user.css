@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      20.0.33
+@version      20.0.34
 @description  Wikipedia Dark theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -244,7 +244,8 @@ domain("wikimedia.org") {
     td[style*="background:#EDF1F1" i],
     tr[style*="background-color:white" i],
     tr[style*="background:#f9f9f9" i],
-    td[bgcolor="#FFFFFF" i],
+    [style*="background-color: #f9f9f9" i],
+    [bgcolor="#FFFFFF" i],
     tr[style*="background:#ddd" i],
     td[style*="background: #F2F2F2" i],
     tr[style*="background-color:#F2F2F2" i],
@@ -703,10 +704,6 @@ domain("wikimedia.org") {
 
     /*********************************/
     /*** Dark comfort improvements ***/
-    .thumbcaption,
-    .oo-ui-tagItemWidget.oo-ui-widget-enabled {
-        color: #ccc !important;
-    }
     .thumbcaption a {
         color: #fff !important;
     }
@@ -766,7 +763,10 @@ domain("wikimedia.org") {
     .suggestions-result,
     input,
     .central-featured-lang .link-box em,
-    .central-featured-lang .link-box small {
+    .central-featured-lang .link-box small,
+    .mwe-popups-title,
+    .thumbcaption,
+    .oo-ui-tagItemWidget.oo-ui-widget-enabled {
         color: #ccc !important;
     }
     .mw-mmv-download-pane,
@@ -783,7 +783,8 @@ domain("wikimedia.org") {
     button[type="submit"] {
         border-color: transparent !important;
     }
-    input,
+    /* input,
+    problem for filters on https://de.wikipedia.org/w/index.php?title=Liste_der_Altersstufen_im_deutschen_Recht&action=history */
     button {
         border-style: initial !important;
         border-width: 1px !important;
@@ -816,18 +817,34 @@ domain("wikimedia.org") {
     tr[bgcolor="#e0e0e0" i],
     tr[bgcolor="#efefef" i],
     tr[bgcolor="eeeeee" i],
-    [style*="background:#F9F9F9;" i],
+    [style*="background:#F9F9F9" i],
+    [style*="background-color:#F9F9F9" i],
     .infobox,
-    table[style*="background:#f9f9f9" i],
     .mwe-popups *,
-    tr[style*="background:#FFFFFF;" i],
+    [style*="background-color:#FFFFFF" i],
+    [style*="background-color: #FFFFFF" i],
+    [style*="background-color:#FFF;" i],
+    [style*="background-color: #FFF;" i],
     td.fileinfo-paramfield,
-    table[style*="background-color:#f7f8ff;" i],
+    table[style*="background-color:#f7f8ff" i],
     .mw_metadata th,
     .mw_metadata td,
-    [style*="background:#E3E3E3;" i],
-    [style*="background-color:#F5FAFE;" i] {
+    [style*="background:#E3E3E3" i],
+    [style*="background-color:#F5FAFE" i],
+    .prettytable {
         background-color: #333 !important;
+    }
+    table.sortable tr[style^="background:#E8E8E8" i],
+    .wikitable tr[style^="background:#E1E9F3" i],
+    table[style*="background:WhiteSmoke" i],
+    [style*="background:#ffffff" i],
+    [style*="background: #ffffff" i],
+    [style*="background:#fff" i],
+    [style*="background: #fff" i],
+    [style*="background:#E0E0E0" i],
+    [style*="background:#eeeeee" i],
+    [style*="background: #E3E3E3" i] {
+        background: #333 !important;
     }
     [style*="background-color:#D0D0D0;"] {
         background-color: #111 !important;
@@ -835,34 +852,30 @@ domain("wikimedia.org") {
     table > * > tr.hintergrundfarbe8 > th, table > * > tr > th.hintergrundfarbe8, table.hintergrundfarbe8, .hintergrundfarbe8 {
         background-color: #554913 !important;
     }
-    td[style*="background: #DDE5EE;" i] {
+    td[style*="background: #DDE5EE" i] {
         background:#335 !important;
         border-color: #555 !important;
     }
-    td[style^="background:#F7F7F7" i] {
+    td[style^="background:#F7F7F7" i],
+    .mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend,
+    [style*="background:#efefef" i],
+    [style*="background:#f5f5f5" i],
+    [style*="background-color:#f5f5f5" i] {
         background: #222 !important;
     }
-    div[style="background:#DFE0E3;" i] {
+    div[style="background:#DFE0E3;" i],
+    [style*="background:#F5F5F5" i] {
         background: #2a2a2a !important;
     }
-    table[style*="background: #E3E3E3;" i],
-    table[style*="background:#E5E5E5;" i],
+    table[style*="background: #E3E3E3" i],
+    table[style*="background:#E5E5E5" i],
     td[style="background:#BBBBBB;" i],
-    tr[style^="background:#AABBCC" i],
-    li.gallerybox div.thumb {
+    tr[style^="background:#AABBCC;" i],
+    li.gallerybox div.thumb,
+    [style*="background:#c9c9c9" i],
+    [style*="background:#ececec" i],
+    [style*="background-color:#fff6d9" i] {
         background: #444 !important;
-    }
-    table.sortable tr[style^="background:#E8E8E8" i],
-    .wikitable tr[style^="background:#E1E9F3" i],
-    table[style*="background:WhiteSmoke;" i],
-    td[style*="background: #ffffff;" i],
-    table[style*="background:#ffffff;" i],
-    table[style*="background:#E0E0E0;" i],
-    td[style*="background:#eeeeee;" i],
-    th[style*="background: #E3E3E3;" i],
-    table[style*="background-color: #fff;" i],
-    tr[style="background-color:#FFFFFF;" i] {
-        background: #333 !important;
     }
     div.vectorTabs li.selected,
     .client-js #preftoc li.selected {
@@ -880,18 +893,21 @@ domain("wikimedia.org") {
     .mw-parser-output table.taxobox,
     .suggestions-results,
     .suggestions-special,
-    table[style*="background-color:#FFFFFF;" i],
-    th[style*="background:white" i],
-    td[style*="background:white" i],
-    th[style*="background: #F0F0F0;" i],
+    table[style*="background-color:#FFFFFF" i],
+    [style*="background:white" i],
+    [style*="background: white" i],
+    [style*="background:#F0F0F0" i],
+    [style*="background: #F0F0F0" i],
     .wikitable tr[style^="background:#EEEEEE" i],
-    table[style*="background:transparent;" i],
+    table[style*="background:transparent" i],
     .navbox, .navbox-subgroup,
     tr[style="background:#FFFFFF" i],
     #hauptseite .inhalt,
     .mw-advancedSearch-namespace-selection,
     .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle,
-    .mw-datatable td {
+    .mw-datatable td,
+    [style*="background-color:#F0F0F0" i],
+    [style*="background-color:#D8E8FF" i] {
         background: #222 !important;
     }
     .mw-body, .parsoid-body,
@@ -902,10 +918,8 @@ domain("wikimedia.org") {
     div.mw-graph {
         background-color: white !important;
     }
-    .catlinks,
-    [style*="background:#efefef;" i],
-    [style*="background:#f5f5f5;" i] {
-        background-color: #939351 !important;
+    .catlinks {
+        background-color: #3e3e00 !important;
         color: black !important;
     }
     [style="background:lightsteelblue;" i],
@@ -913,20 +927,21 @@ domain("wikimedia.org") {
     .infobox .hintergrundfarbe5[style*="background:lightsteelblue;" i],
     .NavHead[style="background:lightsteelblue;" i],
     div.NavHead,
-    [style*="background:#F8F8FF;" i],
-    [style*="background-color: #EFF5FB;" i],
-    [style*="background-color: #F5FAFE;" i] {
+    [style*="background:#F8F8FF" i],
+    [style*="background-color: #EFF5FB" i],
+    [style*="background-color: #F5FAFE" i] {
         background-color: #000064 !important;
     }
-    [bgcolor="#b0ceff"],
-    [bgcolor="#b0ceff"] > td,
-    [bgcolor="#ffb6b6"],
-    [bgcolor="#ffb6b6"] > td,
+    [bgcolor="#b0ceff" i],
+    [bgcolor="#b0ceff" i] > td,
+    [bgcolor="#ffb6b6" i],
+    [bgcolor="#ffb6b6" i] > td,
+    [bgcolor="#FFFF99" i],
     #mw-content-text [style^="background:#F7F6A8;" i],
     #mw-content-text [style^="background:#FFDAB9;" i],
     #mw-content-text [style^="background:#DCE5E5;" i],
     .mw-parser-output table.taxobox > * > * > th,
-    tr[style*="background-color:#ABCDEF;" i] > th,
+    tr[style*="background-color:#ABCDEF" i] > th,
     .hintergrundfarbe6,
     .hintergrundfarbe7,
     .hintergrundfarbe7 > *,
@@ -947,7 +962,29 @@ domain("wikimedia.org") {
     [style*="background:#cef;" i],
     .fullMedia .mw-ui-button,
     #mw-hidden-catlinks,
-    td[style*="background: #BCD2F4;" i] {
+    [style*="background: #BCD2F4" i],
+    [style*="background: #0A0;" i],
+    [style*="background: #4c4;" i],
+    [style*="background: #8f8;" i],
+    [style*="background: #bfb;" i],
+    [style*="background: #6e6;" i],
+    [style*="background: #88f;" i],
+    [style*="background: #f88;" i],
+    [style*="background:yellow;" i],
+    [style*="background: #b0c4de" i],
+    [style*="background:#cc9966" i],
+    [style*="background:#ffd700" i],
+    [style*="background:#c0c0c0" i],
+    [style*="background-color:#FFF68F" i] > td,
+    [style*="background-color:#FFe7ba" i] > td,
+    [style*="background-color:#bfefff" i] > td,
+    [style*="background-color:#B9FFC5" i],
+    [style*="background-color:#e2ffd9" i],
+    [style*="background-color:#FFD9E2" i],
+    [style*="background-color:#E0E0FF" i],
+    [style*="background-color: #E5FFE5" i],
+    [style*="background-color:#E0E0FF" i] > p,
+    [style*="background-color: #E5FFE5" i]> p {
         color: black !important;
     }
     .ui-icon,
