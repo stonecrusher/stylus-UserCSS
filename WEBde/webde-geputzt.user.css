@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.20
+@version      2.2.21
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -25,7 +25,7 @@
 @var color    var_hintergrund2   'DS Hintergrund hover'    #444
 ==/UserStyle== */
 
-@-moz-document regexp("https?:\\/\\/((mm|3c|3c-bap|adressbook|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
+@-moz-document regexp("https?:\\/\\/((mm|3c|3c-bap|adressbook|account|cloud|kalender|wusa|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
   /*** Login & Logout ***/
   #mainnav, #header-image-link, #helplinks, #promoline, #footer, [class^="ad-"],
   #loginsearch-login .tab-nav, .breaking-news, #loginsearch-search,
