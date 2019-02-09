@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.1
+@version      21.0.2
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -198,7 +198,7 @@ domain("wiki.rpcs3.net") {
   tr[style*="background-color: #f7f7f7;" i], th[style*="background:#F2F2F2" i],
   #filetoc, .toccolours, th[style*="background:#F9F9F9" i],
   th[style*="background-color: lightgrey" i], th[style*="background:#ddd" i],
-  .infobox th[style*="background"], .infobox td[style*="background"],
+  /* .infobox th[style*="background"], .infobox td[style*="background"], */
   td[style*="background:#F2F2F2" i],
   table.wikitable > tbody > tr[style*="background-color:#F6F6F6" i], .tlheader,
   th[style*="background:whitesmoke" i], td[style*="background:whitesmoke" i],
@@ -511,12 +511,17 @@ domain("wiki.rpcs3.net") {
     /*** BACKGROUND ***/
     [style*="background:#c9c9c9" i],
     [style*="background:#ececec" i],
-    [style*="background-color:#fff6d9" i] 
+    [style*="background-color:#fff6d9" i],
+    [style*="background:#b0c4de" i],
+    [style*="background: #b0c4de" i],
     table[style*="background: #e3e3e3" i],
     table[style*="background:#e5e5e5" i],
     td[style="background:#bbbbbb;" i],
     tr[style^="background:#aabbcc;" i],
-    li.gallerybox div.thumb {
+    [style*="background:#cedaf2" i],
+    .hintergrundfarbe5,
+    li.gallerybox div.thumb,
+    .infobox th[style*="background"] {
       background: #444 !important;
     }
     [style*="background-color:#ffffff" i],
@@ -545,7 +550,6 @@ domain("wiki.rpcs3.net") {
     .prettytable,
     td.fileinfo-paramfield,
     table.hintergrundfarbe2,
-    .mwe-popups *,
     .mw_metadata th,
     .mw_metadata td,
     table > * > tr.hintergrundfarbe2 > th,
@@ -565,10 +569,14 @@ domain("wiki.rpcs3.net") {
       background: #333 !important;
     }
     [style*="background:#f5f5f5" i],
-    div[style="background:#dfe0e3;" i] {
+    [style*="background:#f2f2f4" i],
+    div[style="background:#dfe0e3;" i],
+    td[style*="background-color:#f2f2f4" i],
+    table.wikitable.zebra > tbody > :nth-child(2n):not([class*="hintergrundfarbe"]) {
       background: #2a2a2a !important;
     }
     [style*="background:#efefef" i],
+    [style*="background-color:#efefef" i],
     [style*="background:#f5f5f5" i],
     [style*="background-color:#f5f5f5" i],
     [style*="background:white" i],
@@ -659,6 +667,10 @@ domain("wiki.rpcs3.net") {
     #pagehistory li.selected {
       color: #ccc !important;
     }
+    [style*="#555555" i],
+    #mw-navigation h3 {
+      color: #9a9a9a !important;
+    }
     [bgcolor="#b0ceff" i],
     [bgcolor="#b0ceff" i] > td,
     [bgcolor="#ffb6b6" i],
@@ -685,12 +697,16 @@ domain("wiki.rpcs3.net") {
     [style*="background: #6e6;" i],
     [style*="background: #88f;" i],
     [style*="background: #f88;" i],
-    [style*="background: #b0c4de" i],
     [style*="background:yellow;" i],
     [style*="background:#cef;" i],
     [style*="background:#cc9966" i],
     [style*="background:#ffd700" i],
     [style*="background:#c0c0c0" i],
+    [style*="background:#f7f6a8" i],
+    [style*="background:#f7f6a8" i] > td,
+    [style*="background:#dce5e5" i],
+    [style*="background:#dce5e5" i] > td,
+    [style*="background:#ffdab9" i] > td,
     [style*="background-color:#b9ffc5" i],
     [style*="background-color:#e2ffd9" i],
     [style*="background-color:#ffd9e2" i],
@@ -718,8 +734,11 @@ domain("wiki.rpcs3.net") {
     .table-na {
       color: white !important;
     }
+    td[style*="background:#b0c4de" i] > a {
+      color: #4184dc !important;
+    }
 
-    /* BORDER */
+    /*** BORDER ***/
     td[style*="background: #dde5ee" i] {
       background: #335 !important;
       border-color: #555 !important;
@@ -735,6 +754,9 @@ domain("wiki.rpcs3.net") {
     }
     button[type="submit"] {
       border-color: transparent !important;
+    }
+    html .thumbimage {
+      border-color: #222 !important;
     }
 
     /*** DIVERSE ***/
@@ -802,5 +824,15 @@ domain("wiki.rpcs3.net") {
         border-width: 1px 2px 2px !important;
     }
     /* Current element in Periodic table of elements (Chemistry) */
-    #table td > div[style*="position:relative; overflow:hidden; width:7px; height:9px;"][style*="border:1px solid black;"] { border: 1px solid white !important; }
+    #table td > div[style*="position:relative; overflow:hidden; width:7px; height:9px;"][style*="border:1px solid black;"] {
+      border: 1px solid white !important;
+    }
+    /* Side navigation top border */
+    #mw-panel .portal .body {
+      background-image: none !important;
+      border-top: 1px solid #9a9a9a !important;
+    }
+    #p-navigation.portal > .body {
+      border-top: none !important;
+    }
 }
