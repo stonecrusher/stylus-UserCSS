@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.31
+@version        1.4.33
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -650,7 +650,8 @@
         .listViewTrackNumber,
         .avu-content .avu-section-alt .av-secondary,
         .cs-help-content p.lead,
-        .dv-el-attr-key {
+        .dv-el-attr-key,
+        .badge-wrapper span.cat-name {
             color: var_font3 !important;
         }
         hr,
@@ -680,7 +681,8 @@
         .hud-carousel-element a:active .subtext, .hud-carousel-element a:focus .subtext, .hud-carousel-element a:link .subtext, .hud-carousel-element a:visited .subtext,
         #dm-settings-page .dm-expander-header .link,
         .hud-white-dashboard .hud-profilecard-digital-preorders, .hud-white-dashboard .hud-profilecard-yourorders, .hud-white-dashboard .hud-profilecard-category, .hud-white-dashboard .hud-profilecard-name, .hud-white-dashboard .hud-profile-giftguide-text-only-option-text,
-        .hud-white-dashboard .hud-card-subtext-line1, .hud-white-dashboard .hud-card-subtext-line2 {
+        .hud-white-dashboard .hud-card-subtext-line1, .hud-white-dashboard .hud-card-subtext-line2,
+        .badge-wrapper .cat-link {
             color: var_linkdefault !important;
         }
         a:hover,
@@ -694,7 +696,8 @@
         a.a-color-state,
         #productDescription .aplus h1, #productDescription .aplus h2, #productDescription .aplus h3, #productDescription .aplus h4,
         #productDescription_feature_div > h1.default, #productDescription_feature_div > h2.default, #productDescription_feature_div > h3.default, #productDescription_feature_div > h4.default,
-        .cs-help-header .cs-help-title {
+        .cs-help-header .cs-help-title,
+        .badge-wrapper .cat-link:hover {
             color: var_linkhover !important;
         }
         .a-color-price,
@@ -912,7 +915,9 @@
         /* Prime Video Teaser Carousel */
         .a-section.a-spacing-small.dv-hero-carousel,
         .a-section.a-spacing-none.dv-hero-carousel.dv-superhero-carousel,
-        .DigitalVideoWebNodeStorefront_Collection__AboveNav.DigitalVideoWebNodeStorefront_Collection__containsSuperHero {
+        .DigitalVideoWebNodeStorefront_Collection__AboveNav.DigitalVideoWebNodeStorefront_Collection__containsSuperHero,
+        /* Prime Video watch offline ad */
+        .av-detail-section > article.av-hql-container {
             display: none !important;
         }
         
