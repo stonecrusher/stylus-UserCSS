@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.2
+@version      21.0.3
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -51,7 +51,6 @@ domain("wiki.rpcs3.net") {
     --bg-attachment: /*[[bg-attachment]]*/;
   }
   /* transparent background */
-  div, span:not(.legend-color):not([class*="wikEd"]):not([style*="background"]),
   .MainPageBG, .navbox-list, div#mw-head, .mw-wsmfinal-content, #bodyContent,
   .referencetooltip > li + li, div.vectorTabs ul li,
   tr[style*="background:#F5FFFA" i], th[style*="background-color: #fff" i],
@@ -501,7 +500,7 @@ domain("wiki.rpcs3.net") {
 /**************************************************************************************************************************/
 /**************************************************************************************************************************/
 /**************************************************************************************************************************/
-
+/* modification above: remove generic rules for div & span transparent background */
 
 
 
@@ -824,7 +823,8 @@ domain("wiki.rpcs3.net") {
         border-width: 1px 2px 2px !important;
     }
     /* Current element in Periodic table of elements (Chemistry) */
-    #table td > div[style*="position:relative; overflow:hidden; width:7px; height:9px;"][style*="border:1px solid black;"] {
+    #table td > div[style*="position:relative; overflow:hidden; width:7px; height:9px;"][style*="border:1px solid black;"],
+    .wikitable .mw-selflink span[style*="width:6px;height:8px;"][style*="border:1px solid black;"] {
       border: 1px solid white !important;
     }
     /* Side navigation top border */
