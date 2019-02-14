@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.5
+@version      21.0.6
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -301,7 +301,7 @@ domain("wiki.rpcs3.net") {
   div:not([style*="-color"]), div[style*="background-color"],
   span:not([class*="color"]), table:not(.hp-portalen),
   tr:not([style*="border-bottom"]), th,
-  td:not([style*="border-bottom"]):not([style*="border-top"]),
+  /*td:not([style*="border-bottom"]):not([style*="border-top"]),*/
   h1, h2, h3, h4, h5, h6, ul, li, input,
   select, #bodyContent code, .lang-list-button:hover,
   .oo-ui-buttonElement-button {
@@ -500,7 +500,10 @@ domain("wiki.rpcs3.net") {
 /**************************************************************************************************************************/
 /**************************************************************************************************************************/
 /**************************************************************************************************************************/
-/* modification above: remove generic rules for div & span transparent background */
+/* modifications above:
+  - remove generic rules for div & span transparent background
+  - remove line 304 -- td:not([style*="border-bottom"]):not([style*="border-top"]),
+/**/
 
 
 
@@ -557,8 +560,8 @@ domain("wiki.rpcs3.net") {
     }
     [style*="background:#ffffff" i],
     [style*="background: #ffffff" i],
-    [style*="background:#fff" i],
-    [style*="background: #fff" i],
+    [style*="background:#fff;" i],
+    [style*="background: #fff;" i],
     [style*="background:#e0e0e0" i],
     [style*="background:#eeeeee" i],
     [style*="background: #e3e3e3" i],
