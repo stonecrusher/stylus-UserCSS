@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.6
+@version      21.0.7
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -139,7 +139,7 @@ domain("wiki.rpcs3.net") {
     background-color: #181818 !important;
   }
   table, input, button, select, textarea:not([class*="mw-editfont"]),
-  tr[style*="background: antiquewhite" i], #toc, td[style*="background-color"],
+  tr[style*="background: antiquewhite" i], #toc,
   td[style*="background:#F5FAFF" i],
   #mw-content-text div[style*="background: #"], .vevent td, .referencetooltip li,
   .suggestions, .mw-ui-button[style*="background"],
@@ -503,6 +503,7 @@ domain("wiki.rpcs3.net") {
 /* modifications above:
   - remove generic rules for div & span transparent background
   - remove line 304 -- td:not([style*="border-bottom"]):not([style*="border-top"]),
+  - remove line 142 -- td[style*="background-color"],
 /**/
 
 
@@ -523,7 +524,8 @@ domain("wiki.rpcs3.net") {
     [style*="background:#cedaf2" i],
     .hintergrundfarbe5,
     li.gallerybox div.thumb,
-    .infobox th[style*="background"] {
+    .infobox th[style*="background"],
+    tr[bgcolor="#f8f8ff" i] {
       background: #444 !important;
     }
     [style*="background-color:#ffffff" i],
@@ -540,7 +542,8 @@ domain("wiki.rpcs3.net") {
     tr[bgcolor="#f8f8f8" i],
     tr[bgcolor="#e0e0e0" i],
     tr[bgcolor="#efefef" i],
-    tr[bgcolor="eeeeee" i],
+    tr[bgcolor="#eeeeee" i],
+    tr[bgcolor="#ffffff" i],
     tr[style^="background:#eaecf0" i],
     tr[style^="background:#f3f3f3" i],
     table[style*="background-color:#f7f8ff" i],
