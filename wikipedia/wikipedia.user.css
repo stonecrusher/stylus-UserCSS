@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.4
+@version      21.0.5
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -619,8 +619,8 @@ domain("wiki.rpcs3.net") {
     [style*="background:#f8f8ff" i],
     [style*="background-color: #eff5fb" i],
     [style*="background-color: #f5fafe" i],
-    .infobox [style*="background:lightsteelblue;" i],
-    .infobox .hintergrundfarbe5[style*="background:lightsteelblue;" i],
+    .infobox [style*="background:lightsteelblue" i],
+    .infobox .hintergrundfarbe5[style*="background:lightsteelblue" i],
     .NavHead[style="background:lightsteelblue;" i],
     div.NavHead {
       background-color: #000064 !important;
@@ -678,19 +678,20 @@ domain("wiki.rpcs3.net") {
     [bgcolor="#ffb6b6" i] > td,
     [bgcolor="#ffff99" i],
     [bgcolor="#ffdddd" i],
-    [style*="background: #ff8c00;" i],
-    [style*="background: #ffa500;" i],
-    [style*="background: #ffcc66;" i],
-    [style*="background: #ffff99;" i],
-    [style*="background: #cfe8ff;" i],
-    [style*="background: #b9d3ff;" i],
-    [style*="background: #8ab0ff;" i],
-    [style*="background: #4169e1;" i],
-    [style*="background: #6495ed;" i],
-    [style*="background: #828bd9;" i],
-    [style*="background: #607cd2;" i],
-    [style*="background: #f0f8ff;" i],
+    [style*="background: #ff8c00" i],
+    [style*="background: #ffa500" i],
+    [style*="background: #ffcc66" i],
+    [style*="background: #ffff99" i],
+    [style*="background: #cfe8ff" i],
+    [style*="background: #b9d3ff" i],
+    [style*="background: #8ab0ff" i],
+    [style*="background: #4169e1" i],
+    [style*="background: #6495ed" i],
+    [style*="background: #828bd9" i],
+    [style*="background: #607cd2" i],
+    [style*="background: #f0f8ff" i],
     [style*="background: #bcd2f4" i],
+    [style*="background: #ff6347" i],
     [style*="background: #0a0;" i],
     [style*="background: #4c4;" i],
     [style*="background: #8f8;" i],
@@ -718,10 +719,10 @@ domain("wiki.rpcs3.net") {
     [style*="background-color:#fff68f" i] > td,
     [style*="background-color:#ffe7ba" i] > td,
     [style*="background-color:#bfefff" i] > td,
-    #mw-content-text [style^="background:#f7f6a8;" i],
-    #mw-content-text [style^="background:#ffdab9;" i],
-    #mw-content-text [style^="background:#dce5e5;" i],
-    #mw-content-text [style^="background:#cceeff;" i],
+    #mw-content-text [style^="background:#f7f6a8" i],
+    #mw-content-text [style^="background:#ffdab9" i],
+    #mw-content-text [style^="background:#dce5e5" i],
+    #mw-content-text [style^="background:#cceeff" i],
     .hintergrundfarbe6,
     .hintergrundfarbe7,
     .hintergrundfarbe7 > *,
