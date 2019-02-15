@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.33
+@version        1.4.34
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -166,7 +166,8 @@
         .gw-card-layout .a-cardui,
         .adcenterRowWrapper, .billboardRowWrapper, .desktop-row,
         .huc-v2-upsell-item-slide,
-        .pay-desktop .payment-selected {
+        .pay-desktop .payment-selected,
+        .compositeThumbnailContentView {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
