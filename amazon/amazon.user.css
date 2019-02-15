@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.34
+@version        1.4.36
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -499,7 +499,20 @@
         i[id^="fst-cs-btn-arrow"],
         #prime-bbop-logo,
         .cr-helpful-icon,
-        #nav-subnav .nav-categ-image, #nav-subnav .nav-image {
+        #nav-subnav .nav-categ-image, #nav-subnav .nav-image,
+        /* grey spinners */
+        .a-popover-loading,
+        div.a-lazy-loaded,
+        div.a-manually-loaded,
+        .a-carousel-card-empty,
+        .shoveler li.shoveler-progress,
+        .tag-cols .snake,
+        .nav-spinner,
+        /* yellow spinners */
+        .nav-spinner,
+        .atfc-spinner,
+        .reviewsLightbox .loadingIcon,
+        .reviewsLightbox .large-loadingIcon {
             filter: invert(1) !important;
         }
         .nav-promo,
@@ -551,7 +564,8 @@
             background-color: darken(var_headfoot, 50%) !important;
         }
         #navbar.nav-bluebeacon #nav-search .nav-search-scope,
-        .a-popover-wrapper {
+        .a-popover-wrapper,
+        .acs-private-brands-container-background-single-image .s-item-container {
             border-color: var_bg4 !important;
         }
         #dv-product-details table.product-details-meta {
