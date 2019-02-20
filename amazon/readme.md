@@ -1,13 +1,11 @@
 # Description
 
 This is my personal approach on amazon.de
+It should also work for other country's domains, but is untested.
 
 - Change colors
 - Get rid of self-advertisement (which is often not blocked by adblockers) and unnecessary big margins
 - Prevent too small review percentage bars when using [Amazon show absolute review numbers](https://greasyfork.org/scripts/369355) UserScript or enlarge the bars simply for better visibility and less wasted free space.
-
-
-It should also work for other amazon country domains, but is untested.
 
 In general the code of this style is highly unstructured and I just freely add stuff when I see something flashing or unpleasant.
 But the good thing is you are very free to change the colors - either via style settings or for advanced users in the style code.
