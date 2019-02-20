@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.38
+@version        1.4.39
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -122,7 +122,8 @@
         .marketing-container .a-carousel-container .a-carousel-left, .marketing-container .a-carousel-container .a-carousel-right,
         .marketing-container .prime-cardcarousel #prime-main-carousel .a-carousel-card::after,
         .pmts-selected,
-        .octopus-pc-card, .octopus-pc-item, .octopus-pc-item-block, .octopus-pc-card-content, .octopus-pc-item-image-section {
+        .octopus-pc-card, .octopus-pc-item, .octopus-pc-item-block, .octopus-pc-card-content, .octopus-pc-item-image-section, .octopus-pc-category-card-v2, .octopus-pc-category-card-v1, .octopus-pc-category-card-v2-item-block, .octopus-pc-category-card-v1-item-block,
+        .pantry-shelf-header {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -139,7 +140,8 @@
         .ryp__media-upload-square-button-container,
         .text-link-stripe,
         .dv-episode-container,
-        .primeCentralChargeBreakdown {
+        .primeCentralChargeBreakdown,
+        .p-prod-tile .p-prod-tile-buttons {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -173,7 +175,8 @@
         .huc-v2-upsell-item-slide,
         .pay-desktop .payment-selected,
         .compositeThumbnailContentView,
-        #membershipInfoLeftPanelDiv {
+        #membershipInfoLeftPanelDiv,
+        .bxc-grid__text--light.bxc-grid-overlay--background {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -428,7 +431,9 @@
         #wl-item-search,
         .huc-v2-upsell-item-slide,
         #membershipInfoLeftPanelDiv,
-        .octopus-pc-card-content {
+        .octopus-pc-card-content,
+        .pantry-shelf-entry-v1, .pantry-shelf-entry-v2, .pantry-table, .pantry-shelf-header, .p-prod-tile, .p-prod-tile .p-prod-tile-buttons,
+        .octopus-pc-category-card-v2-item, .octopus-pc-category-card-v2-content {
             border-color: var_bg6 !important;
         }
         
@@ -969,6 +974,9 @@
         }
         .a-fixed-right-grid-inner[style="padding-right:310px"] {
             padding-right: 0 !important;
+        }
+        [id^="image-map_image-map-ns_"].a-section.shogun-widget.image-map.aui-desktop-map /*social media BS*/ {
+            display: none !important;
         }
         
         /* Footer */
