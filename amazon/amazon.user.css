@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.37
+@version        1.4.38
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -121,7 +121,8 @@
         #pet_your_prime .pet_cta_detail,
         .marketing-container .a-carousel-container .a-carousel-left, .marketing-container .a-carousel-container .a-carousel-right,
         .marketing-container .prime-cardcarousel #prime-main-carousel .a-carousel-card::after,
-        .pmts-selected {
+        .pmts-selected,
+        .octopus-pc-card, .octopus-pc-item, .octopus-pc-item-block, .octopus-pc-card-content, .octopus-pc-item-image-section {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -426,7 +427,8 @@
         #s-result-info-bar,
         #wl-item-search,
         .huc-v2-upsell-item-slide,
-        #membershipInfoLeftPanelDiv {
+        #membershipInfoLeftPanelDiv,
+        .octopus-pc-card-content {
             border-color: var_bg6 !important;
         }
         
@@ -488,6 +490,9 @@
         .transparentTwisterDropdownBorder,
         #squished-desktop-row .desktop-row {
             border-color: var_bg1 !important;
+        }
+        .octopus-pc-asin-block {
+          border-right: 1px solid var_bg2 !important;
         }
 
 
@@ -665,7 +670,8 @@
         .a-alert-inline-warning .a-alert-container,
         .membershipSettingsInfoItemDiv,
         #membershipDaysSpan, .membershipInfoItemsHeaderSpan,
-        .marketing-container p, .marketing-container a {
+        .marketing-container p, .marketing-container a,
+        .octopus-pc-asin-price {
             color: var_font1 !important;
         }
         input, select, textarea,
