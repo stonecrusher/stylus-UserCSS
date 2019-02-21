@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.7
+@version      21.0.8
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -571,14 +571,16 @@ domain("wiki.rpcs3.net") {
     .wikitable tr[style^="background:#e1e9f3" i],
     table.sortable tr[style^="background:#e8e8e8" i],
     table[style*="background:WhiteSmoke" i],
-    .k-player .credits_box  {
+    .k-player .credits_box,
+    div#mw-missingsummary {
       background: #333 !important;
     }
     [style*="background:#f5f5f5" i],
     [style*="background:#f2f2f4" i],
     div[style="background:#dfe0e3;" i],
     td[style*="background-color:#f2f2f4" i],
-    table.wikitable.zebra > tbody > :nth-child(2n):not([class*="hintergrundfarbe"]) {
+    table.wikitable.zebra > tbody > :nth-child(2n):not([class*="hintergrundfarbe"]),
+    textarea, .editOptions {
       background: #2a2a2a !important;
     }
     [style*="background:#efefef" i],
@@ -615,7 +617,8 @@ domain("wiki.rpcs3.net") {
     div.thumbinner {
       background-color: #222 !important;
     }
-    [style*="background-color:#d0d0d0;" i] {
+    [style*="background-color:#d0d0d0;" i],
+    .wikiEditor-ui-toolbar, .menuSwitcher[style*="background-color: rgb(255, 255, 255);"] {
       background-color: #111 !important;
     }
     div.mw-graph {
@@ -671,7 +674,8 @@ domain("wiki.rpcs3.net") {
     .wikitable tr:not([style*="color:black" i]) th:not([style*="color: black" i]),
     table.wikitable > tbody > tr[style*="background-color:#f6f6f6" i] > td > *,
     .ui-widget-header,
-    #pagehistory li.selected {
+    #pagehistory li.selected,
+    textarea {
       color: #ccc !important;
     }
     [style*="#555555" i],
