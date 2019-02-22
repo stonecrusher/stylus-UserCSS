@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.5.0
+@version        1.5.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -435,7 +435,8 @@
         #membershipInfoLeftPanelDiv,
         .octopus-pc-card-content,
         .pantry-shelf-entry-v1, .pantry-shelf-entry-v2, .pantry-table, .pantry-shelf-header, .p-prod-tile, .p-prod-tile .p-prod-tile-buttons,
-        .octopus-pc-category-card-v2-item, .octopus-pc-category-card-v2-content {
+        .octopus-pc-category-card-v2-item, .octopus-pc-category-card-v2-content,
+        #merchandised-content [style*="1px solid #d1d1d1;"] {
             border-color: var_bg6 !important;
         }
         
@@ -678,7 +679,8 @@
         .membershipSettingsInfoItemDiv,
         #membershipDaysSpan, .membershipInfoItemsHeaderSpan,
         .marketing-container p, .marketing-container a,
-        .octopus-pc-asin-price {
+        .octopus-pc-asin-price,
+        strong[style*="color: #000;" i] {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -899,16 +901,21 @@
             background: linear-gradient(to bottom, darken(var_bg2, 20%), var_bg2) !important;
         }
         
-        /* Darken Product Images */
+        /* Darken product image thumbs */
         .product-image,
         .hud-profile-categories-image {
             opacity: darkProductImage !important;
         }
-        /* Darken Product Images that have dark background not so much */
+        /* Darken product image thumbs less that have dark background */
         .dealContainer img,
         .a-dynamic-image,
         .bxc-grid__image,
-        .img-wrap {
+        .img-wrap,
+        .acs-ln-header > img,
+        .card-images img,
+        .octopus-pc-category-card-v2-image,
+        .octopus-pc-item-image,
+        .generic-subnav-flyout-image {
             opacity: darkProductImage + ( (1 - darkProductImage) / 4) !important;
         }
     }
