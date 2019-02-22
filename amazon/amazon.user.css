@@ -3,24 +3,25 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.4.40
+@version        1.5.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
 
-@var checkbox  darkstyle       'Darkstyle (DS)'      1
-@var color     var_bg1         'DS Background'       #333
-@var color     var_selected    'DS Background 2'     #6e583a
-@var color     var_headfoot    'DS Header & footer background' #232f3e
-@var color     var_font1       'DS Font color'       #ccc
-@var color     var_linkdefault 'DS Link color'       #75a9d7
-@var color     var_linkhover   'DS Link hover color' #cc5800
-@var color     var_price       'DS Price color'      #ff3b14
-@var checkbox  compact         'Compact mode & No Ads'      1
-@var checkbox  mark-sponsored  'Mark sponsored results'     1
-@var checkbox  av-pause-remove 'Remove Video pause overlay' 1
-@var text      review-width    'Width of review bars'       300px
+@var checkbox  darkstyle        'Darkstyle (DS)'      1
+@var color     var_bg1          'DS Background'       #333
+@var color     var_selected     'DS Background 2'     #6e583a
+@var color     var_headfoot     'DS Header & footer background' #232f3e
+@var color     var_font1        'DS Font color'       #ccc
+@var color     var_linkdefault  'DS Link color'       #75a9d7
+@var color     var_linkhover    'DS Link hover color' #cc5800
+@var color     var_price        'DS Price color'      #ff3b14
+@var range     darkProductImage 'DS Darken product images'   [0.8,0.4,1,0.05]
+@var checkbox  compact          'Compact mode & No Ads'      1
+@var checkbox  mark-sponsored   'Mark sponsored results'     1
+@var checkbox  av-pause-remove  'Remove Video pause overlay' 1
+@var text      review-width     'Width of review bars'       300px
 ==/UserStyle== */
 /* Amazon default review bar width is 185px */
 
@@ -896,6 +897,19 @@
         /* "Send to this address" */
         .a-box-title .a-box-inner {
             background: linear-gradient(to bottom, darken(var_bg2, 20%), var_bg2) !important;
+        }
+        
+        /* Darken Product Images */
+        .product-image,
+        .hud-profile-categories-image {
+            opacity: darkProductImage !important;
+        }
+        /* Darken Product Images that have dark background not so much */
+        .dealContainer img,
+        .a-dynamic-image,
+        .bxc-grid__image,
+        .img-wrap {
+            opacity: darkProductImage + ( (1 - darkProductImage) / 4) !important;
         }
     }
     
