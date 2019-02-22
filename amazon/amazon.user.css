@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.5.2
+@version        1.5.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -143,7 +143,8 @@
         .dv-episode-container,
         .primeCentralChargeBreakdown,
         .p-prod-tile .p-prod-tile-buttons,
-        .avu-section-alt .dv-carousel-control {
+        .avu-section-alt .dv-carousel-control,
+        #asv-gclp-balance-widget-desktop {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
