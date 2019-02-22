@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.5.1
+@version        1.5.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -711,7 +711,9 @@
         .a-color-base,
         .a-checkbox label, .a-radio label,
         .a-ordered-list .a-list-item, .a-unordered-list .a-list-item, ol .a-list-item, ul .a-list-item,
-        #closeErrorDialog {
+        #closeErrorDialog,
+        .bxc-grid__text.a-text-center,
+        .a-size-mini.a-color-base.dotdBadge {
             color: var_font0 !important;
         }
         .fresh-shoveler .as-title-block .a-color-base,
@@ -901,12 +903,13 @@
             background: linear-gradient(to bottom, darken(var_bg2, 20%), var_bg2) !important;
         }
         
-        /* Darken product image thumbs */
+        /* Darken product images */
         .product-image,
-        .hud-profile-categories-image {
+        .hud-profile-categories-image,
+        .comparison_image_title_cell img {
             opacity: darkProductImage !important;
         }
-        /* Darken product image thumbs less that have dark background */
+        /* Darken product images less that have dark background */
         .dealContainer img,
         .a-dynamic-image,
         .bxc-grid__image,
@@ -915,7 +918,11 @@
         .card-images img,
         .octopus-pc-category-card-v2-image,
         .octopus-pc-item-image,
-        .generic-subnav-flyout-image {
+        .generic-subnav-flyout-image,
+        .imageThumbnail,
+        .sims-fbt-image,
+        .coupon-image,
+        .s-access-image {
             opacity: darkProductImage + ( (1 - darkProductImage) / 4) !important;
         }
     }
