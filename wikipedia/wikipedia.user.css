@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.8
+@version      21.0.9
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -629,16 +629,23 @@ domain("wiki.rpcs3.net") {
     [style*="background-color: #eff5fb" i],
     [style*="background-color: #f5fafe" i],
     .infobox [style*="background:lightsteelblue" i],
+    .infobox td[style*="background-color:lightsteelblue" i],
     .infobox .hintergrundfarbe5[style*="background:lightsteelblue" i],
     .NavHead[style="background:lightsteelblue;" i],
-    div.NavHead {
+    div.NavHead,
+    [style^="background:#AFD6FF"],
+    [style^="background: #AFD6FF"]{
       background-color: #000064 !important;
     }
+    [style^="background:#ffffcc" i],
     table > * > tr.hintergrundfarbe8 > th,
     table > * > tr > th.hintergrundfarbe8,
     table.hintergrundfarbe8,
     .hintergrundfarbe8 {
-      background-color: #554913 !important;
+      background-color: #4e4e27 !important; /**/
+    }
+    [style^="background:#FFE4C4;" i] {
+      background-color: #5c370a !important;
     }
     div.vectorTabs li.selected,
     .client-js #preftoc li.selected {
