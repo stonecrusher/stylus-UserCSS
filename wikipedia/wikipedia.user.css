@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.9
+@version      21.0.10
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -525,7 +525,8 @@ domain("wiki.rpcs3.net") {
     .hintergrundfarbe5,
     li.gallerybox div.thumb,
     .infobox th[style*="background"],
-    tr[bgcolor="#f8f8ff" i] {
+    tr[bgcolor="#f8f8ff" i],
+    .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover {
       background: #444 !important;
     }
     [style*="background-color:#ffffff" i],
@@ -558,7 +559,8 @@ domain("wiki.rpcs3.net") {
     .mw_metadata th,
     .mw_metadata td,
     table > * > tr.hintergrundfarbe2 > th,
-    table > * > tr > th.hintergrundfarbe2 {
+    table > * > tr > th.hintergrundfarbe2,
+    figure[typeof~="mw:Image/Thumb"], figure[typeof~="mw:Video/Thumb"], figure[typeof~="mw:Audio/Thumb"], figure[typeof~="mw:Image/Frame"], figure[typeof~="mw:Video/Frame"], figure[typeof~="mw:Audio/Frame"] {
       background-color: #333 !important;
     }
     [style*="background:#ffffff" i],
@@ -608,7 +610,9 @@ domain("wiki.rpcs3.net") {
     .mw-parser-output table.taxobox,
     #hauptseite .inhalt,
     .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle,
-    .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus,
+    .oo-ui-toolbar-bar,
+    .guider {
       background: #222 !important;
     }
     .mw-mmv-download-pane,
@@ -682,7 +686,8 @@ domain("wiki.rpcs3.net") {
     table.wikitable > tbody > tr[style*="background-color:#f6f6f6" i] > td > *,
     .ui-widget-header,
     #pagehistory li.selected,
-    textarea {
+    textarea,
+    .guider_description {
       color: #ccc !important;
     }
     [style*="#555555" i],
@@ -750,10 +755,12 @@ domain("wiki.rpcs3.net") {
       color: black !important;
     }
     .CategoryTreeEmptyBullet,
-    .table-na {
+    .table-na,
+    .hintergrundfarbe5 > a:hover {
       color: white !important;
     }
-    td[style*="background:#b0c4de" i] > a {
+    td[style*="background:#b0c4de" i] > a,
+    .hintergrundfarbe5 > a {
       color: #4184dc !important;
     }
 
@@ -777,13 +784,17 @@ domain("wiki.rpcs3.net") {
     html .thumbimage {
       border-color: #222 !important;
     }
+    figure[typeof~="mw:Image/Thumb"], figure[typeof~="mw:Video/Thumb"], figure[typeof~="mw:Audio/Thumb"], figure[typeof~="mw:Image/Frame"], figure[typeof~="mw:Video/Frame"], figure[typeof~="mw:Audio/Frame"] {
+      border-color: #555 !important;
+    }
 
     /*** DIVERSE ***/
     .catlinks {
       background-color: #3e3e00 !important;
       color: #999 !important;
     }
-    img[src*="Loudspeaker.svg"] {
+    img[src*="Loudspeaker.svg"],
+    .x_button {
       filter: invert(0.8) !important;
     }
     #mw-indicator-mw-helplink a,
