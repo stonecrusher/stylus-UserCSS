@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.5.7
+@version        1.5.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -710,7 +710,8 @@
         strong[style*="color: #000;" i],
         #octopus-quick-look-asin-popover .octopus-quick-look-title,
         #octopus-quick-look-asin-popover .octopus-quick-look-pricing .octopus-quick-look-price, #octopus-quick-look-asin-popover .octopus-quick-look-pricing .octopus-quick-look-price .a-color-price,
-        .vpc_coupon_grid_more_coupons, .vpc_coupon_grid_get_more_coupons {
+        .vpc_coupon_grid_more_coupons, .vpc_coupon_grid_get_more_coupons,
+        .bxc-grid__text ul li {
             color: var_font1 !important;
         }
         input, select, textarea,
