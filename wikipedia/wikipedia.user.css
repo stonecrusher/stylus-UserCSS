@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.14
+@version      21.0.16
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -521,8 +521,8 @@ domain("wiki.rpcs3.net") {
     table[style*="background:#e5e5e5" i],
     td[style="background:#bbbbbb;" i],
     tr[style^="background:#aabbcc;" i],
-    [style*="background:#cedaf2" i],
     .hintergrundfarbe5,
+    .hintergrundfarbe5 > th,
     li.gallerybox div.thumb,
     .infobox th[style*="background"],
     tr[bgcolor="#f8f8ff" i],
@@ -548,6 +548,7 @@ domain("wiki.rpcs3.net") {
     tr[bgcolor="#ffffff" i],
     tr[style^="background:#eaecf0" i],
     tr[style^="background:#f3f3f3" i],
+    td[style^="background-color:#f3f3f3" i],
     table[style*="background-color:#f7f8ff" i],
     .hintergrundfarbe2,
     .mw-interlanguage-selector,
@@ -603,6 +604,7 @@ domain("wiki.rpcs3.net") {
     .wikitable tr[style^="background:#eeeeee" i],
     table[style*="background:transparent" i],
     tr[style="background:#ffffff" i],
+    td[style="width:5%; background-color:white;" i],
     .mw-datatable td
     .suggestions-results,
     .suggestions-special,
@@ -646,7 +648,9 @@ domain("wiki.rpcs3.net") {
     .NavHead[style="background:lightsteelblue;" i],
     div.NavHead,
     [style^="background:#AFD6FF"],
-    [style^="background: #AFD6FF"] {
+    [style^="background: #AFD6FF"],
+    [style*="background-color:#CEDAF2;" i],
+    [style*="background:#cedaf2" i] {
       background-color: #000064 !important;
     }
     [style^="background:#ffffcc" i],
