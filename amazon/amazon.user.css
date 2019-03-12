@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.5.8
+@version        1.6.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -25,7 +25,7 @@
 ==/UserStyle== */
 /* Amazon default review bar width is 185px */
 
-@-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
+@-moz-document regexp("https?:\\/\\/(www|music|smile)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
     /* Stylus variables */
     /* Colors to be replaced are in the comment */
     
@@ -133,7 +133,8 @@
         #ewc .ewc-item-cover .ewc-item-cover-back,
         #ewc-content, .nav-ewc-content, .ewc-style, #navbar #nav-flyout-ewc .nav-flyout-body,
         table[bgcolor="#ffffff" i],
-        .popover-inner li {
+        .popover-inner li,
+        #gw-asin-popover {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -156,7 +157,9 @@
         #asv-gclp-balance-widget-desktop,
         .octopus-sims-wrapper,
         .octopus-sims-img-container,
-        .vpc_coupon_bar {
+        .vpc_coupon_bar,
+        .sims-wrapper,
+        .sims-img-container {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -579,7 +582,8 @@
         .GB-M-COMMON.GB-PC-FACEOUT .filterLink .filterImage,
         .invitationWidgetUpArrow, .invitationWidgetDownArrow,
         .vpc_category_bar_header_left_arrow,
-        .vpc_category_bar_header_right_carrot {
+        .vpc_category_bar_header_right_carrot,
+        .gw-icon.close-icon {
             filter: invert(0.8) !important;
         }
         .nav-image {
@@ -787,7 +791,8 @@
         .bia-price,
         .bia-ppu,
         .price,
-        .ewc-color-price {
+        .ewc-color-price,
+        #gw-asin-popover .pricing .price, #gw-asin-popover .pricing .price .a-color-price {
             color: var_price !important;
         }
         #navbar.nav-bluebeacon #nav-search-label, #navbar.nav-bluebeacon .nav-a-2 .nav-line-1, #navbar.nav-bluebeacon .nav-a-2 .nav-line-2,
