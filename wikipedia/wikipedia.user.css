@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.17
+@version      21.0.18
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -577,7 +577,8 @@ domain("wiki.rpcs3.net") {
     table.sortable tr[style^="background:#e8e8e8" i],
     table[style*="background:WhiteSmoke" i],
     .k-player .credits_box,
-    div#mw-missingsummary {
+    div#mw-missingsummary,
+    #talkheader [style*="background-color: white;" i] {
       background: #333 !important;
     }
     [style*="background:#f5f5f5" i],
@@ -676,6 +677,10 @@ domain("wiki.rpcs3.net") {
     #mw-page-base,
     #simpleSearch {
       background-color: transparent !important;
+    }
+    table.tmbox,
+    table.tmbox table {
+      background-color: hsl(46, 82%, 15%) !important;
     }
 
     /*** TEXT COLOR ***/
@@ -801,7 +806,8 @@ domain("wiki.rpcs3.net") {
     }
     figure[typeof~="mw:Image/Thumb"], figure[typeof~="mw:Video/Thumb"], figure[typeof~="mw:Audio/Thumb"], figure[typeof~="mw:Image/Frame"], figure[typeof~="mw:Video/Frame"], figure[typeof~="mw:Audio/Frame"],
     [style*="border:1px solid #B1B9C9;" i],
-    [style*="border-top:1px solid #E0E0E0;" i] {
+    [style*="border-top:1px solid #E0E0E0;" i],
+    #talkheader td {
       border-color: #555 !important;
     }
 
