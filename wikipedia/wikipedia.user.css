@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.16
+@version      21.0.17
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -163,7 +163,8 @@ domain("wiki.rpcs3.net") {
   #mw-searchoptions, .mw-advancedSearch-namespace-selection,
   td[style*="background:#fff2e6" i], td[style*="background:#F9F9F0"],
   td[style*="background:#F4F9F0"], td[style*="background:#F9F0F0"],
-  td[style*="background:#f0f0f0"] {
+  td[style*="background:#f0f0f0"],
+  .suggestions-results {
     background-color: #222 !important;
   }
   body .ui-button {
