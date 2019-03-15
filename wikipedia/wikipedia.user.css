@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.19
+@version      21.0.20
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -527,7 +527,8 @@ domain("wiki.rpcs3.net") {
     li.gallerybox div.thumb,
     .infobox th[style*="background"],
     tr[bgcolor="#f8f8ff" i],
-    .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover {
+    .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover,
+    .licensetpl_wrapper {
       background: #444 !important;
     }
     [style*="background-color:#ffffff" i],
