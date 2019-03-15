@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.18
+@version      21.0.19
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -790,7 +790,9 @@ domain("wiki.rpcs3.net") {
       border-color: #555 !important;
     }
     td[style*="border-left"][style*="border-right"],
-    .wikitable td {
+    .wikitable td,
+    tr + tr > .navbox-abovebelow, tr + tr > .navbox-group, tr + tr > .navbox-image, tr + tr > .navbox-list,
+    .navbox-list {
       border-color: #444 !important;
     }
     input,
