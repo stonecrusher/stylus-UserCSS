@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.0
+@version      2.3.1
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -683,9 +683,7 @@
   }  
 }
 
-@-moz-document url-prefix("https://web.de/fm"),
-               regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*"),
-               regexp("https?:\\/\\/web\\.de\\/(#.*)?") {
+@-moz-document url-prefix("https://web.de/fm"), regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*"), regexp("https?:\\/\\/web\\.de\\/(#.*)?") {
   if darkstyle-enable {
     /*** Login & Logout DS ***/
     html,
