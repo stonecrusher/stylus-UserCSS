@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.21
+@version      21.0.22
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
@@ -528,7 +528,9 @@ domain("wiki.rpcs3.net") {
     .infobox th[style*="background"],
     tr[bgcolor="#f8f8ff" i],
     .oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover,
-    .licensetpl_wrapper {
+    .licensetpl_wrapper,
+    [style*="background-color:#FFFAFA;" i],
+    .wikitable.float-right td[style*="background-color:#f2f2f4;" i] {
       background: #444 !important;
     }
     [style*="background-color:#ffffff" i],
@@ -635,7 +637,7 @@ domain("wiki.rpcs3.net") {
       background-color: #111 !important;
     }
     td[style*="background-color:#f0f0ff;" i] {
-        background-color: #182030 !important;
+      background-color: #182030 !important;
     }
     div.mw-graph {
       background-color: white !important;
@@ -811,7 +813,8 @@ domain("wiki.rpcs3.net") {
     figure[typeof~="mw:Image/Thumb"], figure[typeof~="mw:Video/Thumb"], figure[typeof~="mw:Audio/Thumb"], figure[typeof~="mw:Image/Frame"], figure[typeof~="mw:Video/Frame"], figure[typeof~="mw:Audio/Frame"],
     [style*="border:1px solid #B1B9C9;" i],
     [style*="border-top:1px solid #E0E0E0;" i],
-    #talkheader td {
+    #talkheader td,
+    .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wikitable > * > tr > td {
       border-color: #555 !important;
     }
 
