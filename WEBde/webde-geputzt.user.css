@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.2.21
+@version      2.3.0
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -38,10 +38,14 @@
   .promo,
   #rightnav,
   section.cookie-lasche-hp, /* Cookie Hinweis */
-  .cloud-storage-bar--extend-link {
+  .cloud-storage-bar--extend-link,
+  #loginsearch-login > .netID-container,
+  #loginsearch-login > .domain-check {
     display:none !important;
   }
-  #header { background:transparent !important; }
+  #header {
+    background:transparent !important;
+  }
   body.defaultHero > .wrapper-center {
     max-width:98% !important;
     top: 5em !important;
@@ -50,13 +54,25 @@
   .adWithOutsideComponent, .adWithOutsideComponent body {
       background-color: #fbfbfb;
   }
-
-  /* Logout-Breite für sm */
+  
+  /* Logout-Breite für sm *//*
   body { min-width:100% !important; }
   #header > .header-inner { width:100% !important; }
 
-  /* Login-Breite für sm */
+  /* Login-Breite für sm *//*
   html { width:calc(100% - 8px) !important; }
+  /**/
+
+  html,
+  body {
+    min-width: initial !important;
+  }
+  #header > .header-inner {
+    width: initial !important;
+  }
+  .wrapper-center {
+    width: calc(100% - 20px) !important;
+  }
 
   .adWithOutsideComponent .wrapper-center,
   .adWithOutsideComponent .wrapper-border {
@@ -64,9 +80,10 @@
     top:0 !important;
   }
   #loginsearch {
-    display:inline !important;
-    min-width:250px !important;
-    max-width:60% !important;
+    display: inline !important;
+    width: initial !important;
+    //min-width:250px !important;
+    max-width:462px !important;
   }
   
   .hint-wrapper { display:block !important; }
@@ -76,16 +93,25 @@
     max-width:60% !important;
   }
 
-  #loginsearch-login .tab-contentPart { display:inline !important }
+  #loginsearch-login .tab-contentPart {
+    display:inline !important;
+  }
+  #loginsearch-login .tab-container {
+    height: initial !important;
+  }
   #loginsearch-login .tab-contentPart:not(:nth-child(2)),
 
   .ie7fix ~ *,
   #loginsearch-ad,
 
   .hint > h2 + p,
-  .hint > p:first-child { display:none !important; }
+  .hint > p:first-child {
+    display: none !important;
+  }
 
-  [data-hint="timeout"].hint-error > p { display:block !important; } /* Timeout-Hinweis einblenden */
+  [data-hint="timeout"].hint-error > p {
+    display: block !important;  /* Timeout-Hinweis einblenden */
+  }
   [translate="LOGGED_OUT_AUTOMATICALLY_TEXT"] > p {display:none !important;}
 
   #loginsearch {
@@ -94,10 +120,17 @@
     background-image:none !important;
     padding:0 20px 30px !important;
   }
+  #loginsearch > .container {
+    height: initial !important;
+  }
+  
+  aside[data-teasers^="https://web.de/magazine/"] {
+    display: none !important;
+  }
 
   /* Javascript-Hinweis entfernen, falls homepage.js geblockt ist und Seitenbreite für sm fixen */
   .jsDisabled {
-    min-width:100% !important;
+    //min-width:100% !important;
     margin-top:0 !important;
   }
   .jsDisabled .wrapper-indent::before { content:none !important; }
@@ -355,7 +388,6 @@
   /***************   D A R K S T Y L E   S T A R T   ****************/
   if darkstyle-enable {
     html,
-    #loginsearch,
     .wrapper-center.first::before,
     .n7-dialog-bottom, .n7-dialog-input-text, .search-field .search-field-wrapper input[type="search"],
     #n7-breadcrumb-fade-out,
@@ -370,6 +402,7 @@
     body.webde #welcome p,
     .adWithOutsideComponent, .adWithOutsideComponent body,
     #main,.hint,#container, /* Kundencenter 2019-01-31 */
+    .header::before,
     html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label):not(.active):not(select):not(hr):not(.dialog-container):not(.pos-modal-layer) {
       color: var_schriftfarbe;
       background-color: var_hintergrund1;
@@ -423,14 +456,16 @@
 
     .adWithOutsideComponent .wrapper-center.first .wrapper-border::before,
     body::before {
-      border-bottom-color:var_hintergrund1 !important;
+      border-bottom-color: var_hintergrund1 !important;
     }
 
-    .fc-toolbar > .fc-left h2 { color:var_schriftfarbe !important; } /* Kalender Datum */
+    .fc-toolbar > .fc-left h2 {
+      color: var_schriftfarbe !important; /* Kalender Datum */
+    }
 
     #mail-list .folder-section .container,
     #mail-list .folder-section .container * {
-      background-color:var_hintergrund2 !important;
+      background-color: var_hintergrund2 !important;
     }
 
 
@@ -440,19 +475,51 @@
       width:70px !important;
       height:50px !important;
     }
+    
+    /*** Mobile Menu ***/
+    .mod-weathertool .tool-content.weather-tool .weather-block li {
+      background-color: var_hintergrund1 !important;
+    }
+    .navigation li ul li a:hover, .navigation li ul li.active a:hover, .navigation li ul li a:focus a:hover,
+    .mod-weather .details .week ul li {
+      background-color: var_hintergrund2 !important;
+    }
+    .mod-weather .details .week ul li.active,
+    .mod-weather .details .week ul li.active > span,
+    .mod-weather .details .week ul li:hover,
+    .burger-icon::before, .burger-icon::after {
+      background-color: var_hintergrund3 !important;
+    }
+    .mod-weather .details .header-weather,
+    .mod-weather .details .weather-mobile tr,
+    .mod-weather .details .weather-mobile tr th, .mod-weather .details .weather-mobile tr td,
+    .mod-weather .details .weather-desktop tr,
+    .mod-weathertool .tool-content.weather-tool .weather-block li {
+      border-color: var_hintergrund2 !important;
+    }
+    .mod-weather .details .week ul li {
+      border-color: var_hintergrund3 !important;
+    }
+    .new-header .icon-email::before {
+      color: var_hintergrund3 !important;
+    }
+    .new-header__logo .logo-image {
+      filter: invert(100%) !important;
+      background-color: #ddd !important;
+    }
 
     /*** Email Editor ***/
     input[placeholder="Suche"],
-    .compose-header_object input { color:var_schriftfarbe !important; }
+    .compose-header_object input { color: var_schriftfarbe !important; }
 
     .simple-icon_attachment-upload,
     .cke_button_icon,
     .cke_button_label,
     .symbol,
     .widget-mail-table .tool a.icon.mail-star,
-    .widget-mail-mail .mail-star a { filter:invert(87%) !important; } /* Am besten je nach Hintergrundfarbe anpassen! */
+    .widget-mail-mail .mail-star a { filter: invert(87%) !important; } /* Am besten je nach Hintergrundfarbe anpassen! */
 
-    #cke_1_top.collapsed { padding-bottom:0 !important; }
+    #cke_1_top.collapsed { padding-bottom: 0 !important; }
 
     /* Stylingbuttons hover */
     a.cke_button_off:hover, a.cke_button_off:focus, a.cke_button_off:active, a.cke_button_disabled:hover, a.cke_button_disabled:focus, a.cke_button_disabled:active {
@@ -616,7 +683,9 @@
   }  
 }
 
-@-moz-document url-prefix("https://web.de/fm"), regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*") {
+@-moz-document url-prefix("https://web.de/fm"),
+               regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*"),
+               regexp("https?:\\/\\/web\\.de\\/(#.*)?") {
   if darkstyle-enable {
     /*** Login & Logout DS ***/
     html,
@@ -641,6 +710,13 @@
     #header .logout-notification .btn-wrapper.btn-service * {
       background:green !important; border-color:green !important;
     }
+        #loginsearch, #loginsearch .tab-container, #loginsearch div, #loginsearch fieldset, #loginsearch .form-item > span, #loginsearch .form-item > span > a {
+      background: var_hintergrund2 !important;
+    }
+    .form-l input[type="email"], .form-l input[type="password"], .form-l input[type="text"] {
+      box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.5) !important;
+    }
+
   }
   /***************   D A R K S T Y L E   E N D   ****************/
 }
