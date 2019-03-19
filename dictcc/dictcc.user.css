@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dict.cc dark centered
 @namespace      Stonecrusher
-@version        1.0.1
+@version        1.0.2
 @license        CC0
 @description    Stitched together from old styles + improvements
 @author         Linucc, d3n1c1d3, Stonecrusher
@@ -9,7 +9,7 @@
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @preprocessor   stylus
 
-@var checkbox center 'Zentriert' 1
+@var checkbox center 'Center content' 1
 ==/UserStyle== */
 
 /* TODO
@@ -274,25 +274,6 @@ DSGVO-Notice
     background-color: #2A2C2B !important;
     color: #BBB !important;
   }
-  /* correction for my.dict.cc
-  http://my.dict.cc/ */
-  tr[style*="background-color:#ccc"] {
-    background-color: #374140 !important;
-  }
-  .langlabelmy {
-    color: #BBB;
-  }
-  /* correction for user page
-  http://users.dict.cc/Paul/ */
-  form div[style*="background-color:#ddd"] {
-    background-color: #5c5d13 !important;
-  }
-  /* correction for user page
-  http://users.dict.cc/Halmafelix/ */
-  h1[style*="background:url(http://www4.dict.cc/img/bg_userheader728.jpg)"] {
-    filter: invert(100%) grayscale(100%);
-    color: #000 !important; /* inverted means it appears like #FFF */
-  }
   /* correction for main page
   http://www.dict.cc/ */
   a.nolibg:hover, .nolibg a:hover {
@@ -332,6 +313,28 @@ DSGVO-Notice
     color: #777 !important;
   }
   /* 2017-06-03 highlighted page number in subnavigation on the bottom - STOPP */
+}
+
+@-moz-document domain("users.dict.cc") {
+  form div[style*="background-color:#ddd"] {
+    background-color: #5c5d13 !important;
+  }
+  h1[style*="background:url(http://www4.dict.cc/img/bg_userheader728.jpg)"] {
+    filter: invert(100%) grayscale(100%);
+    color: #000 !important; /* inverted means it appears like #FFF */
+  }
+  img[src^="https://www4.dict.cc/img/stars"][src$=".gif"] {
+    filter: invert(1) !important;
+  }
+}
+
+@-moz-document domain("my.dict.cc") {
+  tr[style*="background-color:#ccc"] {
+    background-color: #374140 !important;
+  }
+  .langlabelmy {
+    color: #333 !important;
+  }
 }
 
 /********************************************************************/
