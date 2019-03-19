@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dict.cc dark centered
 @namespace      Stonecrusher
-@version        1.0.0
+@version        1.0.1
 @license        CC0
 @description    Stitched together from old styles + improvements
 @author         Linucc, d3n1c1d3, Stonecrusher
@@ -11,6 +11,11 @@
 
 @var checkbox center 'Zentriert' 1
 ==/UserStyle== */
+
+/* TODO
+search suggestions
+DSGVO-Notice
+*/
 
 @-moz-document domain("dict.cc") {
   /* Original style by Linucc: */
@@ -53,7 +58,8 @@
     background-color: #1E1E20 !important;
     color: #CCC;
   }
-  body, #maincontent, #maincontent div {
+  /* body, #maincontent, #maincontent div { /**/
+  body, #maincontent {
     background-color: #1E1E20;
   }
   .noli666, .noli666 > div  {
@@ -98,7 +104,7 @@
     background-color: #505452;
   }
   /* Translation-Detail page */
-  #maincontent > div:not(.orangebar):not(.subnav),
+  #maincontent > div:not(.orangebar):not(.subnav):not([style="font-size:15px"]),
   #maincontent > div:not(.orangebar):not(.subnav) > .noline {
     background-color: #2A2C2B !important;
   }
@@ -349,5 +355,43 @@
   /* Background in forums */
   #answers > table {
     background-color: #000 !important;
+  }
+  /* Do not show top contributors */
+  div[style="position:absolute; left:752px; top:140px; width:176px;"] {
+    display: none !important;
+  }
+  /* DSGVO notice */
+  #sncmp-popup-content-wrapper {
+    background: #1e1e20 !important;
+  }
+
+  img[src="https://www4.dict.cc/img/ic_speech2.gif"] {
+    filter: invert(1) !important;
+  }
+  #adrig {
+    display: none !important;
+  }
+  .aftertable {
+    margin-left:0 !important;
+    margin-right:1px !important;
+  }
+  /* Search suggestions */
+  #autosuglayer > div {
+    background: #1e1e20 !important;
+    color: #bbb !important;
+    &:hover {
+      background: lighten(#1e1e20,15%) !important;
+    }
+  }
+
+  .cmenu {
+    filter: invert(0.8) !important;
+  }
+  .cmenu a {
+    color: #000 !important;
+  }
+
+  .inp2[type="button"] {
+    color: #ccc !important;
   }
 }
