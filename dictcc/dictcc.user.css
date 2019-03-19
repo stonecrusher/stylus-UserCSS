@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dict.cc dark centered
 @namespace      Stonecrusher
-@version        1.0.2
+@version        1.0.3
 @license        CC0
 @description    Stitched together from old styles + improvements
 @author         Linucc, d3n1c1d3, Stonecrusher
@@ -396,5 +396,10 @@ DSGVO-Notice
 
   .inp2[type="button"] {
     color: #ccc !important;
+  }
+  
+  /* picture top right */
+  #shst > div:first-of-type {
+    background: #2a2c2b !important;
   }
 }
