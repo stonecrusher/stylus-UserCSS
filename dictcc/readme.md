@@ -6,7 +6,7 @@ Main features are a dark style and centering the content (optional).
 # Installation
 
 1. Install browser extension [Stylus](https://add0n.com/stylus.html) (download links are on top right)
-2. Click here: [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/dictcc/master/amazon/dictcc.user.css)
+2. Click here: [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/dictcc/dictcc.user.css)
 
 # Screenshots
 
