@@ -14,13 +14,13 @@ Main features are a dark style and centering the content (optional).
 
 # Testpages
 
-http://dict.cc/
-https://dict.cc/?s=perlenkettenanh%C3%A4nger
-https://www.dict.cc/?s=schmelze
-https://dict.cc/englisch-deutsch/e.php
-https://my.dict.cc/
-https://users.dict.cc/Paul/
-https://users.dict.cc/Halmafelix/
+http://dict.cc/  
+https://dict.cc/?s=perlenkettenanh%C3%A4nger  
+https://www.dict.cc/?s=schmelze  
+https://dict.cc/englisch-deutsch/e.php  
+https://my.dict.cc/  
+https://users.dict.cc/Paul/  
+https://users.dict.cc/Halmafelix/  
 
 # Changelog
 
