@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           Wikipedia uncensor 2019-03-21
 @namespace      Stonecrusher
-@version        1.0.0
+@version        1.1.0
 @license        CC0
-@preprocessor   default
+@preprocessor   stylus
 ==/UserStyle== */
 
-@-moz-document domain("wikipedia.org") {
+@-moz-document domain("de.wikipedia.org") {
   body {
     display: block !important;
     background: white !important;
@@ -14,6 +14,9 @@
   body a,
   .mw-parser-output a {
     color: hsl(240, 100%, 35%) !important;
+    &:visited {
+      color: hsl(240, 100%, 50%) !important;
+    }
   }
   #ceb-inline {
     display: none !important;
@@ -30,9 +33,44 @@
     filter: none !important;
   }
   #toc {
-    border: 1px solid black !important;
+    border: 1px solid grey !important;
+  }
+  #toc,
+  .sistersitebox td,
+  #Vorlage_Weiterleitungshinweis,
+  #Vorlage_Dieser_Artikel,
+  .wikitable.float-right {
+    background: #f8f9fa !important;
+    & * {
+      background: #f8f9fa !important;
+    }
+  }
+  body {
+    background: #f8f9fa !important;
   }
   html #p-logo a {
     filter: none !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    border-bottom: 1px solid #a2a9b1 !important;
+  }
+  .mw-parser-output {
+    & h1, h2, h3, h4, h5, h6 {
+      border-bottom: 1px solid #a2a9b1 !important;
+    }
+  }
+  #content::before {
+    content: "⚠️ Dies ist nur ein Provisorium. Bitte entferne diesen Userstyle am 22.03.2019 wieder, da er unerwünschte Fehler produziert (z.B. unsichtbare Temperaturdiagramme). \A     Bitte nimm dir auch die Zeit, dich mit Artikel 13 zu beschäftigen!";
+    color: #ddd;
+    background-color: #261d08 !important;
+    border: 1px solid #542 !important;
+    font-size: 0.8em;
+    font-weight: 500;
+    display: block;
+    padding: 8px;
+    margin-bottom: 5px;
+    margin-top: -10px;
+    max-width: 62.5rem;
+    white-space: pre;
   }
 }
