@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.22
+@version      21.0.23
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
-@homepageURL  https://github.com/stonecrusher/stylus-UserCSS/wikipedia
+@homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/wikipedia
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license      CC-BY-SA-4.0
 @advanced color    base-color    "Base color"    #3570ac
@@ -437,7 +437,8 @@ domain("wiki.rpcs3.net") {
   img[src*="Speaker_Icon"], .infobox img[alt*="structure"][src*=".svg"],
   img[src*=".png"]:active, img[src*=".svg"][height="16"],
   img[src*=".svg"][height="17"], img[src*=".svg"][height="18"],
-  .oo-ui-iconElement-icon:not(.mw-echo-notifications-badge), .RTsettings,
+  /*.oo-ui-iconElement-icon:not(.mw-echo-notifications-badge),*/
+  .RTsettings,
   #gtx-host, .jfk-bubble-closebtn,
   #pt-notifications-notice .mw-echo-notifications-badge:before,
   .oo-ui-pendingElement-pending,
@@ -505,6 +506,7 @@ domain("wiki.rpcs3.net") {
   - remove generic rules for div & span transparent background
   - remove line 304 -- td:not([style*="border-bottom"]):not([style*="border-top"]),
   - remove line 142 -- td[style*="background-color"],
+  - remove -- .oo-ui-iconElement-icon:not(.mw-echo-notifications-badge),
 /**/
 
 
@@ -736,6 +738,7 @@ domain("wiki.rpcs3.net") {
     [style*="background: #bcd2f4" i],
     [style*="background: #ff6347" i],
     [style*="background: #ff4040" i],
+    [style*="background: #fff8dc" i],
     [style*="background: #0a0;" i],
     [style*="background: #4c4;" i],
     [style*="background: #8f8;" i],
@@ -776,7 +779,9 @@ domain("wiki.rpcs3.net") {
     tr[style*="background-color:#abcdef" i] > th,
     th[style*="background-color:#ff8c8c;" i],
     th[style*="background-color:#fcc;" i],
-    [style^="background-color: #E0E0FF;" i] {
+    [style^="background-color: #E0E0FF;" i],
+    .wikitable td[style^="background-color:" i],
+    .wikitable td[style^="background:" i] {
       color: black !important;
     }
     .CategoryTreeEmptyBullet,
@@ -825,7 +830,8 @@ domain("wiki.rpcs3.net") {
       color: #999 !important;
     }
     img[src*="Loudspeaker.svg"],
-    .x_button {
+    .x_button,
+    .licensetpl img {
       filter: invert(0.8) !important;
     }
     #mw-indicator-mw-helplink a,
