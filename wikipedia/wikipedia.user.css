@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.23
+@version      21.0.24
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/wikipedia
@@ -825,6 +825,11 @@ domain("wiki.rpcs3.net") {
     }
 
     /*** DIVERSE ***/
+    /* Scores / Noten */
+    img[src^="//upload.wikimedia.org/score/"] {
+      filter: invert(1) !important;
+    }
+
     .catlinks {
       background-color: #3e3e00 !important;
       color: #999 !important;
