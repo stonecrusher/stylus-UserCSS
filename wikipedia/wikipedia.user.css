@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.25
+@version      21.0.26
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/wikipedia
@@ -832,6 +832,9 @@ domain("wiki.rpcs3.net") {
     /* Signatures */
     img[src$="_signature.svg.png"] {
       filter: invert(0.91) !important;
+    }
+    .thumbcaption img[src$="_signature.svg.png"] {
+      filter: invert(1) !important;
     }
 
     .catlinks {
