@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.3
+@version        1.6.4
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -1007,7 +1007,8 @@
         #productAlert_feature_div,
         #universalHQP_feature_div,
         #huc-v2-cobrand-stripe, /* Before payment VISA banner */
-        #primeCentralHomepagePromotionSlotContentImportedFromMS3 {
+        #primeCentralHomepagePromotionSlotContentImportedFromMS3,
+        #issuancePriceblockAmabot_feature_div { /* Prime VISA inline */
             display: none !important;
         }
 
