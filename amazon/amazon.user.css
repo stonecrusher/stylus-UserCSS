@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.2
+@version        1.6.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -462,7 +462,8 @@
         #navbar #nav-flyout-ewc .nav-flyout-body,
         #ewc #ewc-checkout .ewc-checkout-inner,
         .olpViewOptions,
-        .olpOfferList {
+        .olpOfferList,
+        #s-refinements {
             border-color: var_bg6 !important;
         }
         
