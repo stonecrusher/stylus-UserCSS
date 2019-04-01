@@ -3,7 +3,7 @@
 @description    Darker colors, more compact layout, gets rid of the php error messages.
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.0.1
+@version        1.1.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/anno1404rechner
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -11,6 +11,7 @@
 
 @var text var_PCwidth 'Production chain pagewidth' 90%
 @var color var_PCboxtitleColor 'Production chain box title' #B22222
+@var checkbox dimImages 'Dim images' 1
 ==/UserStyle== */
 
 @-moz-document domain("anno1404-rechner.de") {
@@ -93,7 +94,8 @@
     .hausInput {
         border: none !important;
         padding: 0 !important;
-        margin: 0 !important; }
+        margin: 0 !important;
+        background: #999 !important; }
 
     #inputFrame .items ol {
         padding: 3px !important;
@@ -102,18 +104,24 @@
     #inputFrame > .cmd { margin:0 0 10px !important; }
 
     #result > .bordertable {
-        border-spacing: 0 !important; }
+      border-spacing: 0 !important; }
 
     #result > .bordertable th,
     #result > .bordertable td {
         border: none !important;
         padding: 3px !important; }
 
+    #result > .bordertable tr:nth-of-type(n + 2) > td {
+        padding: 8px 0 0 2px !important; }
+
     #result > .bordertable td:nth-of-type(14) {
         padding-right: 15px !important; }
 
     #inputFrame .items li:first-of-type {
         background-color: white !important; }
+    
+    td > div > div[style$="background-color:#fff;"] {
+      background-color: #666 !important; }
 
 
     /*** Produktionsketten ***/
@@ -183,6 +191,167 @@
         border: none !important;
         padding: 3px !important;
         border-right: 1px solid black !important; }
+    
+    td[style="background-color:#e8f6ff;"] {
+        background-color: #e8f6ff33 !important;
+    }
+    .bordertable tr:nth-of-type(n+2) > td:nth-of-type(n+2) {
+        border-top: 1px solid black !important;
+    }
+    .bordertable tr:last-of-type > td:nth-of-type(n+2) {
+        border-bottom: 1px solid black !important;
+    }
+    
+    if dimImages {
+      .replace-image {
+        height: 0 !important;
+        width: 0 !important;
+        mix-blend-mode: multiply !important;
+        filter: brightness(1.1) contrast(1.5) !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+      }
+      .replace-icon {
+        padding-left: 46px !important;
+        padding-top: 46px !important;
+      }
+
+      #result td > img,
+      .pkDisplayC img,
+      .bordertable tr:first-of-type img{
+        @extend .replace-image
+        @extend .replace-icon
+        &[src="images/iconLupe.png"] {background-image: url("images/iconLupe.png") !important;}
+        &[src="images/iconFisch.png"] {background-image: url("images/iconFisch.png") !important;}
+        &[src="images/iconGewuerze.png"] {background-image: url("images/iconGewuerze.png") !important;}
+        &[src="images/iconBrot.png"] {background-image: url("images/iconBrot.png") !important;}
+        &[src="images/iconFleisch.png"] {background-image: url("images/iconFleisch.png") !important;}
+        &[src="images/iconMost.png"] {background-image: url("images/iconMost.png") !important;}
+        &[src="images/iconBier.png"] {background-image: url("images/iconBier.png") !important;}
+        &[src="images/iconWein.png"] {background-image: url("images/iconWein.png") !important;}
+        &[src="images/iconLeinenkutten.png"] {background-image: url("images/iconLeinenkutten.png") !important;}
+        &[src="images/iconLederwaemse.png"] {background-image: url("images/iconLederwaemse.png") !important;}
+        &[src="images/iconPelzmaentel.png"] {background-image: url("images/iconPelzmaentel.png") !important;}
+        &[src="images/iconBrokatgewaender.png"] {background-image: url("images/iconBrokatgewaender.png") !important;}
+        &[src="images/iconBuecher.png"] {background-image: url("images/iconBuecher.png") !important;}
+        &[src="images/iconKerzenleuchter.png"] {background-image: url("images/iconKerzenleuchter.png") !important;}
+        &[src="images/iconBrillen.png"] {background-image: url("images/iconBrillen.png") !important;}
+        &[src="images/iconDatteln.png"] {background-image: url("images/iconDatteln.png") !important;}
+        &[src="images/iconMilch.png"] {background-image: url("images/iconMilch.png") !important;}
+        &[src="images/iconTeppiche.png"] {background-image: url("images/iconTeppiche.png") !important;}
+        &[src="images/iconKaffee.png"] {background-image: url("images/iconKaffee.png") !important;}
+        &[src="images/iconPerlenketten.png"] {background-image: url("images/iconPerlenketten.png") !important;}
+        &[src="images/iconDuftwasser.png"] {background-image: url("images/iconDuftwasser.png") !important;}
+        &[src="images/iconMarzipan.png"] {background-image: url("images/iconMarzipan.png") !important;}
+        /* Erweitert */
+        &[src="images/iconHanf.png"] {background-image: url("images/iconHanf.png") !important;}
+        &[src="images/iconMehl.png"] {background-image: url("images/iconMehl.png") !important;}
+        &[src="images/iconKraeuter.png"] {background-image: url("images/iconKraeuter.png") !important;}
+        &[src="images/iconGetreide.png"] {background-image: url("images/iconGetreide.png") !important;}
+        &[src="images/iconSchweinezucht.png"] {background-image: url("images/iconSchweinezucht.png") !important;}
+        &[src="images/iconSalz.png"] {background-image: url("images/iconSalz.png") !important;}
+        &[src="images/iconSalzmine.png"] {background-image: url("images/iconSalzmine.png") !important;}
+        &[src="images/iconKohle1.png"] {background-image: url("images/iconKohle1.png") !important;}
+        &[src="images/iconIndigo.png"] {background-image: url("images/iconIndigo.png") !important;}
+        &[src="images/iconPapier.png"] {background-image: url("images/iconPapier.png") !important;}
+        &[src="images/iconHolz.png"] {background-image: url("images/iconHolz.png") !important;}
+        &[src="images/iconKerze.png"] {background-image: url("images/iconKerze.png") !important;}
+        &[src="images/iconHonig.png"] {background-image: url("images/iconHonig.png") !important;}
+        &[src="images/iconMessing.png"] {background-image: url("images/iconMessing.png") !important;}
+        &[src="images/iconKupfererz.png"] {background-image: url("images/iconKupfererz.png") !important;}
+        &[src="images/iconRind.png"] {background-image: url("images/iconRind.png") !important;}
+        &[src="images/iconTraube.png"] {background-image: url("images/iconTraube.png") !important;}
+        &[src="images/iconFass.png"] {background-image: url("images/iconFass.png") !important;}
+        &[src="images/iconEisen.png"] {background-image: url("images/iconEisen.png") !important;}
+        &[src="images/iconEisenerz.png"] {background-image: url("images/iconEisenerz.png") !important;}
+        &[src="images/iconQuarz.png"] {background-image: url("images/iconQuarz.png") !important;}
+        &[src="images/iconPelz.png"] {background-image: url("images/iconPelz.png") !important;}
+        &[src="images/iconSeide.png"] {background-image: url("images/iconSeide.png") !important;}
+        &[src="images/iconGold.png"] {background-image: url("images/iconGold.png") !important;}
+        &[src="images/iconGolderz.png"] {background-image: url("images/iconGolderz.png") !important;}
+        &[src="images/iconBohle.png"] {background-image: url("images/iconBohne.png") !important;}
+        &[src="images/iconPerle.png"] {background-image: url("images/iconPerle.png") !important;}
+        &[src="images/iconDuftwasser.png"] {background-image: url("images/iconDuftwasser.png") !important;}
+        &[src="images/iconDuftwasser"] {background-image: url("images/iconDuftwasser.png") !important;}
+        &[src="images/iconRose.png"] {background-image: url("images/iconRose.png") !important;}
+        &[src="images/iconMandel.png"] {background-image: url("images/iconMandel.png") !important;}
+        &[src="images/iconZucker.png"] {background-image: url("images/iconZucker.png") !important;}
+        &[src="images/iconZuckerrohr.png"] {background-image: url("images/iconZuckerrohr.png") !important;}
+        &[src="images/iconSeile.png"] {background-image: url("images/iconSeile.png") !important;}
+        &[src="images/iconWerkzeuge.png"] {background-image: url("images/iconWerkzeuge.png") !important;}
+        &[src="images/iconMosaik.png"] {background-image: url("images/iconMosaik.png") !important;}
+        &[src="images/iconLehm.png"] {background-image: url("images/iconLehm.png") !important;}
+        &[src="images/iconGlas.png"] {background-image: url("images/iconGlas.png") !important;}
+        &[src="images/iconWaffen.png"] {background-image: url("images/iconWaffen.png") !important;}
+        &[src="images/iconStein.png"] {background-image: url("images/iconStein.png") !important;}
+        &[src="images/iconKanonen.png"] {background-image: url("images/iconKanonen.png") !important;}
+        &[src="images/iconKriegsmaschinen.png"] {background-image: url("images/iconKriegsmaschinen.png") !important;}
+      }
+      .bewohner > ol:nth-of-type(n+2) > li:first-of-type img,
+       h1 > img,
+      .bordertable img[width="46"] {
+        @extend .replace-image
+        @extend .replace-icon
+        &[src$="images/iconBettler.png"] {background-image: url("images/iconBettler.png") !important;}
+        &[src$="images/iconBauer.png"] {background-image: url("images/iconBauer.png") !important;}
+        &[src$="images/iconBuerger.png"] {background-image: url("images/iconBuerger.png") !important;}
+        &[src$="images/iconPatrizier.png"] {background-image: url("images/iconPatrizier.png") !important;}
+        &[src$="images/iconAdlige.png"] {background-image: url("images/iconAdlige.png") !important;}
+        &[src$="images/iconNormaden.png"] {background-image: url("images/iconNormaden.png") !important;}
+        &[src$="images/iconGesandte.png"] {background-image: url("images/iconGesandte.png") !important;}
+      }
+      .bordertable img[width="33"] {
+        @extend .replace-image
+        padding-left: 33px !important;
+        padding-top: 33px !important;
+        &[src="images/iconBewohner.png"] {background-image: url("images/iconBewohner.png") !important;}
+      }
+      .bewohner > ol > li img[src="images/iconBewohner.png"] {
+        @extend .replace-image
+        padding-left: 22px !important;
+        padding-top: 22px !important;
+        background-image: url("images/iconBewohner.png") !important;
+      }
+      .bewohner > ol > li img[src="images/iconHaus.png"] {
+        @extend .replace-image
+        padding-left: 22px !important;
+        padding-top: 22px !important;
+        background-image: url("images/iconHaus.png") !important;
+      }
+      #inputFrame .items li:first-of-type {
+        background-color: #777 !important;
+      }
+      #inputFrame .items select {
+        background-color: #999 !important;
+      }
+      #inputFrame .items img {
+        @extend .replace-image
+        padding-left: 32px !important;
+        padding-top: 32px !important;
+        &[src="images/iconLupe.png"] {background-image: url("images/iconLupe.png") !important;}
+        &[src="images/iconFisch.png"] {background-image: url("images/iconFisch.png") !important;}
+        &[src="images/iconGewuerze.png"] {background-image: url("images/iconGewuerze.png") !important;}
+        &[src="images/iconBrot.png"] {background-image: url("images/iconBrot.png") !important;}
+        &[src="images/iconFleisch.png"] {background-image: url("images/iconFleisch.png") !important;}
+        &[src="images/iconMost.png"] {background-image: url("images/iconMost.png") !important;}
+        &[src="images/iconBier.png"] {background-image: url("images/iconBier.png") !important;}
+        &[src="images/iconWein.png"] {background-image: url("images/iconWein.png") !important;}
+        &[src="images/iconLeinenkutten.png"] {background-image: url("images/iconLeinenkutten.png") !important;}
+        &[src="images/iconLederwaemse.png"] {background-image: url("images/iconLederwaemse.png") !important;}
+        &[src="images/iconPelzmaentel.png"] {background-image: url("images/iconPelzmaentel.png") !important;}
+        &[src="images/iconBrokatgewaender.png"] {background-image: url("images/iconBrokatgewaender.png") !important;}
+        &[src="images/iconBuecher.png"] {background-image: url("images/iconBuecher.png") !important;}
+        &[src="images/iconKerzenleuchter.png"] {background-image: url("images/iconKerzenleuchter.png") !important;}
+        &[src="images/iconBrillen.png"] {background-image: url("images/iconBrillen.png") !important;}
+        &[src="images/iconDatteln.png"] {background-image: url("images/iconDatteln.png") !important;}
+        &[src="images/iconMilch.png"] {background-image: url("images/iconMilch.png") !important;}
+        &[src="images/iconTeppiche.png"] {background-image: url("images/iconTeppiche.png") !important;}
+        &[src="images/iconKaffee.png"] {background-image: url("images/iconKaffee.png") !important;}
+        &[src="images/iconPerlenketten.png"] {background-image: url("images/iconPerlenketten.png") !important;}
+        &[src="images/iconDuftwasser.png"] {background-image: url("images/iconDuftwasser.png") !important;}
+        &[src="images/iconMarzipan.png"] {background-image: url("images/iconMarzipan.png") !important;}
+      }
+  }
 }
 
 @-moz-document regexp("https?:\\/\\/(www\\.)?anno1404-rechner\\.de\\/produktionsketten\\.php.*"){
