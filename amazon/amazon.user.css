@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.9
+@version        1.6.10
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -134,7 +134,10 @@
         #ewc-content, .nav-ewc-content, .ewc-style, #navbar #nav-flyout-ewc .nav-flyout-body,
         table[bgcolor="#ffffff" i],
         .popover-inner li,
-        #gw-asin-popover {
+        #gw-asin-popover,
+        .profile-v5-desktop,
+        .profile-v5-desktop-background,
+        .profile-at-product-box {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -159,7 +162,10 @@
         .octopus-sims-img-container,
         .vpc_coupon_bar,
         .sims-wrapper,
-        .sims-img-container {
+        .sims-img-container,
+        .card.desktop.name-header-card,
+        .deck-container.main .card.desktop,
+        .deck-container.sub .card.desktop {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -463,7 +469,9 @@
         #ewc #ewc-checkout .ewc-checkout-inner,
         .olpViewOptions,
         .olpOfferList,
-        #s-refinements {
+        #s-refinements,
+        .card.desktop,
+        .profile-at-product-box {
             border-color: var_bg6 !important;
         }
         
@@ -718,7 +726,8 @@
         .vpc_coupon_grid_more_coupons, .vpc_coupon_grid_get_more_coupons,
         .bxc-grid__text ul li,
         .color-base[style="color:#111111;"],
-        #ybh.desktop .asin-title, #ybh.tablet .asin-title {
+        #ybh.desktop .asin-title, #ybh.tablet .asin-title,
+        .profile-at-product-box .profile-at-product-title-container span {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -787,7 +796,8 @@
         #productDescription .aplus h1, #productDescription .aplus h2, #productDescription .aplus h3, #productDescription .aplus h4,
         #productDescription_feature_div > h1.default, #productDescription_feature_div > h2.default, #productDescription_feature_div > h3.default, #productDescription_feature_div > h4.default,
         .cs-help-header .cs-help-title,
-        .badge-wrapper .cat-link:hover {
+        .badge-wrapper .cat-link:hover,
+        .profile-at-product-box .profile-at-product-title-container span:hover {
             color: var_linkhover !important;
         }
         .a-color-price,
@@ -973,6 +983,11 @@
         .aok-inline-block[style^="cursor:pointer; width:110px;"],
         .g-itemImage {
             opacity: darkProductImage + ( (1 - darkProductImage) / 4) !important;
+        }
+
+        /* User profiles */
+        .nudge-container.desktop {
+            box-shadow: 0 0 0 2px var_bg1, 0 0 0 3px #89CD89 !important;
         }
     }
     
