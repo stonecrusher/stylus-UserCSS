@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.8
+@version        1.6.9
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -1017,7 +1017,8 @@
         #primeCentralHomepagePromotionSlotContentImportedFromMS3,
         #issuancePriceblockAmabot_feature_div, /* Prime VISA inline */
         #tellAFriendBox_feature_div,
-        #digitalDashLowProminence_feature_div {
+        #digitalDashLowProminence_feature_div,
+        #digitalDashHighProminenceAccordion_feature_div {
             display: none !important;
         }
 
