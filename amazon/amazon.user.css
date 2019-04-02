@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.5
+@version        1.6.6
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -948,7 +948,9 @@
         .product-image,
         .hud-profile-categories-image,
         .comparison_image_title_cell img,
-        .octopus-sims-img {
+        .octopus-sims-img,
+        .hud-orders-image,
+        .hud-dashboard-card-v2-image {
             opacity: darkProductImage !important;
         }
         /* Darken product images less that have dark background */
@@ -965,7 +967,11 @@
         .sims-fbt-image,
         .coupon-image,
         .s-access-image,
-        .octopus-quick-look-product-image {
+        .octopus-quick-look-product-image,
+        .rhf-RVIs > a > img[width="50px"],
+        .asin-image,
+        .aok-inline-block[style^="cursor:pointer; width:110px;"],
+        .g-itemImage {
             opacity: darkProductImage + ( (1 - darkProductImage) / 4) !important;
         }
     }
