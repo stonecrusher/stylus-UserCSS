@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.10
+@version        1.6.11
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -137,7 +137,9 @@
         #gw-asin-popover,
         .profile-v5-desktop,
         .profile-v5-desktop-background,
-        .profile-at-product-box {
+        .profile-at-product-box,
+        .view-alert-container.desktop .view-alert.self,
+        .interest-follow-widget-carousel-item {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -535,7 +537,7 @@
             border-color: var_bg1 !important;
         }
         .octopus-pc-asin-block {
-          border-right: 1px solid var_bg2 !important;
+            border-right: 1px solid var_bg2 !important;
         }
 
 
@@ -592,7 +594,8 @@
         .invitationWidgetUpArrow, .invitationWidgetDownArrow,
         .vpc_category_bar_header_left_arrow,
         .vpc_category_bar_header_right_carrot,
-        .gw-icon.close-icon {
+        .gw-icon.close-icon,
+        .profile-at-menu-button-image {
             filter: invert(0.8) !important;
         }
         .nav-image {
@@ -747,7 +750,8 @@
         .avu-content .avu-section-alt .av-secondary,
         .cs-help-content p.lead,
         .dv-el-attr-key,
-        .badge-wrapper span.cat-name {
+        .badge-wrapper span.cat-name,
+        .a-profile-descriptor {
             color: var_font3 !important;
         }
         hr,
@@ -986,8 +990,12 @@
         }
 
         /* User profiles */
-        .nudge-container.desktop {
+        .nudge-container.desktop,
+        .view-alert-container.desktop .view-alert.self {
             box-shadow: 0 0 0 2px var_bg1, 0 0 0 3px #89CD89 !important;
+        }
+        .avatar-image-container.desktop .circular-avatar-image {
+            box-shadow: 0 0 0 4px var_bg2 !important;
         }
     }
     
