@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.11
+@version        1.6.12
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -411,6 +411,10 @@
         }
         .octopus-sims-img-overlay {
             background: transparent !important;
+        }
+        
+        table[style="background-color:#EFF7FE;"] {
+            background-color: #4d5862 !important;
         }
 
         /*** Borders ***/
@@ -1029,6 +1033,7 @@
         hr.bucketDivider:not(.a-divider-normal),
         */
         #quickPromoBucketContent,
+        #quickPromoBucketContent ~ #sims-fbt > hr.bucketDivider:nth-child(1),
         #gbox-ad-row-2\.0,
         #csg-search-cu,
         #top table table img,
@@ -1039,9 +1044,15 @@
         #huc-v2-cobrand-stripe, /* Before payment VISA banner */
         #primeCentralHomepagePromotionSlotContentImportedFromMS3,
         #issuancePriceblockAmabot_feature_div, /* Prime VISA inline */
+        /* Share */
+        #tellAFriendBylineBox_feature_div,
         #tellAFriendBox_feature_div,
+        /* Dash buttons */
+        #digital-dash-create,
         #digitalDashLowProminence_feature_div,
-        #digitalDashHighProminenceAccordion_feature_div {
+        #digitalDashHighProminenceAccordion_feature_div,
+        #rightCol > #moreBuyingChoices_feature_div > div.a-section.a-spacing-medium.a-spacing-top-base > #mbc-action-panel-wrapper + div.a-section.a-padding-base, /* Sell stuff */
+        #dummy_bc_longline /*delete me*/ {
             display: none !important;
         }
 
