@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.12
+@version        1.6.14
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -248,7 +248,8 @@
         }
         .cr-lighthouse-term,
         .a-icon-text-separator, .a-text-separator,
-        .dsv-cBoxR {
+        .dsv-cBoxR,
+        .generic-subnav-divider {
             background-color: var_bg6 !important;
         }
         center > div[style^="background-color:#eff7fe;"] {
@@ -412,8 +413,9 @@
         .octopus-sims-img-overlay {
             background: transparent !important;
         }
-        
-        table[style="background-color:#EFF7FE;"] {
+        /* blueish background */
+        table[style="background-color:#EFF7FE;"],
+        .addOnItem-header {
             background-color: #4d5862 !important;
         }
 
@@ -477,7 +479,9 @@
         .olpOfferList,
         #s-refinements,
         .card.desktop,
-        .profile-at-product-box {
+        .profile-at-product-box,
+        #nav-flyout-accountList #nav-al-your-account,
+        #navbar .nav-flyout-sidePanel {
             border-color: var_bg6 !important;
         }
         
@@ -575,7 +579,6 @@
         .a-carousel-card-empty,
         .shoveler li.shoveler-progress,
         .tag-cols .snake,
-        .nav-spinner,
         /* yellow spinners */
         .nav-spinner,
         .atfc-spinner,
@@ -583,8 +586,13 @@
         .reviewsLightbox .large-loadingIcon {
             filter: invert(1) !important;
         }
-        .nav-promo,
+        /* grey spinners */
+        .nav-spinner,
         .loadingSpinner,
+        /* yellow spinner */
+        .feedback-loading-spinner,
+        /* spinners end */
+        .nav-promo,
         .bia-prime-badge,
         .s-ref-img-sprite[alt="Amazon Pantry-Option"],
         .firstPageLeftArrow,
@@ -610,6 +618,10 @@
         }
         .a-button-close {
             filter: brightness(0.8) !important;
+        }
+        /* Plus product */
+        #addon > .icon {
+            filter: invert(0.8) hue-rotate(175deg) saturate(2) !important;
         }
         /* Car Parts top bar */
         .atsCaret, .atsCenter, .atsContent, .atsDDLL, .atsDDLR, .atsDDUL, .atsDDUR, .atsLL, .atsLR, .atsUL, .atsUR {
@@ -852,6 +864,9 @@
         .swSprite::before {
             color: transparent !important;
         }
+        .sims-fbt-unselected-item {
+            opacity: .5 !important;
+        }
         
         /* Song controls */
         /* inactive */
@@ -1033,7 +1048,7 @@
         hr.bucketDivider:not(.a-divider-normal),
         */
         #quickPromoBucketContent,
-        #quickPromoBucketContent ~ #sims-fbt > hr.bucketDivider:nth-child(1),
+        #quickPromoBucketContent ~ #sims-fbt > hr.bucketDivider:nth-child(1), /* Sell */
         #gbox-ad-row-2\.0,
         #csg-search-cu,
         #top table table img,
