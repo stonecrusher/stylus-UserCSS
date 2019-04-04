@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.6.14
+@version        1.7.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -1081,7 +1081,9 @@
         
         /* Sponsored results */
         .s-item-container > h5.a-spacing-none ~ *,
-        #atfResults h5[class*="sponsored"] ~ * {
+        #atfResults h5[class*="sponsored"] ~ *,
+        #pdagEncapsulated,
+        .AdHolder {
             display: none !important;
         }
         
@@ -1130,8 +1132,17 @@
         #atfResults h5[class*="sponsored"] {
             color: black !important;
             letter-spacing: 5px !important;
-            background-color: red !important;
+            background-color: var_price !important;
             font-weight: bold !important;
+        }
+        #pdagEncapsulated,
+        .AdHolder {
+            border: 1px dashed var_price !important;
+        }
+        .sponsoredBy,
+        .adFeedback__text,
+        .s-result-item.AdHolder div.sg-col-inner > div.a-section.a-spacing-none > span.a-size-base.a-color-secondary {
+            color: var_price !important;
         }
     }
     if av-pause-remove {
