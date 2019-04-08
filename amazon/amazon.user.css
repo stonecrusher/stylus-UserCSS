@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.8.0
+@version        1.9.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -20,6 +20,7 @@
 @var range     darkProductImage 'DS Darken product images'   [0.8,0.4,1,0.05]
 @var checkbox  compact          'Compact mode & No Ads'      1
 @var checkbox  hide-similar     'Hide other customer item recommendations' 1
+@var checkbox  hide-ask         'Hide ask'                   0
 @var checkbox  mark-sponsored   'Mark sponsored results'     1
 @var checkbox  av-pause-remove  'Remove Video pause overlay' 1
 @var text      review-width     'Width of review bars'       300px
@@ -140,7 +141,8 @@
         .profile-v5-desktop-background,
         .profile-at-product-box,
         .view-alert-container.desktop .view-alert.self,
-        .interest-follow-widget-carousel-item {
+        .interest-follow-widget-carousel-item,
+        .avu-content-aui {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -483,7 +485,10 @@
         .card.desktop,
         .profile-at-product-box,
         #nav-flyout-accountList #nav-al-your-account,
-        #navbar .nav-flyout-sidePanel {
+        #navbar .nav-flyout-sidePanel,
+        #rhf .rhf-divider-no-gradient,
+        .aplus-v2 .apm-rightthirdcol,
+        #prodDetails .secHeader {
             border-color: var_bg6 !important;
         }
         
@@ -749,7 +754,8 @@
         .color-base[style="color:#111111;"],
         #ybh.desktop .asin-title, #ybh.tablet .asin-title,
         .profile-at-product-box .profile-at-product-title-container span,
-        #prime-pda-type-box-ad p[style*="color:#111111"], #prime-pda-type-box-ad p[style*="color:#555555"] {
+        #prime-pda-type-box-ad p[style*="color:#111111"], #prime-pda-type-box-ad p[style*="color:#555555"],
+        .a-carousel-pagination {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1054,6 +1060,7 @@
         https://www.amazon.de/dp/B001SP9N86/
         hr.bucketDivider:not(.a-divider-normal),
         */
+        #promotions_feature_div,
         #quickPromoBucketContent,
         #quickPromoBucketContent ~ #sims-fbt > hr.bucketDivider:nth-child(1), /* Sell */
         #gbox-ad-row-2\.0,
@@ -1074,7 +1081,9 @@
         #digitalDashLowProminence_feature_div,
         #digitalDashHighProminenceAccordion_feature_div,
         #rightCol > #moreBuyingChoices_feature_div > div.a-section.a-spacing-medium.a-spacing-top-base > #mbc-action-panel-wrapper + div.a-section.a-padding-base, /* Sell stuff */
-        #prime-pda-type-box-ad {
+        #prime-pda-type-box-ad,
+        #dp-ads-center-promo_feature_div,
+        #dp-ads-middle_feature_div {
             display: none !important;
         }
 
@@ -1130,6 +1139,18 @@
         /* Amazon Assistant (after ordering) */
         .bit-aa-install-widget-contents,
         #cs-app-prompt {
+            display: none !important;
+        }
+        
+        /* prevent dividers from collapsing when hiding above section */
+        #dp-container > hr {
+            width: 100% !important;
+        }
+    }
+    if hide-ask {
+        #ask-btf_feature_div,
+        #ask-dp-search_feature_div,
+        .askReviewsPageAskWidget {
             display: none !important;
         }
     }
