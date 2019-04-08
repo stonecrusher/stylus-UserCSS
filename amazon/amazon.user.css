@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.7.0
+@version        1.8.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -19,6 +19,7 @@
 @var color     var_price        'DS Price color'      #ff3b14
 @var range     darkProductImage 'DS Darken product images'   [0.8,0.4,1,0.05]
 @var checkbox  compact          'Compact mode & No Ads'      1
+@var checkbox  hide-similar     'Hide other customer item recommendations' 1
 @var checkbox  mark-sponsored   'Mark sponsored results'     1
 @var checkbox  av-pause-remove  'Remove Video pause overlay' 1
 @var text      review-width     'Width of review bars'       300px
@@ -167,7 +168,8 @@
         .sims-img-container,
         .card.desktop.name-header-card,
         .deck-container.main .card.desktop,
-        .deck-container.sub .card.desktop {
+        .deck-container.sub .card.desktop,
+        .gw-card-layout .desktop-row > div {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -746,7 +748,8 @@
         .bxc-grid__text ul li,
         .color-base[style="color:#111111;"],
         #ybh.desktop .asin-title, #ybh.tablet .asin-title,
-        .profile-at-product-box .profile-at-product-title-container span {
+        .profile-at-product-box .profile-at-product-title-container span,
+        #prime-pda-type-box-ad p[style*="color:#111111"], #prime-pda-type-box-ad p[style*="color:#555555"] {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -831,6 +834,10 @@
         #navbar.nav-bluebeacon #nav-search-label, #navbar.nav-bluebeacon .nav-a-2 .nav-line-1, #navbar.nav-bluebeacon .nav-a-2 .nav-line-2,
         .swatchElement .a-button a, .swatchElement .a-button:hover a {
             color: var_font7 !important;
+        }
+        /* Search matches */
+        .askBtfSearchResultsContainer .askBtfSearchResults .matches, .askDPSearchPrimaryViewContent .matches, .askDPSearchSecondaryViewContent .askSearchResults .matches, .askLiveSearchResults .matches, .askSearchResultsContainer .askSearchResults .matches {
+            color: black !important;
         }
         
         .aplus-v2 th.apm-tablemodule-keyhead {
@@ -1067,7 +1074,7 @@
         #digitalDashLowProminence_feature_div,
         #digitalDashHighProminenceAccordion_feature_div,
         #rightCol > #moreBuyingChoices_feature_div > div.a-section.a-spacing-medium.a-spacing-top-base > #mbc-action-panel-wrapper + div.a-section.a-padding-base, /* Sell stuff */
-        #dummy_bc_longline /*delete me*/ {
+        #prime-pda-type-box-ad {
             display: none !important;
         }
 
@@ -1163,6 +1170,15 @@
             background-color: var_price !important;
         }
     }
+    if hide-similar {
+        #sims-consolidated-1_feature_div,
+        #sims-consolidated-2_feature_div,
+        #sims-consolidated-3_feature_div,
+        #sims-consolidated-4_feature_div,
+        #recommendations_feature_div {
+            display: none !important;
+        }
+    }
     
     /*** Review-width ***/
     /*** At the bottom of a product page ***/
@@ -1172,6 +1188,18 @@
     #reviewSummary > .a-fixed-left-grid > .a-fixed-left-grid-inner > .a-col-left {
         width: review-width !important;
         margin-left: -(review-width) !important;
+    }
+    
+    /*** Next to reviews ***/
+    #reviewsMedley > div[style="padding-left:300px"] {
+        padding-left: review-width !important;
+    }
+    #reviewsMedley > div[style="padding-left:300px"] > div[style="width:300px;margin-left:-300px;float:left;"] {
+        width: review-width !important;
+        margin-left: - review-width !important;
+    }
+    #reviewsMedley > div[style="padding-left:300px"] > div[style="width:300px;margin-left:-300px;float:left;"] .a-fixed-left-grid-col[style="width:400px;margin-left:-280px;float:left;"] {
+        width: review-width !important;
     }
 
     /*** Separate review page ***/
