@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.4
+@version        1.9.5
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -293,7 +293,8 @@
         .aplus-v2 .apm-sidemodule,
         #automotiveStripe.asDoesFit #automotiveStripeMain,
         #asNotesWrapper #asNotesCarousel,
-        #asNotesContainer .asNotesGroup {
+        #asNotesContainer .asNotesGroup,
+        .a-color-base-background {
             background-color: var_bg1 !important;
         }
         .a-color-offset-background,
@@ -555,6 +556,11 @@
         .octopus-pc-asin-block {
             border-right: 1px solid var_bg2 !important;
         }
+        .s-desktop-toolbar {
+            border-color: var_bg6 !important;
+            border-top: none !important;
+            box-shadow: 0 0 10px darken(var_bg6,30%) !important;
+        }
 
 
         /*** Filter images / Icons ***/
@@ -616,7 +622,8 @@
         .vpc_category_bar_header_left_arrow,
         .vpc_category_bar_header_right_carrot,
         .gw-icon.close-icon,
-        .profile-at-menu-button-image {
+        .profile-at-menu-button-image,
+        .s-back-arrow, .s-forward-arrow {
             filter: invert(0.8) !important;
         }
         .nav-image {
