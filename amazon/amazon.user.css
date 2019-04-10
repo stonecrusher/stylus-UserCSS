@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.3
+@version        1.9.4
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -75,7 +75,7 @@
         #navbar .nav-flyout-sidePanel,
         .digital-dash-dashboard-content, .digital-dash-sticky-content,
         ul.a-tabs .a-tab-heading.a-active a, ul.a-tabs li.a-active a,
-          .GB-M-COMMON,
+        .GB-M-COMMON,
         .a-expander-partial-collapse-header,
         #hud-dashboard,
         a.a-link-section-expander,
@@ -142,7 +142,8 @@
         .profile-at-product-box,
         .view-alert-container.desktop .view-alert.self,
         .interest-follow-widget-carousel-item,
-        .avu-content-aui {
+        .avu-content-aui,
+        #promise-background-container.background-normal {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -756,7 +757,10 @@
         #ybh.desktop .asin-title, #ybh.tablet .asin-title,
         .profile-at-product-box .profile-at-product-title-container span,
         #prime-pda-type-box-ad p[style*="color:#111111"], #prime-pda-type-box-ad p[style*="color:#555555"],
-        .a-carousel-pagination {
+        .a-carousel-pagination,
+        #deliveredAddress-container .reached .milestone-primaryMessage, #progressTracker-container .reached .milestone-primaryMessage,
+        .carrierRelatedInfo-mfn-providerTitle,
+        #errorPageContainer .widgetHeader, #mapTracking-bottomSheet-container .widgetHeader, #pageContainer .widgetHeader {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1029,6 +1033,12 @@
         }
         .avatar-image-container.desktop .circular-avatar-image {
             box-shadow: 0 0 0 4px var_bg2 !important;
+        }
+        
+        /* Parcel tracking page */
+        #errorPageContainer .grayExceptionBtn-group a, #mapTracking-bottomSheet-container .grayExceptionBtn-group a, #pageContainer .grayExceptionBtn-group a {
+            border-bottom: 2px solid var_bg6 !important;
+            background-color: var_bg2 !important;
         }
     }
     
