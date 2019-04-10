@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.0
+@version        1.9.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -593,6 +593,7 @@
         .reviewsLightbox .large-loadingIcon {
             filter: invert(1) !important;
         }
+        /** TODO: Fix more spinners **/
         /* grey spinners */
         .nav-spinner,
         .loadingSpinner,
@@ -1083,7 +1084,11 @@
         #rightCol > #moreBuyingChoices_feature_div > div.a-section.a-spacing-medium.a-spacing-top-base > #mbc-action-panel-wrapper + div.a-section.a-padding-base, /* Sell stuff */
         #prime-pda-type-box-ad,
         #dp-ads-center-promo_feature_div,
-        #dp-ads-middle_feature_div {
+        #dp-ads-middle_feature_div,
+        #hqpWrapper,
+        #dp-ads-center-promo-top_feature_div,
+        #quickPromoDivId,
+        #promotions-list_feature_div {
             display: none !important;
         }
 
@@ -1145,6 +1150,10 @@
         /* prevent dividers from collapsing when hiding above section */
         #dp-container > hr {
             width: 100% !important;
+        }
+        
+        body {
+            font-family: "Amazon Ember",Arial,sans-serif !important;
         }
     }
     if hide-ask {
