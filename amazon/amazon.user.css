@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.5
+@version        1.9.6
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -172,7 +172,8 @@
         .card.desktop.name-header-card,
         .deck-container.main .card.desktop,
         .deck-container.sub .card.desktop,
-        .gw-card-layout .desktop-row > div {
+        .gw-card-layout .desktop-row > div,
+        .expansion-container {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -490,7 +491,8 @@
         #navbar .nav-flyout-sidePanel,
         #rhf .rhf-divider-no-gradient,
         .aplus-v2 .apm-rightthirdcol,
-        #prodDetails .secHeader {
+        #prodDetails .secHeader,
+        .expansion-container {
             border-color: var_bg6 !important;
         }
         
@@ -597,7 +599,9 @@
         .nav-spinner,
         .atfc-spinner,
         .reviewsLightbox .loadingIcon,
-        .reviewsLightbox .large-loadingIcon {
+        .reviewsLightbox .large-loadingIcon,
+        .feed-carousel-control,
+        .ysh-carousel-close-icon {
             filter: invert(1) !important;
         }
         /** TODO: Fix more spinners **/
@@ -623,10 +627,14 @@
         .vpc_category_bar_header_right_carrot,
         .gw-icon.close-icon,
         .profile-at-menu-button-image,
-        .s-back-arrow, .s-forward-arrow {
+        .s-back-arrow, .s-forward-arrow,
+        .cu-bottom, .cu-bottom-left, .cu-eb-bottom, .cu-eb-bottom-left, .cu-eb-top, .cu-eb-top-left, .cu-top, .cu-top-left,
+        .cu-contact-channel-recommended,
+        .ces_frame img[src*="/logo/"] {
             filter: invert(0.8) !important;
         }
-        .nav-image {
+        .nav-image,
+        .ysh-carousel-arrow {
             filter: invert(0.65) !important;
         }
         input[disabled] {
@@ -767,7 +775,8 @@
         .a-carousel-pagination,
         #deliveredAddress-container .reached .milestone-primaryMessage, #progressTracker-container .reached .milestone-primaryMessage,
         .carrierRelatedInfo-mfn-providerTitle,
-        #errorPageContainer .widgetHeader, #mapTracking-bottomSheet-container .widgetHeader, #pageContainer .widgetHeader {
+        #errorPageContainer .widgetHeader, #mapTracking-bottomSheet-container .widgetHeader, #pageContainer .widgetHeader,
+        .ces_frame h1, .ces_frame legend, .ces_frame #comment_label {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -788,7 +797,9 @@
         .cs-help-content p.lead,
         .dv-el-attr-key,
         .badge-wrapper span.cat-name,
-        .a-profile-descriptor {
+        .a-profile-descriptor,
+        .cu-contact-channel-error-msg, .cu-contact-channel-warning-msg,
+        .carousel-faceout-container .title-container {
             color: var_font3 !important;
         }
         hr,
@@ -838,7 +849,8 @@
         #productDescription_feature_div > h1.default, #productDescription_feature_div > h2.default, #productDescription_feature_div > h3.default, #productDescription_feature_div > h4.default,
         .cs-help-header .cs-help-title,
         .badge-wrapper .cat-link:hover,
-        .profile-at-product-box .profile-at-product-title-container span:hover {
+        .profile-at-product-box .profile-at-product-title-container span:hover,
+        .carousel-faceout-container .title-container:hover {
             color: var_linkhover !important;
         }
         .a-color-price,
@@ -853,8 +865,15 @@
         .swatchElement .a-button a, .swatchElement .a-button:hover a {
             color: var_font7 !important;
         }
+        .cu-eb-header {
+            color: #333 !important;
+        }
         /* Search matches */
         .askBtfSearchResultsContainer .askBtfSearchResults .matches, .askDPSearchPrimaryViewContent .matches, .askDPSearchSecondaryViewContent .askSearchResults .matches, .askLiveSearchResults .matches, .askSearchResultsContainer .askSearchResults .matches {
+            color: black !important;
+        }
+        /* Contact form buttons */
+        a.cu-btn, a.cu-btn span, a.cu-contact-channel-btn, a.cu-contact-channel-btn span {
             color: black !important;
         }
         
@@ -1008,7 +1027,8 @@
         .comparison_image_title_cell img,
         .octopus-sims-img,
         .hud-orders-image,
-        .hud-dashboard-card-v2-image {
+        .hud-dashboard-card-v2-image,
+        .recs-carousel-element-img-outer {
             opacity: darkProductImage !important;
         }
         /* Darken product images less that have dark background */
@@ -1029,7 +1049,8 @@
         .rhf-RVIs > a > img[width="50px"],
         .asin-image,
         .aok-inline-block[style^="cursor:pointer; width:110px;"],
-        .g-itemImage {
+        .g-itemImage,
+        [id^="iyrListItemImg"] {
             opacity: darkProductImage + ( (1 - darkProductImage) / 4) !important;
         }
 
