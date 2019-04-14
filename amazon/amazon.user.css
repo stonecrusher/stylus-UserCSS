@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.6
+@version        1.9.7
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -143,7 +143,8 @@
         .view-alert-container.desktop .view-alert.self,
         .interest-follow-widget-carousel-item,
         .avu-content-aui,
-        #promise-background-container.background-normal {
+        #promise-background-container.background-normal,
+        .masrw-box {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -173,7 +174,8 @@
         .deck-container.main .card.desktop,
         .deck-container.sub .card.desktop,
         .gw-card-layout .desktop-row > div,
-        .expansion-container {
+        .expansion-container,
+        #ewc #ewc-active-cart .ewc-top-msg .ewc-alert-inline-info .ewc-alert-inner {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -492,7 +494,9 @@
         #rhf .rhf-divider-no-gradient,
         .aplus-v2 .apm-rightthirdcol,
         #prodDetails .secHeader,
-        .expansion-container {
+        .expansion-container,
+        .masrw-box,
+        .masrw-box .masrw-box-footer {
             border-color: var_bg6 !important;
         }
         
@@ -776,7 +780,8 @@
         #deliveredAddress-container .reached .milestone-primaryMessage, #progressTracker-container .reached .milestone-primaryMessage,
         .carrierRelatedInfo-mfn-providerTitle,
         #errorPageContainer .widgetHeader, #mapTracking-bottomSheet-container .widgetHeader, #pageContainer .widgetHeader,
-        .ces_frame h1, .ces_frame legend, .ces_frame #comment_label {
+        .ces_frame h1, .ces_frame legend, .ces_frame #comment_label,
+        div.bucket {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -850,7 +855,8 @@
         .cs-help-header .cs-help-title,
         .badge-wrapper .cat-link:hover,
         .profile-at-product-box .profile-at-product-title-container span:hover,
-        .carousel-faceout-container .title-container:hover {
+        .carousel-faceout-container .title-container:hover,
+        .masrw-buy-box .masrw-button .masrw-button-text:hover {
             color: var_linkhover !important;
         }
         .a-color-price,
@@ -872,8 +878,9 @@
         .askBtfSearchResultsContainer .askBtfSearchResults .matches, .askDPSearchPrimaryViewContent .matches, .askDPSearchSecondaryViewContent .askSearchResults .matches, .askLiveSearchResults .matches, .askSearchResultsContainer .askSearchResults .matches {
             color: black !important;
         }
-        /* Contact form buttons */
-        a.cu-btn, a.cu-btn span, a.cu-contact-channel-btn, a.cu-contact-channel-btn span {
+        /* buttons */
+        a.cu-btn, a.cu-btn span, a.cu-contact-channel-btn, a.cu-contact-channel-btn span,
+        .masrw-buy-box .masrw-button .masrw-button-text {
             color: black !important;
         }
         
@@ -1050,7 +1057,11 @@
         .asin-image,
         .aok-inline-block[style^="cursor:pointer; width:110px;"],
         .g-itemImage,
-        [id^="iyrListItemImg"] {
+        [id^="iyrListItemImg"],
+        .a-carousel-card.rvi-item > span > a > img,
+        .s-image,
+        .ewc-item-cover-left > img,
+        .ewc-item-info-left > a > img {
             opacity: darkProductImage + ( (1 - darkProductImage) / 4) !important;
         }
 
