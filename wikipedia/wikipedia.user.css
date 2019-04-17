@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.26
+@version      21.0.28
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/wikipedia
@@ -583,7 +583,8 @@ domain("wiki.rpcs3.net") {
     table[style*="background:WhiteSmoke" i],
     .k-player .credits_box,
     div#mw-missingsummary,
-    #talkheader [style*="background-color: white;" i] {
+    #talkheader [style*="background-color: white;" i],
+    div[style*="background-color:#ececec;" i] {
       background: #333 !important;
     }
     [style*="background:#f5f5f5" i],
@@ -714,7 +715,9 @@ domain("wiki.rpcs3.net") {
       color: #ccc !important;
     }
     [style*="#555555" i],
-    #mw-navigation h3 {
+    #mw-navigation h3,
+    .k-player .time-disp,
+    .k-player .source-switch {
       color: #9a9a9a !important;
     }
     [bgcolor="#b0ceff" i],
@@ -793,6 +796,9 @@ domain("wiki.rpcs3.net") {
     .hintergrundfarbe5 > a {
       color: #4184dc !important;
     }
+    .wikitable td[style*="background:#ffdead" i] {
+      color: #9a9a9a !important;
+    }
 
     /*** BORDER ***/
     td[style*="background: #dde5ee" i] {
@@ -849,7 +855,8 @@ domain("wiki.rpcs3.net") {
     #mw-indicator-mw-helplink a,
     .ui-icon,
     .oo-ui-indicatorElement-indicator,
-    #mw-fr-revisiontag {
+    #mw-fr-revisiontag,
+    .k-player .volume-slider .ui-slider-range {
       filter: invert(1) !important;
     }
     .thumbcaption a {
