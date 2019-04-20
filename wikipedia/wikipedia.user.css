@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Wikipedia Dark
 @namespace    Stonecrusher
-@version      21.0.28
+@version      21.0.29
 @description  Wikipedia Dark Theme
 @author       StylishThemes, Stonecrusher
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/wikipedia
@@ -782,9 +782,10 @@ domain("wiki.rpcs3.net") {
     tr[style*="background-color:#abcdef" i] > th,
     th[style*="background-color:#ff8c8c;" i],
     th[style*="background-color:#fcc;" i],
-    [style^="background-color: #E0E0FF;" i],
-    .wikitable td[style^="background-color:" i],
-    .wikitable td[style^="background:" i] {
+    [style^="background-color: #E0E0FF;" i]
+    /*.wikitable td[style^="background-color:" i],
+    .wikitable td[style^="background:" i]  too broad!  */
+    {
       color: black !important;
     }
     .CategoryTreeEmptyBullet,
