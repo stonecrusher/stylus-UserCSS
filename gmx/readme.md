@@ -55,6 +55,7 @@ Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 ## Changelog
 
+- Der Changelog wird nicht mehr gepflegt. Siehe stattdessen die [commit history auf Github](https://github.com/stonecrusher/stylus-UserCSS/commits/master/gmx).
 - 2018-06-17: Scroll shadow fix.
 - 2018-05-30: Optionsreihenfolge; Inaktive items: Schriftfarbe abdunkeln statt Hintergrund aufhellen.
 - 2018-05-30: Farbvariablen hinzugefügt und Standardfarben aufgehellt.
