@@ -1,10 +1,10 @@
 ! Blockierregeln für bereinigtes web.de und gmx.net
 !
-! Homepage: https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
+! Homepage: https://github.com/stonecrusher/filterlists
 ! Title: web.de und gmx Turbo
 ! Expires: 7 days
-! Version: 20190203
-! Redirect: https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde
+! Version: 20190424
+! Redirect: https://raw.githubusercontent.com/stonecrusher/filterlists/master/gmx-webde-turbo.txt
 !
 ! Autor: Stonecrusher
 ! Lizenz: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
