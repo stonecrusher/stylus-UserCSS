@@ -24,7 +24,7 @@ Die Ladezeiten (hauptsächlich für geputzte Login & Logoutseite) können signif
 
 ### Anleitung zum abonnieren von Filterlisten
 Füge folgende URL als Filterliste in deinem Adblocker hinzu:  
-https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/blockierregeln-gmx-webde
+https://raw.githubusercontent.com/stonecrusher/filterlists/master/gmx-webde-turbo.txt
 
 - **uBlock Origin**:  
   Dashboard öffnen --> Filterlisten --> Importieren --> URL einfügen --> Änderungen anwenden
