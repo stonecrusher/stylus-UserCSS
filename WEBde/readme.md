@@ -14,6 +14,14 @@ Optionaler Darkstyle in den Settings nach der Installation verfügbar.
 2. Klicke hier: [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/WEBde/webde-geputzt.user.css)
 
 
+# Screenshots
+
+![login dark](./screenshots/2019-04-27%2021_08_14.png)
+![login hell](./screenshots/2019-04-27%2021_08_43.png)
+![postfach dark](./screenshots/2019-04-27%2021_09_45.png)
+![postfach hell](./screenshots/2019-04-27%2021_09_18.png)
+![style optionen](./screenshots/2019-04-27%2021_10_23.png)
+
 
 # Weitere Informationen
 
@@ -56,7 +64,7 @@ Nur kostenloses FreeMail. Die Bezahlvariante "web.de CLUB" ist ungetestet!
 
 # Changelog
 
-- Changelog wird nicht mehr gepflegt, siehe commit history auf GitHub.
+- Changelog wird nicht mehr gepflegt, siehe [commit history](https://github.com/stonecrusher/stylus-UserCSS/commits/master/WEBde/webde-geputzt.user.css) auf GitHub.
 - 2018-08-05: Cookie Hinweis entfernt (hat ohne uBO Regeln Login blockiert)
 - 2018-05-30: Standardfarben, Optionenreihenfolge und Label geändert #1; Login & Logout Hintergrund fix.
 - 2018-05-26: Virenschutz im Menü hat Platz gewechselt.
