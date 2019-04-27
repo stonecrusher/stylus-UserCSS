@@ -15,4 +15,4 @@ Ich habe die Farben zwar einstellbar gemacht, aber nicht wirklich getestet, ob b
 
 # Screenshot
 
-![ebay-kleinanzeigen screenshot](2019-04-27%2020_22_56.png)
+![ebay-kleinanzeigen screenshot](2019-04-27%2020_22_56.jpg)
