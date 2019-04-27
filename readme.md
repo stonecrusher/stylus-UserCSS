@@ -1,7 +1,7 @@
 # Description
 
 This repository contains UserCSS styles for restyling websites.  
-Many styles feature options to alter colors or switch modifications on or off.
+Many styles feature options to alter colors or toggle modifications.
 
 A browser extension is needed to inject the UserCSS into a site.  
 I personally use and recommend [Stylus](https://add0n.com/stylus.html) which is officially available for Firefox, Chrome and Opera.  
