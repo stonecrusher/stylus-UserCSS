@@ -17,9 +17,9 @@ But the good thing is you are very free to change the colors - either via style 
 
 # Screenshots
 
-![amazon](https://user-images.githubusercontent.com/1388389/43968604-ee534782-9cc7-11e8-8f36-00d2b2fd2451.png)
+![amazon](https://user-images.githubusercontent.com/1388389/43968604-ee534782-9cc7-11e8-8f36-00d2b2fd2451.jpg)
 
-![amazon2](https://user-images.githubusercontent.com/1388389/43968744-4d36c6d4-9cc8-11e8-9bab-467f4da63409.png)
+![amazon2](https://user-images.githubusercontent.com/1388389/43968744-4d36c6d4-9cc8-11e8-9bab-467f4da63409.jpg)
 
 *Style settings*
 
