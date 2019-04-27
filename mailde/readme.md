@@ -21,7 +21,7 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 
 # Screenshots
 
-![Contribution guidelines for this project](2019-04-27%2020_02_25.png)
+![Contribution guidelines for this project](2019-04-27%2020_02_25.jpg)
 ![Contribution guidelines for this project](2019-04-27%2020_03_30.png)
 
 # Sonstiges
