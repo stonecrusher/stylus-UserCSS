@@ -19,6 +19,11 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 - [Automatische Weiterleitung zum Posteingang](https://greasyfork.org/de/scripts/32227)
 -->
 
+# Screenshots
+
+![Contribution guidelines for this project](2019-04-27%2020_02_25.png)
+![Contribution guidelines for this project](2019-04-27%2020_03_30.png)
+
 # Sonstiges
 
 Getestet mit Firefox66 auf dem Desktop.  
