@@ -14,6 +14,16 @@ Optionaler "darkstyle" und Einblenden bestimmter Features (siehe style settings 
 1. Installiere die [Browsererweiterung Stylus](https://add0n.com/stylus.html) (Direktlinks auf der Seite oben rechts)
 2. Klicke hier: [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/gmx/gmx-geputzt.user.css)
 
+
+# Screenshots
+
+![login dark](./screenshots/2019-04-27%2021_19_08.png)
+![login hell](./screenshots/2019-04-27%2021_19_37.png)
+![postfach dark](./screenshots/2019-04-27%2021_21_07.png)
+![hell dark](./screenshots/2019-04-27%2021_20_46.png)
+![style optionen](./screenshots/2019-04-27%2021_21_18.png)
+
+
 # Weitere Informationen
 
 ## Ladezeiten verkürzen / Ressourcen ganz blockieren
