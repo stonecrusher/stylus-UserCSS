@@ -13,7 +13,6 @@ Verkleinert den header und ändert die Farben auf angenehmeres grau.
 
 Ich habe die Farben zwar einstellbar gemacht, aber nicht wirklich getestet, ob bei anderen als den Standardfarben alles lesbar bleibt. Bei Problemen bitte melden.
 
+# Screenshot
 
-# Changelog
-
-- 2018-08-06 Initial release
+![ebay-kleinanzeigen screenshot](2019-04-27%2020_22_56.png)
