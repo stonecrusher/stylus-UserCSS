@@ -1,0 +1,117 @@
+/* ==UserStyle==
+@name           mail.de
+@namespace      Stonecrusher
+@version        1.0.0
+@license        CC-BY-NC-SA-4.0
+@description    Werbung entfernt, etwas abgedunkelt
+@author         Stonecrusher
+@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/mailde
+@supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
+@preprocessor   stylus
+
+@var checkbox colorchange 'Farben ändern'    1
+@var color    var_bg      'Hintergrundfarbe' #b3b3b3
+@var color    var_text    'Schriftfarbe'     #294066
+==/UserStyle== */
+
+@-moz-document url("https://mail.de/") {
+    #contactUsButton,
+    #motto,
+    #navigation,
+    #content,
+    #footer,
+    .mdebn,
+    #mobMenu {
+        display: none !important;
+    }
+
+    #header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        top: 0 !important;
+    }
+    #logo {
+        order: 1 !important;
+    }
+    #hpLogin {
+        order: 2 !important;
+    }
+
+    #header, #content, #footer {
+        max-width: initial !important;
+    }
+    #header {
+        height: 100% !important;
+    }
+    #logo {
+        margin-top: 20vh !important;
+    }
+
+    a[href="https://registrierung.mail.de/"] {
+        display: none !important;
+    }
+    #hpLogin a {
+        margin-left: 131px !important;
+    }
+}
+@-moz-document domain("my.mail.de") {
+    #mdeSideProp, .mdePropS,
+    .mdePropC {
+        display: none !important;
+    }
+    #appTabs > [data-tab="games"],
+    #appTabs > [data-tab="offers"],
+    .premiumUpgrade,
+    #mdeSideProp,
+    #vipDashboardControls > li:nth-of-type(n + 3),
+    #vipMailControls > li:nth-of-type(n + 3),
+    .MooDialogFreeMail,
+    #overlay,
+    a[href="https://registrierung.mail.de/"] {
+        display: none !important;
+    }
+    body {
+        overflow: scroll !important;
+    }
+    /* Mail preview header */
+    .mailPreviewDisplay .displayMailUserPic {
+        height: 47px !important;
+        width: 36px !important;
+        background-size: contain !important;
+        margin-top: -3px !important;
+    }
+    .displayMailHeaders {
+        min-height: initial !important;
+    }
+    .mailHeadFrom {
+        margin-bottom: 4px !important;
+    }
+    .mailHeaderFrame:not(.mailHeaderFrameClosed) {
+        padding-bottom: 4px !important;
+    }
+
+    #logout {
+        margin-top: 20vh !important;
+    }
+    
+    if colorchange {
+        .light .box, .light .tabs li.active, .light #helpView .controlBar, .light #cscView .controlBar, .light #cscContainer .subView .customerFolderArea.box {
+            background: var_bg;
+            color: var_text;
+        }
+        .light #search .navBox .mask, .light #dashboardContent,
+        body.light, .light #helpContainer, .light #cscContainer,
+        .mailPreviewDisplay,
+        body, #logout {
+            background-color: var_bg;
+        }
+    }
+}
+@-moz-document url("https://my.mail.de/erfolgreich-ausgeloggt") {
+    #mdeva,
+    .container,
+    .footer {
+        display: none !important;
+    }
+}
