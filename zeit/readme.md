@@ -26,6 +26,10 @@ Artikelseiten mit Kommentaren sind ca. 33% k√ºrzer. Der Style ist nicht auf Sch√
 2. Klicke hier: [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/zeit/zeit-condensed.user.css)
 
 
+# Screenshot
+
+![Zeit.de kompakt Screenshot](2019-04-27_zeit.de.jpg)
+
 
 # Weitere Informationen
 
