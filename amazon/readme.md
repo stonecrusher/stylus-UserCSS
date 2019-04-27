@@ -1,7 +1,7 @@
 # Description
 
 This is my personal approach on amazon.de
-It should also work for other country's domains, but is untested.
+It should also work for other countries' domains, but is untested.
 
 - Change colors
 - Get rid of self-advertisement (which is often not blocked by adblockers) and unnecessary big margins
@@ -12,7 +12,7 @@ But the good thing is you are very free to change the colors - either via style 
 
 # Installation
 
-1. Install browser extension [Stylus](https://add0n.com/stylus.html) (download links are on top right)
+1. Install browser extension [Stylus](https://add0n.com/stylus.html) (download links are on top right).
 2. Click here: [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css)
 
 # Screenshots
