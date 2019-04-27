@@ -21,19 +21,19 @@ Am übersichtlichsten ist es mit einem Browserzoom von 80%. Dazu auf der Seite e
 # Screenshots
 
 Vorher
-![1](https://user-images.githubusercontent.com/1388389/42376555-d3b56680-811f-11e8-9816-8201bc142b1b.png)
+![1](https://user-images.githubusercontent.com/1388389/42376555-d3b56680-811f-11e8-9816-8201bc142b1b.jpg)
 Nachher
-![2](https://user-images.githubusercontent.com/1388389/42376556-d3d668a8-811f-11e8-95bd-9ec2f60a1d1f.png)
+![2](https://user-images.githubusercontent.com/1388389/42376556-d3d668a8-811f-11e8-95bd-9ec2f60a1d1f.jpg)
 
 Vorher
-![7](https://user-images.githubusercontent.com/1388389/42378709-8979dbba-8128-11e8-8eb5-e61539cbd60e.png)
+![7](https://user-images.githubusercontent.com/1388389/42378709-8979dbba-8128-11e8-8eb5-e61539cbd60e.jpg)
 Nachher
-![8](https://user-images.githubusercontent.com/1388389/42378708-895d2240-8128-11e8-9cff-6e1932412eb9.png)
+![8](https://user-images.githubusercontent.com/1388389/42378708-895d2240-8128-11e8-9cff-6e1932412eb9.jpg)
 
 Vorher
-![5](https://user-images.githubusercontent.com/1388389/42376552-d375154e-811f-11e8-94fb-89499f85f30c.png)
+![5](https://user-images.githubusercontent.com/1388389/42376552-d375154e-811f-11e8-94fb-89499f85f30c.jpg)
 Nachher
-![6](https://user-images.githubusercontent.com/1388389/42376554-d397b702-811f-11e8-92a4-79148f2e02eb.png)
+![6](https://user-images.githubusercontent.com/1388389/42376554-d397b702-811f-11e8-92a4-79148f2e02eb.jpg)
 
 # Changelog
 
