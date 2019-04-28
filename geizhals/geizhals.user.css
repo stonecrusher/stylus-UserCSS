@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.0.0
+@version        1.0.1
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -11,6 +11,7 @@
 
 @var color    var_bg0    "Hintergrund 1"   #2a2a2a
 @var color    var_text   "Schriftfarbe"    #cccccc
+@var color    var_link   "Linkfarbe"       #94c2ff
 @var color    var_black  "Schwarz"         #333333
 @var color    var_blue   "Blau"            #2a2a38
 @var color    var_orange "Orange"          #714e00
@@ -26,12 +27,9 @@ var_bg3 = lighten(var_bg0,20%)
 .logotop {
     filter: grayscale(100%) invert(82%) !important;
 }
-
 .modal__container {
-    filter: invert(85%) !important;
-    color: lighten(var_bg0,5%) !important;
+    background-color: var_bg2 !important;
 }
-
 div#gh_content_wrapper,
 body#ghbody,
 div.nl_box,
@@ -44,7 +42,6 @@ th.xf_th,
 #gh_filterbox {
     background-color: var_bg0 !important;
 }
-
 .boxfm,
 .boxfmh,
 a.gh_pag_i {
@@ -60,9 +57,6 @@ a.gh_pag_i:hover {
     border-color: var_bg3 !important;
     text-decoration: none !important;
 }
-
-a,
-a:visited,
 div#gh_leftnav,
 body#ghbody,
 div.nl_box,
@@ -97,8 +91,6 @@ a.btn3,
 .categorylist_headline, .gh_listtitle, div.arthdr {
     color: var_text !important;
 }
-
-
 #xf_table.xf_this_cat_open .xf_tr:nth-child(2n+1),
 .productlist__header,
 .productlist__header .productlist__compare,
@@ -112,56 +104,40 @@ a.btn3,
 table.gh_fstbl > tbody > tr:nth-child(2n) {
     background-color: var_bg1 !important;
 }
-
-
 div#gh_hdr {
     background: var_bg0 !important;
     color: var_text !important;
 }
-
 li.gh_tabs {
     background: var_bg0 !important;
     border-right: 2px solid var_bg3 !important;
     /* *float: left; */
 }
-
 div#gh_statline {
     background: var_bg3 !important;
     color: var_text !important;
 }
-
 #gh_main {
     background: linear-gradient(90deg, var_bg2 17.8em, var_text 0) !important;
     background-color: var_bg2 !important;
 }
-
-
-
 #ghbody div.ghinfoboxh,
 .box10h,
 #ghfooter,
 #gh_content_wrapper.gh_content_wrapper--new, #gh_content_wrapper_nonav.gh_content_wrapper--new {
     background: var_bg2 !important;
 }
-
 #ghbody div.ghinfobox {
     border: 1px solid var_bg3 !important;
 }
-
-
 div.gh_srch_wrp {
     background: var_bg2 !important;
-    box-shadow: inset 1px 1px 4px lighten(var_bg3,5%), 0 0 3px rgba(0, 0, 0, .2) !important;
+    box-shadow: inset 1px 1px 4px lighten(var_bg3,5%), 0 0 3px #00000033 !important;
 }
-
-
-
 div#gh_hdr_toplinks {
     text-shadow: none !important;
     color: var_text !important;
 }
-
-
 .gh_listtitle,
 div.arthdr {
     color: var_text !important;
@@ -169,22 +145,16 @@ div.arthdr {
     background: linear-gradient(180deg, var_bg2, var_bg2) !important;
     border-bottom: none !important;
 }
-
-
 .gh_cat {
     border: 1px solid var_bg2 !important;
 }
 .t10i {
     border-bottom: 1px solid var_bg2 !important;
 }
-
-
 .gh_gradient0 {
     background: linear-gradient(var_bg2, var_bg0) !important;
-    color: rgb(213, 213, 213) !important;
+    color: #d5d5d5 !important;
 }
-
-
 #xf_table .xf_tr {
     background-color: var_bg0 !important;
     border-bottom: .1em solid var_bg2 !important;
@@ -198,9 +168,6 @@ th.xf_th {
 .productlist__product:nth-child(2n) {
     background-color: var_bg1 !important;
 }
-
-
-
 #ghbody .av_e,
 .offer__delivery-time {
     background: var_bg2 !important;
@@ -218,8 +185,6 @@ th.xf_th {
 .offer--shortly .offer__delivery-time {
     background: #3c3c0e !important;
 }
-
-
 .lh1,
 a.menulink0,
 .offer__delivery-header {
@@ -236,31 +201,25 @@ a.menulink0,
     background-color: var_bg1 !important;
 }
 .table-of-content__item:hover,
-tr.compare__row:nth-child(1).highligh,
+tr.compare__row:nth-child(1).highlight,
 .gh-data-table__row:nth-child(2n+1) {
     background-color: var_bg0 !important;
 }
-
 .offer:nth-child(2n) {
     background-color: var_bg0 !important;
 }
-
 .offer_bt,
 .offer_bt:visited {
-    background: var_bg1 !important;
-    background: linear-gradient(var_bg1, var_bg0) !important;
+    background: linear-gradient(var_bg2, var_bg0) !important;
     border: 1px solid var_bg1 !important;
     color: var_text !important;
 }
-
 .ct-label {
     fill: var_text !important;
     color: var_text !important;
     font-size: .75rem !important;
     line-height: 1 !important;
 }
-
-
 
 /**********************************************************************************************/
 /**********************************************************************************************/
@@ -277,6 +236,22 @@ if reduce {
         display: none !important;
     }
 }
+/* Links */
+a,
+.offer__price-discount-text__inner,
+.rating-post__footer > label {
+    color: var_link !important;
+    &:visited {
+        color: darken(var_link,20%) !important;
+    }
+}
+a.n,
+a.n:visited,
+a.gh_tabs,
+a.gh_tabs:visited,
+a.gh_statline {
+    color: var_text !important;
+}
 /* Seitenlänge */
 div#gh_content_wrapper,
 #gh_leftnav {
@@ -291,15 +266,23 @@ body.fullscreen-gallery .galroot {
 .rating-post__replies > .gh_clay {
     background-color: var_bg0 !important;
 }
-/* Preisverlauf */
+/* Preisentwicklung */
 .chartist-tooltip {
     background-color: var_bg0 !important;
 }
-.chartist-tooltip::before {
+.chartist-tooltip::before,
+#pricehistory-tooltip::before {
     border-top-color: var_bg0 !important;
 }
 #pricehistory__preview.loaded:hover {
-    background-color: rgba(244, 246, 251, .3) !important;
+    background-color: #f4f6fb4d !important;
+}
+.ct-grid {
+    stroke: #ffffff33 !important;
+}
+#gh_sbgraphhinfo,
+.rating-graph {
+    background-color: var_bg0 !important;
 }
 /* Suchfeld, Kategorien-Dropdown */
 .gh_searchfld,
@@ -311,23 +294,35 @@ select.gh_searchkat {
 .t10c, a.t10c {
     color: darken(var_text,30%) !important;
 }
+.toplist__link--secondary:visited > b, .toplist__link--secondary > b {
+    color: var_text !important;
+}
+.toplist__headline > span {
+    background-color: var_bg2 !important;
+}
 /* Hintergrund Muster */
 @css {
     div#gh_hdr,
     #gh_main,
     #ghfooter,
-    #gh_wrap {
+    #gh_wrap,
+    body {
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAAB20lEQVRIx4XWuZXDMAwE0C0SAQtggIIYoAAEU+aKOHhYojTrYP2+QfOW/5QIJOih/q8HwF/pb3EX+UPIveYcQGgEHiu9hI+ihEc5Jz5KBIlRRRaJ1JtoSAl5Hw96hLB1/up1tnIXOck5jZQy+3iU2hAOKSH1JvwxHsp+5TLF5MOl1/MQXsVs1miXc+KDbYydyMeUgpPQreZ7fWidbNhkXNJSeAhc6qHmHD8AYovunYyEACWEbyIhNeB9fRrH3hFi0bGPLuEW7xCNaohw1vAlS805nfsrTspclB/hVdoqusg53eH7FWot+wjYpOViX8KbFFKTwlnzvj65P9H/vD0/hibYBGhPwlPO8TmxRsaxsNnrUmUXpNhirlJMPr6Hqq9k5Xn/8iYQHYIuQsWFC6Z87IOxLxHphSY4SpuiU87xJnJr5axfeRd+lnMExXpEWPpuZ1v7qZdNBOjiHzDREHX5fs5Zz9p6X0vVKbKKchlSl5rv+3p//FJ/PYvoKryI8vs+2G9lzRmnEKkh+BU8yDk515jDj/HAswu7CCz6U/Mxb/PnC9N41ndpU4hUU7JGk/C9PmP/M2xZYdvBW2PObyf1IUiIzoHmHW9yTncliYs9A9tVNppdShfgQaTLMf+j3X723tLeHgAAAABJRU5ErkJggg==) !important;
     }
 }
+/* Footer */
 #ghfooter {
     border-top: 2px solid var_bg3 !important;
+    margin-top: 20px !important;
 }
 #ghfooter,
 #ghfooter a,
 #ghfootercop,
 .ghfootlh {
     color: darken(var_text,40%) !important;
+}
+.gh_blatext {
+    border-color: var_bg3 !important;
 }
 /* Top Menu */
 li.gh_tabs {
@@ -336,7 +331,10 @@ li.gh_tabs {
         background: linear-gradient(to bottom,lighten(var_blue,20%),var_blue) !important;
     }
     &.gh_tabs_selected {
-        background: linear-gradient(to bottom,lighten(var_blue,5%),var_bg3) !important;
+        background: linear-gradient(to bottom,lighten(var_blue,10%) 60%,var_bg3) !important;
+        &>a {
+            color: white !important;
+        }
     }
 }
 /* Filter */
@@ -349,7 +347,8 @@ li.gh_tabs {
     background: lighten(var_blue,10%) !important;
     color: var_text !important;
 }
-img[title="Hilfe"] {
+img[title="Hilfe"],
+img[src="//gzhls.at/b/info.png"] {
     filter: invert(1) !important;
 }
 .xf_i.xf_all_highlight {
@@ -362,15 +361,64 @@ img[title="Hilfe"] {
 a.xf_msel:hover .xf_n::after {
     background: var_blue !important;
 }
+/* Produktseite */
+.offerlist__header-cell {
+    background: lighten(var_blue,10%) !important;
+    color: var_text !important;
+}
+.offer .offer__delivery:not(.offer__price), .offer .offer__details:not(.offer__price), .offer .offer__merchant-rating:not(.offer__price), .offer .offer__merchant:not(.offer__price), .offer .offer__price:not(.offer__price),
+.offerlist__header-cell:not(.offer__price),
+.av_sel.av_e,
+.offerlist__header-cell,
+.offer .offer__delivery, .offer .offer__details, .offer .offer__merchant, .offer .offer__merchant-rating, .offer .offer__price {
+    border-color: var_bg2 !important;
+}
+.images__control:hover,
+#gallery__close:hover {
+    background-color: var_bg2 !important;
+}
+.thumbWrap .slide_container:hover {
+    border-color: var_bg3 !important;
+}
 /* Seitennavi aktiv */
 .ghnavsub {
     background: #b2b2b238 !important;
 }
+/* Trenner */
+.paginator__lazy-loader--show.gh-basic__button--primary, .paginator__lazy-loader-complete--show.gh-basic__button--primary, .paginator__lazy-loader-error--show.gh-basic__button--primary, .paginator__lazy-loader-progress--show.gh-basic__button--primary {
+    &:hover {
+        background-color: var_bg3 !important;
+    }
+}
+/* Gutschein Popup */
+.offer__price-discount-overlay--inner {
+    background-color: var_bg3 !important;
+    &::after {
+        border-bottom-color: var_bg3 !important;
+    }
+}
+.offer__price-discount-overlay--inner {
+    border-color: var_text !important;
+    &::before {
+        border-bottom-color: var_text !important;
+    }
+}
+.offer__price-discount-overlay--close {
+    filter: invert(1) !important;
+}
+/* Händlerbewertung / Kommentar verfassen */
+.gh-basic__button--secondary, .gh-basic__button--secondary:visited {
+    background-color: var_bg2 !important;
+}
+.rating_value {
+    color: var_text !important;
+}
 
 
-/** Produktvergleich von Original **/
+
+/** Produktvergleich von originaler productcomparison.ghp.css **/
 .comparelist__button {
-    color: lighten(var_blue, 20%) !important;
+    color: lighten(var_blue, 50%) !important;
 }
 #compare__container {
     background-color: var_black !important;
