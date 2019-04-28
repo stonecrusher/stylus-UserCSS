@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.7
+@version        1.9.10
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -496,7 +496,8 @@
         #prodDetails .secHeader,
         .expansion-container,
         .masrw-box,
-        .masrw-box .masrw-box-footer {
+        .masrw-box .masrw-box-footer,
+        #tracking-events-container .tracking-event-time-left .tracking-event-vertLine {
             border-color: var_bg6 !important;
         }
         
@@ -880,7 +881,8 @@
         }
         /* buttons */
         a.cu-btn, a.cu-btn span, a.cu-contact-channel-btn, a.cu-contact-channel-btn span,
-        .masrw-buy-box .masrw-button .masrw-button-text {
+        .masrw-buy-box .masrw-button .masrw-button-text,
+        #rhf .rhf-sign-in-button .action-inner, #rhf a.action-button:active .action-inner, #rhf a.action-button:hover .action-inner, #rhf a.action-button:link .action-inner, #rhf a.action-button:visited .action-inner {
             color: black !important;
         }
         
@@ -1137,7 +1139,9 @@
         #hqpWrapper,
         #dp-ads-center-promo-top_feature_div,
         #quickPromoDivId,
-        #promotions-list_feature_div {
+        #promotions-list_feature_div,
+        .rush-component[data-component-type="s-brand-footer-slot"],
+        .rush-component[data-component-type="s-footer-slot"] {
             display: none !important;
         }
 
