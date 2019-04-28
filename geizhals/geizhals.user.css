@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.0.1
+@version        1.0.2
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -542,6 +542,9 @@ a.xf_msel:hover .xf_n::after {
 }
 .arrow {
     border-color: var_text !important;
+}
+.compare__table td, .compare__table th {
+    border-color: darken(var_text,40%) !important;
 }
 
 }
