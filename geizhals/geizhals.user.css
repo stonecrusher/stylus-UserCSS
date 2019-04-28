@@ -1,0 +1,499 @@
+/* ==UserStyle==
+@name           Geizhals Dark Grey
+@namespace      Stonecrusher
+@version        1.0.0
+@license        CC-BY
+@description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
+@author         evea, Stonecrusher
+@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/geizhals
+@supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
+@preprocessor   stylus
+
+@var color    var_bg0    "Hintergrund 1"   #2a2a2a
+@var color    var_text   "Schriftfarbe"    #cccccc
+@var color    var_black  "Schwarz"         #333333
+@var color    var_blue   "Blau"            #2a2a38
+@var color    var_orange "Orange"          #714e00
+@var checkbox reduce     "Kram ausblenden" 1
+==/UserStyle== */
+
+var_bg1 = darken(var_bg0,10%)
+var_bg2 = lighten(var_bg0,10%)
+var_bg3 = lighten(var_bg0,20%)
+
+@-moz-document domain("geizhals.at"), domain("geizhals.de"), domain("geizhals.eu"), domain("skinflint.co.uk"), domain("cenowarka.pl") {
+
+.logotop {
+    filter: grayscale(100%) invert(82%) !important;
+}
+
+.modal__container {
+    filter: invert(85%) !important;
+    color: lighten(var_bg0,5%) !important;
+}
+
+div#gh_content_wrapper,
+body#ghbody,
+div.nl_box,
+.ghloginbox,
+.productlist__name,
+.productlist__image,
+#acbox,
+table.gh_fstbl > tbody,
+th.xf_th,
+#gh_filterbox {
+    background-color: var_bg0 !important;
+}
+
+.boxfm,
+.boxfmh,
+a.gh_pag_i {
+    background: var_bg2 !important;
+}
+.gh_pag_i {
+    border-color: var_bg3 !important;
+}
+.gh_pag_act,
+a.gh_pag_i:hover {
+    color: var_text !important;
+    background: #0c355c !important;
+    border-color: var_bg3 !important;
+    text-decoration: none !important;
+}
+
+a,
+a:visited,
+div#gh_leftnav,
+body#ghbody,
+div.nl_box,
+.ghnavsub,
+a.m,
+a.n,
+a.gh_tabs,
+.ghloginbox,
+.xf_hidden_button,
+.xf_hidden_button:visited,
+.xf_i,
+a.xf_i,
+.productlist__description,
+.gh_afilterbox_h,
+.table-of-content__item,
+.table-of-content__item:visited,
+.productlist__header,
+.btn3,
+a.btn3,
+.productlist__header .productlist__item,
+.acbox_ntry > a.acs,
+#xf_table.xf_this_cat_open .xf_tr:nth-child(2n+1),
+.productlist__header,
+.productlist__header .productlist__compare,
+.btn3,
+a.btn3,
+.productlist__breadcrumb,
+.productlist__breadcrumb-dummy,
+.productlist__footer-cell,
+.descr,
+#act1, #act2, #act3,
+.categorylist_headline, .gh_listtitle, div.arthdr {
+    color: var_text !important;
+}
+
+
+#xf_table.xf_this_cat_open .xf_tr:nth-child(2n+1),
+.productlist__header,
+.productlist__header .productlist__compare,
+.btn3,
+a.btn3,
+.productlist__breadcrumb,
+.productlist__breadcrumb-dummy,
+.productlist__footer-cell,
+.descr,
+#act1, #act2, #act3,
+table.gh_fstbl > tbody > tr:nth-child(2n) {
+    background-color: var_bg1 !important;
+}
+
+
+div#gh_hdr {
+    background: var_bg0 !important;
+    color: var_text !important;
+}
+
+li.gh_tabs {
+    background: var_bg0 !important;
+    border-right: 2px solid var_bg3 !important;
+    /* *float: left; */
+}
+
+div#gh_statline {
+    background: var_bg3 !important;
+    color: var_text !important;
+}
+
+#gh_main {
+    background: linear-gradient(90deg, var_bg2 17.8em, var_text 0) !important;
+    background-color: var_bg2 !important;
+}
+
+
+
+#ghbody div.ghinfoboxh,
+.box10h,
+#ghfooter,
+#gh_content_wrapper.gh_content_wrapper--new, #gh_content_wrapper_nonav.gh_content_wrapper--new {
+    background: var_bg2 !important;
+}
+
+#ghbody div.ghinfobox {
+    border: 1px solid var_bg3 !important;
+}
+
+
+div.gh_srch_wrp {
+    background: var_bg2 !important;
+    box-shadow: inset 1px 1px 4px lighten(var_bg3,5%), 0 0 3px rgba(0, 0, 0, .2) !important;
+}
+
+
+
+div#gh_hdr_toplinks {
+    text-shadow: none !important;
+    color: var_text !important;
+}
+
+
+.gh_listtitle,
+div.arthdr {
+    color: var_text !important;
+    background: var_bg2 !important;
+    background: linear-gradient(180deg, var_bg2, var_bg2) !important;
+    border-bottom: none !important;
+}
+
+
+.gh_cat {
+    border: 1px solid var_bg2 !important;
+}
+.t10i {
+    border-bottom: 1px solid var_bg2 !important;
+}
+
+
+.gh_gradient0 {
+    background: linear-gradient(var_bg2, var_bg0) !important;
+    color: rgb(213, 213, 213) !important;
+}
+
+
+#xf_table .xf_tr {
+    background-color: var_bg0 !important;
+    border-bottom: .1em solid var_bg2 !important;
+}
+th.xf_th {
+    border-right: .2em solid var_bg2 !important;
+}
+.xf_tr.xf_tr_visible .xf_th {
+    border-color: darken(var_text,30%) !important;
+}
+.productlist__product:nth-child(2n) {
+    background-color: var_bg1 !important;
+}
+
+
+
+#ghbody .av_e,
+.offer__delivery-time {
+    background: var_bg2 !important;
+}
+.av_sel.av_e,
+.av_sel.av_l,
+.av_sel.av_k {
+    border-bottom: 1px solid var_bg2 !important;
+}
+#ghbody .av_l,
+.offer--available .offer__delivery-time {
+    background: #003806 !important;
+}
+#ghbody .av_k,
+.offer--shortly .offer__delivery-time {
+    background: #3c3c0e !important;
+}
+
+
+.lh1,
+a.menulink0,
+.offer__delivery-header {
+    color: var_text !important;
+}
+.lh1 {
+    background: var_bg1 !important;
+    font-weight: 800 !important;
+    border-top: 1px solid darken(var_text,30%) !important;
+}
+.gh-card,
+.compare__row:nth-child(2n),
+.compare__table tr:nth-child(2n) td.compare__data.no-highlight {
+    background-color: var_bg1 !important;
+}
+.table-of-content__item:hover,
+tr.compare__row:nth-child(1).highligh,
+.gh-data-table__row:nth-child(2n+1) {
+    background-color: var_bg0 !important;
+}
+
+.offer:nth-child(2n) {
+    background-color: var_bg0 !important;
+}
+
+.offer_bt,
+.offer_bt:visited {
+    background: var_bg1 !important;
+    background: linear-gradient(var_bg1, var_bg0) !important;
+    border: 1px solid var_bg1 !important;
+    color: var_text !important;
+}
+
+.ct-label {
+    fill: var_text !important;
+    color: var_text !important;
+    font-size: .75rem !important;
+    line-height: 1 !important;
+}
+
+
+
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/*** ERWEITERUNG ***/
+/* Kram ausblenden */
+if reduce {
+    #gh_boxfm_js,
+    #gh_leftnav > div,
+    .serviceWidget,
+    img[src="//gzhls.at/b/ds_fb2.png"],
+    .heise-coop,
+    #gh_blah {
+        display: none !important;
+    }
+}
+/* Seitenlänge */
+div#gh_content_wrapper,
+#gh_leftnav {
+    min-height: initial !important;
+}
+/* Vollbild Produktbilder */
+body.fullscreen-gallery .galroot {
+    border: 1px solid var_bg0 !important;
+    background-color: black !important;
+}
+/* Bewertungs-Antworten */
+.rating-post__replies > .gh_clay {
+    background-color: var_bg0 !important;
+}
+/* Preisverlauf */
+.chartist-tooltip {
+    background-color: var_bg0 !important;
+}
+.chartist-tooltip::before {
+    border-top-color: var_bg0 !important;
+}
+#pricehistory__preview.loaded:hover {
+    background-color: rgba(244, 246, 251, .3) !important;
+}
+/* Suchfeld, Kategorien-Dropdown */
+.gh_searchfld,
+select.gh_searchkat {
+    color: var_text !important;
+}
+/* Top10 */
+.t10i::before,
+.t10c, a.t10c {
+    color: darken(var_text,30%) !important;
+}
+/* Hintergrund Muster */
+@css {
+    div#gh_hdr,
+    #gh_main,
+    #ghfooter,
+    #gh_wrap {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAAB20lEQVRIx4XWuZXDMAwE0C0SAQtggIIYoAAEU+aKOHhYojTrYP2+QfOW/5QIJOih/q8HwF/pb3EX+UPIveYcQGgEHiu9hI+ihEc5Jz5KBIlRRRaJ1JtoSAl5Hw96hLB1/up1tnIXOck5jZQy+3iU2hAOKSH1JvwxHsp+5TLF5MOl1/MQXsVs1miXc+KDbYydyMeUgpPQreZ7fWidbNhkXNJSeAhc6qHmHD8AYovunYyEACWEbyIhNeB9fRrH3hFi0bGPLuEW7xCNaohw1vAlS805nfsrTspclB/hVdoqusg53eH7FWot+wjYpOViX8KbFFKTwlnzvj65P9H/vD0/hibYBGhPwlPO8TmxRsaxsNnrUmUXpNhirlJMPr6Hqq9k5Xn/8iYQHYIuQsWFC6Z87IOxLxHphSY4SpuiU87xJnJr5axfeRd+lnMExXpEWPpuZ1v7qZdNBOjiHzDREHX5fs5Zz9p6X0vVKbKKchlSl5rv+3p//FJ/PYvoKryI8vs+2G9lzRmnEKkh+BU8yDk515jDj/HAswu7CCz6U/Mxb/PnC9N41ndpU4hUU7JGk/C9PmP/M2xZYdvBW2PObyf1IUiIzoHmHW9yTncliYs9A9tVNppdShfgQaTLMf+j3X723tLeHgAAAABJRU5ErkJggg==) !important;
+    }
+}
+#ghfooter {
+    border-top: 2px solid var_bg3 !important;
+}
+#ghfooter,
+#ghfooter a,
+#ghfootercop,
+.ghfootlh {
+    color: darken(var_text,40%) !important;
+}
+/* Top Menu */
+li.gh_tabs {
+    background: linear-gradient(to bottom,lighten(var_blue,10%),var_blue) !important;
+    &:hover {
+        background: linear-gradient(to bottom,lighten(var_blue,20%),var_blue) !important;
+    }
+    &.gh_tabs_selected {
+        background: linear-gradient(to bottom,lighten(var_blue,5%),var_bg3) !important;
+    }
+}
+/* Filter */
+.fltrs,
+.filterbox,
+.productlist__additionalfilter, .productlist__bestpriceoffer, .productlist__compare, .productlist__deliverytime, .productlist__image, .productlist__name, .productlist__offerscount--standard, .productlist__price, .productlist__rating, .productlist__wishlistbuttons {
+    border-color: var_bg2 !important;
+}
+.productlist__header, .productlist__header .btn3, .productlist__header .productlist__item {
+    background: lighten(var_blue,10%) !important;
+    color: var_text !important;
+}
+img[title="Hilfe"] {
+    filter: invert(1) !important;
+}
+.xf_i.xf_all_highlight {
+    background: var_bg2 !important;
+    &:hover {
+        background: var_bg1 !important;
+    }
+}
+.xf_sel:hover .xf_n::after,
+a.xf_msel:hover .xf_n::after {
+    background: var_blue !important;
+}
+/* Seitennavi aktiv */
+.ghnavsub {
+    background: #b2b2b238 !important;
+}
+
+
+/** Produktvergleich von Original **/
+.comparelist__button {
+    color: lighten(var_blue, 20%) !important;
+}
+#compare__container {
+    background-color: var_black !important;
+}
+.collapse_button {
+    background-color: var_orange !important;
+}
+.collapse_button .collapse-text > p {
+    color: lighten(var_black, 10%) !important;
+}
+.pagination__container {
+    background-color: var_black !important;
+}
+.listitem:nth-child(2n) {
+    background-color: lighten(var_black, 15%) !important;
+}
+.compare__button-container {
+    background-color: var_black !important;
+}
+.compare-delete a {
+    color: lighten(var_black, 10%) !important;
+}
+.compare-button.active {
+    background-color: var_blue !important;
+}
+.compare-button.active a {
+    color: var_black !important;
+}
+@media screen and (max-width: 1200px) {
+    .comparelist__button:hover {
+        background-color: lighten(var_black, 12%) !important;
+    }
+}
+.addToListToolTip,
+.comparelist__button-tooltip {
+    background-color: var_blue !important;
+    color: var_black !important;
+}
+.catpage__tooltip {
+    color: var_black !important;
+    background-color: var_blue !important;
+}
+.productlist__compare.block-click.notInList svg path {
+    fill: lighten(var_blue,50%) !important;
+}
+.productlist__compare.block-click.inList svg path {
+    fill: var_orange !important;
+}
+.delete__button-container {
+    background-color: var_black !important;
+}
+.delete__button-confirm {
+    background-color: var_blue !important;
+    color: var_black !important;
+}
+.compare__table td.compare__data.highlight {
+    background-color: lighten(var_orange, 5%) !important;
+}
+.compare__table .highlight:hover td.compare__data.highlight,
+.compare__table .highlight:hover td.compare__data.highlight:hover {
+    background-color: lighten(var_orange, 20%) !important;
+}
+.compare__table td.compare__data.no-highlight {
+    background-color: var_black !important;
+}
+.compare__table .highlight .compare__data,
+.compare__table .highlight:hover .compare__data,
+.compare__table .highlight:hover .compare__data:hover {
+    background-color: lighten(var_blue, 16%) !important;
+}
+.compare__table .highlight .compare__data:hover,
+.compare__table .highlight:hover td.compare__data.no-highlight {
+    background-color: lighten(var_black, 22%) !important;
+}
+.compare__row:nth-child(2n),
+.compare__table tr:nth-child(2n) td.compare__data.no-highlight {
+    background-color: lighten(var_black, 8%) !important;
+}
+.compare__row:hover {
+    background-color: lighten(var_black, 25%) !important;
+}
+.compare__table .compare__offer a,
+.compare__table .compare__offer a:visited {
+    background-color: lighten(var_blue, 10%) !important;
+    color: var_black !important;
+}
+.compare__offer a:hover {
+    background-color: lighten(var_blue, 15%) !important;
+}
+.compare__table--fixed-header {
+    background-color: var_black !important;
+}
+.compare__remove,
+.compare__remove:visited {
+    background-color: lighten(var_black, 14%) !important;
+    color: lighten(var_black, 5%) !important;
+}
+.compare__remove:hover {
+    background-color: lighten(var_black, 13%) !important;
+}
+.compare__base.fb-bt-unlock-checkbox:checked + .fb-bt-unlock-lever:after,
+.fb-bt-unlock-checkbox:checked + .fb-bt-unlock-lever {
+    background-color: lighten(var_orange, 25%) !important;
+}
+/* Produktvergleich Ergänzung */
+.compare-delete a,
+.compare-button.active a,
+.compare__table .compare__offer a,
+.compare__table .compare__offer a:visited,
+.compare__remove,
+.compare__remove:visited,
+.collapse_button .collapse-text > p {
+    color: var_text !important;
+}
+.compare__table .compare__offer a,
+.compare__table .compare__offer a:visited {
+    border-color: var_bg0 !important;
+}
+.gh_stars {
+    filter: invert(1) !important;
+}
+.arrow {
+    border-color: var_text !important;
+}
+
+}
