@@ -17,17 +17,17 @@ But the good thing is you are very free to change the colors - either via style 
 
 # Screenshots
 
-![amazon](https://user-images.githubusercontent.com/1388389/43968604-ee534782-9cc7-11e8-8f36-00d2b2fd2451.jpg)
+![amazon](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/screenshots/43968744-4d36c6d4-9cc8-11e8-9bab-467f4da63409.jpg)
 
-![amazon2](https://user-images.githubusercontent.com/1388389/43968744-4d36c6d4-9cc8-11e8-9bab-467f4da63409.jpg)
+![amazon2](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/screenshots/43968604-ee534782-9cc7-11e8-8f36-00d2b2fd2451.jpg)
 
 *Style settings*
 
-![amazon3](https://user-images.githubusercontent.com/1388389/43968840-90dcadea-9cc8-11e8-801e-a8fa808916a6.png)
+![amazon3](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/screenshots/43968840-90dcadea-9cc8-11e8-801e-a8fa808916a6.png)
 
 *Review bar width*
 
-![amazon-percentagebar](https://user-images.githubusercontent.com/1388389/41170969-0a9cc800-6b4f-11e8-999c-6d91646ec5c8.png)
+![amazon-percentagebar](https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/screenshots/41170969-0a9cc800-6b4f-11e8-999c-6d91646ec5c8.png)
 
 # Changelog
 
