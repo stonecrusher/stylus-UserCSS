@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.3.4
+@version        3.3.5
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -209,9 +209,10 @@
     }
     
     /* Allgemeiner Sicherheitshinweis */
-    .mfp-bg, .mfp-wrap {
+    /* 2019-05-24: Deaktiviert, da es u.a. Popups von "Anzeige melden" unterdrückt */
+    /*.mfp-bg, .mfp-wrap {
         display: none !important;
-    }
+    }/**/
     html {
         overflow: auto !important;
     }
