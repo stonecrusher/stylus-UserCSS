@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.10
+@version        1.9.14
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -98,7 +98,6 @@
         .dragonfly section.menuPanel,
         .dropdownSelector .dropdownMenu h3,
         #contextMenu li,
-        .suggestions-list,
         .acs-product-card-for-container,
         .acs-carousel .a-carousel-goto-nextpage, .acs-carousel .a-carousel-goto-prevpage,
         .ap_content[role="alertdialog"],
@@ -229,7 +228,10 @@
         .dsv-whiteBox table,
         .dsv-primary, .dsv-secEyebrow h2,
         .cs-help-header,
-        #pageContent {
+        #pageContent,
+        .imgblock,
+        /* #gw-asin-popover .imgblock */
+        #superleafActionPanelWrapper {
             background: var_bg1 !important;
         }
         .a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
@@ -346,6 +348,12 @@
             &:hover {
                 background: var_bg3 !important;
             }
+        }
+        .instantsavings-button {
+            background: var_bg2 !important;
+        }
+        .instantsavings-button::after {
+            color: var_font1 !important;
         }
         /* Text on yellow buttons */
         .a-button-oneclick,
@@ -606,7 +614,8 @@
         .reviewsLightbox .loadingIcon,
         .reviewsLightbox .large-loadingIcon,
         .feed-carousel-control,
-        .ysh-carousel-close-icon {
+        .ysh-carousel-close-icon,
+        .a-checkbox-label > img[src*="/gifts_icon"] {
             filter: invert(1) !important;
         }
         /** TODO: Fix more spinners **/
@@ -635,7 +644,8 @@
         .s-back-arrow, .s-forward-arrow,
         .cu-bottom, .cu-bottom-left, .cu-eb-bottom, .cu-eb-bottom-left, .cu-eb-top, .cu-eb-top-left, .cu-top, .cu-top-left,
         .cu-contact-channel-recommended,
-        .ces_frame img[src*="/logo/"] {
+        .ces_frame img[src*="/logo/"],
+        .apx-add-pm-trigger-common-image {
             filter: invert(0.8) !important;
         }
         .nav-image,
@@ -685,7 +695,8 @@
             border-bottom-color: var_bg6 !important;
         }
         /* Search suggestions hover */
-        #suggestions > .s-suggestion:hover {
+        #suggestions > .s-suggestion:hover,
+        #suggestions > .s-selected {
             background: var_bg2 !important;
         }
         #bottomBar .srSprite {
@@ -882,7 +893,8 @@
         /* buttons */
         a.cu-btn, a.cu-btn span, a.cu-contact-channel-btn, a.cu-contact-channel-btn span,
         .masrw-buy-box .masrw-button .masrw-button-text,
-        #rhf .rhf-sign-in-button .action-inner, #rhf a.action-button:active .action-inner, #rhf a.action-button:hover .action-inner, #rhf a.action-button:link .action-inner, #rhf a.action-button:visited .action-inner {
+        #rhf .rhf-sign-in-button .action-inner, #rhf a.action-button:active .action-inner, #rhf a.action-button:hover .action-inner, #rhf a.action-button:link .action-inner, #rhf a.action-button:visited .action-inner,
+        ._2nSRgu > span, ._2nSRgu:focus > span, ._2nSRgu:hover > span {
             color: black !important;
         }
         
@@ -1254,11 +1266,26 @@
         }
     }
     if hide-similar {
-        #sims-consolidated-1_feature_div,
+        div[id^="sims-consolidated-"],
+        /*#sims-consolidated-1_feature_div,
         #sims-consolidated-2_feature_div,
         #sims-consolidated-3_feature_div,
         #sims-consolidated-4_feature_div,
-        #recommendations_feature_div {
+        */
+        div[id*="-similarities-sims-feature-"],
+        /*
+        #p13n-m-desktop-dp-sims_session-similarities-sims-feature-1,
+        #p13n-m-desktop-dp-sims_session-similarities-sims-feature-2,
+        #p13n-m-desktop-dp-sims_session-similarities-sims-feature-3,
+        #p13n-m-desktop-dp-sims_session-similarities-sims-feature-4,
+        #p13n-m-desktop-dp-sims_purchase-similarities-sims-feature-1,
+        #p13n-m-desktop-dp-sims_purchase-similarities-sims-feature-1,
+        #p13n-m-desktop-dp-sims_purchase-similarities-sims-feature-1,
+        #p13n-m-desktop-dp-sims_purchase-similarities-sims-feature-1,
+        */
+        #recommendations_feature_div,
+        #huc-last-upsell-rows > .a-row:last-child,
+        div[cel_widget_id^="desktop-dp-sims_hardlines-day0-sims-feature-"] {
             display: none !important;
         }
     }
