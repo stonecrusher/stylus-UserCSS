@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.14
+@version        1.9.16
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -174,7 +174,9 @@
         .deck-container.sub .card.desktop,
         .gw-card-layout .desktop-row > div,
         .expansion-container,
-        #ewc #ewc-active-cart .ewc-top-msg .ewc-alert-inline-info .ewc-alert-inner {
+        #ewc #ewc-active-cart .ewc-top-msg .ewc-alert-inline-info .ewc-alert-inner,
+        .cs-help-content .cs-help-note,
+        #nav-subnav.spacious[data-category="dmusic"] {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -793,7 +795,8 @@
         .carrierRelatedInfo-mfn-providerTitle,
         #errorPageContainer .widgetHeader, #mapTracking-bottomSheet-container .widgetHeader, #pageContainer .widgetHeader,
         .ces_frame h1, .ces_frame legend, .ces_frame #comment_label,
-        div.bucket {
+        div.bucket,
+        #nav-subnav.spacious .nav-a.nav-active .nav-a-content, #nav-subnav.spacious .nav-a:hover .nav-a-content {
             color: var_font1 !important;
         }
         input, select, textarea,
