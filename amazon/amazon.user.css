@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.18
+@version        1.9.19
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -1297,7 +1297,8 @@
         */
         #recommendations_feature_div,
         #huc-last-upsell-rows > .a-row:last-child,
-        div[cel_widget_id^="desktop-dp-sims_hardlines-day0-sims-feature-"] {
+        div[cel_widget_id^="desktop-dp-sims_hardlines-day0-sims-feature-"],
+        #attach-accessories {
             display: none !important;
         }
     }
