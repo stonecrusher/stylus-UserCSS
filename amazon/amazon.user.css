@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.16
+@version        1.9.18
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -176,7 +176,11 @@
         .expansion-container,
         #ewc #ewc-active-cart .ewc-top-msg .ewc-alert-inline-info .ewc-alert-inner,
         .cs-help-content .cs-help-note,
-        #nav-subnav.spacious[data-category="dmusic"] {
+        #nav-subnav.spacious[data-category="dmusic"],
+        #sp_rar_shared,
+        #attach-desktop-sideSheet .attach-primary-atc-confirm-box,
+        #attach-desktop-sideSheet div.attach-sidesheet-card,
+        #attachDisplayAddBaseAlert {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -214,7 +218,8 @@
         .compositeThumbnailContentView,
         #membershipInfoLeftPanelDiv,
         .bxc-grid__text--light.bxc-grid-overlay--background,
-        .vpc_coupon_grid_more_coupons:hover, .vpc_coupon_grid_get_more_coupons:hover {
+        .vpc_coupon_grid_more_coupons:hover, .vpc_coupon_grid_get_more_coupons:hover,
+        .a-scroller.attach-accessory-section {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -266,6 +271,9 @@
         }
         center > div[style^="background-color:#eff7fe;"] {
             background-color: var_bg3 !important;
+        }
+        #attach-desktop-sideSheet .close-button::after, #attach-desktop-sideSheet .close-button::before {
+            background-color: var_font1 !important;
         }
         .wl-list.selected,
         .GB-SUPPLE .filters,
@@ -1156,7 +1164,8 @@
         #quickPromoDivId,
         #promotions-list_feature_div,
         .rush-component[data-component-type="s-brand-footer-slot"],
-        .rush-component[data-component-type="s-footer-slot"] {
+        .rush-component[data-component-type="s-footer-slot"],
+        #cm_cr-rvw_summary-ads {
             display: none !important;
         }
 
