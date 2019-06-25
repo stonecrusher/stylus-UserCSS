@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.2
+@version      2.3.3
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -40,19 +40,33 @@
   section.cookie-lasche-hp, /* Cookie Hinweis */
   .cloud-storage-bar--extend-link,
   #loginsearch-login > .netID-container,
-  #loginsearch-login > .domain-check {
+  #loginsearch-login > .domain-check,
+  .info-layer-inactive,
+  .cookie-lasche-hp {
     display:none !important;
   }
   #header {
     background:transparent !important;
+    border-bottom: none !important;
   }
   body.defaultHero > .wrapper-center {
     max-width:98% !important;
     top: 5em !important;
   }
+  .wrapper-center {
+    border: none !important;
+  }
+  /* Login Button */
+  .btn-wrapper.btn-service > * {
+    background: #ffd800 !important;
+  }
+  .login-submit > .btn-wrapper > input {
+    border-radius: 4px !important;
+    padding-right: 15px !important;
+  }
   /* Login Hintergrund. Kein !important, wird vom DS überschrieben */
   .adWithOutsideComponent, .adWithOutsideComponent body {
-      background-color: #fbfbfb;
+    background-color: #fbfbfb;
   }
   
   /* Logout-Breite für sm *//*
@@ -82,8 +96,12 @@
   #loginsearch {
     display: inline !important;
     width: initial !important;
-    //min-width:250px !important;
-    max-width:462px !important;
+    /*
+    min-width: 250px !important;
+    max-width: 462px !important;
+    /**/
+    max-width: 570px !important;
+    border-radius: 0 !important;
   }
   
   .hint-wrapper { display:block !important; }
@@ -130,7 +148,7 @@
 
   /* Javascript-Hinweis entfernen, falls homepage.js geblockt ist und Seitenbreite für sm fixen */
   .jsDisabled {
-    //min-width:100% !important;
+    /*min-width:100% !important;*/
     margin-top:0 !important;
   }
   .jsDisabled .wrapper-indent::before { content:none !important; }
