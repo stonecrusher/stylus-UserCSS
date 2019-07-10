@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.19
+@version        1.9.21
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -143,7 +143,8 @@
         .interest-follow-widget-carousel-item,
         .avu-content-aui,
         #promise-background-container.background-normal,
-        .masrw-box {
+        .masrw-box,
+        .message-table-row {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -180,7 +181,9 @@
         #sp_rar_shared,
         #attach-desktop-sideSheet .attach-primary-atc-confirm-box,
         #attach-desktop-sideSheet div.attach-sidesheet-card,
-        #attachDisplayAddBaseAlert {
+        #attachDisplayAddBaseAlert,
+        .message-center-left-nav-selected,
+        .message-table-row:hover {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -219,7 +222,8 @@
         #membershipInfoLeftPanelDiv,
         .bxc-grid__text--light.bxc-grid-overlay--background,
         .vpc_coupon_grid_more_coupons:hover, .vpc_coupon_grid_get_more_coupons:hover,
-        .a-scroller.attach-accessory-section {
+        .a-scroller.attach-accessory-section,
+        .message-center-left-nav-selected:hover, .message-center-left-nav:hover {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -320,6 +324,14 @@
         .a-button:not(.a-button-primary):not(.a-button-image) {
             border-color: var_bg7 var_bg5 var_bg5 var_bg7 !important;
             background: var_bg6 !important;
+        }
+        .a-button.a-button-disabled:not(.a-button-primary):not(.a-button-image) {
+            border-color: var_bg3 var_bg2 var_bg2 var_bg3 !important;
+            background: var_bg1 !important;
+        }
+        .a-button.a-button-disabled:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected) .a-button-inner,
+        .a-button.a-button-disabled:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected) .a-button-inner:hover {
+            background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
         }
         .a-button-inner,
         .a-carousel-goto-nextpage, .a-carousel-goto-prevpage,
@@ -515,7 +527,8 @@
         .expansion-container,
         .masrw-box,
         .masrw-box .masrw-box-footer,
-        #tracking-events-container .tracking-event-time-left .tracking-event-vertLine {
+        #tracking-events-container .tracking-event-time-left .tracking-event-vertLine,
+        .message-table-row {
             border-color: var_bg6 !important;
         }
         
@@ -625,7 +638,8 @@
         .reviewsLightbox .large-loadingIcon,
         .feed-carousel-control,
         .ysh-carousel-close-icon,
-        .a-checkbox-label > img[src*="/gifts_icon"] {
+        .a-checkbox-label > img[src*="/gifts_icon"],
+        message-table-row > span > img[title="Attachment"] {
             filter: invert(1) !important;
         }
         /** TODO: Fix more spinners **/
@@ -804,7 +818,8 @@
         #errorPageContainer .widgetHeader, #mapTracking-bottomSheet-container .widgetHeader, #pageContainer .widgetHeader,
         .ces_frame h1, .ces_frame legend, .ces_frame #comment_label,
         div.bucket,
-        #nav-subnav.spacious .nav-a.nav-active .nav-a-content, #nav-subnav.spacious .nav-a:hover .nav-a-content {
+        #nav-subnav.spacious .nav-a.nav-active .nav-a-content, #nav-subnav.spacious .nav-a:hover .nav-a-content,
+        .message-center-nav-path span {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -905,7 +920,8 @@
         a.cu-btn, a.cu-btn span, a.cu-contact-channel-btn, a.cu-contact-channel-btn span,
         .masrw-buy-box .masrw-button .masrw-button-text,
         #rhf .rhf-sign-in-button .action-inner, #rhf a.action-button:active .action-inner, #rhf a.action-button:hover .action-inner, #rhf a.action-button:link .action-inner, #rhf a.action-button:visited .action-inner,
-        ._2nSRgu > span, ._2nSRgu:focus > span, ._2nSRgu:hover > span {
+        ._2nSRgu > span, ._2nSRgu:focus > span, ._2nSRgu:hover > span,
+        ._3x6JZ- > span > span /*play now*/ {
             color: black !important;
         }
         
