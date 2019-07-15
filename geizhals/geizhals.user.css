@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.0.2
+@version        1.0.4
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -289,6 +289,10 @@ body.fullscreen-gallery .galroot {
 select.gh_searchkat {
     color: var_text !important;
 }
+/* Suchvorschläge Dropdown */
+.acbox_ntry.aclhi > a {
+    color: black !important;
+}
 /* Top10 */
 .t10i::before,
 .t10c, a.t10c {
@@ -380,12 +384,16 @@ a.xf_msel:hover .xf_n::after {
 .thumbWrap .slide_container:hover {
     border-color: var_bg3 !important;
 }
+.gh-card, .steel_list_container.whitestripe_first .row:nth-child(2n+1) {
+    background-color: lighten(var_bg1,5%) !important;
+}
 /* Seitennavi aktiv */
 .ghnavsub {
     background: #b2b2b238 !important;
 }
 /* Trenner */
 .paginator__lazy-loader--show.gh-basic__button--primary, .paginator__lazy-loader-complete--show.gh-basic__button--primary, .paginator__lazy-loader-error--show.gh-basic__button--primary, .paginator__lazy-loader-progress--show.gh-basic__button--primary {
+    background-color: var_bg2 !important;
     &:hover {
         background-color: var_bg3 !important;
     }
