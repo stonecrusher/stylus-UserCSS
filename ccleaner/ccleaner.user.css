@@ -3,7 +3,7 @@
 @description    Gets rid of unnecessary upgrade offers and the necessity to scroll down on update page.
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.0.0
+@version        1.0.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ccleaner
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -13,8 +13,9 @@
 @-moz-document regexp("https?:\\/\\/www\\.(piriform|ccleaner)\\.com\\/(.*\\/)?ccleaner\\/update.*") {
     .product-update > div[data-vwo-target="product-update__notice"],
     .product-update__features,
-    .productPromoBottomInner > h5,
-    .productPromoBottomInner > h6,
+    .productPromoBottomInner > div > h5,
+    .productPromoBottomInner > div > h6,
+    .productPromoBottomInner > .footer-note,
     #GTM__buy--CCP-footer {
         display: none !important;
     }
@@ -45,8 +46,14 @@
     .text-center.fs-16.text-semibold,
     .page-foot .grid,
     .page-body > .band:not(:nth-child(1)),
-    .social-followers-proto {
+    .social-followers-proto,
+    div[data-module-id="downloadpage"] > .container > .pb--md,
+    div[data-module-id="downloadpage"] > .container > .pb--xl,
+    .download-notification__overlay {
         display: none !important;
+    }
+    div[data-module-id="downloadpage"] > .container > .pb--lg {
+        padding-top: 10px;
     }
     .price-table tfoot .btn {
         margin: 10px !important;
