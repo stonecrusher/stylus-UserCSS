@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.21
+@version        1.9.25
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -669,7 +669,8 @@
         .cu-bottom, .cu-bottom-left, .cu-eb-bottom, .cu-eb-bottom-left, .cu-eb-top, .cu-eb-top-left, .cu-top, .cu-top-left,
         .cu-contact-channel-recommended,
         .ces_frame img[src*="/logo/"],
-        .apx-add-pm-trigger-common-image {
+        .apx-add-pm-trigger-common-image,
+        .checkout-giftbox-icon {
             filter: invert(0.8) !important;
         }
         .nav-image,
@@ -819,7 +820,10 @@
         .ces_frame h1, .ces_frame legend, .ces_frame #comment_label,
         div.bucket,
         #nav-subnav.spacious .nav-a.nav-active .nav-a-content, #nav-subnav.spacious .nav-a:hover .nav-a-content,
-        .message-center-nav-path span {
+        .message-center-nav-path span,
+        .a-radio-label,
+        .a-unordered-list, ul,
+        .huc-v2-order-row .huc-v2-scarcity {
             color: var_font1 !important;
         }
         input, select, textarea,
