@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.3.6
+@version        3.3.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -187,6 +187,9 @@
         background-color: var_bg1 !important;
         color: var_font1 !important;
     }
+    .splitfield-right {
+        background-color: #070 !important;
+    }
     /* Image thumbs hover */
     .ad-gallery .ad-thumb-list > li.ad-active .imagebox-thumbnail, .ad-gallery-horizontal .ad-thumb-list > li.ad-active .imagebox-thumbnail {
         border-color: var_font3 !important;
@@ -195,6 +198,10 @@
         .link-open-section, .textdropdown-input {
             background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjgiIGhlaWdodD0iNSIgdmlld0JveD0iMCAwLjggOCA1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMC44IDggNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM1Mi4wMDAwMDAsIC0xODY5LjAwMDAwMCkiPjxwYXRoIGZpbGw9IiM3MGI3ZjUiIGQ9Ik0zNTIgMTg2OS44aDhsLTQgNUwzNTIgMTg2OS44eiIvPjwvZz48L3N2Zz4=) !important;
         }
+    }
+    /* Folgen-Button */
+    .button-toggle, .is-toggled {
+        color: lighten(var_linkfarbe1,30%) !important;
     }
     /*** Meine Nachrichten ***/
     .listitem-container,
