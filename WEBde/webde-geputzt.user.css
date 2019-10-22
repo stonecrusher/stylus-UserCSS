@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.6
+@version      2.3.7
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -100,7 +100,7 @@
     min-width: 250px !important;
     max-width: 462px !important;
     /**/
-    max-width: 570px !important;
+    max-width: 620px !important;
     border-radius: 0 !important;
   }
   
