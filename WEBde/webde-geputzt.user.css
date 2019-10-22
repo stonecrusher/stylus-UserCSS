@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.3
+@version      2.3.5
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -133,7 +133,7 @@
   [translate="LOGGED_OUT_AUTOMATICALLY_TEXT"] > p {display:none !important;}
 
   #loginsearch {
-    background:#D2E1EA;
+    /* background:#D2E1EA; */
     margin-top:100px !important;
     background-image:none !important;
     padding:0 20px 30px !important;
@@ -152,6 +152,9 @@
     margin-top:0 !important;
   }
   .jsDisabled .wrapper-indent::before { content:none !important; }
+
+  /* "Sie haben nicht den neuesten Browser" Banner entfernen */
+  body { margin-top: 0 !important; }
 
   /*** Navi ***/
   li[title="Vorteile des WEB.DE Club 1 Monat kostenlos testen"] { display:none !important; }
