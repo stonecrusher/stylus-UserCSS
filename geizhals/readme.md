@@ -17,3 +17,10 @@ Beruht auf dem [Userstyle von evea](https://userstyles.org/styles/134683/).
 ![main](./screenshots/01-main.jpg)
 ![category](./screenshots/02-category.jpg)
 ![compare](./screenshots/03-compare.jpg)
+
+
+# Weiteres
+
+Entferne Amazon Marketplace Angebote, indem du  
+`geizhals.de##.offer__merchant-link:has-text((via Amazon Marketplace)):nth-ancestor(2)`  
+in [uBlock Origin](https://addons.mozilla.org/de/firefox/addon/ublock-origin/) unter "Meine Filter" hinzufügst.
