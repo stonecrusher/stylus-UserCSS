@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.5
+@version      2.3.6
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -136,10 +136,15 @@
     /* background:#D2E1EA; */
     margin-top:100px !important;
     background-image:none !important;
-    padding:0 20px 30px !important;
+    padding:0 20px !important;
   }
   #loginsearch > .container {
     height: initial !important;
+  }
+  #loginsearch .login-username,
+  #loginsearch .login-password,
+  #loginsearch .login-submit {
+    padding-bottom: 20px !important;
   }
   
   aside[data-teasers^="https://web.de/magazine/"] {
@@ -424,7 +429,7 @@
     .adWithOutsideComponent, .adWithOutsideComponent body,
     #main,.hint,#container, /* Kundencenter 2019-01-31 */
     .header::before,
-    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label):not(.active):not(select):not(hr):not(.dialog-container):not(.pos-modal-layer) {
+    html *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(pos-icon-item):not(button):not(li):not(.btn):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.number):not(.label):not(.active):not(select):not(hr):not(.dialog-container):not(.pos-modal-layer):not(.placeholder) {
       color: var_schriftfarbe;
       background-color: var_hintergrund1;
     }
