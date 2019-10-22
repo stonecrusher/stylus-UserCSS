@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.9.25
+@version        1.10.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -144,7 +144,8 @@
         .avu-content-aui,
         #promise-background-container.background-normal,
         .masrw-box,
-        .message-table-row {
+        .message-table-row,
+        #hmenu-content {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -183,7 +184,9 @@
         #attach-desktop-sideSheet div.attach-sidesheet-card,
         #attachDisplayAddBaseAlert,
         .message-center-left-nav-selected,
-        .message-table-row:hover {
+        .message-table-row:hover,
+        #automotiveStripe.asDoesNotFit #automotiveStripeMain
+        #hmenu-content a.hmenu-item:hover {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -435,6 +438,12 @@
             border: 2px solid var_bg6 !important;
             border-radius: 3px !important;
         }
+
+        /* Slidemenu left */
+        #hmenu-content a.hmenu-item:hover .hmenu-arrow-next {
+            background-position: -137px -288px !important;
+        }
+        
         /* Automotive stripe */
         #automotiveStripe {
             background: var_bg2 !important;
@@ -925,7 +934,8 @@
         .masrw-buy-box .masrw-button .masrw-button-text,
         #rhf .rhf-sign-in-button .action-inner, #rhf a.action-button:active .action-inner, #rhf a.action-button:hover .action-inner, #rhf a.action-button:link .action-inner, #rhf a.action-button:visited .action-inner,
         ._2nSRgu > span, ._2nSRgu:focus > span, ._2nSRgu:hover > span,
-        ._3x6JZ- > span > span /*play now*/ {
+        ._3x6JZ- > span > span /*play now*/,
+        .checkout-giftbox-icon {
             color: black !important;
         }
         
@@ -1147,6 +1157,7 @@
         
         /* #centerPlus, /* erwischt auch "keine Ergebnisse gefunden" */
         #detail-ilm_div,
+        #percolate-ui-ilm_div,
         .super-tcg, /* Amazon Video: Fire-TV top ad */
         .dv-product-offer,
         #nav-upnav,
@@ -1185,7 +1196,8 @@
         #promotions-list_feature_div,
         .rush-component[data-component-type="s-brand-footer-slot"],
         .rush-component[data-component-type="s-footer-slot"],
-        #cm_cr-rvw_summary-ads {
+        #cm_cr-rvw_summary-ads,
+        #customer-survey_feature_div {
             display: none !important;
         }
 
