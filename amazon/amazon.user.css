@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.10.1
+@version        1.10.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -145,7 +145,9 @@
         #promise-background-container.background-normal,
         .masrw-box,
         .message-table-row,
-        #hmenu-content {
+        #hmenu-content,
+        .oct-dls-container,
+        #oct-shop-all-deals-sec {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -226,7 +228,8 @@
         .bxc-grid__text--light.bxc-grid-overlay--background,
         .vpc_coupon_grid_more_coupons:hover, .vpc_coupon_grid_get_more_coupons:hover,
         .a-scroller.attach-accessory-section,
-        .message-center-left-nav-selected:hover, .message-center-left-nav:hover {
+        .message-center-left-nav-selected:hover, .message-center-left-nav:hover,
+        .oct-dls-background {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -537,7 +540,8 @@
         .masrw-box,
         .masrw-box .masrw-box-footer,
         #tracking-events-container .tracking-event-time-left .tracking-event-vertLine,
-        .message-table-row {
+        .message-table-row,
+        .oct-dls-asin-stream-container, .oct-acs-asin-item-container {
             border-color: var_bg6 !important;
         }
         
@@ -1197,7 +1201,9 @@
         .rush-component[data-component-type="s-brand-footer-slot"],
         .rush-component[data-component-type="s-footer-slot"],
         #cm_cr-rvw_summary-ads,
-        #customer-survey_feature_div {
+        #customer-survey_feature_div,
+        #marketing,
+        #nav-link-prime /* discover prime benefits */ {
             display: none !important;
         }
 
