@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.10.3
+@version        1.10.4
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -147,7 +147,9 @@
         .message-table-row,
         #hmenu-content,
         .oct-dls-container,
-        #oct-shop-all-deals-sec {
+        #oct-shop-all-deals-sec,
+        .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
+        .nav-ewc-persistent-click .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area, .nav-ewc-persistent-hover .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
