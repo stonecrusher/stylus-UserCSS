@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.10.4
+@version        1.10.5
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -190,7 +190,9 @@
         .message-center-left-nav-selected,
         .message-table-row:hover,
         #automotiveStripe.asDoesNotFit #automotiveStripeMain
-        #hmenu-content a.hmenu-item:hover {
+        #hmenu-content a.hmenu-item:hover,
+        .octopus-pc-asin-info-section,
+        .octopus-pc-dotd-info-section {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
