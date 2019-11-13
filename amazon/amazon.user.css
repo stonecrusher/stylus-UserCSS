@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.10.5
+@version        1.10.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -18,7 +18,7 @@
 @var color     var_linkhover    'DS Link hover color' #cc5800
 @var color     var_price        'DS Price color'      #ff3b14
 @var range     darkProductImage 'DS Darken product images'   [0.8,0.4,1,0.05]
-@var checkbox  compact          'Compact mode & No Ads'      1
+@var checkbox  compact          'Compact mode & Less ads'      1
 @var checkbox  hide-similar     'Hide other customer item recommendations' 1
 @var checkbox  hide-ask         'Hide ask'                   0
 @var checkbox  mark-sponsored   'Mark sponsored results'     1
@@ -192,7 +192,8 @@
         #automotiveStripe.asDoesNotFit #automotiveStripeMain
         #hmenu-content a.hmenu-item:hover,
         .octopus-pc-asin-info-section,
-        .octopus-pc-dotd-info-section {
+        .octopus-pc-dotd-info-section,
+        #dmusic_library_section .a-color-base-background {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -474,6 +475,43 @@
             background-color: #4d5862 !important;
         }
 
+        /* brand pages */
+        .style__brand__1jc3S,
+        .style__storeCarousel__3rdso {
+            background-color: var_bg1 !important;
+            border-color: var_bg6 !important;
+        }
+        .style__name__3DH1O,
+        .style__title__3ihg8 {
+            color: var_font1 !important;
+        }
+        .style__description__21VcD {
+            color: var_font2 !important;
+        }
+        .style__itemOuter__2dxew {
+            background: var_bg2 !important;
+            z-index: 0 !important;
+            border-color: var_bg6 !important;
+        }
+        .style__reviewCount__2jU9D {
+            color: var_font1 !important;
+        }
+        .style__slide__2-I3V {
+            background-color: var_bg1 !important;
+        }
+        .style__slide__2-I3V .style__cardArea__31CHa {
+            background-color: var_bg2 !important;
+        }
+        .style__slide__2-I3V .style__infoArea__a70s1 .style__title__2Ut7H {
+            color: var_font1 !important;
+        }
+        .style__carousel__WB6cn .slick-next, .style__carousel__WB6cn .slick-prev {
+            background-color: var_bg1 !important;
+            &:hover {
+                background-color: var_bg2 !important;
+            }
+        }
+
         /*** Borders ***/
         .quotes-bubble-arrow {
             border-color: var_bg4 transparent !important;
@@ -687,7 +725,8 @@
         .cu-contact-channel-recommended,
         .ces_frame img[src*="/logo/"],
         .apx-add-pm-trigger-common-image,
-        .checkout-giftbox-icon {
+        .checkout-giftbox-icon,
+        .newMusicLogo {
             filter: invert(0.8) !important;
         }
         .nav-image,
@@ -1207,7 +1246,8 @@
         #cm_cr-rvw_summary-ads,
         #customer-survey_feature_div,
         #marketing,
-        #nav-link-prime /* discover prime benefits */ {
+        #nav-link-prime, /* discover prime benefits */
+        #maple-dss-slot /* sign up for amazon visa card */ {
             display: none !important;
         }
 
