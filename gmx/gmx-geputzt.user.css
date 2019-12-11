@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.2
+@version      2.3.3
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -22,6 +22,7 @@
 @var checkbox calendar-hide      'Kalender, Dok-Manager, Pinnwand verstecken' 1
 @var checkbox grusskarten-hide   'Grußkarten verstecken' 1
 @var color    logoutbutton-color 'Farbe des Logout-Buttons' #FF8800
+@var checkbox intellipost-hide   'Intelligentes Postfach verstecken' 1
 
 @var checkbox darkstyle-enable   'Darkstyle (DS)' 1
 @var color    var_schriftfarbe   'DS Schriftfarbe'      #eee
@@ -114,6 +115,15 @@ https://userstyles.org/styles/134069/
   /* Grußkarten? */
   if grusskarten-hide {
     #cockpit #navigation > ul > li:nth-of-type(4) {
+        display:none !important;
+      }
+  }
+  
+  
+  /* Intelligentes Postfach? */
+  if intellipost-hide {
+    #navigation > div[id] > .navigation.gui-toggle > div[title^="Intelligentes Postfach"],
+    #navigation > div[id] > .navigation.gui-toggle > div[title^="Intelligentes Postfach"] + .panel-body {
         display:none !important;
       }
   }
