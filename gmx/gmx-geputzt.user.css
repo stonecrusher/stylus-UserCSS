@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.1
+@version      2.3.2
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -389,8 +389,9 @@ https://userstyles.org/styles/134069/
 
     /* Senden Buttons */
     #section-0 .m-button.button-size-large.button-block.button-link, /* Email Schreiben Button */
-    #compose-form .js-compose-send-button, /* Senden Button top right */
-    #compose-form-submit-send /* Senden Button bottom right */ {
+    #compose-form .js-compose-send-button, /* Senden Button oben rechts */
+    #compose-form-submit-send, /* Senden Button unten rechts */
+    .m-button /* Buttons allgemein */ {
       background-image: linear-gradient(to bottom,var_btnFarbe,darken(var_btnFarbe, 30%)) !important;
         &.is-hovered { background-image: linear-gradient(to bottom, lighten(var_btnFarbe,10%),var_btnFarbe) !important; }
     }
@@ -467,6 +468,9 @@ https://userstyles.org/styles/134069/
       background-color: lighten(var_hintergrund2,20%) !important;
       background-image: none !important;
       font-weight: bold !important;
+    }
+    h2.title {
+      color: darken(var_schriftfarbe, 40%) !important;
     }
 
     /* Adressbuch */
