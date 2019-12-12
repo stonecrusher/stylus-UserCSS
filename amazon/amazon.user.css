@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.10.8
+@version        1.10.11
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -149,7 +149,8 @@
         .oct-dls-container,
         #oct-shop-all-deals-sec,
         .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
-        .nav-ewc-persistent-click .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area, .nav-ewc-persistent-hover .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area {
+        .nav-ewc-persistent-click .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area, .nav-ewc-persistent-hover .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
+        .s-desktop-content, .s-desktop-toolbar {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -916,7 +917,8 @@
         #closeErrorDialog,
         .bxc-grid__text.a-text-center,
         .a-size-mini.a-color-base.dotdBadge,
-        .olpViewOption {
+        .olpViewOption,
+        .notouch ul.order-level-item-summary-list li div {
             color: var_font0 !important;
         }
         .fresh-shoveler .as-title-block .a-color-base,
@@ -1247,7 +1249,8 @@
         #customer-survey_feature_div,
         #marketing,
         #nav-link-prime, /* discover prime benefits */
-        #maple-dss-slot /* sign up for amazon visa card */ {
+        #maple-dss-slot, /* sign up for amazon visa card */
+        #detail-ilm_feature_div /* 15€ action voucher */ {
             display: none !important;
         }
 
