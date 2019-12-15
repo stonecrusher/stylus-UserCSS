@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.10.12
+@version        1.10.13
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -150,7 +150,8 @@
         #oct-shop-all-deals-sec,
         .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
         .nav-ewc-persistent-click .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area, .nav-ewc-persistent-hover .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
-        .s-desktop-content, .s-desktop-toolbar {
+        .s-desktop-content, .s-desktop-toolbar,
+        .ModalPurchase.ItemizedList, .ModalPurchase.ItemTitle {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -932,7 +933,8 @@
         .acs-wtfl-filtersort-category:hover,
         .nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text,
         .asNotesValue,
-        .dv-el-attr-value {
+        .dv-el-attr-value,
+        .ModalPurchase.SelectionText, .ModalPurchase.TrackCount, .ModalPurchase.BottomTip {
             color: var_font2 !important;
         }
 
