@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.0
+@version        1.11.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -442,8 +442,8 @@
             background: var_bg4 !important;
         }
         div.pagnHy,
-        .feed-carousel .feed-scrollbar-track,
-        #pageContent hr {
+        .feed-carousel .feed-scrollbar-track
+        /*,#pageContent hr /**/ {
             background-color: var_bg5 !important;
         }
         .atsCenter, .atsContent, .atsDDLL, .atsDDLR, .atsDDUL, .atsDDUR, .atsLL, .atsLR, .atsUL, .atsUR {
