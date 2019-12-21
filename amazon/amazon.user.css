@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.1
+@version        1.11.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -887,7 +887,9 @@
         .message-center-nav-path span,
         .a-radio-label,
         .a-unordered-list, ul,
-        .huc-v2-order-row .huc-v2-scarcity {
+        .huc-v2-order-row .huc-v2-scarcity,
+        #checkout-page-container .turbo-checkout-panel-link span.compact-address-name,
+        #checkout-page-container .turbo-checkout-payment-issuer {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1190,6 +1192,14 @@
         #errorPageContainer .grayExceptionBtn-group a, #mapTracking-bottomSheet-container .grayExceptionBtn-group a, #pageContainer .grayExceptionBtn-group a {
             border-bottom: 2px solid var_bg6 !important;
             background-color: var_bg2 !important;
+        }
+        
+        /* Fast checkout popup */
+        #checkout-page-container .turbo-checkout-panel-link:hover {
+            background: var_bg2 linear-gradient(to right,var_bg1,var_bg2,var_bg1) !important;
+        }
+        #checkout-page-container .turbo-checkout-push-to-bottom {
+            background: var_bg1 linear-gradient(to bottom,var_bg3,var_bg1) !important;
         }
     }
     
