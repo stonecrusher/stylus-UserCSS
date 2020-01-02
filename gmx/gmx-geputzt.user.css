@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.3
+@version      2.3.4
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -186,7 +186,6 @@ https://userstyles.org/styles/134069/
   #transferoption .form-item[id], /* "Einschreiben" bei Email schreiben optionen */
   #innercontent > div[id]:not([class]), /* Startseite textlink unter mailbox */
   .webcent, /* WEB.cent auf Startseite */
-  .atl-third-party-dialog__blocker, /* Neues Overlay 2018-03 */
   #desk > .cockpit > .grid-right,
   #desk > .cockpit > .grid-left > .grid-container:last-child, /* Werbekram, Wetter, Hilfe & Tipps auf Startseite */
   #cockpit #navigation > ul > li:nth-of-type(n + 14):not(:nth-of-type(n + 25)), /* Linke Navi "Produkte" */
