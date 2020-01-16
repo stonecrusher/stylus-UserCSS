@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.3.8
+@version        3.4.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -19,7 +19,8 @@
 @var checkbox header-condense   'Header komprimieren'             1
 @var checkbox ads-remove        'Werbung, TopAds, Newsletter und Alternative Anzeigen entfernen' 1
 @var checkbox upsell-remove     'Upsell-Angebote entfernen'       1
-@var checkbox social-remove     'Teilen in soz. Medien entfernen' 0
+@var checkbox social-remove     'Teilen in soz. Medien entfernen' 1
+@var checkbox footer-remove     'Footer entfernen'                0
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
@@ -236,6 +237,44 @@
     html {
         overflow: auto !important;
     }
+    /* Änderungen BoxBG 2020-01-16 */
+    .splitlinebox,
+    .contentbox.boxedarticle {
+        background: var_bg1 !important;
+    }
+    #viewad-description {
+        background: var_bg2 !important;
+    }
+    .splitlinebox h1, .splitlinebox h2, .splitlinebox h3, .splitlinebox h4, .splitlinebox h5,
+    .itemlist-separatedbefore > li:first-child, .itemlist-padded-separatedbefore > li:first-child,
+    .itemlist > li + li, .itemlist-separatedbefore > li + li, .itemlist-padded-separatedbefore > li + li, .itemlist-separatedafter > li + li, .itemlist-padded-separatedafter > li + li, .itemlist-padded > li + li,
+    .button-secondary, .button-inverted, .iconbox {
+        border-color: var_font3 !important;
+    }
+    #viewad-locality, .boxedarticle--details--full {
+        color: var_font1 !important;
+    }
+    .galleryimage-large--cover {
+        opacity: 1 !important;
+        background: var_bg1 !important;
+    }
+    .button-secondary, .button-inverted, .iconbox {
+        background-color: var_bg2 !important;
+        &:hover {
+            background-color: var_bg1 !important;
+        }
+    }
+    .icon-star-open-gray {
+        filter: invert(0.8) !important;
+    }
+    #viewad-contact-phone-login {
+        color: var_linkfarbe1 !important;
+    }
+    /* Suchfelder Hintergrund */
+    .splitfield-left {
+        background-color: var_font1 !important;
+    }
+
     
     /*** Conditionals ***/
     if header-condense {
@@ -285,7 +324,13 @@
         }
     }
     if social-remove {
-        .socialshare {
+        .socialshare,
+        #viewad-list-shares {
+            display: none !important;
+        }
+    }
+    if footer-remove {
+        #site-footer {
             display: none !important;
         }
     }
