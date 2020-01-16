@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.4.0
+@version        3.4.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -237,6 +237,7 @@
     html {
         overflow: auto !important;
     }
+    /*******************************/
     /* Änderungen BoxBG 2020-01-16 */
     .splitlinebox,
     .contentbox.boxedarticle {
@@ -273,6 +274,13 @@
     /* Suchfelder Hintergrund */
     .splitfield-left {
         background-color: var_font1 !important;
+    }
+    .checktaglist .checktag {
+        color: var_font1 !important;
+    }
+    /* Trennstrich unter Anzeige */
+    #liberty-vip_pro-middle {
+        background: #070 !important;
     }
 
     
