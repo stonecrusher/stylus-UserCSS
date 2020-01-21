@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.4.1
+@version        3.4.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -161,6 +161,20 @@
     .imagebox.is-nopic, .is-nopic.imagebox-small, .is-nopic.imagebox-storelogo-mini, .is-nopic.imagebox-thumbnail, .is-nopic.imagebox-storelogo {
         filter:invert(0.8) !important;
     }
+    #viewad-sticky .iconbox {
+        background-color: invert(var_bg2) !important;
+        filter: invert(1) !important;
+        &:hover {
+            background-color: invert(var_bg1) !important;
+        }
+    }
+    #viewad-action-box .iconbox {
+        background-color: var_bg1 !important;
+        border-color: var_bg2 !important;
+        &:hover {
+            background-color: var_bg2 !important;
+        }
+    }
     .button-secondary,
     .button-inverted {
         background-color: var_bg1 !important;
@@ -259,13 +273,13 @@
         opacity: 1 !important;
         background: var_bg1 !important;
     }
-    .button-secondary, .button-inverted, .iconbox {
+    .button-secondary, .button-inverted{
         background-color: var_bg2 !important;
         &:hover {
             background-color: var_bg1 !important;
         }
     }
-    .icon-star-open-gray {
+    .button-icon.icon-star-open-gray {
         filter: invert(0.8) !important;
     }
     #viewad-contact-phone-login {
@@ -281,6 +295,10 @@
     /* Trennstrich unter Anzeige */
     #liberty-vip_pro-middle {
         background: #070 !important;
+    }
+    /* Sticky bottom / head */
+    .stickybox, .stickybox--top, .stickybox--bottom {
+        background: var_bg1 !important;
     }
 
     
