@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.4
+@version      2.3.5
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -186,6 +186,7 @@ https://userstyles.org/styles/134069/
   #transferoption .form-item[id], /* "Einschreiben" bei Email schreiben optionen */
   #innercontent > div[id]:not([class]), /* Startseite textlink unter mailbox */
   .webcent, /* WEB.cent auf Startseite */
+/* .atl-third-party-dialog__blocker, /* Neues Overlay 2018-03 */
   #desk > .cockpit > .grid-right,
   #desk > .cockpit > .grid-left > .grid-container:last-child, /* Werbekram, Wetter, Hilfe & Tipps auf Startseite */
   #cockpit #navigation > ul > li:nth-of-type(n + 14):not(:nth-of-type(n + 25)), /* Linke Navi "Produkte" */
@@ -360,7 +361,7 @@ https://userstyles.org/styles/134069/
   /***** GMX Darkstyle *****/
   if darkstyle-enable {
     body,
-    body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.envelope):not(.iconset):not(.placeholder) {
+    body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.envelope):not(.iconset):not(.placeholder):not(.close-btn):not(.layer-icon) {
       color:var_schriftfarbe !important;
       background-color:var_hintergrund1 !important;
       background-image:none !important;
@@ -480,6 +481,10 @@ https://userstyles.org/styles/134069/
     }
     h2.title {
       color: darken(var_schriftfarbe, 40%) !important;
+    }
+    /* Spam / Newsletter Popup */
+    .layer-dialog .dialog-text h2 {
+        color: var_schriftfarbe !important;
     }
 
     /* Adressbuch */
