@@ -1,0 +1,125 @@
+/* ==UserStyle==
+@name           blog.fefe.de
+@namespace      Stonecrusher
+@version        1.0.0
+@license        CC-BY-NC-SA-4.0
+@author         Fefe, Stonecrusher
+@preprocessor   stylus
+
+@var number pg-width 'Seitenbreite' [800, 600, 4000, 10, "px"]
+==/UserStyle== */
+
+@-moz-document regexp("https?:\\/\\/blog\\.fefe\\.de\\/(?!faq\\.html).*") {
+    /* fefe.css */
+    body {
+        text-rendering: optimizeLegibility;
+        font-variant-ligatures: common-ligatures;
+        font-kerning: normal; }
+
+    body > ul > li {
+        font-family: PT Sans, Trebuchet MS, Helvetica, Arial;
+        font-size: 14px; }
+
+    body > h2 > a {
+        text-decoration: none;
+        color: black; }
+
+    ul {
+        margin-bottom: 1em; }
+
+    body > ul > li > a:first-child {
+        margin-left: -17pt;
+        float: left;
+        background: #a0a0a0;
+        color: #a0a0a0;
+        text-decoration: none; }
+
+    body > ul > li > a:first-child:hover {
+        background: #000000;
+        color: #ffffff; }
+
+    body > ul > li {
+        list-style-type: none;
+        margin-top: 20pt;
+        margin-right: 20pt;
+        padding: 1em;
+        background-color: #f8f8f8; }
+
+    ul * ul > li {
+        list-style-type: disc; }
+
+    ul ul > li {
+        list-style-type: square; }
+
+    blockquote {
+        margin-left: 1em;
+        border: 1px dashed black;
+        background-color: #f0f0f0;
+        padding: 0.5em; }
+
+    pre {
+        margin-left: 1em;
+        margin-right: 3em;
+        border-left: 2px dotted black;
+        background-color: #f0f0ff;
+        font-family: Andale Mono, Luxi Mono, Courier;
+        padding: 0.5em;
+        overflow-x: scroll; }
+
+    h3 {
+        font-family: PT Sans, Trebuchet MS, Tahoma, Helvetica, Arial; }
+
+    h2 {
+        font-family: Tahoma, Helvetica, Arial;
+        text-align: center;
+        font-size: 200%; }
+
+    a:hover {
+        background: #ffa }
+
+    p[u] {
+        background-color: #d0f8d0; }
+
+    p[u] + blockquote {
+        background-color: #d0f8d0; }
+
+
+    /************************/
+    /* Addition to fefe.css */
+    body {
+        background-color: darkgray !important; }
+
+    body > p {
+        margin: -40px 0 50px 0 !important; }
+
+    h2 {
+        margin: 0 !important;
+        padding-bottom: 20px !important; }
+
+    h2 + b {
+        display: none !important; }
+
+    body > ul > li {
+        margin: 0 20pt 30px 0; }
+
+    body > ul > li > a:first-child {
+        background: #636363 !important;
+        color: #636363 !important; }
+
+    a:visited {
+        color: #000 !important; }
+
+    li a:visited {
+        color: #6F3434 !important; }
+    body > ul {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 5px !important;
+        max-width: pg-width !important;
+    }
+    h3 {
+        background: lighten(darkgray, 20%) !important;
+        padding-left: 20px !important;
+        margin: 10px !important;
+    }
+}
