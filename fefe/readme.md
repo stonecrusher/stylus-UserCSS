@@ -12,4 +12,4 @@ Original [fefe.css](https://blog.fefe.de/?ts=b9f2d149) etwas angepasst; Z.B. Sei
 
 # Screenshots
 
-![main](./Screenshot_2020-01-24 Fefes Blog.png)
+![main](./Screenshot_2020-01-24%20Fefes%20Blog.png)
