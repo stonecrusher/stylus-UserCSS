@@ -1,6 +1,6 @@
 # Beschreibung
 
-Verkleinert den header und ändert die Farben auf angenehmeres grau.
+Verkleinert den header und ändert die Farben auf angenehmeres Grau.
 
 
 # Installation
