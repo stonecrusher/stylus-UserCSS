@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.2
+@version        1.11.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -196,7 +196,8 @@
         #hmenu-content a.hmenu-item:hover,
         .octopus-pc-asin-info-section,
         .octopus-pc-dotd-info-section,
-        #dmusic_library_section .a-color-base-background {
+        #dmusic_library_section .a-color-base-background,
+        .feed-carousel .spinner {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -734,7 +735,8 @@
         .ces_frame img[src*="/logo/"],
         .apx-add-pm-trigger-common-image,
         .checkout-giftbox-icon,
-        .newMusicLogo {
+        .newMusicLogo,
+        img[src^="https://images-na.ssl-images-amazon.com/images/G/01/amazonui/loading/loading-"] {
             filter: invert(0.8) !important;
         }
         .nav-image,
