@@ -161,6 +161,12 @@
   /* "Sie haben nicht den neuesten Browser" Banner entfernen */
   body { margin-top: 0 !important; }
 
+  /* Wetterwidget-Breite für lange Ortsnamen */
+  .header-inner > .weather,
+  .header-inner > .weather > a {
+      width: initial !important;
+  }
+
   /*** Navi ***/
   li[title="Vorteile des WEB.DE Club 1 Monat kostenlos testen"] { display:none !important; }
 
