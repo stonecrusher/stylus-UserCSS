@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.3
+@version        1.11.7
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -415,6 +415,16 @@
                 background-color: var_bg3 !important;
             }
         }
+        /* Prime play / trailer button */
+        [data-ref="atv_dp_stream_prime_tv"] > span {
+            color: black !important;
+        }
+        [data-ref="atv_dp_watch_trailer"] > span,
+        button[name="more-purchase-options"],
+        .dv-dp-node-watchlist > form > button {
+            color: var_font1 !important;
+        }
+
         /* Amazon Music Add / Remove buttons */
         .listViewStatusButtonInLibrary .stroke {
             background-color: var_bg7 !important;
@@ -424,6 +434,11 @@
         .a-button-primary .a-color-base.s-price,
         .white {
             color: black !important;
+        }
+        /* Deals */
+        .background-gary-1,
+        .background-white {
+            background-color: var_bg2 !important;
         }
 
         .a-button-toggle.a-button-selected .a-button-inner, .a-button-toggle.a-button-selected.a-button-focus .a-button-inner, .a-button-toggle.a-button-selected.a-button-focus:hover .a-button-inner, .a-button-toggle.a-button-selected:focus .a-button-inner, .a-button-toggle.a-button-selected:focus:hover .a-button-inner, .a-button-toggle.a-button-selected:hover .a-button-inner,
@@ -891,7 +906,9 @@
         .a-unordered-list, ul,
         .huc-v2-order-row .huc-v2-scarcity,
         #checkout-page-container .turbo-checkout-panel-link span.compact-address-name,
-        #checkout-page-container .turbo-checkout-payment-issuer {
+        #checkout-page-container .turbo-checkout-payment-issuer,
+        #pet_nav_tooltip .pet_tooltip_message,
+        div.gbh1-bold, div.gbh2-bold {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -950,7 +967,8 @@
         #dm-settings-page .dm-expander-header .link,
         .hud-white-dashboard .hud-profilecard-digital-preorders, .hud-white-dashboard .hud-profilecard-yourorders, .hud-white-dashboard .hud-profilecard-category, .hud-white-dashboard .hud-profilecard-name, .hud-white-dashboard .hud-profile-giftguide-text-only-option-text,
         .hud-white-dashboard .hud-card-subtext-line1, .hud-white-dashboard .hud-card-subtext-line2,
-        .badge-wrapper .cat-link {
+        .badge-wrapper .cat-link,
+        .a-link-normal > .color-black {
             color: var_linkdefault !important;
         }
         a:hover,
@@ -968,7 +986,8 @@
         .badge-wrapper .cat-link:hover,
         .profile-at-product-box .profile-at-product-title-container span:hover,
         .carousel-faceout-container .title-container:hover,
-        .masrw-buy-box .masrw-button .masrw-button-text:hover {
+        .masrw-buy-box .masrw-button .masrw-button-text:hover,
+        .a-link-normal:hover > .color-black {
             color: var_linkhover !important;
         }
         .a-color-price,
@@ -1274,6 +1293,10 @@
             display: none !important;
         }
 
+        /* Prime Video App 2020-02-04 */
+        article._3EPDij {
+            display: none !important;
+        }
         /* Amazon Music */
         .primeBrowseHeader + .carousel,
         .barker,
