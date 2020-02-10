@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.7
+@version        1.11.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -238,7 +238,8 @@
         .vpc_coupon_grid_more_coupons:hover, .vpc_coupon_grid_get_more_coupons:hover,
         .a-scroller.attach-accessory-section,
         .message-center-left-nav-selected:hover, .message-center-left-nav:hover,
-        .oct-dls-background {
+        .oct-dls-background,
+        #mako-subnav {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -607,7 +608,8 @@
         .masrw-box .masrw-box-footer,
         #tracking-events-container .tracking-event-time-left .tracking-event-vertLine,
         .message-table-row,
-        .oct-dls-asin-stream-container, .oct-acs-asin-item-container {
+        .oct-dls-asin-stream-container, .oct-acs-asin-item-container,
+        #mako-subnav {
             border-color: var_bg6 !important;
         }
         
@@ -1017,6 +1019,10 @@
         ._3x6JZ- > span > span /*play now*/,
         .checkout-giftbox-icon {
             color: black !important;
+        }
+        /* Delivery limitation notice */
+        .content-grid-block[style^="background-color: #B6E1B6;"] {
+            color: #333 !important;
         }
         
         .aplus-v2 th.apm-tablemodule-keyhead {
