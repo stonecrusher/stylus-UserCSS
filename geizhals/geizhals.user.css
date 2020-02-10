@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.0.18
+@version        1.0.19
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -34,8 +34,8 @@ div#gh_content_wrapper,
 body#ghbody,
 div.nl_box,
 .ghloginbox,
-.productlist__name,
-.productlist__image,
+/*.productlist__name,
+.productlist__image,*/
 #acbox,
 table.gh_fstbl > tbody,
 th.xf_th,
@@ -356,6 +356,9 @@ li.gh_tabs {
 .filterbox,
 .productlist__additionalfilter, .productlist__bestpriceoffer, .productlist__compare, .productlist__deliverytime, .productlist__image, .productlist__name, .productlist__offerscount--standard, .productlist__price, .productlist__rating, .productlist__wishlistbuttons {
     border-color: var_bg2 !important;
+}
+.filterbox {
+    background: var_bg1 !important;
 }
 .productlist__header, .productlist__header .btn3, .productlist__header .productlist__item {
     background: lighten(var_blue,10%) !important;
