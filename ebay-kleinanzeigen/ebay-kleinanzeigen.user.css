@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.4.2
+@version        3.4.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -48,7 +48,6 @@
     }
     body,
     .mainnav-sub-header,
-    h1, h2, h3, h4, h5, h6,
     .flexlist--header,
     .aditem-addon, .savedsearchitem-addon,
     #viewad-cntr-num,
@@ -61,6 +60,11 @@
     .textcounter,
     .headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .icon-headline, .icon-headline-small {
         color: var_font1 !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        &:not(#viewad-price) {
+            color: var_font1 !important;
+        }
     }
     .boxheader,
     .boxheader-nomarginbottom {
