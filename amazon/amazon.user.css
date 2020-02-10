@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.8
+@version        1.11.9
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -197,7 +197,8 @@
         .octopus-pc-asin-info-section,
         .octopus-pc-dotd-info-section,
         #dmusic_library_section .a-color-base-background,
-        .feed-carousel .spinner {
+        .feed-carousel .spinner,
+        #familyStripe_feature_div {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
