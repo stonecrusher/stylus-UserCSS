@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.9
+@version        1.11.10
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -198,7 +198,10 @@
         .octopus-pc-dotd-info-section,
         #dmusic_library_section .a-color-base-background,
         .feed-carousel .spinner,
-        #familyStripe_feature_div {
+        #familyStripe_feature_div,
+        .navHeader_alexa_myx,
+        .navOptionChildItem_alexa_myx,
+        .myx-popover .myx-popover-wrapper {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -240,7 +243,10 @@
         .a-scroller.attach-accessory-section,
         .message-center-left-nav-selected:hover, .message-center-left-nav:hover,
         .oct-dls-background,
-        #mako-subnav {
+        #mako-subnav,
+        .navOptionChildItem_alexa_myx:hover,
+        .myx-dropdown .myx-list-link li a.myx-active, .myx-splitdropdown .myx-list-link li a.myx-active, .myx-suggest .myx-list-link li a.myx-active,
+        .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -610,7 +616,8 @@
         #tracking-events-container .tracking-event-time-left .tracking-event-vertLine,
         .message-table-row,
         .oct-dls-asin-stream-container, .oct-acs-asin-item-container,
-        #mako-subnav {
+        #mako-subnav,
+        .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a {
             border-color: var_bg6 !important;
         }
         
