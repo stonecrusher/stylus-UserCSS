@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.0.20
+@version        1.0.21
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -544,12 +544,17 @@ a.xf_msel:hover .xf_n::after {
 .compare__table .highlight:hover td.compare__data.no-highlight {
     background-color: lighten(var_black, 22%) !important;
 }
+.compare__row {
+    background-color: var_black !important;
+}
 .compare__row:nth-child(2n),
-.compare__table tr:nth-child(2n) td.compare__data.no-highlight {
+.compare__row:nth-child(2n):hover,
+.compare__table tr:nth-child(2n) td.compare__data.no-highlight,
+.compare__table tr:nth-child(2n):hover td.compare__data.no-highlight {
     background-color: lighten(var_black, 8%) !important;
 }
 .compare__row:hover {
-    background-color: lighten(var_black, 25%) !important;
+    filter: brightness(1.2) saturate(3) !important;
 }
 .compare__table .compare__offer a,
 .compare__table .compare__offer a:visited {
