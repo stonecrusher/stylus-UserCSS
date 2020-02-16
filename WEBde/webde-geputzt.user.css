@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.7
+@version      2.3.8
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -271,12 +271,24 @@
 
   /*** Email Editor ***/
   #transferoption {
-    background-color: var_hintergrund1 !important;
-  }
+    background-color: var_hintergrund1 !important; }
+  #cke_editor .cke_top {
+      background: var_hintergrund1 !important; }
+  [title="Speicherplatz erweitern"] {
+      display: none !important; }
 
   /*** Adressbuch ***/
-  #content-sky { display:none!important; }
-  #regions { width:auto !important; }
+  #content-sky {
+      display:none!important; }
+  #regions {
+      width:auto !important; }
+  #toolbar {
+      background-color: var_hintergrund1 !important;
+      border-color: var_hintergrund3 !important;
+  }
+  #toolbar > div > .button.primary {
+      color: black !important;
+  }
 
   /*** Postfach ***/
   /* Höhe der Emailliste */
