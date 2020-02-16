@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.4.4
+@version        3.5.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -17,6 +17,7 @@
 @var color var_bg2         'Hintergrundfarbe 2'        #555
 
 @var checkbox header-condense   'Header komprimieren'             1
+@var checkbox title-full        'Vollen Angebotstitel in Übersicht anzeigen' 1
 @var checkbox ads-remove        'Werbung, TopAds, Newsletter und Alternative Anzeigen entfernen' 1
 @var checkbox upsell-remove     'Upsell-Angebote entfernen'       1
 @var checkbox social-remove     'Teilen in soz. Medien entfernen' 1
@@ -308,6 +309,11 @@
     .stickybox, .stickybox--top, .stickybox--bottom {
         background: var_bg1 !important;
     }
+    
+    .simpletag {
+        color: var_font3 !important;
+        background: var_bg1 !important;
+    }
 
     
     /*** Conditionals ***/
@@ -366,6 +372,24 @@
     if footer-remove {
         #site-footer {
             display: none !important;
+        }
+    }
+    if title-full {
+        .itemtile, .itemtile-condensed, .itemtile-fullpic {
+            height: initial !important;
+        }
+        .itemtile-title {
+            line-height: 1.2 !important;
+            white-space: normal !important;
+            height: 3.6em !important;
+            margin-bottom: 2px !important;
+        }
+        .itemtile-location, .itemtile-category {
+            margin: 0 !important;
+            line-height: 1.2 !important;
+        }
+        .itemtile-body {
+            padding: 5px 10px !important;
         }
     }
 }
