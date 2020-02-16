@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.13
+@version        1.11.14
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -152,7 +152,8 @@
         .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
         .nav-ewc-persistent-click .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area, .nav-ewc-persistent-hover .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
         .s-desktop-content, .s-desktop-toolbar,
-        .ModalPurchase.ItemizedList, .ModalPurchase.ItemTitle {
+        .ModalPurchase.ItemizedList, .ModalPurchase.ItemTitle,
+        .stores-container {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -617,7 +618,8 @@
         .message-table-row,
         .oct-dls-asin-stream-container, .oct-acs-asin-item-container,
         #mako-subnav,
-        .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a {
+        .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a,
+        .sc-list .sc-list-item-border, .sc-list .sc-list-head {
             border-color: var_bg6 !important;
         }
         
@@ -1110,18 +1112,19 @@
 
         /*** Gradients ***/
         hr.bucketDivider::after,
-        #rhf .rhf-divider,
-        .rhf-divider::after,
         #gw-content-grid-bottom > div, #gw-content-grid-top > div,
-        .a-box .a-divider.a-divider-section .a-divider-inner::after, .a-color-base-background .a-divider.a-divider-section .a-divider-inner::after, .a-divider.a-divider-section .a-divider-inner::after,
         .kfs-bg-container,
-        .a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner,
         .atsDDCC, .atsDDCL, .atsDDCR,
         .atsDDFBC, .atsDDFBL, .atsDDFBR, .atsDDFCC, .atsDDFCL, .atsDDFCR, .atsDDHBC, .atsDDHBL, .atsDDHBR, .atsDDHCC, .atsDDHCL, .atsDDHCR, .atsDDHTC, .atsDDHTL, .atsDDHTR, .atsDDLC, .atsDDLL, .atsDDLR, .atsDDUC, .atsDDUL, .atsDDUR {
             background-image: none !important;
         }
+        #rhf .rhf-divider,
         .a-box .a-divider.a-divider-section .a-divider-inner, .a-color-base-background .a-divider.a-divider-section .a-divider-inner, .a-divider.a-divider-section .a-divider-inner {
-            border-top: 1px solid var_font3 !important;
+            background: linear-gradient(to bottom, #fff8, #fff1 3px, transparent) !important;
+        }
+        #rhf .rhf-divider::after,
+        .a-box .a-divider.a-divider-section .a-divider-inner::after, .a-color-base-background .a-divider.a-divider-section .a-divider-inner::after, .a-divider.a-divider-section .a-divider-inner::after {
+            background: linear-gradient(to right, var_bg1, rgba(255,255,255,0), var_bg1) !important;
         }
         .fadeGradient,
         .a-expander-content-fade {
