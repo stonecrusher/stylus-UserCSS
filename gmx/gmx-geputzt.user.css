@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.5
+@version      2.3.6
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -191,6 +191,7 @@ https://userstyles.org/styles/134069/
   #desk > .cockpit > .grid-left > .grid-container:last-child, /* Werbekram, Wetter, Hilfe & Tipps auf Startseite */
   #cockpit #navigation > ul > li:nth-of-type(n + 14):not(:nth-of-type(n + 25)), /* Linke Navi "Produkte" */
   .smart-inbox-empty-preview-teaser,
+  #superbanner,
   
   #dummy {
     display:none !important;
