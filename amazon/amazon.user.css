@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.12
+@version        1.11.13
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -19,9 +19,9 @@
 @var color     var_linkhover    'DS Link hover color' #cc5800
 @var color     var_price        'DS Price color'      #ff3b14
 @var range     darkProductImage 'DS Darken product images'   [0.8,0.4,1,0.05]
-@var checkbox  compact          'Compact mode & Less ads'      1
+@var checkbox  compact          'Compact mode & Less ads'    1
 @var checkbox  hide-similar     'Hide other customer item recommendations' 1
-@var checkbox  hide-ask         'Hide ask'                   0
+@var checkbox  hide-ask         'Hide customer q&a'          0
 @var checkbox  mark-sponsored   'Mark sponsored results'     1
 @var checkbox  av-pause-remove  'Remove Video pause overlay' 1
 @var text      review-width     'Width of review bars'       300px
@@ -1382,7 +1382,10 @@
     if hide-ask {
         #ask-btf_feature_div,
         #ask-dp-search_feature_div,
-        .askReviewsPageAskWidget {
+        .askReviewsPageAskWidget,
+        #cf-ask-cel,
+        .celwidget[cel_widget_id^="ask-swdp-"],
+        #ask_feature_div {
             display: none !important;
         }
     }
