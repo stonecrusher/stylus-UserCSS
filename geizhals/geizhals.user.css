@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.0.21
+@version        1.1.0
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -9,13 +9,14 @@
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @preprocessor   stylus
 
-@var color    var_bg0    "Hintergrund 1"   #2a2a2a
-@var color    var_text   "Schriftfarbe"    #cccccc
-@var color    var_link   "Linkfarbe"       #94c2ff
-@var color    var_black  "Schwarz"         #333333
-@var color    var_blue   "Blau"            #2a2a38
-@var color    var_orange "Orange"          #714e00
-@var checkbox reduce     "Kram ausblenden" 1
+@var color    var_bg0      "Hintergrund 1"   #2a2a2a
+@var color    var_text     "Schriftfarbe"    #cccccc
+@var color    var_link     "Linkfarbe"       #94c2ff
+@var color    var_black    "Schwarz"         #333333
+@var color    var_blue     "Blau"            #2a2a38
+@var color    var_orange   "Orange"          #714e00
+@var checkbox mark-visited "Besuchte Links markieren"  0
+@var checkbox reduce       "Kram ausblenden"  1
 ==/UserStyle== */
 
 var_bg1 = darken(var_bg0,15%)
@@ -244,8 +245,10 @@ a,
 .offer__price-discount-text__inner,
 .rating-post__footer > label {
     color: var_link !important;
-    &:visited {
-        color: darken(var_link,20%) !important;
+    if mark-visited {
+        &:visited {
+            color: darken(var_link,20%) !important;
+        }
     }
 }
 a.n,
@@ -468,9 +471,9 @@ a.xf_msel:hover .xf_n::after {
 
 
 /** Produktvergleich von originaler productcomparison.ghp.css **/
-.comparelist__button {
+/*.comparelist__button {
     color: lighten(var_blue, 50%) !important;
-}
+}/**/
 #compare__container {
     background-color: var_black !important;
 }
