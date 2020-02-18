@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.14
+@version        1.11.17
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -153,7 +153,8 @@
         .nav-ewc-persistent-click .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area, .nav-ewc-persistent-hover .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
         .s-desktop-content, .s-desktop-toolbar,
         .ModalPurchase.ItemizedList, .ModalPurchase.ItemTitle,
-        .stores-container {
+        .stores-container,
+        .ryp__card-frame {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -405,6 +406,10 @@
         .instantsavings-button::after {
             color: var_font1 !important;
         }
+        /* Prime Video other formats */
+        ._25BG6L._25BG6L._25BG6L, ._25BG6L._25BG6L._25BG6L:link, ._25BG6L._25BG6L._25BG6L:visited {
+            background-color: var_bg2 !important;
+        }
 
         /* Text on yellow buttons */
         .a-button-oneclick,
@@ -543,6 +548,9 @@
             &:hover {
                 background-color: var_bg2 !important;
             }
+        }
+        .ryp__profile__background-color {
+            background-color: lighten(var_headfoot,20%) !important;
         }
 
         /*** Borders ***/
@@ -1072,6 +1080,10 @@
         }
         .sims-fbt-unselected-item {
             opacity: .5 !important;
+        }
+        .ryp__cross-icon::before,
+        .ryp__cross-icon::after {
+            background-color: var_font1 !important;
         }
         
         /* Song controls */
