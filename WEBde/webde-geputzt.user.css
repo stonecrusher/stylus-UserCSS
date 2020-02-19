@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.8
+@version      2.3.9
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -567,6 +567,10 @@
     .widget-mail-mail .mail-star a { filter: invert(87%) !important; } /* Am besten je nach Hintergrundfarbe anpassen! */
 
     #cke_1_top.collapsed { padding-bottom: 0 !important; }
+    /* Laden dauert lange Fehlermeldung */
+    .layer-dialog .dialog-text h2 {
+        color: var_schriftfarbe !important;
+    }
 
     /* Stylingbuttons hover */
     a.cke_button_off:hover, a.cke_button_off:focus, a.cke_button_off:active, a.cke_button_disabled:hover, a.cke_button_disabled:focus, a.cke_button_disabled:active {
