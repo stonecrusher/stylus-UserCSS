@@ -5,8 +5,8 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.0.0
-@homepageURL  https://github.com/stonecrusher/stylus-UserCSS/WEBde
+@version      3.0.2
+@homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
 @preprocessor stylus
@@ -45,7 +45,10 @@ url-prefix("https://web.de/fm") {
     html > body > #app > .main > .main-content > div > div:nth-child(n + 2),
     html > body > #app > .main > .main-content > div > section:nth-child(n + 3),
     [data-component="bento"] footer,
-    [data-component="login"] > div:first-child {
+    [data-component="login"] > div:first-child,
+    header + [data-ac="middle"],
+    .main > [data-container="right"],
+    footer {
         display: none !important;
     }
     p[aria-label="reg"],
