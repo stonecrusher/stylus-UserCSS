@@ -3,15 +3,15 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.5.1
+@version        3.6.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
 
 @var color var_font1       'Schriftfarbe'              #ccc
-@var color var_font2       'Schriftfarbe 2'            #0a0
-@var color var_font3       'Schriftfarbe 3'            #999
+@var color var_font2       'Schriftfarbe 3'            #999
+@var color var_font3       'Schriftfarbe 2'            #0a0
 @var color var_linkfarbe1  'Linkfarbe'                 #70b7f5
 @var color var_bg1         'Hintergrundfarbe'          #444
 @var color var_bg2         'Hintergrundfarbe 2'        #555
@@ -47,7 +47,6 @@
     .formerror.is-inline::after {
         background-color: transparent !important
     }
-    body,
     .mainnav-sub-header,
     .flexlist--header,
     .aditem-addon, .savedsearchitem-addon,
@@ -73,6 +72,9 @@
             color: var_font1 !important;
         }
     }
+    hr, .separator {
+        border-color: var_font2 !important;
+    }
     body {
         &#login,&#vap,&#home,&#srchrslt,&#msgbox,&#my-manageads,&#my-settngs,&#wtchlst,&#my-followuser,&#my-savedsearches,&#postad-step1,&#pstad,&#pstrads,&#prview,&#browseCtgry,&#logout {
             color: var_font1 !important;
@@ -81,7 +83,7 @@
     .articleheader--price,
     .button-secondary, .button-inverted,
     .aditem-details > strong {
-        color: var_font2 !important;
+        color: var_font3 !important;
     }
     .outcomebox-error > header,
     .outcomebox-success > header,
@@ -109,6 +111,10 @@
     /* Navi: Anzeige aufgeben, Meins */
     .mainnav-item-inner {
         color: var_font1 !important;
+    }
+    /* Glocke */
+    .bell-container {
+        filter: invert(1);
     }
     
     .bubblebox, .bubblebox h1 {
@@ -152,7 +158,7 @@
         background-color: var_bg2 !important;
     }
     .a-green.bar {
-        background-color: darken(var_font2,30%) !important;
+        background-color: darken(var_font3,30%) !important;
     }
     .imagebox,
     .imagebox-small,
@@ -189,14 +195,14 @@
     }
     .button-toggle,
     .is-toggled {
-        background-color: darken(var_font3,20%) !important;
+        background-color: darken(var_font2,20%) !important;
         &:hover {
-            background-color: var_font3 !important;
+            background-color: var_font2 !important;
         }
     }
     /* Fullscreen Bilder */
     .modal-dialog > header {
-        border-color: var_font3 !important;
+        border-color: var_font2 !important;
     }
     /* Navigationspfeile */
     .ad-gallery .ad-prev-image, .ad-gallery-horizontal .ad-prev-image, .ad-gallery .ad-next-image, .ad-gallery-horizontal .ad-next-image {
@@ -212,7 +218,7 @@
     }
     /* Image thumbs hover */
     .ad-gallery .ad-thumb-list > li.ad-active .imagebox-thumbnail, .ad-gallery-horizontal .ad-thumb-list > li.ad-active .imagebox-thumbnail {
-        border-color: var_font3 !important;
+        border-color: var_font2 !important;
     }
     @css {
         .link-open-section, .textdropdown-input {
@@ -273,7 +279,7 @@
     .itemlist-separatedbefore > li:first-child, .itemlist-padded-separatedbefore > li:first-child,
     .itemlist > li + li, .itemlist-separatedbefore > li + li, .itemlist-padded-separatedbefore > li + li, .itemlist-separatedafter > li + li, .itemlist-padded-separatedafter > li + li, .itemlist-padded > li + li,
     .button-secondary, .button-inverted, .iconbox {
-        border-color: var_font3 !important;
+        border-color: var_font2 !important;
     }
     #viewad-locality, .boxedarticle--details--full {
         color: var_font1 !important;
@@ -311,7 +317,7 @@
     }
     
     .simpletag {
-        color: var_font3 !important;
+        color: var_font2 !important;
         background: var_bg1 !important;
     }
 
