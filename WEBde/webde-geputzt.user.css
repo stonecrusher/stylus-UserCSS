@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.0.4
+@version      3.0.5
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -64,6 +64,12 @@
     }
     [data-content] [data-content-login] {
         justify-content: center !important;
+    }
+    if not menu-keep {
+        [aria-label="netid"],
+        [data-component="bento"] {
+            display: none !important;
+        }
     }
 }
 
@@ -205,6 +211,16 @@
     [title="Installieren Sie Online-Speicher für Windows"] {
         display: none !important;
     }
+
+    /* Einstellungen */
+    /* @email.de, My@dress, Individuelle E-Mail-Adresse von WEB.DE MailDomain zu günstigen Preisen */
+    /* keine zuverlässigen Selektoren!
+    .page-body > .section-1 > .section-container > .splitpanel-settings > .splitpanel-settings-content > .splitpanel-settings-content_wrapper > div:nth-of-type(2),
+    .page-body > .section-1 > .section-container > .splitpanel-settings > .splitpanel-settings-content > .splitpanel-settings-content_wrapper > div:nth-of-type(3),
+    .page-body > .section-1 > .section-container > .splitpanel-settings > .splitpanel-settings-content > .splitpanel-settings-content_wrapper > div:nth-of-type(4) {
+        display: none !important;
+    }
+    */
 }
 
 /* Logout reminder */
