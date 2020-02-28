@@ -34,16 +34,17 @@ url-prefix("https://web.de/fm") {
     html > body > #app > .main,
     html > body > #app > .main > .main-content,
     html > body > #app > .main > .main-content > div,
-    html > body > #app > .main > .main-content > div > section:first-of-type,
-    html > body > #app > .main > .main-content > div > section:first-of-type *,
+    html > body > #app > .main > .main-content > div > section[data-content-login],
+    html > body > #app > .main > .main-content > div > section[data-content-login] *,
     html > body > #app > .main > .main-content > header,
     html > body > #app > .main > .main-content > header > div,
     html > body > #app > .main > .main-content > header > div > [data-part="logo"],
     html > body > #app > .main > .main-content > header > div > [data-part="logo"] * {
         visibility: visible !important;
     }
-    html > body > #app > .main > .main-content > div > div:nth-child(n + 2),
-    html > body > #app > .main > .main-content > div > section:nth-child(n + 3),
+    html > body > #app > .main > .main-content > div > [data-name],
+    html > body > #app > .main > .main-content > div > div:nth-child(n + 3),
+    html > body > #app > .main > .main-content > div > section:nth-child(n + 4),
     [data-component="bento"] footer,
     [data-component="login"] > div:first-child,
     header + [data-ac="middle"],
