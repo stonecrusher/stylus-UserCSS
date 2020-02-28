@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.0.3
+@version      3.0.4
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -23,8 +23,7 @@
 @var color    var_bg2   'DS Hintergrund hover'    #444
 ==/UserStyle== */
 /*** Login ***/
-@-moz-document url("https://web.de/"),
-url-prefix("https://web.de/fm") {
+@-moz-document url("https://web.de/"), url-prefix("https://web.de/fm") {
     * {
         visibility: hidden !important;
     }
@@ -69,8 +68,7 @@ url-prefix("https://web.de/fm") {
 }
 
 /*** Logout ***/
-@-moz-document regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*"),
-regexp("https?:\\/\\/web\\.de\\/#(.*)?") {
+@-moz-document regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*"), regexp("https?:\\/\\/web\\.de\\/#(.*)?") {
     body > *:not(.first),
     .logout-notification > .hint > p,
     .search-wrapper,
@@ -230,10 +228,10 @@ regexp("https?:\\/\\/web\\.de\\/#(.*)?") {
     }
 }
 
-@-moz-document url-prefix("https://3c.web.de/mail/client/") {
+@-moz-document url-prefix("https://3c.web.de/mail/client/"), url-prefix("https://3c-bap.web.de/mail/client/") {
     if notiz {
         .navigation-container-bottom::before {
-            content: 'Aufgrund massiver Änderungen bei web.de muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.0.0';
+            content: 'Aufgrund massiver Änderungen bei web.de muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.0.4';
             background-color: #ffd800;
         }
     }
@@ -305,8 +303,7 @@ url-prefix("https://web.de/fm") {
 }
 
 /*** Logout DS ***/
-@-moz-document regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*"),
-regexp("https?:\\/\\/web\\.de\\/#(.*)?") {
+@-moz-document regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*"), regexp("https?:\\/\\/web\\.de\\/#(.*)?") {
     if ds-enable {
         html,
         body {
