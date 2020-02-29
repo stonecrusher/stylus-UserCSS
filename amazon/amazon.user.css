@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.18
+@version        1.11.19
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -773,7 +773,9 @@
         .apx-add-pm-trigger-common-image,
         .checkout-giftbox-icon,
         .newMusicLogo,
-        img[src^="https://images-na.ssl-images-amazon.com/images/G/01/amazonui/loading/loading-"] {
+        img[src^="https://images-na.ssl-images-amazon.com/images/G/01/amazonui/loading/loading-"],
+        #view-switcher-buttons,
+        img[src^="https://images-eu.ssl-images-amazon.com/images/G/01/payments-portal/r1/PlusIcon"] {
             filter: invert(0.8) !important;
         }
         .nav-image,
