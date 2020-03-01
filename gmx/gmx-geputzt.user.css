@@ -6,580 +6,343 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      2.3.6
+@version      3.0.0
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
 @preprocessor stylus
 
-@var checkbox login-clean        'Loginseite ausputzen' 1
-@var checkbox posteingang-dehnen 'Posteingang nach rechts dehnen' 1
-@var checkbox sofortantwort-hide 'Sofortantwort verstecken' 0
-@var checkbox mediacenter-hide   'MediaCenter verstecken' 1
-@var checkbox mailcheck-hide     'MailCheck verstecken' 1
-@var checkbox demail-hide        'DE-Mail verstecken' 1
-@var checkbox sms-hide           'Verschlüsselte, Fax, SMS verstecken' 1
-@var checkbox calendar-hide      'Kalender, Dok-Manager, Pinnwand verstecken' 1
-@var checkbox grusskarten-hide   'Grußkarten verstecken' 1
-@var color    logoutbutton-color 'Farbe des Logout-Buttons' #FF8800
-@var checkbox intellipost-hide   'Intelligentes Postfach verstecken' 1
+@var checkbox notiz                 'Versionshinweis'                 1
+@var checkbox sofortantwort-hide    'Sofortantwort verstecken'        0
+@var checkbox menu-keep             'Hauptmenüs unangetastet lassen'  0
+@var color    var_logoutcolor       'Logoutbuttonfarbe'               #ff812e
 
-@var checkbox darkstyle-enable   'Darkstyle (DS)' 1
-@var color    var_schriftfarbe   'DS Schriftfarbe'      #eee
-@var color    var_hintergrund1   'DS Hintergrundfarbe'  #222
-@var color    var_hintergrund2   'DS Hintergrund hover' #444
-@var color    var_btnFarbe       'Buttonfarbe'          #486303
-@var color    var_accent         'Akzentfarbe'          #406ed2
+@var checkbox ds-enable 'Darkstyle (DS)'          0
+@var color    var_font1 'DS Schriftfarbe'         #eee
+@var color    var_font2 'DS Schriftfarbe inaktiv' #aaa
+@var color    var_bg1   'DS Hintergrund'          #222
+@var color    var_bg2   'DS Hintergrund hover'    #444
 ==/UserStyle== */
 
-/*
-This Userstyle by stonecrusher can also be found at
-https://userstyles.org/styles/134069/
-*/
-
-@-moz-document domain("gmx.net") {
-  /*** Postfach (eingeloggt) ***/
-
-  /* Sofort-Antwort verstecken? */
-  if sofortantwort-hide {
-    #mail-instant-reply {
-      display:none !important;
-    }
-  }
-
-  /* Posteingang bis zum rechten Rand dehnen? */
-  if posteingang-dehnen {
-    /* Startseite Breite */
-    #desk > .cockpit > .grid-left,
-    #desk ul.section.col-2 {
-      width:100% !important;
-    }
-    html.can-have-sky .section-content { margin-right:0 !important; }
-    /* Startseite Innencontainer Höhe */
-    .component.mail.widget div.data-list { height:99% !important; }
-    /* Startseite Metadaten Breite */
-    .component.mail.widget div.tab-mail > ul.inbox-container > li { max-width:initial !important; }
-    .component.mail.widget div.tab-mail > ul.inbox-container > li > .sender { width: 180px !important; }
-    .component.mail.widget div.tab-mail > ul.inbox-container > li > .subject { width: calc(100% - 260px - 50px) !important; }
-    .component.mail.widget div.tab-mail > ul.inbox-container > li > .date { width: 80px !important; }
-  }
-
-  /* Farbe des Logout-Buttons */
-  pos-icon-item[icon="core_logout"],
-  .is-mobile .toolbar__icon[data-position="right"] { background-color:logoutbutton-color !important; }
-
-  /* Kalender, Dokumenten-Manager, Pinnwand? */
-  if calendar-hide {
-    atl-menu-item[data-item-name="calendar"],
-    #cockpit #navigation > ul > li:nth-of-type(9),
-    #cockpit #navigation > ul > li:nth-of-type(10),
-    #cockpit #navigation > ul > li:nth-of-type(11) {
-      display:none !important;
-    }
-  }
-
-  /* MediaCenter? */
-  if mediacenter-hide {
-    atl-menu-item:nth-of-type(5), /* Top Toolbar */
-    #innercontent > .component.mailbox > .nav > li.storage {
-      display:none !important;
-    }
-  }
-
-  /* DE-Mail? */
-  if demail-hide {
-    .demail-selection,
-    #cockpit #navigation > ul > li:nth-of-type(5) {
-      display:none !important;
-    }
-  }
-
-  /* Verschlüsselte, Fax, SMS? */
-  if sms-hide {
-    a[title="E-Mail schreiben"] + div.button-group-firstblockbutton_subgroup,
-    #cockpit #navigation > ul > li:nth-of-type(3),
-    #cockpit #navigation > ul > li:nth-of-type(12),
-    #cockpit #navigation > ul > li:nth-of-type(13) {
-      display:none !important;
-    }
-  }
-
-  /* MailCheck? */
-  if mailcheck-hide {
-    #cockpit #navigation > ul > li:nth-of-type(6),
-    .mailcheck { /* Achtung, Änderungen? */
-      display:none !important;
-    }
-  }
-
-  /* Grußkarten? */
-  if grusskarten-hide {
-    #cockpit #navigation > ul > li:nth-of-type(4) {
-        display:none !important;
-      }
-  }
-  
-  
-  /* Intelligentes Postfach? */
-  if intellipost-hide {
-    #navigation > div[id] > .navigation.gui-toggle > div[title^="Intelligentes Postfach"],
-    #navigation > div[id] > .navigation.gui-toggle > div[title^="Intelligentes Postfach"] + .panel-body {
-        display:none !important;
-      }
-  }
-  
-  /* "Organisation" Gruppenpunkt Menü links */
-  if sms-hide && calendar-hide {
-    #cockpit #navigation > ul > li:nth-of-type(7),
-    #cockpit #navigation > ul > li:nth-of-type(8) {
-        display:none !important;
-      }
-  }
-
-  /* weiterer Kram zum Verstecken */
-  .ad, .adframe, .specialad, #tracking, #js-kiosk, #kiosk, #js-produkte, .produkte,
-  iframe[src~="adimg.uimserv.net"],
-  .upsell, .button-upsell, .upsell-link, #billboard,
-  .pgp-empty-preview-teaser, .pgp-invite-teaser,
-  ul.link-menu li[title="GMX-Premium-Vorteile 1 Monat kostenlos testen"],
-  ul.link-menu li[title~="Jobs"],
-  div#innercontent > div:nth-of-type(2),  /* footer-Werbung */
-  #page-footer li:nth-of-type(n+4), /* kleiner Footer Eigenwerbung */
-  /* Premium-Werbung in den Startseite-Einstellungen */
-  /*div.setting-dialog.settings-startpage > div > div:first-of-type,*/
-  p#id12ed, /* Werbelink in Einstellungen Newsletter Vorteilswelt */
-  p#id7c2, /* Werbelink in Einstellungen Newsletter Vorteilswelt */
-  /* Top-Toolbar */
-  atl-menu-item:nth-of-type(n+6), /* Musikflat, MailDomain, Premium, AllNet */
-  pos-feedback.pos-feedback, atl-feedback, /* Feedback-Reiter unten rechts */
-  .cke_toolbar.cke-custom-button-phxxxlstorage,
-  div.helpservice-container, a.upsell,
-  /* #footer, #footer-gap, */
-  div#footer li:nth-of-type(n+4),
-  .splash-agb > .hero,  /* Vorschaltseiten */
-  /* .splash-agb > .content-part:not(:last-child), */
-  .splash-agb > .content-part > .content-part:not(:last-child),
-  .splash-agb > .content-part > [class|="content-part"]:not(:last-child),
-  /* .splash-agb   .btn-right-top > .btn-wrapper, */
-  .agb-note, /* Vorschaltseite 2017-06-30 Text */
-  [onclick*="partnershop_hermes"], /* Vorschaltseite 2017-06-30 Button */
-  .pos-third-party-dialog__blocker, /* MailCheck Overlay */
-  #btn-buy,
-  [data-buy], /* nochmal alle Kaufen-Buttons - doppelt hält besser */
-  #thirdPartyFrame_layer,
-  /*#desk #contentwrapper > div:first-of-type,  /* Werbefenster oben rechts [macht startseite kaputt] */
-  #content-sky,  /* Werbung rechte Seitenleiste */
-  tr.new.iba,  /* Werbung getarnt als Emails in der Übersicht */
-  .iba-acceptable,  /* Fake-Emails im Posteingang */
-  [class^="iba-"],  /* Generisch für Werbe-Klassen */
-  tr.new.iba-uncertain,
-  .inbox-container > .iba,
-  .inbox-ad-panel,  /* Seitliche Werbung bei reduziertem Funktionsumfang */
-  #pkf.widget, /* Kasten mit JS-Inhalt Startseite unten links */
-  #skyscraper, /* großer Werbekasten rechts Startseite */
-  .login-security,  /* Aufforderung für Handynummer */
-  .misc-list__item:nth-of-type(even)  /* Mobile Seite - Links im Footer*/
-  .misc-list__item:nth-of-type(even),  /* Mobile Seite - Links im Footer*/
-  #adRectangle, /* Mobilfunk Werbung */
-  [translate="LOGGED_OUT_AUTOMATICALLY_TEXT"] > p, /* Mailcheck-Tipp bei Auto-Logoff */
-  #flyoutFeatureTeaser, /* "Jetzt verschlüsselt kommunizieren */
-  #transferoption .form-item[id], /* "Einschreiben" bei Email schreiben optionen */
-  #innercontent > div[id]:not([class]), /* Startseite textlink unter mailbox */
-  .webcent, /* WEB.cent auf Startseite */
-/* .atl-third-party-dialog__blocker, /* Neues Overlay 2018-03 */
-  #desk > .cockpit > .grid-right,
-  #desk > .cockpit > .grid-left > .grid-container:last-child, /* Werbekram, Wetter, Hilfe & Tipps auf Startseite */
-  #cockpit #navigation > ul > li:nth-of-type(n + 14):not(:nth-of-type(n + 25)), /* Linke Navi "Produkte" */
-  .smart-inbox-empty-preview-teaser,
-  #superbanner,
-  
-  #dummy {
-    display:none !important;
-  }
-
-  /* Info auf leeren Vorschaltseiten hinzufügen */
-  /*.splash-agb.agb-table.splash-treue .goto-next::before */
-  .splash-agb .btn-right-top::before { content:"Werbung entfernt.\00a0" !important; }
-
-  /* Höhe der Startseite vergrößern */
-  .nav-tabs,
-  .tab-mail.active,
-  ul.inbox-container {
-    height:350px !important;
-  }
-  div.no-mails { margin-top:80px !important; }
-
-  /* Höhe des Posteingang vergrößern (hängt von Adblockdetektion ab) */
-  .no-sky.can-have-adb .section-1 > .section-container { bottom:0 !important; }
-
-  /* Fehlerbenachrichtigung beim Login */
-  .hint-wrapper,
-  .hint-wrapper * {
-    visibility:visible !important;
-  }
-  .hint-wrapper {
-    position:fixed !important;
-    z-index:5 !important;
-    top:2% !important;
-    left:calc(42% + 50px) !important;
-    overflow:hidden !important;
-    width:300px !important;
-    margin-left:-150px !important; }
-  #loginsearch .hint-wrapper .r4 { border:none !important; } /* weißer Rand rechts */
-  #loginsearch .hint-wrapper::after, /* Pfeil rechts */
-  #loginsearch .hint-error::after {
-    display:none !important;
-  }
-  #loginsearch .hint { height:auto !important; }
-  #loginsearch .hint a { text-decoration:underline !important; }
-
-  .hint-btn { display:none !important; } /* Zurück zum Login Button */
-
-  .hint-error { background:#f66 !important; border-radius:0 !important; }
-  .hint-error h2 { line-height:48px !important; }
-  .hint-error p {
-    margin:0 auto !important;
-    padding:10px !important;
-    width:250px !important;
-  }
-  .hint-error p strong {
-    display:block !important;
-    margin-top:8px !important;
-  }
-}
-
-
-@-moz-document regexp("^https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/($|free_ssl\\?status=login-failed.*|\\?status=session-expired.*)") {
-  /*** Login-Seite ausputzen ***/
-  if login-clean {
+/*** Login ***/
+@-moz-document url("https://www.gmx.net/"), url-prefix("https://www.gmx.net/fm") {
     * {
-      visibility:hidden !important;
-      overflow:hidden !important;
+        visibility: hidden !important;
     }
-    .form-login, .form-login *,
-    .btn-xs, .btn-xs *,
-    #logo, #logo * {
-      visibility:visible !important;
-      display:block !important;
+    html,
+    html > body,
+    html > body > #app,
+    html > body > #app > .main,
+    html > body > #app > .main > .main-content,
+    html > body > #app > .main > .main-content > div,
+    html > body > #app > .main > .main-content > div > section[data-content-login],
+    html > body > #app > .main > .main-content > div > section[data-content-login] *,
+    html > body > #app > .main > .main-content > header,
+    html > body > #app > .main > .main-content > header > div,
+    html > body > #app > .main > .main-content > header > div > [data-part="logo"],
+    html > body > #app > .main > .main-content > header > div > [data-part="logo"] * {
+        visibility: visible !important;
     }
-    .btn-wrapper { overflow:visible !important; }
-
-    img,
-    a,
-    .teaser, .news, .lotto {
-      display:none !important;
+    html > body > #app > .main > .main-content > div > [data-name],
+    html > body > #app > .main > .main-content > div > div:nth-child(n + 3),
+    html > body > #app > .main > .main-content > div > section:nth-child(n + 4),
+    [data-component="bento"] footer,
+    [data-component="login"] > div:first-child,
+    header + [data-ac="middle"],
+    .main > [data-container="right"],
+    footer {
+        display: none !important;
     }
-
-    body > .wrapper-center:nth-of-type(n+3) { position:fixed !important; }
-
-    #loginsearch-login form.form-login {
-      position:fixed !important;
-      width:50% !important;
-      min-width:250px !important;
-      top:37% !important;
-      left:30% !important;
+    p[aria-label="reg"],
+    p[aria-label="pwd"] {
+        font-size: small !important;
     }
-    #logo {
-      position:fixed !important;
-      top:calc(35% - 30px) !important;
-      left:42% !important;
-      filter:brightness(0) !important;
+    header[data-component="header"] > div {
+        border: 0 !important;
     }
-    .hint-wrapper {
-      position:fixed !important;
-      margin-top:0 !important;
-      width: 380px !important;
-      top:2% !important;
-      left:43% !important;
-      overflow:hidden !important;
-      margin-left:-120px !important;
-    }
-    .hint-wrapper > .r4,
-    .hint {
-      height:initial !important;  /* red error wrapper */
-      width:300px !important;
-    }
-    .hint-error p {
-      width:260px !important;  /* SessionExpired-Text */
-      margin-left:0px !important;
-      padding:10px !important;
-    }
-    /*** Z-INDEX LAYERS ***/
-    .ie7fix { z-index:50000 !important; position:relative !important; }
-
-    #loginsearch { z-index:200 !important; position:absolute !important; }
-    #loginsearch-login form.form-login { top:40% !important; }
-
-    #logo, #header { z-index: 100 !important; }
-  }
-}
-
-
-
-@-moz-document regexp("^https?:\\/\\/www\\.gmx\\.net\\/(magazine\\/logout\\/.*|logoutlounge\\/.*)") {
-  /*** Logout-Seite ***/
-  * {
-    visibility:hidden !important;
-    overflow:hidden !important;
-  }
-
-  .logout, .logout *,
-  #organization, #organization *,
-  .logout-notification, .logout-notification * {
-    visibility:visible !important;
-    display:block !important; }
-
-  .logout { position:fixed !important; }
-
-  .logout-notification {
-    position:fixed !important;
-    width:50% !important;
-    min-width:250px !important;
-    top:48% !important;
-    left:22% !important;
-  }
-
-  .hint-wrapper > .r4 { width:initial !important; }
-
-  div.hint:not(.hint-error) > p:first-of-type,
-  div.hint:not(.hint-error) h2 + p {
-    display:none !important;
-  }
-
-  #organization { background:#1C449B !important; }
-  #logo {
-    visibility:visible !important;
-    position:fixed !important;
-    top:calc(35% - 30px) !important;
-    left:42% !important;
-    filter:brightness(0) !important;
-  }
-}
-
-
-@-moz-document domain("gmx.net"), domain("gmx.at"), domain("gmx.ch") {
-  /*************************/
-  /***** GMX Darkstyle *****/
-  if darkstyle-enable {
     body,
-    body *:not(.ico):not(.icon):not(.icons):not(.m-icon):not(.symbol):not(.sprite):not(input):not(.form-submit):not(.status):not(.form-login):not(.hint):not(h2):not(.expandnav):not(.navcollapse):not(.cke_button_icon):not(.cke_button_label):not([title="Als Favorit markieren"]):not(.smiley-sprite):not(.btn-wrapper):not(.fc-icon):not(.sp-bg):not(.ui-icon):not(.scroll-shadow-top):not(.scroll-shadow-bottom):not(.envelope):not(.iconset):not(.placeholder):not(.close-btn):not(.layer-icon) {
-      color:var_schriftfarbe !important;
-      background-color:var_hintergrund1 !important;
-      background-image:none !important;
+    html {
+        background-color: white !important;
+    }
+    [data-content] [data-content-login] {
+        justify-content: center !important;
+    }
+    if not menu-keep {
+        [aria-label="netid"],
+        [data-component="bento"] {
+            display: none !important;
+        }
+    }
+}
+
+/*** Logout ***/
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.net\\/logoutlounge\\/.*"), regexp("https?:\\/\\/www\\.gmx\\.net\\/#(.*)?") {
+    body > *:not(.first),
+    .logout-notification > .hint > p,
+    .search-wrapper,
+    #rightnav {
+        display: none !important;
+    }
+}
+/*** Eingeloggt ***/
+@-moz-document regexp("https?:\\/\\/((mm|3c|3c-bap|adressbook|account|cloud|kalender|wusa|metasearch|(.+\\.)?navigator)\\.)?gmx\\.net\\/.*") {
+    /* Navi */
+    if not menu-keep {
+        /* Navi oben */
+        /*gmx*/ [data-item-name="cloud"],
+        /*gmx*/ [data-item-name="premium_product"],
+        [data-item-name="maildomain_new"],
+        [data-item-name="allnet"],
+        [data-item-name="zattoo"],
+        /* Navi oben geöffnet ("mehr") */
+        [data-group-name="Produkte"],
+        /* Navi linke Seite */
+        /* beat this specificity: html.resolution-1024 #navigation li.item, */
+        /* Verschlüsselung, DE-Mail, Mailcheck */
+        /*gmx*/ #navigation.component > ul > li.item:nth-child(3),
+        /*gmx*/ #navigation.component > ul > li.item:nth-child(5),
+        /*gmx*/ #navigation.component > ul > li.item:nth-child(6),
+        /* Dokumentenmanager, Pinnwand, SMS/MMS, Fax */
+        #navigation [data-area="orga"] + .seperator + .item + .item + .item,
+        #navigation [data-area="orga"] + .seperator + .item + .item + .item + .item,
+        #navigation [data-area="orga"] + .seperator + .item + .item + .item + .item + .item,
+        #navigation [data-area="orga"] + .seperator + .item + .item + .item + .item + .item + .item,
+        /* Produkte */
+        #navigation [data-area="produkte"],
+        #navigation [data-area="produkte"] + .seperator,
+        #navigation [data-area="produkte"] + .seperator + .item,
+        #navigation [data-area="produkte"] + .seperator + .item + .item,
+        #navigation [data-area="produkte"] + .seperator + .item + .item + .item,
+        #navigation [data-area="produkte"] + .seperator + .item + .item + .item + .item,
+        #navigation [data-area="produkte"] + .seperator + .item + .item + .item + .item + .item,
+        #navigation [data-area="produkte"] + .seperator + .item + .item + .item + .item + .item + .item,
+        #navigation [data-area="produkte"] + .seperator + .item + .item + .item + .item + .item + .item + .item,
+        #navigation [data-area="produkte"] + .seperator + .item + .item + .item + .item + .item + .item + .item + .item,
+        #navigation [data-area="produkte"] + .seperator + .item + .item + .item + .item + .item + .item + .item + .item + .item,
+        /*gmx*/ [title="Jobs @ GMX.DE"],
+        /*gmx*/ [title="GMX-Premium-Vorteile 1 Monat kostenlos testen"],
+        /* Verschlüsselte, Fax, SMS */
+        #section-0 > .navigation-container-top > .panel > .button-group-firstblockbutton > .button-group-firstblockbutton_subgroup,
+        /** Suche Overlay **/
+        .meta-results-page__feedback-button,
+        .meta-results-page__section-web {
+            display: none !important;
+        }
+    }
+    [icon="core_logout"] {
+        background-color: var_logoutcolor !important;
     }
 
-    /* Menüleiste oben */
-    .atl-actions-menu__item--active .pos-icon-item__icon, .atl-actions-menu__item:hover .pos-icon-item__icon, .atl-actions-menu__item--active:hover .pos-icon-item__icon {
-      fill: var_accent !important;
+    /** Startseite **/
+    .atl-feedback__button,
+    .upsell,
+    .extend-mail-storage,
+    .webcent,
+    .hide {
+        display: none !important;
+    }
+    /* Höhe */
+    .component.widget.mail > section {
+        height: 485px !important;
+    }
+    .component.widget.mail .nav-tabs,
+    .component.widget.mail .tab-mail {
+        height: 328px !important;
+    }
+    .component.widget.mail ul.inbox-container {
+        height: initial !important;
+    }
+    .add-widget {
+        height: 100px !important;
+    }
+    .add-widget .text {
+        padding-top: 0 !important;
+    }
+    /* Breite */
+    /*gmx*/ ul.inbox-container li {
+        max-width: initial !important;
+    }
+    #desk > .cockpit > .grid-right {
+        display: none !important;
+    }
+    #desk div.grid-container.grid-left {
+        width: 100% !important;
+    }
+    .component.widget.mail ul.inbox-container li .sender {
+        width: 180px !important;
+    }
+    .component.widget.mail ul.inbox-container li .subject {
+        width: 585px !important;
+    }
+    #desk ul.section.col-2 {
+        width: 100% !important;
     }
 
-    /* Email schreiben */
-    input[placeholder="Suche"],
-    .compose-header_object input {
-      color:var_schriftfarbe !important;
-    }
-    .simple-icon_attachment-upload,
-    .cke_button_icon,
-    .cke_button_label {
-      filter:invert(100%) !important;
-    }
-    #cke_1_top.collapsed { padding-bottom:0 !important; }
-    #cke_editor a.cke_button_off:hover,
-    #cke_editor a.cke_button_off:focus,
-    #cke_editor a.cke_button_off:active {
-      background-image: linear-gradient(to bottom,var_hintergrund2,darken(var_hintergrund2,20%)) !important;
-    }
-    #cke_editor a.cke_button_on {
-      background-image: linear-gradient(to bottom,var_hintergrund2,lighten(var_hintergrund2,20%)) !important;
-    }
-    #cke_editor a.cke_button_disabled:hover,
-    #cke_editor a.cke_button_disabled:focus,
-    #cke_editor a.cke_button_disabled:active {
-      background-image: linear-gradient(to bottom,var_hintergrund1,darken(var_hintergrund1,20%)) !important;
+    /** Email Editor **/
+    .cke_button__phxgreetingcards,
+    #transferoption .form-item[id],
+    #mailComposeScheduledButton,
+    .demail-selection,
+    .dialog-promo,
+    .promo {
+        display: none !important;
     }
 
-    /* Senden Buttons */
-    #section-0 .m-button.button-size-large.button-block.button-link, /* Email Schreiben Button */
-    #compose-form .js-compose-send-button, /* Senden Button oben rechts */
-    #compose-form-submit-send, /* Senden Button unten rechts */
-    .m-button /* Buttons allgemein */ {
-      background-image: linear-gradient(to bottom,var_btnFarbe,darken(var_btnFarbe, 30%)) !important;
-        &.is-hovered { background-image: linear-gradient(to bottom, lighten(var_btnFarbe,10%),var_btnFarbe) !important; }
+    /** Postfach **/
+    .upsell-link,
+    .smart-inbox-empty-preview-teaser,
+    .mailcheck,
+    /*gmx*/ #maillist .iba-acceptable,
+    /*gmx*/ .navigation--smartInbox {
+        display: none !important;
     }
-    #compose-form-submit-send { margin-left: 10px !important; }
-    /* Angefangene E-Mail / Entwürfe */
-    #section-0 .panel-composition ul.drafts a { border: 1px solid var_hintergrund2 !important; }
-    #section-0 .panel-composition ul.drafts li.active a { background-color: var_hintergrund2 !important; }
-    #section-0 .panel-composition ul.drafts li.active:hover a,
-    #section-0 .panel-composition ul.drafts li:hover a {
-      background-color: var_hintergrund2 !important;
+    /* Höhe */
+    #section-0 + .section-1 > .section-container {
+        height: 100% !important;
     }
-
-    /* Startseite */
-    .mail.active::before { display:none !important; }
-
-    .inbox-container > li { border-bottom:1px solid var_schriftfarbe !important; }
-
-    #section-0 .mail-inbox > .mail-id:hover *, /* Mail-Übersicht */ /* ID wird für Spezifität benötigt */
-    /* Neue Mails / Pluszeichen */
-    #section-0 ul.nav li.add,
-    #section-0 ul.nav li.active,
-    #section-0 ul.nav li.active > * {
-      background-color: var_hintergrund2 !important;
+    /* Breite */
+    html.can-have-sky .section-content {
+        margin-right: 0 !important;
     }
-
-    /* Postfach */
-    #mail-list tr:hover *,
-    #navigation > ul > li:hover *,
-    #section-0 .is-hovered  /* E-Mail schreiben Button */ {
-      background-color: var_hintergrund2 !important;
+    if sofortantwort-hide {
+        #mail-instant-reply {
+            display: none !important;
+        }
+        .is-mail-quick-replyable > .widget-mail-mail {
+            bottom: 0 !important;
+        }
     }
-    .symbol { color: var_hintergrund1 !important; } /* Briefsymbol */
-    /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
-    input.menu-item { color: var_schriftfarbe !important; } /* Dropdown */
-    .drop-down li:hover * { background-color: var_hintergrund2 !important; } /* z.B. bei checkbox Auswahl */
-    #panel-mail-table .inactive * { color: darken(var_schriftfarbe, 40%) !important; }
-    #panel-mail-table li:hover:not(.inactive) { background-color: var_schriftfarbe !important; }
-    #panel-mail-display .area span.dropdown,
-    #panel-mail-table .area span.dropdown {  /* Dropdown downarrow */
-      border-style: solid !important;
-      width: 0 !important;
-      height: 0 !important;
-      border-bottom:none !important;
-      border-left: 5px solid black !important;
-      border-right: 5px solid black !important;
-      border-top: 5px solid darkgrey !important;
-    }
-    /* Trennstrich bei Mailvorschau rechts */
-    .system-folder-message.js-box-vertical,
-    .mail-display-wrapper.js-box-vertical {
-      border-left:1px solid #C9D6E7 !important;
-    }
-    /* Email Details toggle workaround */
-    /* sonst müssen oben :not(li):not(.gui-toggle-trigger) eingetragen werden */
-    #mail-head .gui-toggle.minimized ul.gui-toggle-control li,
-    #mail-head .gui-toggle ul.gui-toggle-control li,
-    #html-tag .gui-toggle.minimized ul.gui-toggle-control li,
-    #html-tag .gui-toggle ul.gui-toggle-control li {
-      background-image:url("https://cdn.gmxpro.net/cdn/mail/client/wicket/resource/static-res/---/uic/img/themes/unified/intenseblue/sprite-st-6538373036353439.png") !important;
-      background-position:-230px -246px !important;
-      background-color: var_hintergrund1 !important;
-      filter:grayscale(100%) !important;
-    }
-    #mail-head .gui-toggle ul.gui-toggle-control li,
-    #html-tag .gui-toggle ul.gui-toggle-control li {
-      background-position: -264px 0 !important;
-    }
-    #html-tag .gui-toggle .menu-head .gui-toggle-control {
-      width: 15px !important;
-      line-height: 1.35em !important;
-    }
-    ::-moz-placeholder { color: #777 !important; }
-    .paging input {
-      background-color: lighten(var_hintergrund2,20%) !important;
-      background-image: none !important;
-      font-weight: bold !important;
-    }
-    h2.title {
-      color: darken(var_schriftfarbe, 40%) !important;
-    }
-    /* Spam / Newsletter Popup */
-    .layer-dialog .dialog-text h2 {
-        color: var_schriftfarbe !important;
+    /* After sending email hide SMS notice */
+    /* Online-Speicher */
+    [title="Speicherplatz erweitern"],
+    [title="Installieren Sie Online-Speicher für Windows"] {
+        display: none !important;
     }
 
-    /* Adressbuch */
-    .fc-toolbar > .fc-left h2 { color:var_schriftfarbe !important; }
-    #worker-iframe ~ .container .fc-view-container * {
-      color:var_schriftfarbe !important;
-      background:transparent !important;
-    }
-    #worker-iframe ~ .container .fc-bgevent { background:#8fdf82 !important; }
-    #worker-iframe ~ .container .fc-today,
-    #worker-iframe ~ .container .fc-nonbusiness {
-      background:#333 !important;
-    }
-    #worker-iframe ~ .container .event-bordered { background:#a33 !important; }
-    
     /* Einstellungen */
-    /* Seitenmenü */
-    .panel-setting .panel-head h2 { color: var_schriftfarbe !important; }
-    #html-tag .menu-sub .menu-item.active,
-    #html-tag .menu-sub .menu-item.active > span,
-    #html-tag .menu-sub .menu-item.active:hover,
-    #html-tag .menu-sub .menu-item.active:hover > span,
-    #html-tag .menu-sub li a.active,
-    #html-tag .menu-sub li a.active > span,
-    #html-tag .menu-sub li a.active:hover,
-    #html-tag .menu-sub li a.active:hover > span,
-    #navigation .nav-item .label.active,
-    #navigation .nav-item .label.active > span,
-    #thirdPartyFrame_home .setting-switcher-panel li:hover,
-    #desk .settingspanel li:hover > a {
-      background-color: lighten(var_hintergrund2,10%) !important;
-      color: var_schriftfarbe !important;
+    /* @email.de, My@dress, Individuelle E-Mail-Adresse von gmx.net MailDomain zu günstigen Preisen */
+    /* keine zuverlässigen Selektoren!
+    .page-body > .section-1 > .section-container > .splitpanel-settings > .splitpanel-settings-content > .splitpanel-settings-content_wrapper > div:nth-of-type(2),
+    .page-body > .section-1 > .section-container > .splitpanel-settings > .splitpanel-settings-content > .splitpanel-settings-content_wrapper > div:nth-of-type(3),
+    .page-body > .section-1 > .section-container > .splitpanel-settings > .splitpanel-settings-content > .splitpanel-settings-content_wrapper > div:nth-of-type(4) {
+        display: none !important;
     }
-    #html-tag .menu-sub .menu-item:hover,
-    #html-tag .menu-sub .menu-item:hover > span,
-    #html-tag .menu-sub li a:hover,
-    #html-tag .menu-sub li a:hover > span,
-    #navigation > div > div:not(#navigation-function) .nav-item > .label:hover,
-    #navigation > div > div:not(#navigation-function) .nav-item > .label:hover > span,
-    #desk .settingspanel li:hover > a.active {
-      background-color: var_hintergrund2 !important;
-      color: var_schriftfarbe !important;
-    }
-    #html-tag ul.menu ul.menu-top > li {
-      color: lighten(var_accent,10%) !important;
-      font-weight: bold !important;
-    }
-    #main .choose-permission,
-    #main .personal_data_box,
-    #main .choose-permission *,
-    #main .personal_data_box * {
-      background-color: var_hintergrund2 !important;
-    }
-    .headline-wrapper h2 { color: var_schriftfarbe !important; }
-    #html-tag a.text-link { color: lighten(var_accent,10%) !important; }
-    #html-tag .splitpanel_slider { background-color: var_schriftfarbe !important; }
-
-    /* Automatische Abmeldung */
-    #pos-modal-wrapper .pos-message-modal__wrapper * { background-color: var_hintergrund2 !important; }
-    #pos-modal-wrapper .pos-message-modal__wrapper .pos-button { background-color: var_hintergrund1 !important; }
-  }
-  /***** GMX Darkstyle *****/
-  /*************************/
+    */
 }
 
-@-moz-document regexp("^https?:\\/\\/www\\.gmx\\.net\\/(magazine\\/logout\\/.*|logoutlounge\\/.*)"),
-               regexp("^https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/($|free_ssl\\?status=login-failed.*|\\?status=session-expired.*)") {
-  /*************************/
-  /***** GMX Darkstyle *****/
-  if darkstyle-enable  {
-    /*** Login & Logout DS ***/
-    html { background-color:var_hintergrund1 !important; }
-
-    #logo * { background:none !important; }
-    #logo {
-      background-image:url("https://img.ui-portal.de/homepage/img/gmx/logo.svg") !important;
-      filter:invert(0%) !important;
+/* Logout reminder */
+@-moz-document regexp("https?:\\/\\/(bap\\.)?navigator\\.gmx\\.net\\/remindlogout\\?.*") {
+    #dummy {
+        color: black;
     }
-
-    #header .logout-notification .hint:not(.hint-error) > .link-list * {
-      color:var_hintergrund1 !important; text-shadow:none !important;
-    }
-
-    #header .logout-notification .hint:not(.hint-error),
-    #header .logout-notification .hint:not(.hint-error) > .link-list > li:first-of-type * {
-      background:darkgrey !important;
-    }
-    #header .logout-notification .hint:not(.hint-error) > .link-list > li:last-of-type * { background:green !important; }
-
-    .logout-notification .link-list li > a {
-      margin-right:0 !important;
-      padding-right:15px !important;
-    }
-  }
-  /***** GMX Darkstyle *****/
-  /*************************/
 }
+
+/* Logout */
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.net\\/logoutlounge\\/.*") {
+    #dummy {
+        color: black;
+    }
+}
+
+/* Login failed */
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.net\\/logoutlounge\\/fm\\?status=login-failed.*") {
+    #dummy {
+        color: black;
+    }
+}
+
+@-moz-document url-prefix("https://3c.gmx.net/mail/client/"), url-prefix("https://3c-bap.gmx.net/mail/client/") {
+    if notiz {
+        .navigation-container-bottom::before {
+            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.0.0';
+            background-color: #ffd800;
+        }
+    }
+}
+
+/***************   D A R K S T Y L E   S T A R T   ****************/
+@-moz-document regexp("https?:\\/\\/((mm|3c|3c-bap|adressbook|account|cloud|wusa|metasearch|(.+\\.)?navigator)\\.)?gmx\\.net\\/(?!navigator\\/jump\\/to\\/calendar\\?sid).*") {
+    if darkstyle-enable {
+        #dummy {
+            color: black;
+        }
+
+        /*body, html {
+            background-color: var_bg1 !important;
+        }
+        /*** Mobile Menu ***/
+        /*** Email Editor ***/
+        /*** Startseite ***/
+        /*** Postfach ***/
+        /* Menüleiste Löschen Spam Antworten Weiterleiten etc. */
+        /* Dropdown arrow */
+        /* Trennstrich bei Mailvorschau rechts */
+        /*** Menü hover ***/
+        /*** Einstellungen ***/
+        /* Textboxen: Signatur, Automatische Antwort */
+        /* Whitelist Textbox */
+        /* Einstellungsnavi */
+        /* Seitennavi item hover */
+        /* Abbrechen-Button */
+        /* Filter Überschrift */
+        /* Von Einstellungen zurück zu gmx.net E-Mail präsenter machen */
+    }
+}
+
+/*** Login DS ***/
+@-moz-document url("https://www.gmx.net/"),
+url-prefix("https://www.gmx.net/fm") {
+    if ds-enable {
+        body,
+        html,
+        header[data-component="header"] > [data-wrapper] {
+            background: var_bg1 !important;
+        }
+        [data-content],
+        [data-content] [data-content-login] {
+            background: var_bg1 !important;
+            border-color: var_bg2 !important;
+        }
+        [data-component="navigation"],
+        [data-component="login"] {
+            background: var_bg1 !important;
+        }
+        [data-component="input"] > input,
+        [data-component="input"] > a {
+            color: var_font1 !important;
+            background-color: var_bg2 !important;
+            border-color: var_font1 !important;
+        }
+    }
+}
+
+/*** Logout reminder DS ***/
+@-moz-document regexp("https?:\\/\\/(bap\\.)?navigator\\.gmx\\.net\\/remindlogout\\?.*") {
+    if ds-enable {
+        #dummy {
+            color: black;
+        }
+    }
+}
+
+/*** Logout DS ***/
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.net\\/logoutlounge\\/.*"), regexp("https?:\\/\\/www\\.gmx\\.net\\/#(.*)?") {
+    if ds-enable {
+        html,
+        body {
+            background: var_bg1 !important;
+        }
+        .wrapper-center {
+            background-color: var_bg2 !important;
+            border-color: transparent !important;
+        }
+        .logout-notification > .hint {
+            background: #4e8e4e !important;
+        }
+        .weather > a {
+            color: var_font2 !important;
+        }
+    }
+}
+
+/***************   D A R K S T Y L E   E N D   ****************/
