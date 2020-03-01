@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.1.0
+@version      3.1.1
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -25,7 +25,7 @@
 ==/UserStyle== */
 
 /*** Login ***/
-@-moz-document regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch\\/"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/fm") {
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/fm") {
     * {
         visibility: hidden !important;
     }
@@ -290,7 +290,7 @@
 }
 
 /*** Login DS ***/
-@-moz-document regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch\\/"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/fm") {
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/fm") {
     if ds-enable {
         body,
         html,
