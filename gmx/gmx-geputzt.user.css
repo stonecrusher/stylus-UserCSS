@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.0.0
+@version      3.1.0
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -25,7 +25,7 @@
 ==/UserStyle== */
 
 /*** Login ***/
-@-moz-document url("https://www.gmx.net/"), url-prefix("https://www.gmx.net/fm") {
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch\\/"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/fm") {
     * {
         visibility: hidden !important;
     }
@@ -254,7 +254,7 @@
 @-moz-document url-prefix("https://3c.gmx.net/mail/client/"), url-prefix("https://3c-bap.gmx.net/mail/client/") {
     if notiz {
         .navigation-container-bottom::before {
-            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.0.0';
+            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.1.0';
             background-color: #ffd800;
         }
     }
@@ -290,8 +290,7 @@
 }
 
 /*** Login DS ***/
-@-moz-document url("https://www.gmx.net/"),
-url-prefix("https://www.gmx.net/fm") {
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch\\/"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/fm") {
     if ds-enable {
         body,
         html,
