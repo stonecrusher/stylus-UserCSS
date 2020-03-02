@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.1.1
+@version      3.1.2
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -42,6 +42,9 @@
     html > body > #app > .main > .main-content > header > div > [data-part="logo"],
     html > body > #app > .main > .main-content > header > div > [data-part="logo"] * {
         visibility: visible !important;
+    }
+    body {
+        overflow: hidden !important;
     }
     html > body > #app > .main > .main-content > div > [data-name],
     html > body > #app > .main > .main-content > div > div:nth-child(n + 3),
