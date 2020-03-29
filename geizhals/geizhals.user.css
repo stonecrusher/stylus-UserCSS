@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.2.0
+@version        1.2.1
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -300,6 +300,9 @@ body.fullscreen-gallery .galroot {
 }
 .dialog__content {
     background-color: var_bg1 !important;
+}
+.dialog__headline {
+    border-color: var_bg3 !important;
 }
 /* Suchfeld, Kategorien-Dropdown */
 .gh_searchfld,
