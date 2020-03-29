@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.1.1
+@version        1.2.0
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -285,7 +285,7 @@ body.fullscreen-gallery .galroot {
     border-top-color: var_bg0 !important;
 }
 #pricehistory__preview.loaded:hover {
-    background-color: #f4f6fb4d !important;
+    background-color: #f4f6fb26 !important;
 }
 .ct-grid {
     stroke: #ffffff33 !important;
@@ -452,6 +452,23 @@ a.xf_msel:hover .xf_n::after {
     background: var_bg2 !important;
     border-color: var_bg3 !important;
 }
+.listview__details {
+    background: var_bg3 !important;
+}
+.listview__toggle-details-button,
+.listview__details__specs-grid__item:nth-child(2n+1):not(:last-child),
+.dots-dropdown__link {
+    background: var_bg2 !important;
+}
+.listview__item.opened-details .listview__content {
+    box-shadow: 0 1rem .5rem -1rem rgba(255,255,255,.25);
+}
+.listview, .listview__item {
+    border-color: var_bg3 !important;
+}
+.checkbox--tick {
+    background-color: var_bg3 !important;
+}
 
 /* Produktseite */
 .offer__spacer {
@@ -467,6 +484,19 @@ a.xf_msel:hover .xf_n::after {
     background-color: var_bg2 !important;
 }
 .gh-data-table--expandable .gh-data-table__expand-button {
+    border-color: var_bg3 !important;
+}
+
+/* Händlerdetails */
+.hlist_table {
+    background-color: var_bg2 !important;
+}
+.hlist_table.table_2nd,
+.steel_list_header {
+    background-color: var_bg1 !important;
+}
+.hlist_table, .tblitem:not(:last-child),
+.steel_list_container .row .cell, .steel_list_header .cell {
     border-color: var_bg3 !important;
 }
 
@@ -641,6 +671,7 @@ a.xf_msel:hover .xf_n::after {
 }
 .results__control__sort-by-select {
     color: var_text !important;
+    background-color: var_bg2 !important;
 }
 .results__inner,
 .galleryview,
