@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.21
+@version        1.11.22
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -204,7 +204,8 @@
         .navHeader_alexa_myx,
         .navOptionChildItem_alexa_myx,
         .myx-popover .myx-popover-wrapper,
-        .a2s-utterance-box {
+        .a2s-utterance-box,
+        .cu-issue-summary {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -934,7 +935,9 @@
         #checkout-page-container .turbo-checkout-panel-link span.compact-address-name,
         #checkout-page-container .turbo-checkout-payment-issuer,
         #pet_nav_tooltip .pet_tooltip_message,
-        div.gbh1-bold, div.gbh2-bold {
+        div.gbh1-bold, div.gbh2-bold,
+        .cu-eb-order-header-v2, .cu-contact-channel-disabled-msg,
+        .cu-issue-summary-left-col {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1032,7 +1035,8 @@
             color: #333 !important;
         }
         /* Article warning */
-        .cpsiaMainDiv, .cpsiaWarning {
+        .cpsiaMainDiv, .cpsiaWarning,
+        .msgMini {
             color: black !important;
         }
         /* Search matches */
