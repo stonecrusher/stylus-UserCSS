@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.2.3
+@version        1.2.4
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -509,6 +509,17 @@ a.xf_msel:hover .xf_n::after {
     border-color: var_bg3 !important;
 }
 
+/* Login Dialog */
+.dialog__action, .button--outlined {
+    background-color: var_bg1 !important;
+}
+.button--outlined {
+    color: var_text !important;
+}
+.textfield__input {
+    background-color: var_bg2 !important;
+    color: var_text !important;
+}
 
 /** Produktvergleich von originaler productcomparison.ghp.css **/
 /*.comparelist__button {
