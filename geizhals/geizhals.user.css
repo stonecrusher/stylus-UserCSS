@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.2.6
+@version        1.2.7
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -708,6 +708,12 @@ a.xf_msel:hover .xf_n::after {
 .pricealert_modal-wrapper input[type="text"] {
     background: var_bg3 !important;
     color: var_text !important;
+}
+.pagination__container .pagination__button > span {
+    color: var_text !important;
+    &:hover {
+        background-color: var_bg3 !important;
+    }
 }
 
 /* Deals */
