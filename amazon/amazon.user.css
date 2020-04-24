@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.22
+@version        1.11.23
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -357,7 +357,8 @@
             background: var_bg1 !important;
         }
         .a-button.a-button-disabled:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected) .a-button-inner,
-        .a-button.a-button-disabled:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected) .a-button-inner:hover {
+        .a-button.a-button-disabled:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected) .a-button-inner:hover,
+        .self-service-rich-card:hover {
             background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
         }
         .a-button-inner,
