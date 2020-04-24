@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.23
+@version        1.11.25
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -557,6 +557,18 @@
         .ryp__profile__background-color {
             background-color: lighten(var_headfoot,20%) !important;
         }
+        
+        /* Contact us */
+        .cu-bottom, .cu-bottom-left, .cu-eb-bottom, .cu-eb-bottom-left, .cu-eb-top, .cu-eb-top-left, .cu-eb-top-v2, .cu-top, .cu-top-left, .cu-eb-header-v2 {
+            color: var_font1 !important;
+            background: var_bg1 !important;
+        }
+        .cu-issue-sel-step-top-filler, .cu-manual-order-id-step-top-filler {
+            background: var_bg6 !important;
+        }
+        .cu-eb-bottom, .cu-eb-bottom-left {
+            height: 1px !important;
+        }
 
         /*** Borders ***/
         .quotes-bubble-arrow {
@@ -632,7 +644,13 @@
         .oct-dls-asin-stream-container, .oct-acs-asin-item-container,
         #mako-subnav,
         .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a,
-        .sc-list .sc-list-item-border, .sc-list .sc-list-head {
+        .sc-list .sc-list-item-border, .sc-list .sc-list-head,
+        .contact-us-header,
+        .cu-eb-middle,
+        .newOrderSummary,
+        .orderItem, .orderItems,
+        .newOrderSep,
+        .cu-dyk-content-v2 {
             border-color: var_bg6 !important;
         }
         
@@ -778,7 +796,8 @@
         .newMusicLogo,
         img[src^="https://images-na.ssl-images-amazon.com/images/G/01/amazonui/loading/loading-"],
         #view-switcher-buttons,
-        img[src^="https://images-eu.ssl-images-amazon.com/images/G/01/payments-portal/r1/PlusIcon"] {
+        img[src^="https://images-eu.ssl-images-amazon.com/images/G/01/payments-portal/r1/PlusIcon"],
+        .newOrderShipmentActions {
             filter: invert(0.8) !important;
         }
         .nav-image,
