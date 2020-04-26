@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.2.9
+@version        1.2.10
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -502,6 +502,17 @@ div.gh_sn_lw .gh_sn_wrp {
 }
 .checkbox--tick {
     background-color: var_bg3 !important;
+}
+a.filter__tag-link:hover {
+    background: var_bg0 !important;
+}
+a.filter__tag-link,
+.filter__catlist-item,
+.filter__slider-input {
+    border-color: var_bg3 !important;
+}
+.filter__slider-update-link {
+    box-shadow: 0 -10px 10px 14px var_bg3 !important;
 }
 
 /* Produktseite */
