@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.25
+@version        1.11.26
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -957,7 +957,8 @@
         #pet_nav_tooltip .pet_tooltip_message,
         div.gbh1-bold, div.gbh2-bold,
         .cu-eb-order-header-v2, .cu-contact-channel-disabled-msg,
-        .cu-issue-summary-left-col {
+        .cu-issue-summary-left-col,
+        .ces_frame .questionLabel, .ces_frame .ces_contact {
             color: var_font1 !important;
         }
         input, select, textarea,
