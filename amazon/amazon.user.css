@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.26
+@version        1.11.27
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1423,6 +1423,11 @@
         
         body {
             font-family: "Amazon Ember",Arial,sans-serif !important;
+        }
+        
+        /* hide sub nav banner */
+        #masrw-top > #skippedLink ~ div[cel_widget_id^="desktop-dp-atf_"] {
+            display: none !important;
         }
     }
     if hide-ask {
