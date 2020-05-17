@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.29
+@version        1.11.30
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -435,7 +435,9 @@
         /* Prime play / trailer button */
         .dv-dp-node-playback > div > [data-ref="atv_dp_stream_prime_tv"] > span,
         .dv-signup-button > ._2wzXUU,
-        .Ts7p7K {
+        .Ts7p7K,
+        /* Watch again */
+        .dv-dp-node-playback ._36qUej {
             color: black !important;
         }
         [data-ref="atv_dp_watch_trailer"] > span,
