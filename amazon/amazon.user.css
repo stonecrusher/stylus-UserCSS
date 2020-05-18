@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.30
+@version        1.11.32
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -961,7 +961,8 @@
         .cu-eb-order-header-v2, .cu-contact-channel-disabled-msg,
         .cu-issue-summary-left-col,
         .ces_frame .questionLabel, .ces_frame .ces_contact,
-        .a-ordered-list, ol {
+        .a-ordered-list, ol,
+        .vse-lightbox-wrapper.vse-vertical-lightbox .vse-lb-video-metadata .vse-table.vse-video-title {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1465,20 +1466,33 @@
     }
     if av-pause-remove {
         /* Amazon Video Pause-overlay transparent */
-        .cascadesContainer > div > .webPlayer .gradientOverlay {
-            background:none !important;
+        .f1bkfbcl, .fnu5k6u, .f1yzibwv, .fofauj8  {
+            opacity: 0 !important;
         }
-        /*.cascadesContainer > div > .webPlayer .contentTitlePanel,
-        .time,/**/
-        .controlsOverlay,
-        .pausedOverlay {
+        /* Title readability */
+        .fgzdi7m,
+        .f15586js {
             text-shadow:  1px  1px 1px black,
                           1px -1px 1px black,
                          -1px  1px 1px black,
                          -1px -1px 1px black !important;
         }
-        .positionBar {
+        /* Seekbar color */
+        .f15vbt64 {
             background-color: var_price !important;
+        }
+        /* Header margin */
+        /* X-Ray */
+        .xrayQuickView .collapsibleXrayHeader,
+        /* Title */
+        .ff48h02,
+        /* Controls */
+        .f1uwz81n {
+            margin-top: 1vw !important;
+        }
+        /* Footer margin */
+        .fc1n9o1 {
+            padding-bottom: 1vw !important;
         }
     }
     if hide-similar {
