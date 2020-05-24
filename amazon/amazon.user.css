@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.33
+@version        1.11.34
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1077,6 +1077,13 @@
         ._3x6JZ- > span > span /*play now*/,
         .checkout-giftbox-icon {
             color: black !important;
+        }
+        /* Test <channelname> button */
+        ._14ydqK._14ydqK._14ydqK, ._14ydqK._14ydqK._14ydqK:link, ._14ydqK._14ydqK._14ydqK:visited {
+            color: #222 !important;
+            &:hover {
+                color: #000 !important;
+            }
         }
         /* Delivery limitation notice */
         .content-grid-block[style^="background-color: #B6E1B6;"] {
