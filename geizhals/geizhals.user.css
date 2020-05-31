@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.2.12
+@version        1.2.13
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -388,6 +388,18 @@ img[src="//gzhls.at/b/info.png"] {
 a.xf_msel:hover .xf_n::after {
     background: var_blue !important;
 }
+.filtercategory__list-controls,
+.categorylist__footer {
+    background-color: var_bg2 !important;
+    border-color: var_bg3 !important;
+}
+#gh_filterbox {
+    border-color: var_bg3 !important;
+}
+.productlist__header .productlist__additionalfilter, .productlist__header .productlist__bestpriceoffer, .productlist__header .productlist__compare, .productlist__header .productlist__deliverytime, .productlist__header .productlist__image, .productlist__header .productlist__name, .productlist__header .productlist__offerscount--standard, .productlist__header .productlist__price, .productlist__header .productlist__rating, .productlist__header .productlist__wishlistbuttons {
+    border-color: var_bg3 !important;
+}
+
 /* Produktseite */
 .offerlist__header-cell {
     background: lighten(var_blue,10%) !important;
@@ -759,7 +771,7 @@ a.filter__tag-link,
 .galleryview,
 .galleryview__item,
 .results__control__sort-by-select {
-    border-color: var_bg2 !important;
+    border-color: var_bg3 !important;
 }
 .dots-dropdown__list {
     background-color: var_bg1 !important;
