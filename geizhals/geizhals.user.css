@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.2.13
+@version        1.2.14
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -323,6 +323,10 @@ select.gh_searchkat {
 }
 .toplist__headline > span {
     background-color: var_bg2 !important;
+    color: var_text !important;
+}
+.toplist__headline::after {
+    border-color: var_bg3 !important;
 }
 /* Hintergrund Muster */
 @css {
@@ -546,6 +550,32 @@ a.filter__tag-link,
 }
 .gh-data-table--expandable .gh-data-table__expand-button {
     border-color: var_bg3 !important;
+}
+.variant__header,
+.variant__content__toc,
+.variant__content__content {
+    background-color: var_bg1 !important;
+    border-color: var_bg2 !important;
+}
+.variant__header__specs-grid__item:nth-child(2n+1),
+.variant__content__list-item:nth-child(2n+1) {
+    background-color: var_bg0 !important;
+}
+.variant__content__list-item--headline {
+    background-color: var_bg2 !important;
+}
+.variant__content__toc__button:hover {
+    background-color: var_bg2 !important;
+}
+.offers__lazy-list-wrapper {
+    border-color: var_bg3 !important;
+}
+.paginator__lazy-loader--show, .paginator__lazy-loader-complete--show, .paginator__lazy-loader-error--show, .paginator__lazy-loader-progress--show {
+    background-color: var_bg1 !important;
+    border-color: var_bg3 !important;
+    &:hover {
+        background-color: var_bg0 !important;
+    }
 }
 
 /* Händlerdetails */
