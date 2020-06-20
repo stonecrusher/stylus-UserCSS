@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.35
+@version        1.11.36
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -205,7 +205,8 @@
         .navOptionChildItem_alexa_myx,
         .myx-popover .myx-popover-wrapper,
         .a2s-utterance-box,
-        .cu-issue-summary {
+        .cu-issue-summary,
+        #attach-desktop-sideSheet #attach-warranty-pane {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
