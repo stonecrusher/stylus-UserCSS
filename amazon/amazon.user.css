@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.36
+@version        1.11.37
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -206,7 +206,8 @@
         .myx-popover .myx-popover-wrapper,
         .a2s-utterance-box,
         .cu-issue-summary,
-        #attach-desktop-sideSheet #attach-warranty-pane {
+        #attach-desktop-sideSheet #attach-warranty-pane,
+        #nav-flyout-accountListRedesign #nav-al-links-container a:hover {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -376,6 +377,16 @@
         .cBoxR {
             background: none !important;
         }
+        #nav-flyout-accountListRedesign #nav-al-bottomsection {
+            background-color: var_bg3 !important;
+        }
+        #nav-flyout-accountListRedesign #nav-al-bottomsection .nav-link .nav-text {
+            color: var_font1 !important;
+        }
+        #nav-flyout-accountListRedesign #nav-al-bottomsection .nav-link:hover .nav-text {
+            color: var_linkhover !important;
+        }
+
         /* Text on normal buttons */
         .a-button .a-button-text,
         .dv-button-text {
@@ -654,7 +665,10 @@
         .newOrderSummary,
         .orderItem, .orderItems,
         .newOrderSep,
-        .cu-dyk-content-v2 {
+        .cu-dyk-content-v2,
+        #nav-flyout-accountListRedesign #nav-al-left-links,
+        #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-pldn-msg-wrapper .nav-pldn-a:hover, #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-shop #nav-link-fresh:hover, #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-shop #nav-link-shopall:hover, #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover .nav-right #nav-tools .nav-a:hover, #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover a#nav-hamburger-menu:hover,
+        #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-xshop-container #nav-xshop .nav-a:hover {
             border-color: var_bg6 !important;
         }
         
