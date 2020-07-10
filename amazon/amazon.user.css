@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.41
+@version        1.11.42
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -154,7 +154,8 @@
         .s-desktop-content, .s-desktop-toolbar,
         .ModalPurchase.ItemizedList, .ModalPurchase.ItemTitle,
         .stores-container,
-        .ryp__card-frame {
+        .ryp__card-frame,
+        #dp {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
