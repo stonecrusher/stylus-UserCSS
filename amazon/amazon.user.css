@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.42
+@version        1.11.43
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -155,7 +155,8 @@
         .ModalPurchase.ItemizedList, .ModalPurchase.ItemTitle,
         .stores-container,
         .ryp__card-frame,
-        #dp {
+        #dp,
+        .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout, .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout .ewc-gift-box.ewc-checkbox label {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
