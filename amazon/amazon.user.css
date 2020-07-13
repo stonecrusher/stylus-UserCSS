@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.43
+@version        1.11.44
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -792,7 +792,8 @@
         .feed-carousel-control,
         .ysh-carousel-close-icon,
         .a-checkbox-label > img[src*="/gifts_icon"],
-        message-table-row > span > img[title="Attachment"] {
+        message-table-row > span > img[title="Attachment"],
+        #dmusic_tracklist_content .a-button-text > i {
             filter: invert(1) !important;
         }
         /** TODO: Fix more spinners **/
@@ -1326,6 +1327,10 @@
         }
         #checkout-page-container .turbo-checkout-push-to-bottom {
             background: var_bg1 linear-gradient(to bottom,var_bg3,var_bg1) !important;
+        }
+        /* Strange PrimeMusic Reviewbar issue */
+        #dmusic_tracklist_content table.a-keyvalue td, table.a-keyvalue th {
+            padding: 7px 14px 6px;
         }
     }
     
