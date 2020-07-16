@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.2.2
+@version      3.2.3
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -212,10 +212,10 @@
     .upsell-link,
     .smart-inbox-empty-preview-teaser,
     .mailcheck,
+    .pgp-empty-preview-teaser,
     /*gmx*/ #maillist .iba-acceptable,
     /*gmx*/ .navigation--smartInbox,
-    /*gmx*/ #mail-list tr[data-component="MessageListAdRow"],
-    /*gmx PGP-teaser*/ .pgp-empty-preview-teaser {
+    /*gmx*/ #mail-list tr[data-component="MessageListAdRow"] {
         display: none !important;
     }
     if cloud-hide {
@@ -283,7 +283,7 @@
 @-moz-document url-prefix("https://3c.gmx.net/mail/client/"), url-prefix("https://3c-bap.gmx.net/mail/client/") {
     if notiz {
         .navigation-container-bottom::before {
-            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.1.8';
+            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.2.3';
             background-color: #ffd800;
         }
     }

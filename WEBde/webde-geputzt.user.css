@@ -5,7 +5,7 @@
               Optionaler Darkstyle in den Settings verfügbar.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.0.10
+@version      3.0.11
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -192,7 +192,8 @@
     /** Postfach **/
     .upsell-link,
     .smart-inbox-empty-preview-teaser,
-    .mailcheck {
+    .mailcheck,
+    .pgp-empty-preview-teaser {
         display: none !important;
     }
     /* Höhe */
@@ -254,7 +255,7 @@
 @-moz-document url-prefix("https://3c.web.de/mail/client/"), url-prefix("https://3c-bap.web.de/mail/client/") {
     if notiz {
         .navigation-container-bottom::before {
-            content: 'Aufgrund massiver Änderungen bei web.de muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.0.10';
+            content: 'Aufgrund massiver Änderungen bei web.de muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.0.11';
             background-color: #ffd800;
         }
     }
