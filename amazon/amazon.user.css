@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.44
+@version        1.11.45
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -677,7 +677,8 @@
         #nav-flyout-accountListRedesign #nav-al-signin,
         .GB-SUPPLE .tallCellView,
         .GB-SUPPLE .widgetBorder,
-        .GB-M-COMMON.GB-PC-FACEOUT {
+        .GB-M-COMMON.GB-PC-FACEOUT,
+        .w-divider {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -992,7 +993,8 @@
         .cu-issue-summary-left-col,
         .ces_frame .questionLabel, .ces_frame .ces_contact,
         .a-ordered-list, ol,
-        .vse-lightbox-wrapper.vse-vertical-lightbox .vse-lb-video-metadata .vse-table.vse-video-title {
+        .vse-lightbox-wrapper.vse-vertical-lightbox .vse-lb-video-metadata .vse-table.vse-video-title,
+        .w-uwl span {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1399,7 +1401,8 @@
         #marketing,
         #nav-link-prime, /* discover prime benefits */
         #maple-dss-slot, /* sign up for amazon visa card */
-        #detail-ilm_feature_div /* 15€ action voucher */ {
+        #detail-ilm_feature_div, /* 15€ action voucher */
+        #WLHUC_footer /* Amazon Assistant ad */ {
             display: none !important;
         }
 
