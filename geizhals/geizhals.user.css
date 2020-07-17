@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.2.16
+@version        1.3.0
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -164,7 +164,7 @@ th.xf_th {
     border-right: .2em solid var_bg2 !important;
 }
 .xf_tr.xf_tr_visible .xf_th {
-    border-color: darken(var_text,30%) !important;
+    border-color: var_bg2 !important;
 }
 .productlist__product:nth-child(odd) {
     background-color: var_bg1 !important;
@@ -368,7 +368,8 @@ li.gh_tabs {
 /* Filter */
 .fltrs,
 .filterbox,
-.productlist__additionalfilter, .productlist__bestpriceoffer, .productlist__compare, .productlist__deliverytime, .productlist__image, .productlist__name, .productlist__offerscount--standard, .productlist__price, .productlist__rating, .productlist__wishlistbuttons {
+.productlist__additionalfilter, .productlist__bestpriceoffer, .productlist__compare, .productlist__deliverytime, .productlist__image, .productlist__name, .productlist__offerscount--standard, .productlist__price, .productlist__rating, .productlist__wishlistbuttons,
+.filterbox__list__item {
     border-color: var_bg2 !important;
 }
 .filterbox {
@@ -402,6 +403,19 @@ a.xf_msel:hover .xf_n::after {
 }
 .productlist__header .productlist__additionalfilter, .productlist__header .productlist__bestpriceoffer, .productlist__header .productlist__compare, .productlist__header .productlist__deliverytime, .productlist__header .productlist__image, .productlist__header .productlist__name, .productlist__header .productlist__offerscount--standard, .productlist__header .productlist__price, .productlist__header .productlist__rating, .productlist__header .productlist__wishlistbuttons {
     border-color: var_bg3 !important;
+}
+.paginator__top .blaettern select, .results__control__sort-by-select {
+    filter: invert(0.8) !important;
+    color: black !important;
+    background-color: white !important;
+    border-color: var_bg3 !important;
+}
+.paginator__top .blaettern select > option, .results__control__sort-by-select > option {
+    background: var_bg2 !important;
+    color: var_text !important;
+}
+.gh_input_txt {
+    background: #999 !important;
 }
 
 /* Produktseite */
@@ -583,11 +597,53 @@ a.filter__tag-link,
         background-color: var_bg0 !important;
     }
 }
+.variant__header__expand-button {
+    border-color: var_bg3 !important;
+}
 .variant__header__expand-button > span {
     color: var_text !important;
 }
 .variant__header__expand-button:hover {
     background: var_bg2 !important;
+}
+.variant__header__dropdown__list,
+a.variant__header__dropdown__item--more-link {
+    border-color: var_bg3 !important;
+    background: var_bg0 !important;
+}
+.variant__header__dropdown__item--trigger,
+.variant__header__dropdown__item {
+    border-color: var_bg3 !important;
+}
+.variant__header__dropdown__item__price .gh_price,
+.variant__header__dropdown__item__name {
+    color: var_link !important;
+}
+.variant__header__dropdown__item:focus:focus, .variant__header__dropdown__item:focus:hover, .variant__header__dropdown__item a:focus, .variant__header__dropdown__item a:hover, a.variant__header__dropdown__item:focus, a.variant__header__dropdown__item:hover {
+    background: var_bg2 !important;
+}
+.dots-dropdown__list-link, .dots-dropdown__list-link:visited {
+    color: var_link !important;
+}
+.galleryview__item {
+    background-color: var_bg1 !important;
+}
+.galleryview__item .galleryview__toggle-details-button,
+.dots-dropdown__button {
+    background-color: var_bg2 !important;
+    border-color: var_bg3 !important;
+    &:hover {
+        background-color: var_bg3 !important;
+    }
+}
+.galleryview__details {
+    background-color: none !important;
+}
+.listview__bottom {
+    background-color: var_bg0 !important;
+}
+.dots-dropdown__button {
+    background-color:
 }
 
 /* Händlerdetails */
@@ -653,7 +709,8 @@ a.filter__tag-link,
 .compare-delete > span:hover {
     background-color: var_bg3 !important;
 }
-.listitem-trash > span img {
+.listitem-trash > span img,
+.variant__content__compare-max-button__image {
     filter: invert(1) !important;
 }
 .compare-button.active {
@@ -800,19 +857,14 @@ a.filter__tag-link,
     background: var_bg1 !important;
 }
 .galleryview__item:hover {
-    background: var_bg2 !important;
+    background: var_bg0 !important;
 }
 .galleryview__image {
     mix-blend-mode: unset !important;
 }
-.results__control__sort-by-select {
-    color: var_text !important;
-    background-color: var_bg2 !important;
-}
 .results__inner,
 .galleryview,
-.galleryview__item,
-.results__control__sort-by-select {
+.galleryview__item {
     border-color: var_bg3 !important;
 }
 .dots-dropdown__list {
