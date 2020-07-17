@@ -19,6 +19,8 @@
 @var checkbox reduce       "Kram ausblenden"  1
 ==/UserStyle== */
 
+/* TODO: Suchvorschläge dropdown */
+
 var_bg1 = darken(var_bg0,15%)
 var_bg2 = lighten(var_bg0,10%)
 var_bg3 = lighten(var_bg0,20%)
