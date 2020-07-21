@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.45
+@version        1.11.46
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -678,7 +678,9 @@
         .GB-SUPPLE .tallCellView,
         .GB-SUPPLE .widgetBorder,
         .GB-M-COMMON.GB-PC-FACEOUT,
-        .w-divider {
+        .w-divider,
+        .s-main-slot > .s-widget:not(.s-border-bottom-none):not(:last-child)::after,
+        .s-main-slot > .s-asin + .s-widget::before {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
