@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.46
+@version        1.11.48
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -156,7 +156,8 @@
         .stores-container,
         .ryp__card-frame,
         #dp,
-        .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout, .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout .ewc-gift-box.ewc-checkbox label {
+        .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout, .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout .ewc-gift-box.ewc-checkbox label,
+        .legal-button {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -209,7 +210,8 @@
         .a2s-utterance-box,
         .cu-issue-summary,
         #attach-desktop-sideSheet #attach-warranty-pane,
-        #nav-flyout-accountListRedesign #nav-al-links-container a:hover {
+        #nav-flyout-accountListRedesign #nav-al-links-container a:hover,
+        #dv-signup-container {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -680,7 +682,9 @@
         .GB-M-COMMON.GB-PC-FACEOUT,
         .w-divider,
         .s-main-slot > .s-widget:not(.s-border-bottom-none):not(:last-child)::after,
-        .s-main-slot > .s-asin + .s-widget::before {
+        .s-main-slot > .s-asin + .s-widget::before,
+        .a-section-expander-inner,
+        .legal-button {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
