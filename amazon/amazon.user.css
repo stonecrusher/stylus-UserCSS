@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.48
+@version        1.11.49
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -389,6 +389,18 @@
         }
         #nav-flyout-accountListRedesign #nav-al-bottomsection .nav-link:hover .nav-text {
             color: var_linkhover !important;
+        }
+        .avu-section-alt ._383xQF {
+            background: var_bg2 !important;
+            color: var_font1 !important;
+            border-color: var_bg6 !important;
+        }
+        .avu-section-alt .RdNoU_ {
+            background: var_bg3 !important;
+            color: var_font1 !important;
+        }
+        #settings-navigation-tabs .dvui-tab-active.dvui-tab-active.dvui-tab-active {
+            color: #000 !important;
         }
 
         /* Text on normal buttons */
