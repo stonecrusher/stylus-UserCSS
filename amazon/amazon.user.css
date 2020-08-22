@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.49
+@version        1.11.50
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -157,7 +157,12 @@
         .ryp__card-frame,
         #dp,
         .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout, .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout .ewc-gift-box.ewc-checkbox label,
-        .legal-button {
+        .legal-button,
+        #all-offers-display,
+        #all-offers-display .aod-filter-block-container,
+        #all-offers-display #aod-footer,
+        #all-offers-display-scroller,
+        #all-offers-display .aod-filter-list-container {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -211,7 +216,10 @@
         .cu-issue-summary,
         #attach-desktop-sideSheet #attach-warranty-pane,
         #nav-flyout-accountListRedesign #nav-al-links-container a:hover,
-        #dv-signup-container {
+        #dv-signup-container,
+        #all-offers-display .aod-pinned-offer,
+        #all-offers-display .aod-sticky-pinned-offer,
+        #all-offers-display #aod-offer-list {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -696,7 +704,9 @@
         .s-main-slot > .s-widget:not(.s-border-bottom-none):not(:last-child)::after,
         .s-main-slot > .s-asin + .s-widget::before,
         .a-section-expander-inner,
-        .legal-button {
+        .legal-button,
+        #all-offers-display .aod-filter-block-container,
+        #all-offers-display .aod-offer-block-divider {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -812,7 +822,9 @@
         .ysh-carousel-close-icon,
         .a-checkbox-label > img[src*="/gifts_icon"],
         message-table-row > span > img[title="Attachment"],
-        #dmusic_tracklist_content .a-button-text > i {
+        #dmusic_tracklist_content .a-button-text > i,
+        #all-offers-display .aod-arrow-up,
+        #all-offers-display .aod-arrow-low {
             filter: invert(1) !important;
         }
         /** TODO: Fix more spinners **/
@@ -870,6 +882,9 @@
             color: black !important;
         }
 
+        #all-offers-display .aod-close-button {
+            background-position: -370px -100px !important;
+        }
         .wishlist-left-nav,
         hr[style*="background-color: white"] {
             background-color: transparent !important;
@@ -1012,7 +1027,8 @@
         .ces_frame .questionLabel, .ces_frame .ces_contact,
         .a-ordered-list, ol,
         .vse-lightbox-wrapper.vse-vertical-lightbox .vse-lb-video-metadata .vse-table.vse-video-title,
-        .w-uwl span {
+        .w-uwl span,
+        #all-offers-display {
             color: var_font1 !important;
         }
         input, select, textarea,
