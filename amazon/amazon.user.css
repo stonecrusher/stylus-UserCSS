@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.50
+@version        1.11.51
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -162,7 +162,8 @@
         #all-offers-display .aod-filter-block-container,
         #all-offers-display #aod-footer,
         #all-offers-display-scroller,
-        #all-offers-display .aod-filter-list-container {
+        #all-offers-display .aod-filter-list-container,
+        #searchDropdownBox {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -706,7 +707,8 @@
         .a-section-expander-inner,
         .legal-button,
         #all-offers-display .aod-filter-block-container,
-        #all-offers-display .aod-offer-block-divider {
+        #all-offers-display .aod-offer-block-divider,
+        #nav-flyout-accountList #nav-al-signin {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
