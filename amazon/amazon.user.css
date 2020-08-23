@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.51
+@version        1.11.53
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -163,7 +163,8 @@
         #all-offers-display #aod-footer,
         #all-offers-display-scroller,
         #all-offers-display .aod-filter-list-container,
-        #searchDropdownBox {
+        #searchDropdownBox,
+        #mars-fs-flyouts {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -220,7 +221,8 @@
         #dv-signup-container,
         #all-offers-display .aod-pinned-offer,
         #all-offers-display .aod-sticky-pinned-offer,
-        #all-offers-display #aod-offer-list {
+        #all-offers-display #aod-offer-list,
+        #mars-fs-subnav {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -410,6 +412,9 @@
         }
         #settings-navigation-tabs .dvui-tab-active.dvui-tab-active.dvui-tab-active {
             color: #000 !important;
+        }
+        #mars-jump-links-widget.jump-links-gradient-background {
+            background: var_bg2 !important;
         }
 
         /* Text on normal buttons */
@@ -1030,7 +1035,8 @@
         .a-ordered-list, ol,
         .vse-lightbox-wrapper.vse-vertical-lightbox .vse-lb-video-metadata .vse-table.vse-video-title,
         .w-uwl span,
-        #all-offers-display {
+        #all-offers-display,
+        .ac-for-text {
             color: var_font1 !important;
         }
         input, select, textarea,
