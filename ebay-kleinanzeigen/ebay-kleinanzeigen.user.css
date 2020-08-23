@@ -131,7 +131,14 @@
     .textdropdown-options,
     .itemtile, .itemtile-condensed, .itemtile-fullpic,
     .actionlist-body,
-    .mfp-popup, .mfp-popup-medium, .mfp-popup-small, .mfp-popup-large, .mfp-popup-huge, .mfp-popup-fullscreen {
+    .mfp-popup, .mfp-popup-medium, .mfp-popup-small, .mfp-popup-large, .mfp-popup-huge, .mfp-popup-fullscreen,
+    /*
+    #srchrslt-adtable > .ad-listitem,
+    #srchrslt-adtable-altads > .ad-listitem,
+    #page-searchresults-adtable > .ad-listitem,
+    #vap-smlrads .ad-listitem,
+    #vap-pstrads .ad-listitem,/**/
+    .ad-listitem {
         background-color: var_bg2 !important;
     }
     .ad-listitem.is-highlight {
@@ -318,7 +325,10 @@
     .stickybox, .stickybox--top, .stickybox--bottom {
         background: var_bg1 !important;
     }
-    
+
+    .itemlist-separatedbefore > li:first-child, .itemlist-padded-separatedbefore > li:first-child {
+        border-top: none !important;
+    }
     .simpletag {
         color: var_font2 !important;
         background: var_bg1 !important;
