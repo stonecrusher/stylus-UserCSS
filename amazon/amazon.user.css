@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.53
+@version        1.11.54
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1163,7 +1163,15 @@
         .content-grid-block[style^="background-color: #B6E1B6;"] {
             color: #333 !important;
         }
-        
+
+        #sc-saved-cart-list-caption-text,
+        .sc-buy-it-again-list-caption {
+            color: var_linkdefault !important;
+        }
+        .sc-tab-selected #sc-saved-cart-list-caption-text,
+        .sc-tab-selected .sc-buy-it-again-list-caption {
+            color: var_font1 !important;
+        }
         .aplus-v2 th.apm-tablemodule-keyhead {
             background-color: var_bg3 !important;
             color: var_font1 !important;
