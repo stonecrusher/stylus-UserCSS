@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.54
+@version        1.11.55
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -222,7 +222,8 @@
         #all-offers-display .aod-pinned-offer,
         #all-offers-display .aod-sticky-pinned-offer,
         #all-offers-display #aod-offer-list,
-        #mars-fs-subnav {
+        #mars-fs-subnav,
+        #sp-cc {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -713,7 +714,8 @@
         .legal-button,
         #all-offers-display .aod-filter-block-container,
         #all-offers-display .aod-offer-block-divider,
-        #nav-flyout-accountList #nav-al-signin {
+        #nav-flyout-accountList #nav-al-signin,
+        #sp-cc {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1452,7 +1454,8 @@
         #nav-link-prime, /* discover prime benefits */
         #maple-dss-slot, /* sign up for amazon visa card */
         #detail-ilm_feature_div, /* 15€ action voucher */
-        #WLHUC_footer /* Amazon Assistant ad */ {
+        #WLHUC_footer, /* Amazon Assistant ad */
+        #sp-cc {
             display: none !important;
         }
 
