@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.55
+@version        1.11.56
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -223,7 +223,9 @@
         #all-offers-display .aod-sticky-pinned-offer,
         #all-offers-display #aod-offer-list,
         #mars-fs-subnav,
-        #sp-cc {
+        #sp-cc,
+        .ryp__header-action-button--box,
+        .ryp__header-action-button--box > .a-box {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -1454,8 +1456,7 @@
         #nav-link-prime, /* discover prime benefits */
         #maple-dss-slot, /* sign up for amazon visa card */
         #detail-ilm_feature_div, /* 15€ action voucher */
-        #WLHUC_footer, /* Amazon Assistant ad */
-        #sp-cc {
+        #WLHUC_footer /* Amazon Assistant ad */ {
             display: none !important;
         }
 
