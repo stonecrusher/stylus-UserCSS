@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.56
+@version        1.11.57
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -419,6 +419,20 @@
         #mars-jump-links-widget.jump-links-gradient-background {
             background: var_bg2 !important;
         }
+        /* shopping cart sidebar */
+        /*.uss-c-body {
+            background-color: var_bg1 !important;
+        }/**/
+        .uss-c-uss-sheet-view-gredient {
+            background-image: linear-gradient(var_bg2, var_bg3) !important;
+        }
+        .uss-l-default-layout .uss-c-head,
+        .uss-list-widget h3.uss-widget-header,
+        .uss-asin-faceout,
+        .uss-list-widget .uss-widget-footer {
+            background-color: var_bg2 !important;
+            border-color: var_bg6 !important;
+        }
 
         /* Text on normal buttons */
         .a-button .a-button-text,
@@ -717,7 +731,8 @@
         #all-offers-display .aod-filter-block-container,
         #all-offers-display .aod-offer-block-divider,
         #nav-flyout-accountList #nav-al-signin,
-        #sp-cc {
+        #sp-cc,
+        hr {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
