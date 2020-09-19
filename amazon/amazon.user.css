@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.57
+@version        1.11.58
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -444,7 +444,7 @@
             color: invert(var_font1) !important;
         }
         /* Grey buttons */
-        .a-button:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected),
+        .a-button:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected):not(.a-button-unavailable):not(.a-button-thumbnail),
         #sendSampleButton,
         #wishListMainButton,
         .cr-vote .a-button,
@@ -780,12 +780,32 @@
             background-color: var_bg2 !important;
             color: var_font2 !important;
         }
-        #twister .swatches li.swatchHover .a-button-text,
-        #twister .swatches li.swatchUnavailableHover .a-button-text {
-            background-color: var_bg2 !important;
+        #twister ul.swatches > li.swatchUnavailable .a-button-toggle.a-button-selected {
+            & .a-button-inner {
+                background: darken(desaturate(var_linkhover, 85%), 15%) !important;
+            }
+            &:hover .a-button-inner {
+                background: var_bg2 !important;
+            }
         }
-        #twister .swatches li.swatchSelect {
-            border-color: lighten(var_selected, 40%) !important;
+        #twister ul.swatches > li.swatchSelect {
+            border-color: var_linkhover !important;
+        }
+        #twister ul.swatches > li.swatchSelect .a-button-inner,
+        #twister ul.swatches > li.swatchSelect .a-button {
+            background: linear-gradient(to bottom, var_bg4 70%, darken(var_linkhover, 20%)) !important;
+        }
+        #twister ul.swatches > li.swatchUnavailable .a-button-inner {
+            background-color: var_bg2 !important;
+            & span {
+                color: var_bg5 !important;
+            }
+        }
+        #twister ul.swatches li.swatchAvailable .a-button > .a-button-inner {
+            background: linear-gradient(to bottom, var_bg4 70%, var_bg2) !important;
+        }
+        #twister ul.swatches li.swatchHover .a-button > .a-button-inner .a-button-text {
+            background: linear-gradient(to bottom, var_bg5 70%, var_bg1) !important;
         }
         .address-row {
             border: none !important;
