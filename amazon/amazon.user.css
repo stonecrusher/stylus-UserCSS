@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.58
+@version        1.11.59
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -444,7 +444,7 @@
             color: invert(var_font1) !important;
         }
         /* Grey buttons */
-        .a-button:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected):not(.a-button-unavailable):not(.a-button-thumbnail),
+        .a-button:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected):not(.a-button-unavailable),
         #sendSampleButton,
         #wishListMainButton,
         .cr-vote .a-button,
