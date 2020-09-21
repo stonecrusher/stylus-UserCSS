@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.3.1
+@version      3.3.2
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -29,7 +29,7 @@
 /* GMX Cloud Option betrifft noch nicht die Menüleiste (bei Bedarf anzeigen) */
 
 /*** Login ***/
-@-moz-document regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/fm") {
+@-moz-document regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/fm"), regexp("https?:\\/\\/www\\.gmx\\.(net|at|ch)\\/\\?origin=lpc") {
     * {
         visibility: hidden !important;
     }
@@ -296,7 +296,7 @@
 @-moz-document url-prefix("https://3c.gmx.net/mail/client/"), url-prefix("https://3c-bap.gmx.net/mail/client/") {
     if notiz {
         .navigation-container-bottom::before {
-            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.3.1';
+            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.3.2';
             background-color: #ffd800;
         }
     }
