@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.59
+@version        1.11.60
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -167,6 +167,10 @@
         #mars-fs-flyouts {
             background: var_bg1 !important;
             color: var_font1 !important;
+        }
+        
+        div#footer {
+            background-color: var_bg1 !important;
         }
 
         #leftNav .s-pfsd-banner,
