@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.60
+@version        1.11.61
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1252,6 +1252,10 @@
         .ryp__cross-icon::before,
         .ryp__cross-icon::after {
             background-color: var_font1 !important;
+        }
+        /* PrimeDay badge */
+        .primeDayDeal > span {
+            color: black !important;
         }
         
         /* Song controls */
