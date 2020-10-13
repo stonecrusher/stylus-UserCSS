@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.61
+@version        1.11.62
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1254,7 +1254,7 @@
             background-color: var_font1 !important;
         }
         /* PrimeDay badge */
-        .primeDayDeal > span {
+        .primeExclusiveSolidBadge > span {
             color: black !important;
         }
         
