@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.62
+@version        1.11.63
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -174,7 +174,7 @@
         }
 
         #leftNav .s-pfsd-banner,
-        .a-box.a-color-alternate-background,
+        .a-box.a-color-alternate-background, .a-box.a-color-offset-background,
         .a-divider.a-divider-break.sc-one-click-divider > h5,
         .a-alert-info .a-alert-container,
         #dmusicTracklist_feature_div .sample-button,
