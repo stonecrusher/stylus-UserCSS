@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.63
+@version        1.11.64
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -169,7 +169,8 @@
             color: var_font1 !important;
         }
         
-        div#footer {
+        div#footer,
+        .a-cardui {
             background-color: var_bg1 !important;
         }
 
@@ -229,7 +230,9 @@
         #mars-fs-subnav,
         #sp-cc,
         .ryp__header-action-button--box,
-        .ryp__header-action-button--box > .a-box {
+        .ryp__header-action-button--box > .a-box,
+        .sc-background-dark,
+        #sc-retail-cart-container {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
