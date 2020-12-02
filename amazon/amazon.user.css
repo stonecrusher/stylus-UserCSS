@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.64
+@version        1.11.65
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -164,7 +164,8 @@
         #all-offers-display-scroller,
         #all-offers-display .aod-filter-list-container,
         #searchDropdownBox,
-        #mars-fs-flyouts {
+        #mars-fs-flyouts,
+        div[class*="_buy-again-carousel-"] {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -232,7 +233,8 @@
         .ryp__header-action-button--box,
         .ryp__header-action-button--box > .a-box,
         .sc-background-dark,
-        #sc-retail-cart-container {
+        #sc-retail-cart-container,
+        div[class*="_buy-again-grid-"] {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -739,7 +741,8 @@
         #all-offers-display .aod-offer-block-divider,
         #nav-flyout-accountList #nav-al-signin,
         #sp-cc,
-        hr {
+        hr,
+        div[class*="_buy-again-grid-"] {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
