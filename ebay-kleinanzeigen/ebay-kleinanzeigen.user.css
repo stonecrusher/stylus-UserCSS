@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.6.4
+@version        3.7.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -334,6 +334,68 @@
     .pictureupload-file-status,
     #pvap-mngad h2 {
         color: black !important;
+    }
+    /* "Meine Nachrichten" 2020-01-20 */
+    .Messagebox {
+        background-color: var_bg1 !important;
+        border-color: var_font2 !important;
+    }
+    .ConversationListItem.is-highlighted,
+    .ConversationListItem:hover {
+        background-color: var_bg2 !important;
+        border-left-color: var_linkfarbe1 !important;
+    }
+    .ConversationListItem,
+    .Conversation--List--Loading--Message {
+        color: var_font3 !important;
+        border-bottom-color: var_font2 !important;
+    }
+    .ConversationListItem--Message {
+        color: var_font1 !important;
+    }
+    .ConversationList {
+        border-color: var_font2 !important;
+    }
+    .Conversation {
+        background-color: var_bg2 !important;
+        border-color: var_font2 !important;
+    }
+    .ConversationHeader {
+        background-color: var_bg1 !important;
+        border-color: var_font2 !important;
+    }
+    .ReplyBox {
+        background-color: var_bg1 !important;
+        border-color: var_font2 !important;
+        color: var_font1 !important;
+    }
+    .MessageListItem-Date {
+        color: var_font1 !important;
+    }
+    /* Alle auswählen Button */
+    .BulkSelect,
+    .ConversationHeader--Actions > button,
+    .Reply--Actions > button {
+        background-color: var_bg2 !important;
+        color: var_font1 !important;
+        border-color: var_font2 !important;
+    }
+    .Button--Icon {
+        filter: invert(1) !important;
+    }
+    .Button-primary:hover,
+    .Button-secondary:hover{
+        background-color: lighten(var_bg2,5%) !important;
+    }
+    /* Ende "Meine Nachrichten" */
+
+    .iconlist-text > .iconlist-subtext,
+    .iconlist-text-short > .iconlist-subtext {
+        color: darken(var_font1, 15%) !important;
+    }
+    .activityindicators--item,
+    .empty-page-centered-box {
+        border-color: var_font2 !important;
     }
 
     
