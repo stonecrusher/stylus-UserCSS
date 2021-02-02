@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.11.66
+@version        1.12.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -27,8 +27,6 @@
 @var text      review-width     'Width of review bars'       300px
 ==/UserStyle== */
 /* Amazon default review bar width is 185px */
-
-/* TODO: "Blick ins Buch" dark */
 
 @-moz-document regexp("https?:\\/\\/(www|music|smile)\\.amazon\\.(cn|in|co\\.jp|sg|fr|de|it|nl|es|co\\.uk|ca|com(\\.(mx|au|br))?)\\/.*") {
     /* Stylus variables */
@@ -167,7 +165,12 @@
         #all-offers-display .aod-filter-list-container,
         #searchDropdownBox,
         #mars-fs-flyouts,
-        div[class*="_buy-again-carousel-"] {
+        div[class*="_buy-again-carousel-"],
+        .nav-menu .apd-side-nav,
+        .navHeader_myx,
+        .alexaPrivacy_sideNav_myx,
+        .alexaPrivacyApp_sideNavDiv_myx,
+        .navigationItemAlexa_myx {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -236,7 +239,12 @@
         .ryp__header-action-button--box > .a-box,
         .sc-background-dark,
         #sc-retail-cart-container,
-        div[class*="_buy-again-grid-"] {
+        div[class*="_buy-again-grid-"],
+        .aplus-v2 .aplus-standard .a-color-alternate-background,
+        .myad-section,
+        #manage-skills-permissions .msp-content-box,
+        .apd-content-box,
+        .myx-box {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -398,6 +406,31 @@
         ul.a-pagination li a,
         .acs-product-card-for-container {
             box-shadow: none !important;
+        }
+        .myx-button {
+            background: var_bg1 !important;
+            border-color: var_bg6 !important;
+            &:hover {
+                border-color: var_font1 !important;
+            }
+        }
+        .myx-button .myx-button-text {
+            font-weight: bold !important;
+        }
+        .myx-button .myx-button-inner {
+            background: linear-gradient(to top,var_bg7,var_bg6) !important;
+            &:hover {
+                background: linear-gradient(to top,var_font2,var_bg6) !important;
+            }
+        }
+        .myx-button-disabled:active .myx-button-inner, .myx-button-disabled:focus .myx-button-inner, .myx-button-disabled:hover .myx-button-inner {
+            background: linear-gradient(to top,var_bg3,var_bg6) !important;
+        }
+        .myx-button-disabled .myx-button-text {
+            color: var_font1 !important;
+        }
+        .myx-button-disabled:active, .myx-button-disabled:focus, .myx-button-disabled:hover {
+            border-color: var_bg1 !important;
         }
         #s-result-info-bar {
             box-shadow: 0 0 10px var_bg3 !important;
@@ -744,7 +777,22 @@
         #nav-flyout-accountList #nav-al-signin,
         #sp-cc,
         hr,
-        div[class*="_buy-again-grid-"] {
+        div[class*="_buy-again-grid-"],
+        .navHeader_myx,
+        .myad-section,
+        #apd-page-header,
+        #manage-skills-permissions .filter-menu,
+        #manage-skills-permissions .filter-menu .filter-row,
+        .apd-content-box,
+        #filter-menu .filter-row.display-filter,
+        .apd-sub-page .delete-displayed-recordings-text,
+        .record-items-wrapper,
+        .record-delete-banner,
+        .record-info.expanded,
+        #filter-menu .filter-row,
+        .myx-box,
+        table.myx-bordered tr:first-child th,
+        table.myx-bordered {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -882,7 +930,8 @@
         message-table-row > span > img[title="Attachment"],
         #dmusic_tracklist_content .a-button-text > i,
         #all-offers-display .aod-arrow-up,
-        #all-offers-display .aod-arrow-low {
+        #all-offers-display .aod-arrow-low,
+        .myx-icon-section-collapse, .myx-icon-section-expand {
             filter: invert(1) !important;
         }
         /** TODO: Fix more spinners **/
@@ -938,6 +987,10 @@
         /* Car Parts top bar */
         .atsCaret, .atsCenter, .atsContent, .atsDDLL, .atsDDLR, .atsDDUL, .atsDDUR, .atsLL, .atsLR, .atsUL, .atsUR {
             color: black !important;
+        }
+        
+        .myx-icon-section-collapse, .myx-icon-section-expand {
+            opacity: 1 !important;
         }
 
         #all-offers-display .aod-close-button {
@@ -1087,7 +1140,16 @@
         .vse-lightbox-wrapper.vse-vertical-lightbox .vse-lb-video-metadata .vse-table.vse-video-title,
         .w-uwl span,
         #all-offers-display,
-        .ac-for-text {
+        .ac-for-text,
+        .myad-section,
+        #manage-skills-permissions .msp-content-box .scope-name,
+        .activityDeviceHistoryHeading,
+        .apd-content-box,
+        #filter-menu,
+        .record-delete-banner .record-delete-message,
+        #manage-skills-permissions .apd-expand-toggle-button,
+        .myx-color-base,
+        .myx-box {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1111,7 +1173,10 @@
         .a-profile-descriptor,
         .cu-contact-channel-error-msg, .cu-contact-channel-warning-msg,
         .carousel-faceout-container .title-container,
-        .pfCatResults .partcount {
+        .pfCatResults .partcount,
+        #apd-page-header h1, #apd-page-header h2,
+        #manage-skills-permissions .msp-page-header h3,
+        .record-info {
             color: var_font3 !important;
         }
         hr,
@@ -1136,7 +1201,11 @@
         .nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text,
         .asNotesValue,
         .dv-el-attr-value,
-        .ModalPurchase.SelectionText, .ModalPurchase.TrackCount, .ModalPurchase.BottomTip {
+        .ModalPurchase.SelectionText, .ModalPurchase.TrackCount, .ModalPurchase.BottomTip,
+        #manage-skills-permissions .msp-content-box,
+        #manage-skills-permissions .msp-content-box .scope-empty,
+        .activityDeviceHistoryDescription,
+        .myad-section .myad-sub-section .myad-sub-section-description, .myad-section .myad-sub-section .myad-sub-section-setting-description {
             color: var_font2 !important;
         }
 
@@ -1169,6 +1238,13 @@
         .masrw-buy-box .masrw-button .masrw-button-text:hover,
         .a-link-normal:hover > .color-black {
             color: var_linkhover !important;
+        }
+        .navAlexaOptionItem_alexaNavHeader_myx,
+        .navAlexaOptionItem_alexaNavFooter_myx {
+            color: var_linkdefault !important;
+            &:hover {
+                color: var_linkhover !important;
+            }
         }
         .a-color-price,
         .bia-price,
@@ -1331,7 +1407,8 @@
         .a-form-actions,
         .a-popover-header,
         .banner-border,
-        table.a-bordered tr:first-child th {
+        table.a-bordered tr:first-child th,
+        table.myx-bordered tr:first-child th {
             background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
             border-color: var_bg6 !important;
         }
