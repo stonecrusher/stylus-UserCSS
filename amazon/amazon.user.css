@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.1
+@version        1.12.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -244,7 +244,8 @@
         .myad-section,
         #manage-skills-permissions .msp-content-box,
         .apd-content-box,
-        .myx-box {
+        .myx-box,
+        .a-js .editable:hover span {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -289,7 +290,8 @@
         #mako-subnav,
         .navOptionChildItem_alexa_myx:hover,
         .myx-dropdown .myx-list-link li a.myx-active, .myx-splitdropdown .myx-list-link li a.myx-active, .myx-suggest .myx-list-link li a.myx-active,
-        .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a {
+        .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a,
+        .move-to-list-row:hover {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
