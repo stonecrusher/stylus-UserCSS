@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.3
+@version        1.12.4
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -170,7 +170,8 @@
         .navHeader_myx,
         .alexaPrivacy_sideNav_myx,
         .alexaPrivacyApp_sideNavDiv_myx,
-        .navigationItemAlexa_myx {
+        .navigationItemAlexa_myx,
+        .MMGridLayout#formats .safRow {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -1253,7 +1254,8 @@
         .bia-ppu,
         .price,
         .ewc-color-price,
-        #gw-asin-popover .pricing .price, #gw-asin-popover .pricing .price .a-color-price {
+        #gw-asin-popover .pricing .price, #gw-asin-popover .pricing .price .a-color-price,
+        .MMGridLayout .formatsRow .swatchElement.unselected .slot-price > * {
             color: var_price !important;
         }
         #navbar.nav-bluebeacon #nav-search-label, #navbar.nav-bluebeacon .nav-a-2 .nav-line-1, #navbar.nav-bluebeacon .nav-a-2 .nav-line-2,
