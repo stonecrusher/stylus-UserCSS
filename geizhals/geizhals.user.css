@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.3.7
+@version        1.3.8
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -649,6 +649,16 @@ a.variant__header__dropdown__item--more-link {
 }
 .dots-dropdown__button {
     background-color:
+}
+.checkbox__label--available-shortly,
+.checkbox__label--available {
+    color: var_black !important;
+}
+.variant__content__priceupdate {
+    color: var_text !important;
+}
+.variant__content__offersfilter-expand {
+    background: var_bg2 !important;
 }
 
 /* Händlerdetails */
