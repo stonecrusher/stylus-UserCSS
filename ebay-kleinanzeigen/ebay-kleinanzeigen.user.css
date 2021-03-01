@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.7.0
+@version        3.8.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @license        CC-BY-NC-SA-4.0
@@ -58,7 +58,10 @@
     .modal-dialog > header, .modal-dialog-content,
     .text-light,
     .textcounter,
-    .headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .icon-headline, .icon-headline-small {
+    .headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .icon-headline, .icon-headline-small,
+    .srprebrush .srp-header.it3 h2 + span,
+    .srprebrush .it3 .ad-listitem .aditem-main--top,
+    .srprebrush .it3 .ad-listitem .aditem-main--middle--description {
         color: var_font1 !important;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -82,7 +85,8 @@
     }
     .articleheader--price,
     .button-secondary, .button-inverted,
-    .aditem-details > strong {
+    .aditem-details > strong,
+    .srprebrush .it3 .ad-listitem .aditem-main--middle--price {
         color: var_font3 !important;
     }
     .outcomebox-error > header,
@@ -91,6 +95,14 @@
         & h1,& h2,& h3,& h4,& h5,& h6{
             color: black !important;
         }
+    }
+    /* Suchseite Buttons mit grünem Hintergrund*/
+    .button > span {
+        color: #222 !important;
+    }
+    /* Artikelseite Anzeige teilen */
+    .button-tertiary {
+        color: var_font2 !important;
     }
     /* Eigene Anzeige (beiger Hintergrund) */
     .manageadbox * {
@@ -193,6 +205,7 @@
             background-color: var_bg2 !important;
         }
     }
+    .button-tertiary,
     .button-secondary,
     .button-inverted {
         background-color: var_bg1 !important;
