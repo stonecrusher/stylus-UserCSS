@@ -5,7 +5,7 @@
 @author         Stonecrusher
 @version        1.12.5
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
-@supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
+@supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
@@ -1588,7 +1588,8 @@
         #nav-link-prime, /* discover prime benefits */
         #maple-dss-slot, /* sign up for amazon visa card */
         #detail-ilm_feature_div, /* 15€ action voucher */
-        #WLHUC_footer /* Amazon Assistant ad */ {
+        #WLHUC_footer, /* Amazon Assistant ad */
+        .wp-ftue-tooltip /* Watch party flyout */ {
             display: none !important;
         }
 
