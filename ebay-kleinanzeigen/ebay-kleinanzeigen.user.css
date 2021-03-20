@@ -3,8 +3,8 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.8.1
-@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/ebay-kleinanzeigen
+@version        3.8.2
+@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
 @preprocessor   stylus
@@ -59,9 +59,9 @@
     .text-light,
     .textcounter,
     .headline, .headline-huge, .headline-big, .headline-large, .headline-mediumlarge, .headline-medium, .headline-small, .sectionheadline, .sectionheadline-underlined, .icon-headline, .icon-headline-small,
-    .srprebrush .srp-header.it3 h2 + span,
-    .srprebrush .it3 .ad-listitem .aditem-main--top,
-    .srprebrush .it3 .ad-listitem .aditem-main--middle--description {
+    .srp-header h2 + span,
+    .ad-listitem .aditem-main--top,
+    .ad-listitem .aditem-main--middle--description {
         color: var_font1 !important;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -86,7 +86,7 @@
     .articleheader--price,
     .button-secondary, .button-inverted,
     .aditem-details > strong,
-    .srprebrush .it3 .ad-listitem .aditem-main--middle--price {
+    .ad-listitem .aditem-main--middle--price {
         color: var_font3 !important;
     }
     .outcomebox-error > header,
@@ -112,9 +112,13 @@
         color: darken(var_linkfarbe1, 50%) !important;
     }
     
-    a,
+    a {
+        color: var_linkfarbe1 !important;
+    }
     .textdropdown { /* Sortierungslink */
         color: var_linkfarbe1 !important;
+        background: var_bg1 !important;
+        border-color: var_font2 !important;
     }
     /* Link in notice box (green background) */
     .outcomemessage-error a, .outcomemessage-success a, .outcomemessage-warning a {
