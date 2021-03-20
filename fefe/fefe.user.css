@@ -1,9 +1,11 @@
 /* ==UserStyle==
 @name           blog.fefe.de
 @namespace      Stonecrusher
-@version        1.0.1
+@version        1.0.2
 @license        CC-BY-NC-SA-4.0
 @author         Fefe, Stonecrusher
+@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/fefe
+@supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @preprocessor   stylus
 
 @var number pg-width 'Seitenbreite' [800, 600, 4000, 10, "px"]
