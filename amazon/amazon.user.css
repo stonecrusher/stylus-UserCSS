@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.6
+@version        1.12.7
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -177,7 +177,9 @@
         }
         
         div#footer,
-        .a-cardui {
+        .a-cardui,
+        table table table table td[bgcolor="#FFFFFF"],
+        table table table table td[bgcolor="#FFFFFF"] select {
             background-color: var_bg1 !important;
         }
 
@@ -246,7 +248,8 @@
         #manage-skills-permissions .msp-content-box,
         .apd-content-box,
         .myx-box,
-        .a-js .editable:hover span {
+        .a-js .editable:hover span,
+        table table table table tr[bgcolor="#EEEEDD"] {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
