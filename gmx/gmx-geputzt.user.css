@@ -6,7 +6,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      3.3.3
+@version      3.3.4
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -80,6 +80,9 @@
     .main > [data-container="left"]:first-child {
         display: none !important;
     }
+    [data-component="login"] {
+        justify-content: center !important;
+    }
     if not menu-keep {
         [aria-label="netid"],
         [data-component="bento"] {
@@ -107,6 +110,7 @@
         [data-item-name="maildomain_new"],
         [data-item-name="allnet"],
         [data-item-name="zattoo"],
+        [data-item-name="waiputv"],
         /* Navi oben geöffnet ("mehr") */
         [data-group-name="Produkte"],
         /* Navi linke Seite */
@@ -229,7 +233,10 @@
     /*gmx*/ #maillist .iba-acceptable,
     /*gmx*/ .navigation--smartInbox,
     /*gmx*/ #mail-list tr[data-component="MessageListAdRow"],
-    /*gmx*/ .ftd-box-promote {
+    /*gmx*/ .ftd-box-promote,
+    /*gmx*/ #superbanner.ad,
+    /*gmx*/ .digital-copy-empty-preview-teaser,
+    /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"] {
         display: none !important;
     }
     if cloud-hide {
@@ -297,7 +304,7 @@
 @-moz-document url-prefix("https://3c.gmx.net/mail/client/"), url-prefix("https://3c-bap.gmx.net/mail/client/") {
     if notiz {
         .navigation-container-bottom::before {
-            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.3.3';
+            content: 'Aufgrund massiver Änderungen bei gmx.net muss der Userstyle neu geschrieben werden. Darkstyle ist noch nicht verfügbar. Fehlermeldungen auf Github sind willkommen. \a Aktuelle Version 3.3.4';
             background-color: #ffd800;
         }
     }
