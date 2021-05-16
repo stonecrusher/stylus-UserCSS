@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.9
+@version        1.12.10
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -179,7 +179,9 @@
         div#footer,
         .a-cardui,
         table table table table td[bgcolor="#FFFFFF"],
-        table table table table td[bgcolor="#FFFFFF"] select {
+        table table table table td[bgcolor="#FFFFFF"] select,
+        #ewc-compact-body,
+        .ewc-compact-head {
             background-color: var_bg1 !important;
         }
 
@@ -800,7 +802,8 @@
         #filter-menu .filter-row,
         .myx-box,
         table.myx-bordered tr:first-child th,
-        table.myx-bordered {
+        table.myx-bordered,
+        .ewc-item-separator {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -975,7 +978,8 @@
         img[src^="https://images-na.ssl-images-amazon.com/images/G/01/amazonui/loading/loading-"],
         #view-switcher-buttons,
         img[src^="https://images-eu.ssl-images-amazon.com/images/G/01/payments-portal/r1/PlusIcon"],
-        .newOrderShipmentActions {
+        .newOrderShipmentActions,
+        .ewc-delete-icon {
             filter: invert(0.8) !important;
         }
         .nav-image,
