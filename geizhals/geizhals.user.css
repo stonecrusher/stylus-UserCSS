@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.3.10
+@version        1.3.12
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
-@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/geizhals
-@supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
+@homepageURL    https://github.com/stonecrusher/stylus-UserCSS/geizhals
+@supportURL     https://github.com/stonecrusher/stylus-UserCSS/Issues
 @preprocessor   stylus
 
 @var color    var_bg0      "Hintergrund 1"   #2a2a2a
@@ -40,7 +40,8 @@ div.nl_box,
 #acbox,
 table.gh_fstbl > tbody,
 th.xf_th,
-#gh_filterbox {
+#gh_filterbox,
+#gh-main {
     background-color: var_bg0 !important;
 }
 .boxfm,
@@ -238,7 +239,8 @@ if reduce {
     .heise-coop,
     #gh_blah,
     .deals-badge,
-    #gh-notifications-container--topright {
+    #gh-notifications-container--topright,
+    #gh-aside.leftmenu > div[style^="color:#000;background:#fff;"] {
         display: none !important;
     }
 }
@@ -370,6 +372,7 @@ li.gh_tabs {
 .fltrs,
 .filterbox,
 .productlist__additionalfilter, .productlist__bestpriceoffer, .productlist__compare, .productlist__deliverytime, .productlist__image, .productlist__name, .productlist__offerscount--standard, .productlist__price, .productlist__rating, .productlist__wishlistbuttons,
+.productlist__additionalfilter, .productlist__bestpriceoffer, .productlist__compare, .productlist__deliverytime, .productlist__image, .productlist__metascore, .productlist__name, .productlist__offerscount--standard, .productlist__price, .productlist__rating, .productlist__wishlistbuttons,
 .filterbox__list__item {
     border-color: var_bg2 !important;
 }
@@ -875,6 +878,12 @@ a.variant__header__dropdown__item--more-link {
 .comparepage__toc {
     background: var_bg1 !important;
 }
+/*
+.compare__col-header:not(.compare__col-title):nth-child(2n+1),
+.compare__data:nth-child(2n+1) {
+    background-color: initial !important;    
+}
+/**/
 
 /* Deals */
 .results__inner,
@@ -952,6 +961,13 @@ a.filter__reset {
 }
 .autocomplete {
     background: var_text !important;
+}
+
+/* Kategorien */
+.mocat-item,
+.mo-right .box10, .mo-right .boxfm-ajax {
+    background-color: var_bg2 !important;
+    border-color: var_bg1 !important;
 }
 
 }
