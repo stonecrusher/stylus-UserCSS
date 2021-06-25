@@ -5,7 +5,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.0
+@version      4.0.1
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -246,6 +246,13 @@
     /*gmx*/ .digital-copy-empty-preview-teaser,
     /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"] {
         display: none !important;
+    }
+    /* Invisible #superbanner overlay at bottom */
+    /* https://github.com/stonecrusher/stylus-UserCSS/issues/12 */
+    .abi.adb, .ad.adb {
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
     }
     if cloud-hide {
         /*Anhang in Cloud speichern*/
