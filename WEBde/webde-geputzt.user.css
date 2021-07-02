@@ -251,8 +251,8 @@
     }
     if cloud-hide {
         /*Anhang in Cloud speichern*/
-        /*gmx*/ .attachment-options ul > li:nth-last-of-type(1), 
-        /*gmx*/ .attachment-options ul > li:nth-last-of-type(2) {
+        /*gmx*/ .attachment-options > div:nth-child(2) > ul > li:nth-last-of-type(1),
+        /*gmx*/ .attachment-options > div:nth-child(2) > ul > li:nth-last-of-type(2) {
             display: none !important;
         }
     }
