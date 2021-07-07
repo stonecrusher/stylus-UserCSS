@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Geizhals Dark Grey
 @namespace      Stonecrusher
-@version        1.3.12
+@version        1.3.13
 @license        CC-BY
 @description    Basierend auf dem Userstyle von evea wurden ein paar fixes eingepflegt
 @author         evea, Stonecrusher
@@ -240,7 +240,8 @@ if reduce {
     #gh_blah,
     .deals-badge,
     #gh-notifications-container--topright,
-    #gh-aside.leftmenu > div[style^="color:#000;background:#fff;"] {
+    #gh-aside.leftmenu > div[style^="color:#000;background:#fff;"],
+    .wechselpilot-badge-wrapper {
         display: none !important;
     }
 }
@@ -320,6 +321,9 @@ select.gh_searchkat {
 .t10i::before,
 .t10c, a.t10c {
     color: darken(var_text,30%) !important;
+}
+.t10i:focus-within, .t10i:hover {
+    background: var_bg3 !important;
 }
 .toplist__link--secondary:visited > b, .toplist__link--secondary > b {
     color: var_text !important;
@@ -968,6 +972,10 @@ a.filter__reset {
 .mo-right .box10, .mo-right .boxfm-ajax {
     background-color: var_bg2 !important;
     border-color: var_bg1 !important;
+}
+.mocat-item__image,
+.t10img img {
+    mix-blend-mode: normal !important;
 }
 
 }
