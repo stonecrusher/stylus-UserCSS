@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.12
+@version        1.12.13
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -173,7 +173,9 @@
         .navigationItemAlexa_myx,
         .MMGridLayout#formats .safRow,
         tr[bgcolor="#ffffff"],
-        td[bgcolor="#ffffff"] {
+        td[bgcolor="#ffffff"],
+        .coupon-shoveler-common,
+        div[class*="Shoveler-module__shoveler_"] {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -257,7 +259,8 @@
         .wl-friend-list.selected,
         .apx-transaction-date-container,
         .gb_box_in_cart,
-        .a-box.a-alert-inline.a-alert-inline-success.gb_alert_in_cart {
+        .a-box.a-alert-inline.a-alert-inline-success.gb_alert_in_cart,
+        div[class*="Shoveler-module__shovelerWrapper"] {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -808,7 +811,10 @@
         .myx-box,
         table.myx-bordered tr:first-child th,
         table.myx-bordered,
-        .ewc-item-separator {
+        .ewc-item-separator,
+        div[class*="GridFilters-module__gridFilterSection_"],
+        div[class*="DealItem-module__withBorders_"],
+        div[class*="GridContainer-module__gridMainContainer_"] {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1606,7 +1612,8 @@
         #maple-dss-slot, /* sign up for amazon visa card */
         #detail-ilm_feature_div, /* 15€ action voucher */
         #WLHUC_footer, /* Amazon Assistant ad */
-        .wp-ftue-tooltip /* Watch party flyout */ {
+        .wp-ftue-tooltip /* Watch party flyout */,
+        .customer-feedback-widget.form-common-main {
             display: none !important;
         }
 
