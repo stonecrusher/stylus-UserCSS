@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.10
+@version        1.12.12
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -171,7 +171,9 @@
         .alexaPrivacy_sideNav_myx,
         .alexaPrivacyApp_sideNavDiv_myx,
         .navigationItemAlexa_myx,
-        .MMGridLayout#formats .safRow {
+        .MMGridLayout#formats .safRow,
+        tr[bgcolor="#ffffff"],
+        td[bgcolor="#ffffff"] {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -253,7 +255,9 @@
         .a-js .editable:hover span,
         table table table table tr[bgcolor="#EEEEDD"],
         .wl-friend-list.selected,
-        .apx-transaction-date-container {
+        .apx-transaction-date-container,
+        .gb_box_in_cart,
+        .a-box.a-alert-inline.a-alert-inline-success.gb_alert_in_cart {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -299,7 +303,8 @@
         .navOptionChildItem_alexa_myx:hover,
         .myx-dropdown .myx-list-link li a.myx-active, .myx-splitdropdown .myx-list-link li a.myx-active, .myx-suggest .myx-list-link li a.myx-active,
         .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a,
-        .move-to-list-row:hover {
+        .move-to-list-row:hover,
+        #attach-desktop-sideSheet {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -897,6 +902,9 @@
             border-color: var_bg6 !important;
             border-top: none !important;
             box-shadow: 0 0 10px darken(var_bg6,30%) !important;
+        }
+        #attach-desktop-sideSheet #attach-ld-container #attach-ld-inner {
+            border-bottom-color: var_bg3 !important;
         }
 
 
