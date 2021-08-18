@@ -4,7 +4,7 @@
               Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.1
+@version      4.0.2
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -165,6 +165,7 @@
     }
 
     /** Startseite **/
+    .feedback__button,
     .atl-feedback__button,
     .upsell,
     .extend-mail-storage,
