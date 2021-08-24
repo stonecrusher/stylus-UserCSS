@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.13
+@version        1.12.14
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -175,7 +175,9 @@
         tr[bgcolor="#ffffff"],
         td[bgcolor="#ffffff"],
         .coupon-shoveler-common,
-        div[class*="Shoveler-module__shoveler_"] {
+        div[class*="Shoveler-module__shoveler_"],
+        .Header__left__3CRg_ .Header__navArea__2dJRo,
+        .ProductGridItem__itemOuter__5ow0w {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -185,7 +187,9 @@
         table table table table td[bgcolor="#FFFFFF"],
         table table table table td[bgcolor="#FFFFFF"] select,
         #ewc-compact-body,
-        .ewc-compact-head {
+        .ewc-compact-head,
+        .style__navBar__2NVns > .style__navList__Igck2 > .style__navItem__3rEc7,
+        .style__navMenu__3iZRP .style__navItem__3rEc7.style__isHeading__2UmI2 > a {
             background-color: var_bg1 !important;
         }
 
@@ -260,7 +264,8 @@
         .apx-transaction-date-container,
         .gb_box_in_cart,
         .a-box.a-alert-inline.a-alert-inline-success.gb_alert_in_cart,
-        div[class*="Shoveler-module__shovelerWrapper"] {
+        div[class*="Shoveler-module__shovelerWrapper"],
+        .style__navMenu__3iZRP .style__navItem__3rEc7 a, .style__navMenu__3iZRP .style__navItem__3rEc7 button {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -307,7 +312,8 @@
         .myx-dropdown .myx-list-link li a.myx-active, .myx-splitdropdown .myx-list-link li a.myx-active, .myx-suggest .myx-list-link li a.myx-active,
         .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a,
         .move-to-list-row:hover,
-        #attach-desktop-sideSheet {
+        #attach-desktop-sideSheet,
+        .stores-page {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -814,7 +820,8 @@
         .ewc-item-separator,
         div[class*="GridFilters-module__gridFilterSection_"],
         div[class*="DealItem-module__withBorders_"],
-        div[class*="GridContainer-module__gridMainContainer_"] {
+        div[class*="GridContainer-module__gridMainContainer_"],
+        .ProductGridItem__itemOuter__5ow0w {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1243,7 +1250,9 @@
         .hud-white-dashboard .hud-profilecard-digital-preorders, .hud-white-dashboard .hud-profilecard-yourorders, .hud-white-dashboard .hud-profilecard-category, .hud-white-dashboard .hud-profilecard-name, .hud-white-dashboard .hud-profile-giftguide-text-only-option-text,
         .hud-white-dashboard .hud-card-subtext-line1, .hud-white-dashboard .hud-card-subtext-line2,
         .badge-wrapper .cat-link,
-        .a-link-normal > .color-black {
+        .a-link-normal > .color-black,
+        .ProductGridItem__reviewCount__2hIGr,
+        .style__navMenu__3iZRP .style__navItem__3rEc7.style__back__vECzM button {
             color: var_linkdefault !important;
         }
         a:hover,
