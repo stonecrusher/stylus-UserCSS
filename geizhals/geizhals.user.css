@@ -501,7 +501,12 @@ a.xf_msel:hover .xf_n::after {
 }
 div.gh_sn_lw .gh_sn_wrp {
     background-color: var_bg3 !important;
+}    
+.rating-post__replies .gh_clay {
+    background-color: var_bg0 !important;
+    border-color: var_bg2 !important;
 }
+
 /* Preisalarm */
 .more_options_link {
     color: var_link !important;
