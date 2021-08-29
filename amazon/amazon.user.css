@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.14
+@version        1.12.15
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -265,7 +265,8 @@
         .gb_box_in_cart,
         .a-box.a-alert-inline.a-alert-inline-success.gb_alert_in_cart,
         div[class*="Shoveler-module__shovelerWrapper"],
-        .style__navMenu__3iZRP .style__navItem__3rEc7 a, .style__navMenu__3iZRP .style__navItem__3rEc7 button {
+        .style__navMenu__3iZRP .style__navItem__3rEc7 a, .style__navMenu__3iZRP .style__navItem__3rEc7 button,
+        .octopus-pc-deal-block-section {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
