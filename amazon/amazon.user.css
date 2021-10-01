@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.17
+@version        1.12.18
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1628,7 +1628,8 @@
         #WLHUC_footer, /* Amazon Assistant ad */
         .wp-ftue-tooltip /* Watch party flyout */,
         .customer-feedback-widget.form-common-main,
-        #maple-smart-wagon-full-page /* Checkout: Credit card bonus banner */{
+        #maple-smart-wagon-full-page, /* Checkout: Credit card bonus banner */
+        .nav-prime-tt.nav-flyout /* Prime ad on front page */{
             display: none !important;
         }
 
