@@ -1,7 +1,7 @@
 # Beschreibung
 
 - Dunklere Farben (blendet sonst, wenn man aus dem Spiel raustabbt)
-- Kompakteres Layout (Unwichtiges entfernt, mehr flexboxen)
+- Kompakteres Layout (Unwichtiges entfernt, mehr Flexboxen)
 - PHP Fehlermeldungen entfernt
 
 Optionen:
