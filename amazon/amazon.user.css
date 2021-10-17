@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.19
+@version        1.12.20
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -189,7 +189,8 @@
         #ewc-compact-body,
         .ewc-compact-head,
         .style__navBar__2NVns > .style__navList__Igck2 > .style__navItem__3rEc7,
-        .style__navMenu__3iZRP .style__navItem__3rEc7.style__isHeading__2UmI2 > a {
+        .style__navMenu__3iZRP .style__navItem__3rEc7.style__isHeading__2UmI2 > a,
+        div[class*="GridContainer-module__gridContainer"] {
             background-color: var_bg1 !important;
         }
 
@@ -828,7 +829,9 @@
         div[class*="GridFilters-module__gridFilterSection_"],
         div[class*="DealItem-module__withBorders_"],
         div[class*="GridContainer-module__gridMainContainer_"],
-        .ProductGridItem__itemOuter__5ow0w {
+        .ProductGridItem__itemOuter__5ow0w,
+        div[class*="GridContainer-module__gridContainer"],
+        div[class*="DealGridItem-module__withBorders"] {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
