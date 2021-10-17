@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.21
+@version        1.12.22
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -273,7 +273,8 @@
         [data-card-metrics-id^="smart-wagon-card_desktop-smartwagon_"],
         #rhf,
         #desktop-configurator-side-sheet .detail-page-side-sheet-content .text-swatch-button-with-slots .swatch-title-text-container, #twister-plus-inline-twister-container .text-swatch-button-with-slots .swatch-title-text-container,
-        .desktop-configurator-popover-content:not(.visual-dimension) .desktop-configurator-title-block {
+        .desktop-configurator-popover-content:not(.visual-dimension) .desktop-configurator-title-block,
+        .s-suggestion:hover, .s-suggestion-container:hover {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
