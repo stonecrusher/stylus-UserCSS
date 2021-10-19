@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.22
+@version        1.12.23
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -274,7 +274,8 @@
         #rhf,
         #desktop-configurator-side-sheet .detail-page-side-sheet-content .text-swatch-button-with-slots .swatch-title-text-container, #twister-plus-inline-twister-container .text-swatch-button-with-slots .swatch-title-text-container,
         .desktop-configurator-popover-content:not(.visual-dimension) .desktop-configurator-title-block,
-        .s-suggestion:hover, .s-suggestion-container:hover {
+        .s-suggestion:hover, .s-suggestion-container:hover,
+        #errorPageContainer .widgetLink-group a:hover, #mapTracking-bottomSheet-container .widgetLink-group a:hover, #pageContainer .widgetLink-group a:hover {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -832,7 +833,8 @@
         div[class*="GridContainer-module__gridMainContainer_"],
         .ProductGridItem__itemOuter__5ow0w,
         div[class*="GridContainer-module__gridContainer"],
-        div[class*="DealGridItem-module__withBorders"] {
+        div[class*="DealGridItem-module__withBorders"],
+        #cardsContainer .cardContainer {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1565,6 +1567,14 @@
         /* Strange PrimeMusic Reviewbar issue */
         #dmusic_tracklist_content table.a-keyvalue td, table.a-keyvalue th {
             padding: 7px 14px 6px;
+        }
+        /* Parcel tracking */
+        .milestone.notReached .milestone-marker::before {
+            background: var_bg3 !important;
+            border-color: var_bg6 !important;
+        }
+        #promise-container #secondaryStatus {
+            color: var_font1 !important;
         }
     }
     
