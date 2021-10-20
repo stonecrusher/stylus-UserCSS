@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.12.23
+@version        1.13.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -22,6 +22,7 @@
 @var checkbox  compact          'Compact mode & Less ads'    1
 @var checkbox  hide-similar     'Hide other customer item recommendations' 1
 @var checkbox  hide-ask         'Hide customer q&a'          0
+@var checkbox  hide-cart        'Hide shopping card sidebar' 0
 @var checkbox  mark-sponsored   'Mark sponsored results'     1
 @var checkbox  av-pause-remove  'Remove Video pause overlay' 1
 @var text      review-width     'Width of review bars'       300px
@@ -1733,6 +1734,14 @@
         .celwidget[cel_widget_id^="ask-swdp-"],
         #ask_feature_div {
             display: none !important;
+        }
+    }
+    if hide-cart {
+        #nav-flyout-ewc {
+            display: none !important;
+        }
+        .nav-ewc-persistent-hover.a-js body {
+            padding-right: 1px !important;
         }
     }
     if mark-sponsored {
