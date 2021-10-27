@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.0
+@version        1.13.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -191,7 +191,8 @@
         .ewc-compact-head,
         .style__navBar__2NVns > .style__navList__Igck2 > .style__navItem__3rEc7,
         .style__navMenu__3iZRP .style__navItem__3rEc7.style__isHeading__2UmI2 > a,
-        div[class*="GridContainer-module__gridContainer"] {
+        div[class*="GridContainer-module__gridContainer"],
+        .desktop-configurator-popover-content.visual-dimension .desktop-configurator-title-block {
             background-color: var_bg1 !important;
         }
 
@@ -835,7 +836,8 @@
         .ProductGridItem__itemOuter__5ow0w,
         div[class*="GridContainer-module__gridContainer"],
         div[class*="DealGridItem-module__withBorders"],
-        #cardsContainer .cardContainer {
+        #cardsContainer .cardContainer,
+        .desktop-configurator-popover-content .desktop-configurator-image-block {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1255,7 +1257,8 @@
         .activityDeviceHistoryDescription,
         .myad-section .myad-sub-section .myad-sub-section-description, .myad-section .myad-sub-section .myad-sub-section-setting-description,
         .amsg-2018 .accordion .title,
-        .color-gulfstream {
+        .color-gulfstream,
+        #desktop-configurator-side-sheet .detail-page-side-sheet-content .twister-plus-inline-twister-ppu, #twister-plus-inline-twister-container .twister-plus-inline-twister-ppu {
             color: var_font2 !important;
         }
 
