@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.1
+@version        1.13.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -192,7 +192,8 @@
         .style__navBar__2NVns > .style__navList__Igck2 > .style__navItem__3rEc7,
         .style__navMenu__3iZRP .style__navItem__3rEc7.style__isHeading__2UmI2 > a,
         div[class*="GridContainer-module__gridContainer"],
-        .desktop-configurator-popover-content.visual-dimension .desktop-configurator-title-block {
+        .desktop-configurator-popover-content.visual-dimension .desktop-configurator-title-block,
+        .toolbarGridContainer {
             background-color: var_bg1 !important;
         }
 
@@ -277,7 +278,8 @@
         #desktop-configurator-side-sheet .detail-page-side-sheet-content .text-swatch-button-with-slots .swatch-title-text-container, #twister-plus-inline-twister-container .text-swatch-button-with-slots .swatch-title-text-container,
         .desktop-configurator-popover-content:not(.visual-dimension) .desktop-configurator-title-block,
         .s-suggestion:hover, .s-suggestion-container:hover,
-        #errorPageContainer .widgetLink-group a:hover, #mapTracking-bottomSheet-container .widgetLink-group a:hover, #pageContainer .widgetLink-group a:hover {
+        #errorPageContainer .widgetLink-group a:hover, #mapTracking-bottomSheet-container .widgetLink-group a:hover, #pageContainer .widgetLink-group a:hover,
+        .textnav-pill > a {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -837,7 +839,9 @@
         div[class*="GridContainer-module__gridContainer"],
         div[class*="DealGridItem-module__withBorders"],
         #cardsContainer .cardContainer,
-        .desktop-configurator-popover-content .desktop-configurator-image-block {
+        .desktop-configurator-popover-content .desktop-configurator-image-block,
+        .refinementDivider,
+        ._cerberus-shared_style_asin-cards-mobile__1MXgK:not(:last-child), ._cerberus-shared_style_asin-cards__aPmmg:not(:last-child) {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -934,6 +938,9 @@
         }
         #attach-desktop-sideSheet #attach-ld-container #attach-ld-inner {
             border-bottom-color: var_bg3 !important;
+        }
+        .toolbarGridContainer {
+            border: none !important;
         }
 
 
