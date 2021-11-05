@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.3
+@version        1.13.4
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -178,7 +178,8 @@
         .coupon-shoveler-common,
         div[class*="Shoveler-module__shoveler_"],
         .Header__left__3CRg_ .Header__navArea__2dJRo,
-        .ProductGridItem__itemOuter__5ow0w {
+        .ProductGridItem__itemOuter__5ow0w,
+        [class^="_morpheus-popularity-rank-sidesheet-card_"] {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
