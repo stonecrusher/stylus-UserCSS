@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.4
+@version        1.13.5
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -194,7 +194,10 @@
         .style__navMenu__3iZRP .style__navItem__3rEc7.style__isHeading__2UmI2 > a,
         div[class*="GridContainer-module__gridContainer"],
         .desktop-configurator-popover-content.visual-dimension .desktop-configurator-title-block,
-        .toolbarGridContainer {
+        .toolbarGridContainer,
+        div[id^="gridCell-"],
+        div[id^="gridElement-"],
+        div[id^="featured-"] {
             background-color: var_bg1 !important;
         }
 
@@ -843,7 +846,11 @@
         .desktop-configurator-popover-content .desktop-configurator-image-block,
         .refinementDivider,
         ._cerberus-shared_style_asin-cards-mobile__1MXgK:not(:last-child), ._cerberus-shared_style_asin-cards__aPmmg:not(:last-child),
-        .s-card-border {
+        .s-card-border,
+        div[id^="gridCell-"],
+        div[id^="gridElement-"],
+        div[id^="featured-"],
+        .alm-grid-desktop-grid-container {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
