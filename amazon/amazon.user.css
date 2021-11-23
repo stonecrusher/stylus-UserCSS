@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.6
+@version        1.13.7
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -198,7 +198,8 @@
         div[id^="gridCell-"],
         div[id^="gridElement-"],
         div[id^="featured-"],
-        div#rhf-container {
+        div#rhf-container,
+        .amazon-pay-wallet-menu-row {
             background-color: var_bg1 !important;
         }
 
@@ -284,7 +285,10 @@
         .desktop-configurator-popover-content:not(.visual-dimension) .desktop-configurator-title-block,
         .s-suggestion:hover, .s-suggestion-container:hover,
         #errorPageContainer .widgetLink-group a:hover, #mapTracking-bottomSheet-container .widgetLink-group a:hover, #pageContainer .widgetLink-group a:hover,
-        .textnav-pill > a {
+        .textnav-pill > a,
+        .amazonPayWalletWidgetRow,
+        .apx-wallet-widget-section,
+        .apx-wallet-payment-method-details {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -996,7 +1000,8 @@
         #dmusic_tracklist_content .a-button-text > i,
         #all-offers-display .aod-arrow-up,
         #all-offers-display .aod-arrow-low,
-        .myx-icon-section-collapse, .myx-icon-section-expand {
+        .myx-icon-section-collapse, .myx-icon-section-expand,
+        .amazon-pay-logo {
             filter: invert(1) !important;
         }
         /** TODO: Fix more spinners **/
@@ -1243,7 +1248,8 @@
         .pfCatResults .partcount,
         #apd-page-header h1, #apd-page-header h2,
         #manage-skills-permissions .msp-page-header h3,
-        .record-info {
+        .record-info,
+        .payWalletMenuTabHead {
             color: var_font3 !important;
         }
         hr,
