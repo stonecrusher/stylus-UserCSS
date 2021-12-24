@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.7
+@version        1.13.9
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -288,7 +288,8 @@
         .textnav-pill > a,
         .amazonPayWalletWidgetRow,
         .apx-wallet-widget-section,
-        .apx-wallet-payment-method-details {
+        .apx-wallet-payment-method-details,
+        .sf-filter-floatbox {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -336,7 +337,8 @@
         .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a,
         .move-to-list-row:hover,
         #attach-desktop-sideSheet,
-        .stores-page {
+        .stores-page,
+        .sf-filter-floatbox:hover {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -855,7 +857,9 @@
         div[id^="gridCell-"],
         div[id^="gridElement-"],
         div[id^="featured-"],
-        .alm-grid-desktop-grid-container {
+        .alm-grid-desktop-grid-container,
+        .border-left-only,
+        .sf-filter-floatbox {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
