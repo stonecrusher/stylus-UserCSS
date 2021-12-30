@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.9
+@version        1.13.11
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -289,7 +289,9 @@
         .amazonPayWalletWidgetRow,
         .apx-wallet-widget-section,
         .apx-wallet-payment-method-details,
-        .sf-filter-floatbox {
+        .sf-filter-floatbox,
+        .sf-top-nav,
+        .aod-recommendations-widget-properties {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -859,7 +861,9 @@
         div[id^="featured-"],
         .alm-grid-desktop-grid-container,
         .border-left-only,
-        .sf-filter-floatbox {
+        .sf-filter-floatbox,
+        #navbar.layout2.bold-focus-hover #nav-xshop-container #nav-xshop .nav-a:hover,
+        .a-button {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
