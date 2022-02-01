@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           blog.fefe.de
 @namespace      Stonecrusher
-@version        1.0.2
+@version        1.0.3
 @license        CC-BY-NC-SA-4.0
 @author         Fefe, Stonecrusher
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/fefe
@@ -125,4 +125,7 @@
         margin: 10px !important; }
     blockquote {
         font-style: italic !important; }
+    li > p:last-of-type {
+        margin-bottom: 0 !important;
+    }
 }
