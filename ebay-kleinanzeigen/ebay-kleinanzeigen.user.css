@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.8.3
+@version        3.9.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -154,7 +154,8 @@
     #page-searchresults-adtable > .ad-listitem,
     #vap-smlrads .ad-listitem,
     #vap-pstrads .ad-listitem,/**/
-    .ad-listitem {
+    .ad-listitem,
+    .contentbox, .contentbox--vip, .contentbox-unpadded, .contentbox-info, .contentbox-landingpage {
         background-color: var_bg2 !important;
     }
     .ad-listitem.is-highlight {
@@ -404,10 +405,8 @@
     .Button-secondary:hover{
         background-color: lighten(var_bg2,5%) !important;
     }
-    .PaymentEntryBanner {
-        background: var_bg1 !important;
-        box-shadow: inset 0px -1px 0px var_font2 !important;
-        color: var_font2 !important;
+    .Message--Text {
+        color: var_bg1 !important;
     }
     /* Ende "Meine Nachrichten" */
 
@@ -454,7 +453,8 @@
         #vap #pla-container,    //Google Vorschläge auf Detailseite
         #postad-publish div.l-row.a-double-margin.l-container-row, //Newsletter
         #srchrslt-adtable-topads, //TopAds
-        #measure-emotions-survey //Smiley-Umfrage
+        #measure-emotions-survey, //Smiley-Umfrage
+        .PaymentEntryBanner       //Neue Bezahlmethoden
         {
             display: none !important;
         }
