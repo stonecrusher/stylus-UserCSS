@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.12
+@version        1.13.13
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -199,7 +199,8 @@
         div[id^="gridElement-"],
         div[id^="featured-"],
         div#rhf-container,
-        .amazon-pay-wallet-menu-row {
+        .amazon-pay-wallet-menu-row,
+        #a-page {
             background-color: var_bg1 !important;
         }
 
