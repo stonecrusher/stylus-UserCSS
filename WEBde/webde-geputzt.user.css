@@ -4,7 +4,7 @@
               Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.2
+@version      4.0.3
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -80,10 +80,14 @@
 
 /*** Logout ***/
 @-moz-document regexp("https?:\\/\\/web\\.de\\/logoutlounge\\/.*"), regexp("https?:\\/\\/web\\.de\\/#(.*)?") {
-    body > *:not(.first),
+    /* https://github.com/stonecrusher/stylus-UserCSS/issues/13 */
+    /*body > *:not(.first),
     .logout-notification > .hint > p,
     .search-wrapper,
-    #rightnav {
+    #rightnav { /**/
+    header,
+    [data-skeleton-body],
+    footer {
         display: none !important;
     }
 }
@@ -171,7 +175,11 @@
     .extend-mail-storage,
     .webcent,
     .hide,
-    .login-security {
+    .login-security,
+    #footer a[href^="https://newsroom.gmx.net/"],
+    #footer a[href^="https://web.de/presse/"],
+    #footer a[href^="https://www.mail-and-media.com/jobs.html"],
+    #footer a[href^="https://www.united-internet-media.de/"] {
         display: none !important;
     }
     /* Höhe */
