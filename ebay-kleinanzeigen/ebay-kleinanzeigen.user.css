@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.9.2
+@version        3.9.3
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -136,7 +136,27 @@
             color: var_font2 !important;
         }
     }
-    /* Eigene Anzeige (beiger Hintergrund) */
+    /* Eigene Anzeigen verwalten */
+    #my-manageads-adlist > li {
+        background: var_bg2 !important;
+    }
+    #my-manageads-adlist > li {
+        border-color: var_font2 !important;
+    }
+    .manageaditem-ad--category {
+        color: var_font2 !important;
+    }
+    .manageaditem-stats,
+    .manageaditem-ad--expiration {
+        color: var_font1 !important;
+    }
+    .manageaditem-actions i {
+        filter: invert(1) !important;
+    }
+    .align-right.text-body-small {
+        color: var_font2 !important;
+    }
+    /* Eigene Anzeige (beiger Hintergrund / Vorschau) */
     .manageadbox * {
         color: black !important;
     }
@@ -244,8 +264,10 @@
     }
     .button-tertiary,
     .button-secondary,
-    .button-inverted {
+    .button-inverted,
+    #managead-more {
         background-color: var_bg1 !important;
+        color: var_font2 !important;
          &:hover {
             background-color: darken(var_bg1,20%) !important;
         }
