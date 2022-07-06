@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.9.1
+@version        3.9.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -104,6 +104,37 @@
     /* Artikelseite Anzeige teilen */
     .button-tertiary {
         color: var_font2 !important;
+    }
+    /* Bild bearbeiten */
+    .darkroom-button-group > button .darkroom-icon:hover,
+    .darkroom-button-group > button:hover .darkroom-icon {
+        fill: black !important;
+    }
+    .darkroom-button-group > button:disabled .darkroom-icon:hover,
+    .darkroom-button-group > button:disabled:hover .darkroom-icon {
+        fill: var_font2 !important;
+    }
+    .darkroom-button-group > button .darkroom-icon {
+        fill: var_font1 !important;
+    }
+    .darkroom-button-group > button:disabled .darkroom-icon {
+        fill: var_font2 !important;
+    }
+    /* Kategorie Auswahl Checkmarks */
+    .category-selection-list-item.is-leaf {
+        background-image: none !important;
+    }
+    /* Anzeige erstellen Versanddetails */
+    #j-shipping {
+        div, span, strong {
+            color: var_font1 !important;
+        }
+    }
+    /* Anzeige erstellen Tipp */
+    .bubblebox-reorder {
+        p, strong {
+            color: var_font2 !important;
+        }
     }
     /* Eigene Anzeige (beiger Hintergrund) */
     .manageadbox * {
@@ -418,6 +449,9 @@
     .activityindicators--item,
     .empty-page-centered-box {
         border-color: var_font2 !important;
+    }
+    .icon.icon-empty-page, .icon-empty-page.button-icon, .icon-empty-page.icon-feature, .icon-empty-page.icon-feature-hpgallery, .icon-empty-page.icon-feature-topad, .icon-empty-page.icon-feature-highlight, .icon-empty-page.icon-feature-bumpup, .icon-empty-page.icon-feature-multibumpup {
+        color: red !important;
     }
 
     
