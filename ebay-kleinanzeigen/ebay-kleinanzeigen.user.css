@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.9.4
+@version        3.9.5
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -62,7 +62,8 @@
     .srp-header h2 + span,
     .ad-listitem .aditem-main--top,
     .ad-listitem .aditem-main--middle--description,
-    .UserProfile, .iconlist-text {
+    .UserProfile, .iconlist-text,
+    #viewad-description-text * {
         color: var_font1 !important;
     }
     h1, h2, h3, h4, h5, h6 {
