@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.9.7
+@version        3.10.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -487,6 +487,13 @@
     }
     .icon.icon-empty-page, .icon-empty-page.button-icon, .icon-empty-page.icon-feature, .icon-empty-page.icon-feature-hpgallery, .icon-empty-page.icon-feature-topad, .icon-empty-page.icon-feature-highlight, .icon-empty-page.icon-feature-bumpup, .icon-empty-page.icon-feature-multibumpup {
         color: red !important;
+    }
+    /* Änderungen BG 2022-09-29 */
+    .site-base, .aditem, .savedsearchitem, .followuseritem {
+        background-color: transparent !important;
+    }
+    .contentbox, .contentbox--vip, .contentbox-unpadded, .contentbox-info, .contentbox-landingpage {
+        color: var_font2 !important;
     }
 
     
