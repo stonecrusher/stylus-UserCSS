@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.10.1
+@version        3.11.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -525,19 +525,20 @@
     }
     if ads-remove {
         /* Werbung */
-        #vip-atf-billboard,     //Werbezeile head
-        #store-gallery,         //Einschub Unternehmensseiten
-        #home-gallery,          //Galerie
-        #vap_adsense-middle,    //Google Adsense
+        #vip-atf-billboard,       //Werbezeile head
+        #store-gallery,           //Einschub Unternehmensseiten
+        #home-gallery,            //Galerie
+        #vap_adsense-middle,      //Google Adsense
         .adsenseplacement,
-        #brws_banner-supersize, //Top-result-banner
+        #brws_banner-supersize,   //Top-result-banner
         #srchrslt-adtable > .ad-listitem:not(.lazyload-item), //Einschub in Suchergebnissen
-        #vap #pla-container,    //Google Vorschläge auf Detailseite
+        #vap #pla-container,      //Google Vorschläge auf Detailseite
         #postad-publish div.l-row.a-double-margin.l-container-row, //Newsletter
         #srchrslt-adtable-topads, //TopAds
         #measure-emotions-survey, //Smiley-Umfrage
-        .PaymentEntryBanner,       //Neue Bezahlmethoden
-        #liberty-home-above-header // google ads header
+        .PaymentEntryBanner,      //Neue Bezahlmethoden
+        #liberty-home-above-header, //google ads header
+		#liberty-home-billboard   //riesen top header
         {
             display: none !important;
         }
