@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.11.0
+@version        3.11.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -79,6 +79,10 @@
         & > h1,& > h2,& > h3,& > h4,& > h5,& > h6 {
             color: var_font1 !important;
         }
+    }
+    .aditem-main--middle--price-shipping--shipping,
+    #j-sorting-info-button + span {
+        color: var_font2 !important;
     }
     hr, .separator {
         border-color: var_font2 !important;
@@ -357,15 +361,10 @@
     .uploadbox, .uploadbox-logo {
         background-color: var_bg1 !important;
     }
-    
-    /* Allgemeiner Sicherheitshinweis */
-    /* 2019-05-24: Deaktiviert, da es u.a. Popups von "Anzeige melden" unterdrückt */
-    /*.mfp-bg, .mfp-wrap {
-        display: none !important;
-    }/**/
     html {
         overflow: auto !important;
     }
+    
     /*******************************/
     /* Änderungen BoxBG 2020-01-16 */
     .splitlinebox,
@@ -538,7 +537,8 @@
         #measure-emotions-survey, //Smiley-Umfrage
         .PaymentEntryBanner,      //Neue Bezahlmethoden
         #liberty-home-above-header, //google ads header
-		#liberty-home-billboard   //riesen top header
+        #liberty-home-billboard,  //riesen top header
+        .buyer-protection-info    //Käuferschutz
         {
             display: none !important;
         }
