@@ -4,7 +4,7 @@
               Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.3
+@version      4.0.4
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -25,9 +25,9 @@
     html > body > #app,
     html > body > #app > .main,
     html > body > #app > .main > .main-content,
-    html > body > #app > .main > .main-content > div,
-    html > body > #app > .main > .main-content > div > section[data-content-login],
-    html > body > #app > .main > .main-content > div > section[data-content-login] *,
+    html > body > #app > .main > .main-content > div[data-content],
+    html > body > #app > .main > .main-content > div[data-content] > section[data-content-login],
+    html > body > #app > .main > .main-content > div[data-content] > section[data-content-login] *,
     html > body > #app > .main > .main-content > header,
     html > body > #app > .main > .main-content > header > div,
     html > body > #app > .main > .main-content > header > div > [data-part="logo"],
