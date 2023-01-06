@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.18
+@version        1.13.19
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -298,7 +298,8 @@
         .aod-recommendations-widget-properties,
         .apx-wallet-payment-method-details-section,
         .apx-wallet-desktop-payment-method-selectable-tab-inner-css,
-        .s-selected {
+        .s-selected,
+        #thread-page {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -458,6 +459,12 @@
         .a-button.a-button-disabled:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected) .a-button-inner:hover,
         .self-service-rich-card:hover {
             background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
+        }
+        #buyer-messaging-thread .message-box.message-received {
+            background-color: var_bg1 !important;
+        }
+        #buyer-messaging-thread .message-box {
+            background-color: var_bg3 !important;
         }
         .a-button-inner,
         .a-carousel-goto-nextpage, .a-carousel-goto-prevpage,
@@ -870,7 +877,9 @@
         .border-left-only,
         .sf-filter-floatbox,
         #navbar.layout2.bold-focus-hover #nav-xshop-container #nav-xshop .nav-a:hover,
-        .a-button {
+        .a-button,
+        #thread-page,
+        #buyer-messaging-thread .message-box {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
