@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.20
+@version        1.13.21
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -181,7 +181,8 @@
         div[class*="Shoveler-module__shoveler_"],
         .Header__left__3CRg_ .Header__navArea__2dJRo,
         .ProductGridItem__itemOuter__5ow0w,
-        [class^="_morpheus-popularity-rank-sidesheet-card_"] {
+        [class^="_morpheus-popularity-rank-sidesheet-card_"],
+        .survey-modal-header, .survey-modal-body {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -888,7 +889,8 @@
         #navbar.layout2.bold-focus-hover #nav-xshop-container #nav-xshop .nav-a:hover,
         .a-button,
         #thread-page,
-        #buyer-messaging-thread .message-box {
+        #buyer-messaging-thread .message-box,
+        .survey-modal-header, .survey-modal-body {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1071,7 +1073,8 @@
         #view-switcher-buttons,
         img[src^="https://images-eu.ssl-images-amazon.com/images/G/01/payments-portal/r1/PlusIcon"],
         .newOrderShipmentActions,
-        .ewc-delete-icon {
+        .ewc-delete-icon,
+        svg[class^="styles_closeIcon__"] {
             filter: invert(0.8) !important;
         }
         .nav-image,
