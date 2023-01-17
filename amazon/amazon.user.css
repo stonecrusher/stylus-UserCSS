@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.21
+@version        1.13.22
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -182,7 +182,8 @@
         .Header__left__3CRg_ .Header__navArea__2dJRo,
         .ProductGridItem__itemOuter__5ow0w,
         [class^="_morpheus-popularity-rank-sidesheet-card_"],
-        .survey-modal-header, .survey-modal-body {
+        .survey-modal-header, .survey-modal-body,
+        .showcase-asin-card {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -300,7 +301,8 @@
         .apx-wallet-payment-method-details-section,
         .apx-wallet-desktop-payment-method-selectable-tab-inner-css,
         .s-selected,
-        #thread-page {
+        #thread-page,
+        .s-carousel-button {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
