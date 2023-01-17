@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.22
+@version        1.13.23
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -205,7 +205,10 @@
         div#rhf-container,
         .amazon-pay-wallet-menu-row,
         #a-page,
-        .apx-wallet-payment-method-tab-selected {
+        .apx-wallet-payment-method-tab-selected,
+        [class^="DealMessaging-module__dealMessaging_"],
+        .bxc-grid__content,
+        .puis-status-badge-container {
             background-color: var_bg1 !important;
         }
 
@@ -351,7 +354,8 @@
         .move-to-list-row:hover,
         #attach-desktop-sideSheet,
         .stores-page,
-        .sf-filter-floatbox:hover {
+        .sf-filter-floatbox:hover,
+        [class^="_deal-of-the-day_style_badgeMessage"] {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -1580,7 +1584,11 @@
         .octopus-sims-img,
         .hud-orders-image,
         .hud-dashboard-card-v2-image,
-        .recs-carousel-element-img-outer {
+        .recs-carousel-element-img-outer,
+        .a-image-container,
+        .landscape-image,
+        [class^="_quad-category-card_style_fluidLandscapeImage"],
+        [data-cy="ad-topper-card-image"] > img {
             opacity: darkProductImage !important;
         }
         /* Darken product images less that have dark background */
