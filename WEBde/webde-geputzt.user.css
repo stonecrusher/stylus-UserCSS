@@ -4,7 +4,7 @@
               Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.4
+@version      4.0.6
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -25,6 +25,7 @@
     html > body > #app,
     html > body > #app > .main,
     html > body > #app > .main > .main-content,
+    html > body > #app > .main > .main-content > #service-notification *,
     html > body > #app > .main > .main-content > div[data-content],
     html > body > #app > .main > .main-content > div[data-content] > section[data-content-login],
     html > body > #app > .main > .main-content > div[data-content] > section[data-content-login] *,
@@ -103,6 +104,7 @@
         [data-item-name="allnet"],
         [data-item-name="zattoo"],
         [data-item-name="waiputv"],
+        [data-item-name="online-fitness"],
         /* Navi oben geöffnet ("mehr") */
         [data-group-name="Produkte"],
         /* Navi linke Seite */
