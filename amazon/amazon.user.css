@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.25
+@version        1.13.26
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -899,7 +899,9 @@
         .a-button,
         #thread-page,
         #buyer-messaging-thread .message-box,
-        .survey-modal-header, .survey-modal-body {
+        .survey-modal-header, .survey-modal-body,
+        /* [class*="_grid-column_"], [class*="_grid-detail-column_*"], */
+        #gridItemRoot {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
