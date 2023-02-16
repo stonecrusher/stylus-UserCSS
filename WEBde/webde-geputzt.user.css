@@ -4,7 +4,7 @@
               Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.6
+@version      4.0.8
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -93,7 +93,7 @@
     }
 }
 /*** Eingeloggt ***/
-@-moz-document regexp("https?:\\/\\/((mm|3c|3c-bap|adressbook|account|cloud|kalender|wusa|metasearch|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
+@-moz-document regexp("https?:\\/\\/((dl|mm|3c|3c-bap|adressbook|account|cloud|kalender|wusa|metasearch|(.+\\.)?navigator)\\.)?web\\.de\\/.*") {
     /* Navi */
     if not menu-keep {
         /* Navi oben */
@@ -250,7 +250,11 @@
     /*gmx*/ .ftd-box-promote,
     /*gmx*/ #superbanner.ad,
     /*gmx*/ .digital-copy-empty-preview-teaser,
-    /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"] {
+    /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"],
+	.ad.sky
+    /* TODO select elements inside Shadow DOM
+    list-programmatic-inbox-ad-item,
+    .list-programmatic-inbox-ad-item__iframe, */ {
         display: none !important;
     }
     /* Invisible #superbanner overlay at bottom */
