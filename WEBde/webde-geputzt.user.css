@@ -4,7 +4,7 @@
               Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.7
+@version      4.0.6
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -250,8 +250,7 @@
     /*gmx*/ .ftd-box-promote,
     /*gmx*/ #superbanner.ad,
     /*gmx*/ .digital-copy-empty-preview-teaser,
-    /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"],
-	/*gmx*/ .list-mail-list > iframe {
+    /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"] {
         display: none !important;
     }
     /* Invisible #superbanner overlay at bottom */
