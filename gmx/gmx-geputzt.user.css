@@ -5,7 +5,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.6
+@version      4.0.7
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -256,7 +256,8 @@
     /*gmx*/ .ftd-box-promote,
     /*gmx*/ #superbanner.ad,
     /*gmx*/ .digital-copy-empty-preview-teaser,
-    /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"] {
+    /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"],
+    /*gmx*/ .list-mail-list > iframe {
         display: none !important;
     }
     /* Invisible #superbanner overlay at bottom */
