@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.11.5
+@version        3.11.6
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -71,7 +71,8 @@
     .itemtile-location,
     .ShippingOption--Main *,
     .BuyNowBenefitSection--InfoTextList,
-    .BuyNowSection--SelectContentText {
+    .BuyNowSection--SelectContentText,
+    .NotificationList, .NotificationItem--Since {
         color: var_font1 !important;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -278,7 +279,8 @@
         border-radius: 5px !important;
     }
     .imagebox.is-nopic, .is-nopic.imagebox-small, .is-nopic.imagebox-storelogo-mini, .is-nopic.imagebox-thumbnail, .is-nopic.imagebox-storelogo,
-    .icon-ball-postad{
+    .icon-ball-postad,
+    .iconlist-icon {
         filter:invert(0.8) !important;
     }
     #viewad-sticky .iconbox {
