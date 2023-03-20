@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.27
+@version        1.13.28
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -185,7 +185,8 @@
         .survey-modal-header, .survey-modal-body,
         .showcase-asin-card,
         .sw-card-container,
-        .questionnaire-widget {
+        .questionnaire-widget,
+        .ryp__review-progress-banner-container, .ryp__review_progress-bar-title-container {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -417,7 +418,6 @@
         }
         .wl-list.selected,
         .GB-SUPPLE .filters,
-        table.a-bordered tr:nth-child(2n),
         .acs-wtfl-filtersort-wrap,
         .a-accordion .a-accordion-row:hover,
         #huc-v2-order-row-items,
@@ -426,6 +426,14 @@
         #refinementsOnTop {
             background-color: var_bg2 !important;
         }
+        /* Comparison tables */
+        table.a-bordered tr:nth-child(2n+1) {
+            background-color: var_bg1 !important;
+        }
+        table.a-bordered tr:nth-child(2n) {
+            background-color: var_bg2 !important;
+        }
+
         .dp-main {
             background-color: var_bg2 !important;
             color: var_font1 !important;
@@ -1085,7 +1093,8 @@
         img[src^="https://images-eu.ssl-images-amazon.com/images/G/01/payments-portal/r1/PlusIcon"],
         .newOrderShipmentActions,
         .ewc-delete-icon,
-        svg[class^="styles_closeIcon__"] {
+        svg[class^="styles_closeIcon__"],
+        #ryp__progress-bar__text {
             filter: invert(0.8) !important;
         }
         .nav-image,
