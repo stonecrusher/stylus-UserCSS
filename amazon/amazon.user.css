@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.29
+@version        1.13.30
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -211,7 +211,8 @@
         .apx-wallet-payment-method-tab-selected,
         [class^="DealMessaging-module__dealMessaging_"],
         .bxc-grid__content,
-        .puis-status-badge-container {
+        .puis-status-badge-container,
+        div[class*="_savingsBadgeMessage_"][style="background:#FFFFFF;color:#FF5D1D"] {
             background-color: var_bg1 !important;
         }
 
@@ -1387,7 +1388,8 @@
         .price,
         .ewc-color-price,
         #gw-asin-popover .pricing .price, #gw-asin-popover .pricing .price .a-color-price,
-        .MMGridLayout .formatsRow .swatchElement.unselected .slot-price > * {
+        .MMGridLayout .formatsRow .swatchElement.unselected .slot-price > *,
+        .product--highlight .a-color-base, .product--highlight .a-price[data-a-color="base"] {
             color: var_price !important;
         }
         #navbar.nav-bluebeacon #nav-search-label, #navbar.nav-bluebeacon .nav-a-2 .nav-line-1, #navbar.nav-bluebeacon .nav-a-2 .nav-line-2,
