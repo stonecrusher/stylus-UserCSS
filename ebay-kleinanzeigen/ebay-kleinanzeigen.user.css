@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.11.7
+@version        3.11.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -230,7 +230,8 @@
     .VendorList,
     #liberty-my_ads-top-banner,
     .ownprofile-main,
-    .empty-page-centered-box {
+    .empty-page-centered-box,
+    .Modal--Content {
         background-color: var_bg2 !important;
     }
     .ad-listitem.is-highlight {
