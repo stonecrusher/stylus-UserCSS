@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.0
+@version        1.14.1
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -188,7 +188,10 @@
         .ryp__review-progress-banner-container, .ryp__review_progress-bar-title-container,
         #nav-area,
         li[class^="ProductGridItem__itemOuter"],
-        [class^="AuthorFooter__author-footer__"] {
+        [class^="AuthorFooter__author-footer__"],
+        .stores-container,
+        .stores-page,
+        div[class^="AuthorBio__author-bio__"] {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -391,8 +394,6 @@
         /* #gw-asin-popover .imgblock */
         #superleafActionPanelWrapper,
         .dp-customer-reviews-wrapper,
-        .stores-container,
-        .stores-page,
         div[class^="AuthorCards__"],
         div[class^="SimilarAuthors__similar-authors__"] {
             background: var_bg1 !important;
@@ -1301,7 +1302,9 @@
         div[class^="TextContent__text-content__"],
         [class^="AuthorSubHeader__author-subheader__"],
         div[class^="AuthorProductGridHeader__"],
-        div[class^="SimilarAuthors__author-card__"] {
+        div[class^="SimilarAuthors__author-card__"],
+        span[class^="ProductGridItem__reviewCount__"],
+        div[class^="AlternativeMediaFormats__other-media-formats__"] {
             color: var_font1 !important;
         }
         input, select, textarea,
