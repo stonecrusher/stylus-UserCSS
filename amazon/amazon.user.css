@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.13.30
+@version        1.14.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -156,7 +156,6 @@
         .nav-ewc-persistent-click .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area, .nav-ewc-persistent-hover .nav-bluebeacon #ewc #ewc-sfl-expander.ewc-expander-expanded .ewc-scroll-area,
         .s-desktop-content, .s-desktop-toolbar,
         .ModalPurchase.ItemizedList, .ModalPurchase.ItemTitle,
-        .stores-container,
         .ryp__card-frame,
         #dp,
         .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout, .nav-bluebeacon #ewc #ewc-checkout.ewc-untabbed-checkout .ewc-gift-box.ewc-checkbox label,
@@ -186,7 +185,10 @@
         .showcase-asin-card,
         .sw-card-container,
         .questionnaire-widget,
-        .ryp__review-progress-banner-container, .ryp__review_progress-bar-title-container {
+        .ryp__review-progress-banner-container, .ryp__review_progress-bar-title-container,
+        #nav-area,
+        li[class^="ProductGridItem__itemOuter"],
+        [class^="AuthorFooter__author-footer__"] {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -212,7 +214,11 @@
         [class^="DealMessaging-module__dealMessaging_"],
         .bxc-grid__content,
         .puis-status-badge-container,
-        div[class*="_savingsBadgeMessage_"][style="background:#FFFFFF;color:#FF5D1D"] {
+        div[class*="_savingsBadgeMessage_"][style="background:#FFFFFF;color:#FF5D1D"],
+        div[class^="EditorialRow__"],
+        div[class^="AboutAuthorTile__about-author__"],
+        div[class^="MostPopularBookTile__most-popular-book"],
+        div[class^="EditorialRow"] {
             background-color: var_bg1 !important;
         }
 
@@ -309,7 +315,11 @@
         .apx-wallet-desktop-payment-method-selectable-tab-inner-css,
         .s-selected,
         #thread-page,
-        .s-carousel-button {
+        .s-carousel-button,
+        div[class^="AboutAuthorTile__about-author__border"],
+        div[class^="MostPopularBookTile__most-popular-book__content"],
+        div[class^="AuthorSubHeader__author-subheader__"],
+        div[class^="SimilarAuthors__author-card__"] {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -357,10 +367,10 @@
         .myx-dropdown .myx-list-link li:focus a, .myx-dropdown .myx-list-link li:hover a, .myx-splitdropdown .myx-list-link li:focus a, .myx-splitdropdown .myx-list-link li:hover a, .myx-suggest .myx-list-link li:focus a, .myx-suggest .myx-list-link li:hover a,
         .move-to-list-row:hover,
         #attach-desktop-sideSheet,
-        .stores-page,
         .sf-filter-floatbox:hover,
         [class^="_deal-of-the-day_style_badgeMessage"],
-        div[class^="_quad-multi-asin-card-v2_style_badgeMessage"][style="background:#FFFFFF;color:#FF5D1D"] {
+        div[class^="_quad-multi-asin-card-v2_style_badgeMessage"][style="background:#FFFFFF;color:#FF5D1D"],
+        .Navigation__navBar__tdJ0T > .Navigation__navList__HrEra > .Navigation__navItem__bakjf {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -380,7 +390,11 @@
         .imgblock,
         /* #gw-asin-popover .imgblock */
         #superleafActionPanelWrapper,
-        .dp-customer-reviews-wrapper {
+        .dp-customer-reviews-wrapper,
+        .stores-container,
+        .stores-page,
+        div[class^="AuthorCards__"],
+        div[class^="SimilarAuthors__similar-authors__"] {
             background: var_bg1 !important;
         }
         .a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
@@ -911,7 +925,10 @@
         #buyer-messaging-thread .message-box,
         .survey-modal-header, .survey-modal-body,
         /* [class*="_grid-column_"], [class*="_grid-detail-column_*"], */
-        #gridItemRoot {
+        #gridItemRoot,
+        li[class^="ProductGridItem__itemOuter"],
+        div[class^="EditorialTile__tile__"],
+        [class^="AuthorProductGridHeader__"] {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1279,7 +1296,12 @@
         #manage-skills-permissions .apd-expand-toggle-button,
         .myx-color-base,
         .myx-box,
-        .color-granite {
+        .color-granite,
+        p[class^="AboutAuthorTile__about-author__text"]
+        div[class^="TextContent__text-content__"],
+        [class^="AuthorSubHeader__author-subheader__"],
+        div[class^="AuthorProductGridHeader__"],
+        div[class^="SimilarAuthors__author-card__"] {
             color: var_font1 !important;
         }
         input, select, textarea,
