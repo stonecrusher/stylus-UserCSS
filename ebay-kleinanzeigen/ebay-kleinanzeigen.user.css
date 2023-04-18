@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.11.9
+@version        3.11.10
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -103,7 +103,8 @@
     .articleheader--price,
     .button-secondary, .button-inverted,
     .aditem-details > strong,
-    .ad-listitem .aditem-main--middle--price {
+    .ad-listitem .aditem-main--middle--price,
+    .boxedarticle--price {
         color: var_font3 !important;
     }
     .outcomebox-error > header,
