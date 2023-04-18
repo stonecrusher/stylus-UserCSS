@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.4
+@version        1.14.6
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -327,7 +327,8 @@
         div[class^="MostPopularBookTile__most-popular-book__content"],
         div[class^="AuthorSubHeader__author-subheader__"],
         div[class^="SimilarAuthors__author-card__"],
-        li[class*="OptionDropdownItem__focused__"] {
+        li[class*="OptionDropdownItem__focused__"],
+        .a-expander-content-expanded {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
