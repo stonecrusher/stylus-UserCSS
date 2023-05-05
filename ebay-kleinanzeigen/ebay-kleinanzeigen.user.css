@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.11.11
+@version        3.12.0
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -24,7 +24,7 @@
 @var checkbox footer-remove     'Footer entfernen'                0
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://www.ebay-kleinanzeigen.de/") {
+@-moz-document url-prefix("https://www.kleinanzeigen.de/") {
     body,
     #site-header {
         color: var_font1 !important;
