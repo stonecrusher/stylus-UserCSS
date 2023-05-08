@@ -4,7 +4,7 @@
               Auch gut für unerfahrene Benutzer, um versehentliche "Upgrade" Bestellungen zu vermeiden.
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.8
+@version      4.0.9
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/WEBde
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -150,7 +150,9 @@
         #section-0 > .navigation-container-top > .panel > .button-group-firstblockbutton > .button-group-firstblockbutton_subgroup,
         /** Suche Overlay **/
         .meta-results-page__feedback-button,
-        .meta-results-page__section-web {
+        .meta-results-page__section-web,
+        /* Briefankündigung */
+        #id11 {
             display: none !important;
         }
     }
