@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.8
+@version        1.14.9
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -196,7 +196,8 @@
         .sub-nav-bar,
         .desktopCardified-background,
         .typ-upsell-slot-styling,
-        .postpurchase-sidesheet-foreground {
+        .postpurchase-sidesheet-foreground,
+        .a-section-expander-container {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -330,7 +331,8 @@
         div[class^="SimilarAuthors__author-card__"],
         li[class*="OptionDropdownItem__focused__"],
         .a-expander-content-expanded,
-        .postpurchase-sidesheet-divider {
+        .postpurchase-sidesheet-divider,
+        .ma-attribute-group-expander a.a-expander-header.a-link-section-expander {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -955,7 +957,8 @@
         div[class^="EditorialTile__tile__"],
         [class^="AuthorProductGridHeader__"],
         .grid-item-right-padding,
-        ul[class*="OptionDropdown__dropdown-content__"] {
+        ul[class*="OptionDropdown__dropdown-content__"],
+        .ma-attribute-group-expander .a-section-expander-inner {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
