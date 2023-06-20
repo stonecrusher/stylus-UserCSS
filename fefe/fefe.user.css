@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           blog.fefe.de
 @namespace      Stonecrusher
-@version        1.0.3
+@version        1.0.4
 @license        CC-BY-NC-SA-4.0
 @author         Fefe, Stonecrusher
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/fefe
@@ -79,10 +79,14 @@
         background: #ffa }
 
     p[u] {
-        background-color: #d0f8d0; }
+        background-color: #d0f8d0;
+        padding-bottom: 10px !important;
+        margin: 0 !important;
+    }
 
     p[u] + blockquote {
-        background-color: #d0f8d0; }
+        background-color: #d0f8d0;
+    }
 
 
     /************************/
@@ -127,5 +131,6 @@
         font-style: italic !important; }
     li > p:last-of-type {
         margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
     }
 }
