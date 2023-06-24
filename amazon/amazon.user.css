@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.14
+@version        1.14.15
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -335,7 +335,8 @@
         .a-expander-content-expanded,
         .postpurchase-sidesheet-divider,
         .ma-attribute-group-expander a.a-expander-header.a-link-section-expander,
-        .s-background-color-platinum{
+        .s-background-color-platinum,
+        div[class^="GridContainer-module__gridFooter"] {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -973,7 +974,8 @@
         .grid-item-right-padding,
         ul[class*="OptionDropdown__dropdown-content__"],
         .ma-attribute-group-expander .a-section-expander-inner,
-        .your-content-card {
+        .your-content-card,
+        ul.a-pagination li.a-disabled {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1226,6 +1228,9 @@
         .dropdown-list {
             border-color: var_bg3 !important;
         }
+        .your-content-card-reactions path {
+            fill: var_font3 !important;
+        }
 
         /*** Font colors ***/
         ::marker,
@@ -1384,7 +1389,8 @@
         #manage-skills-permissions .msp-page-header h3,
         .record-info,
         .payWalletMenuTabHead,
-        .vse-video-author, .vse-video-vendorname {
+        .vse-video-author, .vse-video-vendorname,
+        .your-content-card-reactions {
             color: var_font3 !important;
         }
         hr,
