@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.10
+@version        1.14.14
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -227,7 +227,9 @@
         div[class^="EditorialRow__"],
         div[class^="AboutAuthorTile__about-author__"],
         div[class^="MostPopularBookTile__most-popular-book"],
-        div[class^="EditorialRow"] {
+        div[class^="EditorialRow"],
+        .card.desktop, .your-content-card,
+        div[id^="CardInstance"]>.alm-carousel-desktop {
             background-color: var_bg1 !important;
         }
 
@@ -386,7 +388,8 @@
         .sf-filter-floatbox:hover,
         [class^="_deal-of-the-day_style_badgeMessage"],
         div[class^="_quad-multi-asin-card-v2_style_badgeMessage"][style="background:#FFFFFF;color:#FF5D1D"],
-        .Navigation__navBar__tdJ0T > .Navigation__navList__HrEra > .Navigation__navItem__bakjf {
+        .Navigation__navBar__tdJ0T > .Navigation__navList__HrEra > .Navigation__navItem__bakjf,
+        .your-content-widget-tab-btn {
             background-color: var_bg3 !important;
         }
         .a-alert-error .a-alert-container {
@@ -613,6 +616,9 @@
             background-color: var_bg2 !important;
             border-color: var_bg6 !important;
         }
+        .a-popover-modal.a-popover-modal-fixed-height .a-popover-wrapper::after {
+            background: linear-gradient(to bottom,var_bg1 0%,var_bg2 100%) !important;
+        }
 
         /* Text on normal buttons */
         .a-button .a-button-text,
@@ -648,6 +654,13 @@
         }
         .instantsavings-button::after {
             color: var_font1 !important;
+        }
+        .vse-cc-header {
+            background: var_bg2 !important;
+            color: var_font1 !important;
+        }
+        .vse-video-action-strip {
+            background: var_bg2 !important;
         }
         /* Prime Video other formats */
         ._25BG6L._25BG6L._25BG6L, ._25BG6L._25BG6L._25BG6L:link, ._25BG6L._25BG6L._25BG6L:visited {
@@ -959,7 +972,8 @@
         [class^="AuthorProductGridHeader__"],
         .grid-item-right-padding,
         ul[class*="OptionDropdown__dropdown-content__"],
-        .ma-attribute-group-expander .a-section-expander-inner {
+        .ma-attribute-group-expander .a-section-expander-inner,
+        .your-content-card {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1144,7 +1158,8 @@
         .newOrderShipmentActions,
         .ewc-delete-icon,
         svg[class^="styles_closeIcon__"],
-        #ryp__progress-bar__text {
+        #ryp__progress-bar__text,
+        .vse-share-icon {
             filter: invert(0.8) !important;
         }
         .nav-image,
@@ -1368,7 +1383,8 @@
         #apd-page-header h1, #apd-page-header h2,
         #manage-skills-permissions .msp-page-header h3,
         .record-info,
-        .payWalletMenuTabHead {
+        .payWalletMenuTabHead,
+        .vse-video-author, .vse-video-vendorname {
             color: var_font3 !important;
         }
         hr,
@@ -1450,7 +1466,8 @@
         .ewc-color-price,
         #gw-asin-popover .pricing .price, #gw-asin-popover .pricing .price .a-color-price,
         .MMGridLayout .formatsRow .swatchElement.unselected .slot-price > *,
-        .product--highlight .a-color-base, .product--highlight .a-price[data-a-color="base"] {
+        .product--highlight .a-color-base, .product--highlight .a-price[data-a-color="base"],
+        #promise-container #primaryStatus.text-emphasized {
             color: var_price !important;
         }
         #navbar.nav-bluebeacon #nav-search-label, #navbar.nav-bluebeacon .nav-a-2 .nav-line-1, #navbar.nav-bluebeacon .nav-a-2 .nav-line-2,
