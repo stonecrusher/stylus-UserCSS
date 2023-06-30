@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.15
+@version        1.14.16
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1161,7 +1161,8 @@
         .ewc-delete-icon,
         svg[class^="styles_closeIcon__"],
         #ryp__progress-bar__text,
-        .vse-share-icon {
+        .vse-share-icon,
+        .loading-img-text {
             filter: invert(0.8) !important;
         }
         .nav-image,
