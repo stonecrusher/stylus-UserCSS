@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.12.1
+@version        3.12.2
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -74,7 +74,9 @@
     .BuyNowBenefitSection--InfoTextList,
     .BuyNowSection--SelectContentText,
     .NotificationList, .NotificationItem--Since,
-    .RadioSelect-Content-Subtext {
+    .RadioSelect-Content-Subtext,
+    .ad-listitem .aditem-main--middle--description, .ad-listitem .followuseritem-main--middle--description, .ad-listitem .savedsearchitem-main--middle--description, .followuser-listitem .aditem-main--middle--description, .followuser-listitem .followuseritem-main--middle--description, .followuser-listitem .savedsearchitem-main--middle--description, .savedsearch-listitem .aditem-main--middle--description, .savedsearch-listitem .followuseritem-main--middle--description, .savedsearch-listitem .savedsearchitem-main--middle--description,
+    .ad-listitem .aditem-main--top, .ad-listitem .followuseritem-main--top, .ad-listitem .savedsearchitem-main--top, .followuser-listitem .aditem-main--top, .followuser-listitem .followuseritem-main--top, .followuser-listitem .savedsearchitem-main--top, .savedsearch-listitem .aditem-main--top, .savedsearch-listitem .followuseritem-main--top, .savedsearch-listitem .savedsearchitem-main--top {
         color: var_font1 !important;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -251,7 +253,8 @@
     .manageaditem > footer, .savedsearchitem-footer, .followuseritem-footer, .aditem-footer,
     .sectionbox,
     .outcomebox-error .conditionalcomment-outcomeboxbody, .outcomebox-success .conditionalcomment-outcomeboxbody, .outcomebox-warning .conditionalcomment-outcomeboxbody, .outcomebox-error .outcomebox--body, .outcomebox-success .outcomebox--body, .outcomebox-warning .outcomebox--body,
-    .login-overlay {
+    .login-overlay,
+    .ad-listitem, .followuser-listitem, .savedsearch-listitem {
         background-color: var_bg1 !important;
     }
     .login-overlay::before {
