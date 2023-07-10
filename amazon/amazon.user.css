@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.19
+@version        1.14.21
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -198,7 +198,8 @@
         .typ-upsell-slot-styling,
         .postpurchase-sidesheet-foreground,
         .a-section-expander-container,
-        #zg [class*="-zg-banner-landing-page-"]{
+        #zg [class*="-zg-banner-landing-page-"],
+        .a-carousel-right, .a-carousel-left {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -337,7 +338,8 @@
         .postpurchase-sidesheet-divider,
         .ma-attribute-group-expander a.a-expander-header.a-link-section-expander,
         .s-background-color-platinum,
-        div[class^="GridContainer-module__gridFooter"] {
+        div[class^="GridContainer-module__gridFooter"],
+        .sf-selected-filters-list .sf-selected-filters-deselect-enabled {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
