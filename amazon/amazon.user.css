@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.22
+@version        1.14.24
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -340,7 +340,8 @@
         .s-background-color-platinum,
         div[class^="GridContainer-module__gridFooter"],
         .sf-selected-filters-list .sf-selected-filters-deselect-enabled,
-        #attach-desktop-sideSheet #attach-warranty-pane, #attach-desktop-sideSheet #attach-warranty-pane-ld {
+        #attach-desktop-sideSheet #attach-warranty-pane, #attach-desktop-sideSheet #attach-warranty-pane-ld,
+        .dealsx_box_in_cart, .dealsx_box_in_cart .a-box {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -776,6 +777,25 @@
         table[style="background-color:#EFF7FE;"],
         .addOnItem-header {
             background-color: #4d5862 !important;
+        }
+        /* seller pages */
+        #seller-profile-container,
+        #seller-profile-container.spp-redesigned .page-section-container,
+        #seller-profile-container.spp-redesigned.spp-desktop .page-box-container,
+        #seller-profile-container.spp-redesigned.spp-desktop .offset-gap-section{
+            background-color: var_bg2 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        #seller-profile-container.spp-redesigned.spp-desktop .box-section,
+        #seller-profile-container.spp-redesigned.spp-desktop .page-section-container {
+            border: none !important;
+        }
+        #seller-profile-container.spp-redesigned.spp-desktop .sticky.page-section-shadow {
+            box-shadow: none !important
+        }
+        div[data-a-name="leavefeedback"] hr.a-divider-normal {
+            border-top: 10px solid var_font1 !important;
         }
 
         /* brand pages */
