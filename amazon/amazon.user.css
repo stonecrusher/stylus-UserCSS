@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.25
+@version        1.14.28
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -199,7 +199,10 @@
         .postpurchase-sidesheet-foreground,
         .a-section-expander-container,
         #zg [class*="-zg-banner-landing-page-"],
-        .a-carousel-right, .a-carousel-left {
+        .a-carousel-right, .a-carousel-left,
+        .ryp__media-upload-call-to-action--full-width, .ryp__media-upload-call-to-action--rect, .ryp__media-upload-call-to-action--square,
+        .a-alert-info > .a-box-inner:only-child,
+        .a-alert-info > .a-box-inner:only-child h4 {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -1506,6 +1509,14 @@
         .MMGridLayout .formatsRow .swatchElement.unselected .slot-price > *,
         .product--highlight .a-color-base, .product--highlight .a-price[data-a-color="base"],
         #promise-container #primaryStatus.text-emphasized {
+            color: var_price !important;
+        }
+        .stores-theme-elegant.stores-theme-diamond .ProductGridItem__strikePriceLabel__AoQdE,
+        .stores-theme-elegant.stores-theme-diamond .StrikeThroughPrice__strikePrice__stBvh,
+        .stores-theme-elegant.stores-theme-diamond .StrikeThroughPrice__percentageOff__dCdIt {
+            color: var_font2 !important;
+        }
+        [class*="ProductGridItem__buyPrice__"] {
             color: var_price !important;
         }
         #navbar.nav-bluebeacon #nav-search-label, #navbar.nav-bluebeacon .nav-a-2 .nav-line-1, #navbar.nav-bluebeacon .nav-a-2 .nav-line-2,
