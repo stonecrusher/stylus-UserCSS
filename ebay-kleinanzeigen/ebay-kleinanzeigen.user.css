@@ -566,6 +566,7 @@
     if ads-remove {
         /* Werbung */
         #vip-atf-billboard,       //Werbezeile head
+        #vip-billboard,
         #store-gallery,           //Einschub Unternehmensseiten
         #home-gallery,            //Galerie
         #vap_adsense-middle,      //Google Adsense
