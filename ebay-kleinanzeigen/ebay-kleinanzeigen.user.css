@@ -3,7 +3,7 @@
 @description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.12.5
+@version        3.12.7
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -76,7 +76,18 @@
     .NotificationList, .NotificationItem--Since,
     .RadioSelect-Content-Subtext,
     .ad-listitem .aditem-main--middle--description, .ad-listitem .followuseritem-main--middle--description, .ad-listitem .savedsearchitem-main--middle--description, .followuser-listitem .aditem-main--middle--description, .followuser-listitem .followuseritem-main--middle--description, .followuser-listitem .savedsearchitem-main--middle--description, .savedsearch-listitem .aditem-main--middle--description, .savedsearch-listitem .followuseritem-main--middle--description, .savedsearch-listitem .savedsearchitem-main--middle--description,
-    .ad-listitem .aditem-main--top, .ad-listitem .followuseritem-main--top, .ad-listitem .savedsearchitem-main--top, .followuser-listitem .aditem-main--top, .followuser-listitem .followuseritem-main--top, .followuser-listitem .savedsearchitem-main--top, .savedsearch-listitem .aditem-main--top, .savedsearch-listitem .followuseritem-main--top, .savedsearch-listitem .savedsearchitem-main--top {
+    .ad-listitem .aditem-main--top, .ad-listitem .followuseritem-main--top, .ad-listitem .savedsearchitem-main--top, .followuser-listitem .aditem-main--top, .followuser-listitem .followuseritem-main--top, .followuser-listitem .savedsearchitem-main--top, .savedsearch-listitem .aditem-main--top, .savedsearch-listitem .followuseritem-main--top, .savedsearch-listitem .savedsearchitem-main--top,
+    #pstad .formgroup-label, #pstad .formgroup-label--unpadded, #pstad .formgroup-label-mandatory, #pstad .formgroup-label-optional, #pstad .formgroup-label-optional--unpadded,
+    .SingleSelectionItem strong,
+    .SingleSelectionItem--Subtitle,
+    .ShippingSelectionInfo--Text,
+    .CarrierSelectionModal--Subtitle,
+    .CarrierOption--Header,
+    .CarrierOption--Subtitle,
+    .CarrierSelectionModal--Button,
+    .SizeSelectionModal--Subtitle,
+    .BuyNowRadio--Label,
+    .PriceSection--Price-Suffix {
         color: var_font1 !important;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -91,7 +102,10 @@
         }
     }
     .aditem-main--middle--price-shipping--shipping,
-    #j-sorting-info-button + span {
+    #j-sorting-info-button + span,
+    .BuyNowBenefitSection--FakeLink,
+    .BuyNowLegalSection--Text,
+    .PriceSection--PriceSuggestion {
         color: var_font2 !important;
     }
     hr, .separator {
@@ -107,7 +121,8 @@
     .aditem-details > strong,
     .ad-listitem .aditem-main--middle--price,
     .boxedarticle--price,
-    .ad-listitem .aditem-main--middle--price, .ad-listitem .aditem-main--middle--price-shipping--price, .ad-listitem .followuseritem-main--middle--price, .ad-listitem .followuseritem-main--middle--price-shipping--price, .ad-listitem .savedsearchitem-main--middle--price, .ad-listitem .savedsearchitem-main--middle--price-shipping--price, .followuser-listitem .aditem-main--middle--price, .followuser-listitem .aditem-main--middle--price-shipping--price, .followuser-listitem .followuseritem-main--middle--price, .followuser-listitem .followuseritem-main--middle--price-shipping--price, .followuser-listitem .savedsearchitem-main--middle--price, .followuser-listitem .savedsearchitem-main--middle--price-shipping--price, .savedsearch-listitem .aditem-main--middle--price, .savedsearch-listitem .aditem-main--middle--price-shipping--price, .savedsearch-listitem .followuseritem-main--middle--price, .savedsearch-listitem .followuseritem-main--middle--price-shipping--price, .savedsearch-listitem .savedsearchitem-main--middle--price, .savedsearch-listitem .savedsearchitem-main--middle--price-shipping--price {
+    .ad-listitem .aditem-main--middle--price, .ad-listitem .aditem-main--middle--price-shipping--price, .ad-listitem .followuseritem-main--middle--price, .ad-listitem .followuseritem-main--middle--price-shipping--price, .ad-listitem .savedsearchitem-main--middle--price, .ad-listitem .savedsearchitem-main--middle--price-shipping--price, .followuser-listitem .aditem-main--middle--price, .followuser-listitem .aditem-main--middle--price-shipping--price, .followuser-listitem .followuseritem-main--middle--price, .followuser-listitem .followuseritem-main--middle--price-shipping--price, .followuser-listitem .savedsearchitem-main--middle--price, .followuser-listitem .savedsearchitem-main--middle--price-shipping--price, .savedsearch-listitem .aditem-main--middle--price, .savedsearch-listitem .aditem-main--middle--price-shipping--price, .savedsearch-listitem .followuseritem-main--middle--price, .savedsearch-listitem .followuseritem-main--middle--price-shipping--price, .savedsearch-listitem .savedsearchitem-main--middle--price, .savedsearch-listitem .savedsearchitem-main--middle--price-shipping--price,
+    .manageaditem-ad--price {
         color: var_font3 !important;
     }
     .outcomebox-error > header,
@@ -191,6 +206,9 @@
         color: var_linkfarbe1 !important;
         background: var_bg1 !important;
         border-color: var_font2 !important;
+    }
+    .contentbox-unpadded.page-title.is-transparent {
+        background: none !important;
     }
     /* Link in notice box (green background) */
     .outcomemessage-error a, .outcomemessage-success a, .outcomemessage-warning a {
