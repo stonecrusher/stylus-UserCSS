@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.29
+@version        1.14.31
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -202,7 +202,9 @@
         .a-carousel-right, .a-carousel-left,
         .ryp__media-upload-call-to-action--full-width, .ryp__media-upload-call-to-action--rect, .ryp__media-upload-call-to-action--square,
         .a-alert-info > .a-box-inner:only-child,
-        .a-alert-info > .a-box-inner:only-child h4 {
+        .a-alert-info > .a-box-inner:only-child h4,
+        div[class*="GridPresets-module__"][style^="background: rgb(255"],
+        span[class^="GridPresets-module__"] {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -234,7 +236,10 @@
         div[class^="MostPopularBookTile__most-popular-book"],
         div[class^="EditorialRow"],
         .card.desktop, .your-content-card,
-        div[id^="CardInstance"]>.alm-carousel-desktop {
+        div[id^="CardInstance"]>.alm-carousel-desktop,
+        div[class^="_deals-hero-shoveler_style_background_"],
+        span[style^="background-color:#ffffff;color:#CC0C39" i],
+        div[class^="DealCard-module__cardHorizontal_"] {
             background-color: var_bg1 !important;
         }
 
