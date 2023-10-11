@@ -519,6 +519,11 @@
             color: var_font1 !important;
             background: var_bg2 !important;
         }
+        /* Prime Day badge */
+        [class^="_quad-multi-asin-card-v2_style_badgeMessage_"] {
+            background: var_bg3 !important;
+            color: var_linkhover !important;
+        }
         
         /* :not "buy now" */
         .a-button:not(.a-button-primary):not(.a-button-image) {
