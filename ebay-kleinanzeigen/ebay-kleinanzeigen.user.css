@@ -1,9 +1,9 @@
 /* ==UserStyle==
 @name           Kleinanzeigen Dark
-@description    Ebay Kleinanzeigen mit dunkleren Farben und kompakterem Kopf
+@description    kleinanzeigen.de mit dunkleren Farben und kompakterem Kopf
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        3.12.7
+@version        3.12.8
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/ebay-kleinanzeigen
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @license        CC-BY-NC-SA-4.0
@@ -529,6 +529,19 @@
     }
     .Message--Text {
         color: var_bg1 !important;
+    }
+    label.Textarea--Label {
+        color: var_font1;
+        background-color: var_bg1 !important;
+    }
+    .Button-secondary, .Button-tertiary {
+        color: var_font3 !important;
+    }
+    .ConversationListItem--Title--Label {
+        color: var_font2 !important;
+    }
+    .Message-inbound {
+        background-color: var_font1 !important;
     }
     /* Ende "Meine Nachrichten" */
 
