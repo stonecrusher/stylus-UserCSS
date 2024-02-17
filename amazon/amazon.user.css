@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.32
+@version        1.14.33
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1024,7 +1024,8 @@
         .your-content-card,
         ul.a-pagination li.a-disabled,
         .profile-hub-category .header,
-        .accordion .accordion-item {
+        .accordion .accordion-item,
+        .puis-card-border {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1455,7 +1456,8 @@
         #zg [class^="_p13n-zg-nav-tree-all_style_zg-selected"],
         #selectProfileModalId > div .iIBSnQ,
         .profile-hub-category .header .subtitle,
-        .attribute-section-footer .last-updated {
+        .attribute-section-footer .last-updated,
+        .a-price[data-a-color="secondary"] {
             color: var_font3 !important;
         }
         hr,
