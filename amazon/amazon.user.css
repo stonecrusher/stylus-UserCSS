@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.35
+@version        1.14.36
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -205,7 +205,11 @@
         .a-alert-info > .a-box-inner:only-child h4,
         div[class*="GridPresets-module__"][style^="background: rgb(255"],
         span[class^="GridPresets-module__"],
-        #selectProfileModalId > div {
+        #selectProfileModalId > div,
+        div[class*="_Y3Itb_modal"],
+        div[class*="_Y3Itb_media-popover"],
+        div[class*="_Y3Itb_media_cr"],
+        div[class*="_Y3Itb_cr-media-popover"] {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
