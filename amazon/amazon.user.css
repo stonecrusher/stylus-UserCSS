@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.36
+@version        1.14.37
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -209,7 +209,8 @@
         div[class*="_Y3Itb_modal"],
         div[class*="_Y3Itb_media-popover"],
         div[class*="_Y3Itb_media_cr"],
-        div[class*="_Y3Itb_cr-media-popover"] {
+        div[class*="_Y3Itb_cr-media-popover"],
+        .jaCFLV, .hjMJzD, .iJcgAl, .XmvAr, .cOzDtC, .yrXvq {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -244,7 +245,10 @@
         div[id^="CardInstance"]>.alm-carousel-desktop,
         div[class^="_deals-hero-shoveler_style_background_"],
         span[style^="background-color:#ffffff;color:#CC0C39" i],
-        div[class^="DealCard-module__cardHorizontal_"] {
+        div[class^="DealCard-module__cardHorizontal_"],
+        div[class^="DiscountAsinGrid-module__root_"],
+        div[class^="style_badgeMessage"][style^="background-color: rgb(255\, 255\, 255);"],
+        div[class^="ShovelerList-module__deal_"] {
             background-color: var_bg1 !important;
         }
 
@@ -1222,7 +1226,8 @@
         .cr-large-loadingIcon,
         .icon-past-search-suggestion,
         .chevron,
-        .editNameIcon {
+        .editNameIcon,
+        img[src$="/white-spacer.jpg"] {
             filter: invert(0.8) !important;
         }
         .nav-image,
@@ -1428,7 +1433,8 @@
         .jagWJb, .ijWMPx,
         .profile-name,
         .accordion .accordion-trigger .accordion-trigger-content,
-        .attribute-value, .attribute-name {
+        .attribute-value, .attribute-name,
+        button[class^="Bubble-module__bubble_"] {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1535,6 +1541,13 @@
         .navAlexaOptionItem_alexaNavHeader_myx,
         .navAlexaOptionItem_alexaNavFooter_myx {
             color: var_linkdefault !important;
+            &:hover {
+                color: var_linkhover !important;
+            }
+        }
+        p[class*="ProductCard-module__title"],
+        a[class*="DealLink-module__dealLink_"] {
+            color: var_font1 !important;
             &:hover {
                 color: var_linkhover !important;
             }
