@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.37
+@version        1.14.38
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -551,6 +551,9 @@
         .a-button.a-button-disabled:not(.a-button-oneclick):not(.a-button-primary):not(.a-carousel-button):not(.a-button-selected) .a-button-inner:hover,
         .self-service-rich-card:hover {
             background: linear-gradient(to bottom, var_bg2, var_bg1) !important;
+        }
+        div[class*="_cr-sidepanel-container-gradient_"] {
+            background: linear-gradient(to top, var_bg1, transparent) !important;
         }
         #buyer-messaging-thread .message-box.message-received {
             background-color: var_bg1 !important;
@@ -1434,7 +1437,8 @@
         .profile-name,
         .accordion .accordion-trigger .accordion-trigger-content,
         .attribute-value, .attribute-name,
-        button[class^="Bubble-module__bubble_"] {
+        button[class^="Bubble-module__bubble_"],
+        .a-size-base-plus {
             color: var_font1 !important;
         }
         input, select, textarea,
