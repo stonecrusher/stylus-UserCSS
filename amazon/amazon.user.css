@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.38
+@version        1.14.39
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -210,7 +210,8 @@
         div[class*="_Y3Itb_media-popover"],
         div[class*="_Y3Itb_media_cr"],
         div[class*="_Y3Itb_cr-media-popover"],
-        .jaCFLV, .hjMJzD, .iJcgAl, .XmvAr, .cOzDtC, .yrXvq {
+        .jaCFLV, .hjMJzD, .iJcgAl, .XmvAr, .cOzDtC, .yrXvq,
+        .cards_carousel_widget-suggestion, .cards_carousel_widget-sug-column, .cards_carousel_widget-sug-image-container, .cards_carousel_widget-sug-text {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -248,7 +249,8 @@
         div[class^="DealCard-module__cardHorizontal_"],
         div[class^="DiscountAsinGrid-module__root_"],
         div[class^="style_badgeMessage"][style^="background-color: rgb(255\, 255\, 255);"],
-        div[class^="ShovelerList-module__deal_"] {
+        div[class^="ShovelerList-module__deal_"],
+        .discover-tr-carousel-control {
             background-color: var_bg1 !important;
         }
 
@@ -1038,7 +1040,9 @@
         ul.a-pagination li.a-disabled,
         .profile-hub-category .header,
         .accordion .accordion-item,
-        .puis-card-border {
+        .puis-card-border,
+        .cards_carousel_widget-sug-column,
+        .discover-tr-carousel-control {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
