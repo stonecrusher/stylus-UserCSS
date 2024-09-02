@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.40
+@version        1.14.41
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -365,7 +365,8 @@
         .bYpfEl,
         .profile-hub-category .header,
         .s-pc-sidesheet,
-        #bbop .a-box-inner.a-padding-base {
+        #bbop .a-box-inner.a-padding-base,
+        .ryp__review-candidate-new {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -1443,7 +1444,9 @@
         .accordion .accordion-trigger .accordion-trigger-content,
         .attribute-value, .attribute-name,
         button[class^="Bubble-module__bubble_"],
-        .a-size-base-plus {
+        .a-size-base-plus,
+        .pt-status-main-status,
+        .pt-status-milestone-label.active {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1478,7 +1481,8 @@
         #selectProfileModalId > div .iIBSnQ,
         .profile-hub-category .header .subtitle,
         .attribute-section-footer .last-updated,
-        .a-price[data-a-color="secondary"] {
+        .a-price[data-a-color="secondary"],
+        .pt-status-milestone-label {
             color: var_font3 !important;
         }
         hr,
