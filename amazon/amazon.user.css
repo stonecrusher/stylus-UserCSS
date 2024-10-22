@@ -30,7 +30,7 @@
 /* Amazon default review bar width is 185px */
 
 
-@-moz-document regexp("https?:\\/\\/(www|music|smile)\\.amazon\\.(cn|in|sg|ae|fr|de|it|nl|es|ca|com(\\.(mx|au|br|tr|be))?|co\\.(uk|jp))\\/.*") {
+@-moz-document regexp("https?:\\/\\/(www|music|smile)\\.amazon\\.(cn|in|sg|ae|fr|de|it|nl|es|ca|se|com(\\.(mx|au|br|tr|be))?|co\\.(uk|jp))\\/.*") {
     
     /* Stylus variables */
     /* Colors to be replaced are in the comment */
