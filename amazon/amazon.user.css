@@ -367,7 +367,8 @@
         .profile-hub-category .header,
         .s-pc-sidesheet,
         #bbop .a-box-inner.a-padding-base,
-        .ryp__review-candidate-new {
+        .ryp__review-candidate-new,
+        .s-color-swatch-container {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -424,6 +425,13 @@
         .your-content-widget-tab-btn {
             background-color: var_bg3 !important;
         }
+        
+        .dcl-container {
+            --background-color: var_bg1 !important;
+            --primary-text-color: var_font1 !important;
+            --secondary-text-color: var_font2 !important;
+        }
+        
         .a-alert-error .a-alert-container {
             background-color: var_bg2 !important;
             box-shadow: 0 0 0 4px #921915 inset !important;
@@ -1447,7 +1455,8 @@
         button[class^="Bubble-module__bubble_"],
         .a-size-base-plus,
         .pt-status-main-status,
-        .pt-status-milestone-label.active {
+        .pt-status-milestone-label.active,
+        .dcl-iwt .dcl-card-footer {
             color: var_font1 !important;
         }
         input, select, textarea,
