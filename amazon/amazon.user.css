@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.43
+@version        1.14.44
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -252,7 +252,9 @@
         div[class^="ShovelerList-module__deal_"],
         .discover-tr-carousel-control,
         div[class^="GridItem-module__container"],
-        .checkout-experience-page-content {
+        .checkout-experience-page-content,
+        #inline-twister-expander-header-size_name,
+        #inline-twister-expander-header-style_name {
             background-color: var_bg1 !important;
         }
 
@@ -683,13 +685,20 @@
         #wishListMainButton,
         .cr-vote .a-button,
         .writeReviewButton,
-        #p2dPopoverID-no-button {
+        #p2dPopoverID-no-button,
+        .text-swatch-button-with-slots {
             & .a-button-inner {
                 background: linear-gradient(to bottom, var_bg3, var_bg2) !important;
             }
             &:hover .a-button-inner {
                 background: linear-gradient(to bottom, var_bg4, var_bg3) !important;
             }
+        }
+        .a-button.a-button-toggle.text-swatch-button-with-slots {
+            border-width: 4px !important;
+        }
+        .a-button.a-button-toggle.text-swatch-button-with-slots:not(.a-button-unavailable) {
+            border-color: var_font2 !important;
         }
         .a-carousel-button.a-button .a-button-inner {
             background: var_bg2 !important;
@@ -772,7 +781,8 @@
 
         .a-button-toggle.a-button-selected .a-button-inner, .a-button-toggle.a-button-selected.a-button-focus .a-button-inner, .a-button-toggle.a-button-selected.a-button-focus:hover .a-button-inner, .a-button-toggle.a-button-selected:focus .a-button-inner, .a-button-toggle.a-button-selected:focus:hover .a-button-inner, .a-button-toggle.a-button-selected:hover .a-button-inner,
         #MediaMatrix #twister #binding_row_landing, #MediaMatrix #twister .top-level.selected-row,
-        .comparison_table tr:nth-child(2n) td.comparison_baseitem_column {
+        .comparison_table tr:nth-child(2n) td.comparison_baseitem_column,
+        #twister-plus-desktop-twister-container .text-swatch-button-with-slots.a-button-selected .swatch-title-text-container {
             background: var_selected !important;
         }
         .comparison_baseitem_column {
