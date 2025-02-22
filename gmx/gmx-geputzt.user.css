@@ -5,7 +5,7 @@
               *** Not working for gmx.fr / CaraMail / gmx.com ***
 @namespace    stonecrusher
 @author       stonecrusher
-@version      4.0.9
+@version      4.0.10
 @homepageURL  https://github.com/stonecrusher/stylus-UserCSS/tree/master/gmx
 @supportURL   https://github.com/stonecrusher/stylus-UserCSS/issues
 @license      CC-BY-NC-SA-4.0
@@ -105,6 +105,7 @@
         /*web.de*/ [data-item-name="premiumclub_ha"],
         /*gmx*/ [data-item-name="cloud"],
         /*gmx*/ [data-item-name="premium_product"],
+        /*gmx*/ [data-item-name="news"],
         [data-item-name="maildomain_new"],
         [data-item-name="allnet"],
         [data-item-name="zattoo"],
@@ -162,7 +163,7 @@
             display: none !important;
         }
     }
-    [icon="core_logout"] {
+    [icon="core_logout"], [aria-label="Logout"] {
         background-color: var_logoutcolor !important;
     }
     /* Fix für Displays mit geringe Breite */
@@ -259,10 +260,12 @@
     /*gmx*/ #superbanner.ad,
     /*gmx*/ .digital-copy-empty-preview-teaser,
     /*gmx*/ #mail-list tr[data-component-pixelurls*="adfarm1"],
-	.ad.sky
+	.ad.sky,
+    [data-contenttype="promotional"],
     /* TODO select elements inside Shadow DOM
     list-programmatic-inbox-ad-item,
-    .list-programmatic-inbox-ad-item__iframe, */ {
+    .list-programmatic-inbox-ad-item__iframe,
+    list-inbox-ad-item,*/ {
         display: none !important;
     }
     /* Invisible #superbanner overlay at bottom */
