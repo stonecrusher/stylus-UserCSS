@@ -16,11 +16,9 @@ Optionaler Darkstyle in den Settings nach der Installation verfügbar.
 
 # Screenshots
 
-![login dark](./screenshots/2019-04-27%2021_08_14.png)
 ![login hell](./screenshots/2019-04-27%2021_08_43.png)
-![postfach dark](./screenshots/2019-04-27%2021_09_45.png)
 ![postfach hell](./screenshots/2019-04-27%2021_09_18.png)
-![style optionen](./screenshots/2019-04-27%2021_10_23.png)
+![style optionen](./screenshots/2025-02-22%2017_50_47-.png)
 
 
 # Weitere Informationen
@@ -59,7 +57,7 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 
 ## Sonstiges
 
-Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/stylus-UserCSS/issues)).  
+Getestet mit Firefox135 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/stylus-UserCSS/issues)).  
 Nur kostenloses FreeMail. Die Bezahlvariante "web.de CLUB" ist ungetestet!
 
 # Changelog
