@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.44
+@version        1.14.46
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -30,7 +30,7 @@
 /* Amazon default review bar width is 185px */
 
 
-@-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|sg|ae|fr|de|it|nl|es|ca|se|com(\\.(mx|au|br|tr|be))?|co\\.(uk|jp))\\/.*") {
+@-moz-document regexp("https?:\\/\\/(www|music)\\.amazon\\.(cn|in|sg|ae|fr|de|pl|it|nl|es|ca|se|com(\\.(mx|au|br|tr|be))?|co\\.(uk|jp))\\/.*") {
     
     /* Stylus variables */
     /* Colors to be replaced are in the comment */
@@ -694,7 +694,8 @@
                 background: linear-gradient(to bottom, var_bg4, var_bg3) !important;
             }
         }
-        .a-button.a-button-toggle.text-swatch-button-with-slots {
+        .a-button.a-button-toggle.text-swatch-button-with-slots,
+        .a-button.a-button-toggle.image-swatch-button {
             border-width: 4px !important;
         }
         .a-button.a-button-toggle.text-swatch-button-with-slots:not(.a-button-unavailable) {
@@ -1255,7 +1256,8 @@
         .icon-past-search-suggestion,
         .chevron,
         .editNameIcon,
-        img[src$="/white-spacer.jpg"] {
+        img[src$="/white-spacer.jpg"],
+        .awl-ul-item-grab {
             filter: invert(0.8) !important;
         }
         .nav-image,
