@@ -17,11 +17,9 @@ Optionaler "darkstyle" und Einblenden bestimmter Features (siehe style settings 
 
 # Screenshots
 
-![login dark](./screenshots/2019-04-27%2021_19_08.png)
 ![login hell](./screenshots/2019-04-27%2021_19_37.png)
-![postfach dark](./screenshots/2019-04-27%2021_21_07.png)
-![hell dark](./screenshots/2019-04-27%2021_20_46.png)
-![style optionen](./screenshots/2019-04-27%2021_21_18.png)
+![postfach dark](./screenshots/2019-04-27%2021_20_46.png)
+![style optionen](./screenshots/2025-02-22%2017_51_08.png)
 
 
 # Weitere Informationen
@@ -59,7 +57,7 @@ Für funktionelle Erweiterung per JavaScript (z.B. mit [Greasemonkey](https://ww
 
 ## Sonstiges
 
-Getestet mit Firefox59 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/stylus-UserCSS/issues)).  
+Getestet mit Firefox135 & Chrome65 auf dem Desktop (bin dankbar für [Feedback](https://github.com/stonecrusher/stylus-UserCSS/issues)).  
 Nur kostenloses FreeMail. ProMail / TopMail sind ungetestet!
 
 
