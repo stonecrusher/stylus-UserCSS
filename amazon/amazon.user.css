@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.47
+@version        1.14.48
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -370,7 +370,8 @@
         .s-pc-sidesheet,
         #bbop .a-box-inner.a-padding-base,
         .ryp__review-candidate-new,
-        .s-color-swatch-container {
+        .s-color-swatch-container,
+        .in-context-ryp__form-field--mediaUploadInput--custom {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
