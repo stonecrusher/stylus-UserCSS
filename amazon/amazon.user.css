@@ -1972,7 +1972,8 @@
         #maple-smart-wagon-full-page, /* Checkout: Credit card bonus banner */
         .nav-prime-tt.nav-flyout, /* Prime ad on front page */
         #attach-accessories, /* discover additional products sidebar */
-        #widget-rightUpsellSlot /* Upselling after purchase */{
+        #widget-rightUpsellSlot, /* Upselling after purchase */
+        #desktop-dp-ilm_feature_div_01 /* Top banner */ {
             display: none !important;
         }
 
