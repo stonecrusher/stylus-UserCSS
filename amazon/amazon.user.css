@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.50
+@version        1.14.51
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -211,7 +211,8 @@
         div[class*="_Y3Itb_media_cr"],
         div[class*="_Y3Itb_cr-media-popover"],
         .jaCFLV, .hjMJzD, .iJcgAl, .XmvAr, .cOzDtC, .yrXvq,
-        .cards_carousel_widget-suggestion, .cards_carousel_widget-sug-column, .cards_carousel_widget-sug-image-container, .cards_carousel_widget-sug-text {
+        .cards_carousel_widget-suggestion, .cards_carousel_widget-sug-column, .cards_carousel_widget-sug-image-container, .cards_carousel_widget-sug-text,
+        #cpf-dpx-sidesheet-content {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -511,6 +512,11 @@
         #s-result-info-bar.s-refinements-on-top,
         #refinementsOnTop {
             background-color: var_bg2 !important;
+        }
+        /* Climate Pledge Friendly */
+        .s-pc-sticky-footer,
+        .cpf-dpx-sticky-footer {
+            background-color: initial !important;
         }
         /* Comparison tables */
         table.a-bordered td,
@@ -1520,7 +1526,8 @@
         .profile-hub-category .header .subtitle,
         .attribute-section-footer .last-updated,
         .a-price[data-a-color="secondary"],
-        .pt-status-milestone-label {
+        .pt-status-milestone-label,
+        .a-size-base-plus {
             color: var_font3 !important;
         }
         hr,
@@ -1626,6 +1633,12 @@
         #navbar.nav-bluebeacon #nav-search-label, #navbar.nav-bluebeacon .nav-a-2 .nav-line-1, #navbar.nav-bluebeacon .nav-a-2 .nav-line-2,
         .swatchElement .a-button a, .swatchElement .a-button:hover a {
             color: var_font7 !important;
+        }
+        .a-size-mini.unclaimed {
+            color: #333 !important;
+        }
+        .a-size-mini.a-color-base {
+            color: var_font1 !important;
         }
         .cu-eb-header {
             color: #333 !important;
