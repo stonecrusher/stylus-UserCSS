@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.49
+@version        1.14.50
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -448,6 +448,9 @@
             mix-blend-mode: hard-light !important;
             background-color: white !important;
             opacity: 1 !important;
+        }
+        .s-asin-suggestion .s-asin-image {
+            mix-blend-mode: normal !important;
         }
             
         .deals-shoveler.fresh-shoveler,
@@ -1480,7 +1483,8 @@
         .a-size-base-plus,
         .pt-status-main-status,
         .pt-status-milestone-label.active,
-        .dcl-iwt .dcl-card-footer {
+        .dcl-iwt .dcl-card-footer,
+        .s-asin-suggestion .s-asin-title {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1549,7 +1553,8 @@
         .amsg-2018 .accordion .title,
         .color-gulfstream,
         #desktop-configurator-side-sheet .detail-page-side-sheet-content .twister-plus-inline-twister-ppu, #twister-plus-inline-twister-container .twister-plus-inline-twister-ppu,
-        .social-proofing-faceout-title-text {
+        .social-proofing-faceout-title-text,
+        .s-asin-suggestion .s-sug-pp-caption {
             color: var_font2 !important;
         }
 
