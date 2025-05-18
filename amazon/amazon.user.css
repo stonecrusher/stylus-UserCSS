@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.53
+@version        1.14.54
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -212,7 +212,8 @@
         div[class*="_Y3Itb_cr-media-popover"],
         .jaCFLV, .hjMJzD, .iJcgAl, .XmvAr, .cOzDtC, .yrXvq,
         .cards_carousel_widget-suggestion, .cards_carousel_widget-sug-column, .cards_carousel_widget-sug-image-container, .cards_carousel_widget-sug-text,
-        #cpf-dpx-sidesheet-content {
+        #cpf-dpx-sidesheet-content,
+        .nav-bb-search-wrapper {
             background: var_bg1 !important;
             color: var_font1 !important;
         }
@@ -1664,7 +1665,8 @@
         #rhf .rhf-sign-in-button .action-inner, #rhf a.action-button:active .action-inner, #rhf a.action-button:hover .action-inner, #rhf a.action-button:link .action-inner, #rhf a.action-button:visited .action-inner,
         ._2nSRgu > span, ._2nSRgu:focus > span, ._2nSRgu:hover > span,
         ._3x6JZ- > span > span /*play now*/,
-        .checkout-giftbox-icon {
+        .checkout-giftbox-icon,
+        .nav-bb-button {
             color: black !important;
         }
         /* Test <channelname> button */
