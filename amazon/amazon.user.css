@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.52
+@version        1.14.53
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -255,7 +255,8 @@
         div[class^="GridItem-module__container"],
         .checkout-experience-page-content,
         #inline-twister-expander-header-size_name,
-        #inline-twister-expander-header-style_name {
+        #inline-twister-expander-header-style_name,
+        [data-a-atomic-interop][data-a-component="stepper"][data-a-type="atc"] {
             background-color: var_bg1 !important;
         }
 
@@ -1279,7 +1280,9 @@
         .chevron,
         .editNameIcon,
         img[src$="/white-spacer.jpg"],
-        .awl-ul-item-grab {
+        .awl-ul-item-grab,
+        [data-action="a-stepper-increment"] > .a-icon-small-add,
+        [data-action="a-stepper-decrement"] > .a-icon-small-trash {
             filter: invert(0.8) !important;
         }
         .nav-image,
@@ -1492,7 +1495,8 @@
         .pt-status-milestone-label.active,
         .dcl-iwt .dcl-card-footer,
         .s-asin-suggestion .s-asin-title,
-        #buffet-sidesheet-content-header {
+        #buffet-sidesheet-content-header,
+        .a-icon-prime-with-text {
             color: var_font1 !important;
         }
         input, select, textarea,
@@ -1725,7 +1729,9 @@
             background-color: var_font1 !important;
         }
         /* PrimeDay badge */
-        .primeExclusiveSolidBadge > span {
+        .primeExclusiveSolidBadge > span,
+        .sc-unified-promotion-message-badge > .sc-unified-promotion-message-text,
+        [data-csa-c-owner="PromotionsDiscovery"] > label {
             color: black !important;
         }
         
