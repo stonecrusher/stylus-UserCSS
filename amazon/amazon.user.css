@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.54
+@version        1.14.55
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -257,7 +257,8 @@
         .checkout-experience-page-content,
         #inline-twister-expander-header-size_name,
         #inline-twister-expander-header-style_name,
-        [data-a-atomic-interop][data-a-component="stepper"][data-a-type="atc"] {
+        [data-a-atomic-interop][data-a-component="stepper"][data-a-type="atc"],
+        .aplus-v2 .premium-aplus-module-11 {
             background-color: var_bg1 !important;
         }
 
@@ -376,7 +377,8 @@
         .s-color-swatch-container,
         .in-context-ryp__form-field--mediaUploadInput--custom,
         .ryp__review-candidate,
-        #buffet-sidesheet {
+        #buffet-sidesheet,
+        .aplus-v2 .premium-aplus-module-11 .faq-block {
             background-color: var_bg2 !important;
         }
         .acs-private-brands-container-background .s-item-container,
@@ -1088,7 +1090,8 @@
         .accordion .accordion-item,
         .puis-card-border,
         .cards_carousel_widget-sug-column,
-        .discover-tr-carousel-control {
+        .discover-tr-carousel-control,
+        .aplus-v2 .premium-aplus-module-11 .faq-block {
             border-color: var_bg6 !important;
         }
         #navbar[data-template="layoutSwapToolBar"].layout2.bold-focus-hover #nav-logo .nav-logo-link:hover,
@@ -1283,7 +1286,8 @@
         img[src$="/white-spacer.jpg"],
         .awl-ul-item-grab,
         [data-action="a-stepper-increment"] > .a-icon-small-add,
-        [data-action="a-stepper-decrement"] > .a-icon-small-trash {
+        [data-action="a-stepper-decrement"] > .a-icon-small-trash,
+        ._Y3Itc_ai-branding-icon_1_-VZ {
             filter: invert(0.8) !important;
         }
         .nav-image,
@@ -1534,7 +1538,8 @@
         .attribute-section-footer .last-updated,
         .a-price[data-a-color="secondary"],
         .pt-status-milestone-label,
-        .a-size-base-plus {
+        .a-size-base-plus,
+        #FeedbackAgent_feature_div h2[class*="reportAnIssueTitle"], #amazon-devices-legal-only-no-merchandising_feature_div .content-grid-block > h3, #aplus > h2, #ask-btf-container .askWidgetHeader, #ask-btf_feature_div .ask-blue-widget-header > h3, #audible-carousel-pdp-dramabot_feature_div .a-carousel-heading, #audible-podcast-carousel-pdp-dramabot_feature_div .a-carousel-heading, #audibleProductDetailsTitle, #bnx-widget_feature_div .bnx_header h2[role="heading"], #brandInsights_feature_div_3 h2, #bundleSummary_feature_div h1, #climatePledgeFriendly .cpf-dpx-attribute-pill-text > h2, #customer-reviews_feature_div h2, #customer-reviews_feature_div h3, #customerReviews h2, #customerReviews h3, #detailBulletsWrapper_feature_div > h2, #discovery-and-inspiration_feature_div .a-cardui-body > h2, #discovery-and-inspiration_feature_div .featureHeading, #discovery-and-inspiration_feature_div [class*="carousel-title"], #dp-container .bucket:not([id*="aplus"]) h2, #dpx-rex-nice-widget-container > h2, #editorialReviews-btf-ri_feature_div h3 > span, #editorialReviews-btf-ri_feature_div > h2, #editorialReviews_feature_div h3, #editorialReviews_feature_div > h2, #expert-reviews_feature_div .a-cardui-header h3, #feature-bullets > h1, #feature-bullets > h2, #followTheAuthor_feature_div h1[class*="followHeading"], #houseOfCardsFeature #hoc-expander-heading > .a-expander-prompt, #houseOfCardsFeature .hoc-feature-header > h3, #iconfarmv2_feature_div h1, #important-information > h2, #ive-videos-for-this-product-widget_feature_div .a-carousel-heading, #legalEUBtf_feature_div > h2, #moreAboutTheAuthorCard_feature_div #books-entity-teaser, #music-tracks > h4, #musicTracks_feature_div > h2, #newerVersion_feature_div h2, #newerVersion_feature_div h4, #organic-complements-top_feature_div [class*="headerSection"] h2[class*="header"], #postsSameBrandCard_feature_div [class*="carousel-title"], #pre-owned-condition-drawer > h2, #prodDetails .a-expander-container > .a-row h3, #prodDetails .secHeader, #prodDetails h1, #prodDetails > h2, #product-comparison_feature_div h2, #productDescription_feature_div h2.default, #productDescription_feature_div h2.softlines, #productDetails_expanderSectionTables .prodDet-expander-header-styling > .a-expander-prompt, #productDocuments_feature_div h2, #productFactsDesktop_feature_div h3, #provenance-certifications > h1, #red-regulation-content_feature_div h4 > strong, #rhf .rhf-header, #rhf-container .a-carousel-heading, #sbl-header-title, #similarities_feature_div [class*="vseVideoWidgetHeaderBlock"] h3, #similarities_feature_div h2, #technicalSpecifications_feature_div h5, #technicalSpecifications_feature_div > h2, #toySafety_feature_div > h3, #twister-plus-feature .twister-plus-header, #va-related-videos-widget_feature_div .a-carousel-heading, #valuePick_feature_div h4, #vasTitleText, #whatsInTheBoxDeck > h2, #whispersyncforvoice_primary > h2, [data-elementid="vse-cards-vw-dp-widget-title"] {
             color: var_font3 !important;
         }
         hr,
