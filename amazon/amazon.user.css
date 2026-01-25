@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.55
+@version        1.14.56
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -258,7 +258,8 @@
         #inline-twister-expander-header-size_name,
         #inline-twister-expander-header-style_name,
         [data-a-atomic-interop][data-a-component="stepper"][data-a-type="atc"],
-        .aplus-v2 .premium-aplus-module-11 {
+        .aplus-v2 .premium-aplus-module-11,
+        .ProductUIRender__grid-item-v2__Ipp8M {
             background-color: var_bg1 !important;
         }
 
