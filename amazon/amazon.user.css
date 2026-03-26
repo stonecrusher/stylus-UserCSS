@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.56
+@version        1.14.57
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -1502,7 +1502,8 @@
         .dcl-iwt .dcl-card-footer,
         .s-asin-suggestion .s-asin-title,
         #buffet-sidesheet-content-header,
-        .a-icon-prime-with-text {
+        .a-icon-prime-with-text,
+        h1.aui-primitive, h2.aui-primitive, h3.aui-primitive, h4.aui-primitive, h5.aui-primitive, h6.aui-primitive, p.aui-primitive, span.aui-primitive {
             color: var_font1 !important;
         }
         input, select, textarea,
