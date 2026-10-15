@@ -3,7 +3,7 @@
 @description    Change colors, hide (self-)advertisement, control review bar width
 @namespace      Stonecrusher
 @author         Stonecrusher
-@version        1.14.57
+@version        1.14.59
 @homepageURL    https://github.com/stonecrusher/stylus-UserCSS/tree/master/amazon
 @supportURL     https://github.com/stonecrusher/stylus-UserCSS/issues
 @updateURL      https://raw.githubusercontent.com/stonecrusher/stylus-UserCSS/master/amazon/amazon.user.css
@@ -471,7 +471,8 @@
         #superleafActionPanelWrapper,
         .dp-customer-reviews-wrapper,
         div[class^="AuthorCards__"],
-        div[class^="SimilarAuthors__similar-authors__"] {
+        div[class^="SimilarAuthors__similar-authors__"],
+        #gwm-Deck, #gwm-Deck-btf, ._hp-mosaic-container_style_container__2gcSY {
             background: var_bg1 !important;
         }
         .a-button-toggle.a-button-focus .a-button-inner, .a-button-toggle:focus .a-button-inner, .a-button-toggle:hover .a-button-inner,
@@ -2123,34 +2124,16 @@
         }
     }
     if av-pause-remove {
-        /* Amazon Video Pause-overlay transparent */
-        .f1bkfbcl, .fnu5k6u, .fofauj8 {
-            opacity: 0 !important;
+        /* remove overlay */
+        .feqqns3,
+        .f10znfo1 {
+          background: none !important;
+          opacity: 0 !important;
         }
-        /* Title readability */
-        .fgzdi7m,
-        .f15586js {
-            text-shadow:  1px  1px 1px black,
-                          1px -1px 1px black,
-                         -1px  1px 1px black,
-                         -1px -1px 1px black !important;
-        }
-        /* Seekbar color */
+
+        /* Progress bar color */
         .f15vbt64 {
             background-color: var_price !important;
-        }
-        /* Header margin */
-        /* X-Ray */
-        .xrayQuickView .collapsibleXrayHeader,
-        /* Title */
-        .ff48h02,
-        /* Controls */
-        .f1uwz81n {
-            margin-top: 1vw !important;
-        }
-        /* Footer margin */
-        .fc1n9o1 {
-            padding-bottom: 1vw !important;
         }
     }
     if hide-similar {
